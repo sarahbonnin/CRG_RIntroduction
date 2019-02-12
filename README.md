@@ -1,12 +1,5 @@
 
 <h1 class="title"> Day 1 & 2 </h1>
-<h1 class="title"> Day 3 & 4 </h1>
-<h1 class="title"> Day 5 & 6 </h1>
-<h1 class="title"> Day 7 & 8 </h1>
-
-<h1 class="title">
-</h1>
-
 
 <div id="TOC">
    <ul>
@@ -20,10 +13,18 @@
 </div>
 
 
+<h1 class="title"> Day 3 & 4 </h1>
+<h1 class="title"> Day 5 & 6 </h1>
+<h1 class="title"> Day 7 & 8 </h1>
+
+<h1 class="title">
+</h1>
+
+
 <div id="day12">
-   <h2>
+   <h1>
        <a href="#TOC">Day 1 & 2</a>
-   </h2>
+   </h1>
    <p>
        Many have posed the question of true happiness. In this blog post we propose to solve it.
    </p>
