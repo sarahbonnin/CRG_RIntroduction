@@ -4,10 +4,31 @@
 <div id="TOC">
    <ul>
    <li>
-   <a href="#rstudio">R studio</a>
+   	<a href="#rstudio">R studio</a>
    </li>
+   <li>
+   	<a href="#rbasics">R basics</a>
+   </li>
+
    </ul>
 </div>
+
+
+
+
+<div id="day12">
+   <h1>
+       <a href="#TOC">Day 1 & 2</a>
+   </h1>
+   <p>
+       what about day 1
+   </p>
+</div>
+
+
+
+
+
 
 
 <h1 class="title"> Day 3 & 4 </h1>
