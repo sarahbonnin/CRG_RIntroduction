@@ -1,26 +1,18 @@
 
 <div id="TOC">
 <h1 class="title"><a href="#day12">Day 1 & 2 </a></h1>
-<h2><a href="#rstudio">R studio</a></h2>
-<h2><a href="#rbasics">R basics</a></h2>
+  <h2><a href="#rstudio">R studio</a></h2>
+  <h2><a href="#rbasics">R basics</a></h2>
+<h1 class="title"><a href="#day34">Day 3 & 4 </a></h1>
+<h1 class="title"><a href="#day56">Day 5 & 6 </a></h1>
+<h1 class="title"><a href="#day78">Day 7 & 8 </a></h1>
 </div>
 
 
-
-
-
-
-
-<h1 class="title"> Day 3 & 4 </h1>
-<h1 class="title"> Day 5 & 6 </h1>
-<h1 class="title"> Day 7 & 8 </h1>
-
-
-
 <div id="day12">
-   <h2><a href="#TOC">R studio</a></h2>
+   <h2><a href="#TOC">Day 1 & 2</a></h2>
    <p>
-        what about r studio
+        what about day 1 & 2
    </p>
 </div>
 
