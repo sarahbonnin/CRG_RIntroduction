@@ -7,7 +7,7 @@
    <a href="#day12">Day 1 & 2</a>
    </li>
    <li>
-   <a href="#first-attempts">First Attempts</a>
+   <a href="#rstudio">R studio</a>
    </li>
    </ul>
 </div>
@@ -23,15 +23,15 @@
        <a href="#TOC">Day 1 & 2</a>
    </h1>
    <p>
-       Many have posed the question of true happiness. In this blog post we propose to solve it.
+       what about day 1
    </p>
 </div>
-<div id="first-attempts">
+<div id="rstudio">
    <h2>
-       <a href="#TOC">First Attempts</a>
+       <a href="#TOC">R studio</a>
    </h2>
    <p>
-       The earliest attempts at attaining true happiness of course aimed at pleasure. Soon, though, the downside of pleasure was revealed.
+	what about r studio
    </p>
 </div>
 
