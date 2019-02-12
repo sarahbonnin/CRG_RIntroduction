@@ -1,10 +1,8 @@
 <details>
 <summary><h1>Day 1</h1></summary>
 
-+ markdown list 1
-    + nested list 1
-    + nested list 2
-+ markdown list 2
+* markdown list 1
+* markdown list 2
 
 </details>
 
