@@ -1,10 +1,8 @@
 
 <div id="TOC">
-   <ul>
 <h1 class="title"><a href="#day12">Day 1 & 2 </a></h1>
-   	<h2><a href="#rstudio">R studio</a></h2>
-   	<h2><a href="#rbasics">R basics</a></h2>
-   </ul>
+<h2><a href="#rstudio">R studio</a></h2>
+<h2><a href="#rbasics">R basics</a></h2>
 </div>
 
 
