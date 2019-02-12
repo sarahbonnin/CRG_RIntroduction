@@ -5,17 +5,50 @@
 
 
 <details>
-<summary>Heading</summary>
-
+<summary>Day 1</summary>
 + markdown list 1
     + nested list 1
     + nested list 2
 + markdown list 2
-
 </details>
 
-Day 2](day2/day2.md)
-* [Day 3](day3/day3.md)
-* [Day 4](day4/day4.md)
-* [Day 5 & 6: plots](day56/day56_plots.md)
-* [Day 7 & 8: exploratory data analysis](day78/day78_exploratory.md)
+<details>
+<summary>Day 2</summary>
++ markdown list 1
+    + nested list 1
+    + nested list 2
++ markdown list 2
+</details>
+
+<details>
+<summary>Day 3</summary>
++ markdown list 1
+    + nested list 1
+    + nested list 2
++ markdown list 2
+</details>
+
+<details>
+<summary>Day 4</summary>
++ markdown list 1
+    + nested list 1
+    + nested list 2
++ markdown list 2
+</details>
+
+<details>
+<summary>Day 5/summary>
++ markdown list 1
+    + nested list 1
+    + nested list 2
++ markdown list 2
+</details>
+
+<details>
+<summary>Day 6</summary>
++ markdown list 1
+    + nested list 1
+    + nested list 2
++ markdown list 2
+</details>
+
