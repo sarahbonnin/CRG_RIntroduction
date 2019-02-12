@@ -1,9 +1,3 @@
-# Introduction to R
-
-* [Day 1](day1/day1.md)
-
-
-
 <details>
 <summary><h1>Day 1</h1></summary>
 
