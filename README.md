@@ -4,9 +4,6 @@
 <div id="TOC">
    <ul>
    <li>
-   <a href="#day12">Day 1 & 2</a>
-   </li>
-   <li>
    <a href="#rstudio">R studio</a>
    </li>
    </ul>
