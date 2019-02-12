@@ -5,7 +5,7 @@
 
 
 <details>
-<summary>Day 1</summary>
+<summary><h1>Day 1</h1></summary>
 
 + markdown list 1
     + nested list 1
@@ -45,7 +45,7 @@
 </details>
 
 <details>
-<summary>Day 5/summary>
+<summary>Day 5</summary>
 
 + markdown list 1
     + nested list 1
