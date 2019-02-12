@@ -1,5 +1,5 @@
-1. [ Description. ](#desc)
-2. [ Usage tips. ](#usage)
+<h1>[ Description. ](#desc)</h1>
+[ Usage tips. ](#usage)
 
 <a name="desc"></a>
 ## 1. Description
