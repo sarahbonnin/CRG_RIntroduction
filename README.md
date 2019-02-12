@@ -17,9 +17,6 @@
 <h1 class="title"> Day 5 & 6 </h1>
 <h1 class="title"> Day 7 & 8 </h1>
 
-<h1 class="title">
-</h1>
-
 
 <div id="day12">
    <h1>
