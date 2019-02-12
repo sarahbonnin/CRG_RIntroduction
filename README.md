@@ -1,3 +1,7 @@
+<h1>Introduction</h1>
+
+
+<h1>Table of content</h1>
 
 <div id="TOC">
 <h2 class="title"><a href="#day12">Day 1 & 2 </a></h2>
@@ -8,6 +12,7 @@
 <h2 class="title"><a href="#day78">Day 7 & 8 </a></h2>
 </div>
 
+<h1>Course</h1>
 
 <div id="day12">
    <h2><a href="#TOC">Day 1 & 2</a></h2>
