@@ -3,13 +3,8 @@
 
 <div id="TOC">
    <ul>
-   <li>
-   	<a href="#rstudio">R studio</a>
-   </li>
-   <li>
-   	<a href="#rbasics">R basics</a>
-   </li>
-
+   	<h2><a href="#rstudio">R studio</a></h2>
+   	<h2><a href="#rbasics">R basics</a></h2>
    </ul>
 </div>
 
