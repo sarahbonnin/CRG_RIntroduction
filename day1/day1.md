@@ -1,10 +1,10 @@
 # <b>Day 1</b>
 
-## Introduction to R Studio
+## [Introduction to R Studio](rstudio.md)
 
 We will use the [R Studio](https://www.rstudio.com/) of the CRG server (http://rstudio.linux.crg.es). We will go through what can be done with R Studio, from file and folder manipulation/navigation, to getting help on R functions.
 
-## Paths / directories
+## [Paths / directories](pathdirectories.md)
 
 ## Basics of R: syntax, create an object, manipulate the object, simple arithmetics.
 
