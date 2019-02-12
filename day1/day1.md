@@ -6,16 +6,16 @@ We will use the [R Studio](https://www.rstudio.com/) of the CRG server (http://r
 
 ## [Paths / directories](pathdirectories.md)
 
-## Basics of R: syntax, create an object, manipulate the object, simple arithmetics.
+## [Basics of R](Rbasics.md): syntax, create an object, manipulate the object, simple arithmetics.
 
-## Functions usage in R
+## [Functions usage in R](functionsbasics.md)
 Arguments. Get help.
    
-## R scripts: write and save commands, run them as a block. Comment code.
+## [R scripts](Rscripts.md): write and save commands, run them as a block. Comment code.
     
-## Data types.
+## [Data types](datatype.md)
     
-## Data structures:
+## [Data structures](datastructure.md)
 Vectors
 Basic (and most important) data structure in R. We will learn how to create, modify, subset, manipulate, compare vectors.
 Introduction to factors: categorical vectors.
