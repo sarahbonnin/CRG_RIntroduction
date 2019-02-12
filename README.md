@@ -1,4 +1,4 @@
-<h1>[ Description. ](#desc)</h1>
+[<h1> Description. </h1>](#desc)
 [ Usage tips. ](#usage)
 
 <a name="desc"></a>
