@@ -18,25 +18,34 @@ setwd("/users/bi/sbonnin/Rintro/day1")
 ```
 </p>
 </details>
-# 2. Using R as a calculator, calculate the square root of 654.
-sqrt(654)
 
-# 3. Using R as a calculator, calculate the percentage 
-# of males and females currently present in the classroom.
+2. Using R as a calculator, calculate the square root of 654.
+```{r}
+sqrt(654)
+```
+
+3. Using R as a calculator, calculate the percentage of males and females currently present in the classroom.
+```{r}
 (14/18) * 100
 (4/18) * 100
+```
 
-# 4. Create a new object myobject with value 60.
-# Show myobject in the console.
+4. Create a new object myobject with value 60.
+Show myobject in the console.
+```{r}
 myobject <- 60
 myobject
+```
 
-# 5. Reassign myobject with value 87.
+5. Reassign myobject with value 87.
+```{r}
 myobject <- 87
+```
 
-# 6. Subtract 1 to myobject. Reassign.
+6. Subtract 1 to myobject. Reassign.
+```{r}
 myobject <- myobject - 1
-
+```
 # 7. Create a new object mysqrt that will store 
 # the square root of myobject.
 mysqrt <- sqrt(myobject)

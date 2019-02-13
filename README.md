@@ -21,17 +21,18 @@
 
 <h2> Program </h2>
 
-<h3>Day 1 & 2</h3>
+<h3>Module 1</h3>
 * [Introduction to R language](https://sbcrg.github.io/CRG_RIntroduction/Rintro)
 * [R Studio](https://sbcrg.github.io/CRG_RIntroduction/rstudio)
 * [Paths and directories](https://sbcrg.github.io/CRG_RIntroduction/pathdirectories)
 * [R basics](https://sbcrg.github.io/CRG_RIntroduction/Rbasics)
 * [Functions (usage of)](https://sbcrg.github.io/CRG_RIntroduction/functionsbasics)
 * [R scripts](https://sbcrg.github.io/CRG_RIntroduction/Rscripts)
+* [Exercise 1](https://sbcrg.github.io/CRG_RIntroduction/exercise1): Getting started.
 * [Data types](https://sbcrg.github.io/CRG_RIntroduction/datatype)
 * [Data structures](https://sbcrg.github.io/CRG_RIntroduction/datastructure)
 
-<h3>Day 3 & 4</h3>
+<h3>Module 2</h3>
 * [Input / Output](https://sbcrg.github.io/CRG_RIntroduction/inout)
 * [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
 * [](https://sbcrg.github.io/CRG_RIntroduction/)
@@ -39,12 +40,12 @@
 * [](https://sbcrg.github.io/CRG_RIntroduction/)
 * [](https://sbcrg.github.io/CRG_RIntroduction/)
 
-<h3>Day 5 & 6</h3>
+<h3>Module 3</h3>
 * [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
 * [Graphing with ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
 
 
-<h3>Day 7 & 8</h3>
+<h3>Module 4</h3>
 
 
 
