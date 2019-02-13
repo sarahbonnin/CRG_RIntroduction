@@ -14,6 +14,9 @@
 <h3> Instructor </h3>
 [Sarah Bonnin](mailto:sarah.bonnin@crg.eu) - [CRG bioinformatics unit](https://biocore.crg.eu/)
 
+<h2>Learning objectives</h2>
+![](learningobjectives.png "Learning objectives")
+
 <h2> Program </h2>
 
 <h3>Day 1 & 2</h3>

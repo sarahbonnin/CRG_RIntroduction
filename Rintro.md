@@ -1,3 +1,25 @@
+<h2>What is R ?</h2>
 
+* Programming language and environment for data manipulation, statistical computing, and graphical display.
 
-![](learningobjectives.png "Learning objectives")
+* Implementation of the S programming language
+
+* Created at the University of Auckland, New Zealand:
+	+ Initial version released in 1995
+	+ Stable version released in 2000
+* Free and open source !
+	+ https://www.r-project.org/
+
+* Interactive, flexible
+
+* Very active community of developers and users!
+
+* Access through a command-line interpreter:
+![](rterminal.png "R command line")
+
+<h2></h2>
+<h2></h2>
+<h2></h2>
+<h2></h2>
+<h2></h2>
+
