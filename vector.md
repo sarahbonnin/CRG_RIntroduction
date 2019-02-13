@@ -9,6 +9,28 @@ A vector is a sequence of data elements from the **same type**.
 |-|-|-|-|
 | 329 | 45 | 12 | 28 |
 
+<table style="width: 100%">
+    <colgroup>
+       <col span="1" style="width: 25%;">
+       <col span="1" style="width: 25%;">
+       <col span="1" style="width: 25%;">
+    </colgroup>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+</table>
+
+<table style="width: 100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+</table>
+
+
 <h3>Creating a vector</h3>
 
 * Values are assigned to a vector using the **c** command (**c**ombining elements).
