@@ -22,12 +22,31 @@ A vector is a sequence of data elements from the **same type**.
   </tr>
 </table>
 
-<table style="width: 100%">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
+
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td markdown="span">First column **fields**</td>
+<td markdown="span">Some descriptive text.</td>
+<td markdown="span">test</td>
+</tr>
+<tr>
+<td markdown="span">Second column</td>
+<td markdown="span">Some more descriptive text.</td>
+<td markdown="span">test</td>
+</tr>
+</tbody>
 </table>
 
 
