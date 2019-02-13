@@ -29,6 +29,16 @@ print("hello world!")
 </p>
 </details>
 
+
+<details>
+  <summary>Click to expand</summary>
+  ```
+  getwd()
+   ```
+</details>
+
+
+
 2. Using R as a calculator, calculate the square root of 654.
 ```{r}
 sqrt(654)
