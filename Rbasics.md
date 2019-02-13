@@ -50,16 +50,17 @@ What is the percentage of miRNA?
 ```
 
 <h2>Objects in R</h2>
-![](objects_box.png)
+
+<img src="objects_box.png" alt="rstudio logo" width="300"/>
 
 <h2>R syntax</h2>
-![](rsyntax1.png)
+<img src="rsyntax1.png" alt="rstudio logo" width="250"/>
 
 <h3>Assignment operators</h3>
 + **<-** or **=**
 + Essentially the same but, to avoid confusions:
-++ Use **<-** for assignments
-++ Keep **=** for arguments
+  + Use **<-** for assignments
+  + Keep **=** for arguments
 
 <h3>Assigning data to an object</h3>
 
@@ -75,9 +76,5 @@ B + 10
 B <- B + 10<br>
 ```
 <span style="color:red">some **B changed !!** text</span><br>
-
-
-
-
 
 
