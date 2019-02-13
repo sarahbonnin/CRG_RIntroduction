@@ -9,11 +9,11 @@ A vector is a sequence of data elements from the **same type**.
 |-|-|-|-|
 | 329 | 45 | 12 | 28 |
 
-<table style="width: 100%">
+<table style="width: 60%">
     <colgroup>
-       <col span="1" style="width: 25%;">
-       <col span="1" style="width: 25%;">
-       <col span="1" style="width: 25%;">
+       <col span="1" style="width: 33%;">
+       <col span="1" style="width: 33%;">
+       <col span="1" style="width: 33%;">
     </colgroup>
   <tr>
     <th>Firstname</th>
