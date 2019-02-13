@@ -16,6 +16,7 @@ Type **Enter** for R to interpret the command.
 <h3>Simple calculaion</h3>
 
 Given the following table:
+
 | type of RNA | Total   |
 | :---------: |:-------:|
 | mRNA        | 329     |
@@ -23,7 +24,8 @@ Given the following table:
 | snoRNA      | 12      |
 | lncRNA      | 28      |
 
- <table style="width:50%">
+
+ <table style="width:50%"; background-color: #f5f5f5;>
   <tr>
     <th>type of RNA</th>
     <th>Total</th>
