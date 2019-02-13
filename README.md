@@ -1,20 +1,20 @@
-<h3> Date and time </h3>
-<h4>Dates:</h4>
+<h2> Date & time </h2>
+<h3>Dates:</h3>
 * Module 1: Monday 18th & Tuesday 19th February, 2019
 * Module 2: Monday 25th & Tuesday 26th February, 2019
 * Module 3: Monday 4th & Tuesday 5th March, 2019
 * Module 4: Monday 11th & Tuesday 12th March, 2019
 
-<h4>Time:</h4>
+<h3>Time:</h3>
 * 10:00-13:30 <br>
 
-<h4>Place:</h4>
+<h3>Place:</h3>
 * CRG Training center
 
-<h3> Instructors </h3>
+<h2> Instructors </h2>
 [Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu)<br>
 [Sarah Bonnin](mailto:sarah.bonnin@crg.eu)<br>
-[CRG bioinformatics core facility](https://biocore.crg.eu/)
+from CRG [Bioinformatics core facility](https://biocore.crg.eu/)
 
 <h2>Learning objectives</h2>
 <img src="learningobjectives.png"  width="500"/>
