@@ -14,6 +14,8 @@ Time: 10:00-13:30 <br>
 Place: CRG Training center
 
 * [R intro](https://sbcrg.github.io/CRG_RIntroduction/day1/Rintro)
+* [<h3>R intro</h3>](https://sbcrg.github.io/CRG_RIntroduction/day1/Rintro)
+* <h3>[R intro]</h3>(https://sbcrg.github.io/CRG_RIntroduction/day1/Rintro)
 
 
 
