@@ -1,7 +1,7 @@
 <h2>Arithmetic operators</h2>
 
 | Operator  | Function      |
-| --------- |:-------------:|
+|:--------: |:-------------:|
 |     +     | addition      |
 |     -     | subtraction   |
 |     /     | division      |
@@ -17,11 +17,26 @@ Type **Enter** for R to interpret the command.
 
 Given the following table:
 | type of RNA | Total   |
-| ----------- |:-------:|
+| :---------: |:-------:|
 | mRNA        | 329     |
 | miRNA       | 45      |
 | snoRNA      | 12      |
 | lncRNA      | 28      |
+
+ <table style="width:50%">
+  <tr>
+    <th>type of RNA</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>mRNA</td>
+    <td>329</td>
+  </tr>
+  <tr>
+    <td>miRNA</td>
+    <td>45</td>
+  </tr>
+</table> 
 
 Calculate the total number of RNAs reported in the table:
 ```{r}
