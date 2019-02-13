@@ -22,7 +22,28 @@ setwd("/users/bi/sbonnin/Rintro/day1")<br>
     getwd()
     a < 1 + 3
   ```
+
 </details>
+
+
+<details>
+<summary>I could use some help...</summary>
+<p>
+
+```c#
+public class Order
+{
+    public int OrderId { get; set; }
+    public int CustomerId { get; set; }
+
+    public List<int> Products { get; set; }
+}
+\```
+
+</p>
+</details>
+
+
 
 
 <details><summary>CLICK ME</summary>
