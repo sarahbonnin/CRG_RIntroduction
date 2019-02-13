@@ -1,3 +1,21 @@
+# Instructor
+Sarah Bonnin - [CRG bioinformatics unit](https://biocore.crg.eu/)
+
+* [Set up](http://alsanju.github.io/NGSchool2018/setup)
+* [Long-read WGS](http://alsanju.github.io/NGSchool2018/long-readWGS)
+
+# Date and time
+* Day 1 & 2: Monday 18th & Tuesday 19th February, 2019
+* Day 3 & 4: Monday 25th & Tuesday 26th February, 2019
+* Day 5 & 6: 
+* Day 6 & 7: 
+
+Time: 10:00-13:30
+Place: CRG Training center
+
+
+
+
 <h1>Introduction</h1>
 Introduction to R history
 what is R
@@ -6,7 +24,7 @@ what is R
 
 <div id="TOC">
 <h2 class="title"><a href="#day12">Day 1 & 2 </a></h2>
-  <h3><a href="#rintro">R studio</a></h3>
+  <h3><a href="#rintro">R intro</a></h3>
   <h3><a href="#rstudio">R studio</a></h3>
   <h3><a href="#rbasics">R basics</a></h3>
 <h2 class="title"><a href="#day34">Day 3 & 4 </a></h2>
