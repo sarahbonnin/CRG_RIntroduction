@@ -3,8 +3,16 @@
 
 @import "{{ site.theme }}";
 
-table, th, td {
-  border: 3px solid red;
+table, td {
+  border: 1px solid black;
   background: transparent;
+  width: 80%;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+th {
+  color: black;
 }
 
