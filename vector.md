@@ -52,7 +52,7 @@ length(a)
 
  + extract elements using their position (index) in the vector:
 
-<img src="vector_indices.png" width="300">
+<img src="vector_indices.png" width="500">
 
 ```{r}
 a <- 1:6
@@ -63,7 +63,7 @@ a[2:4]
 
  + extract elements using their names:
 
-<img src="vector_indices_names.png" width="300">
+<img src="vector_indices_names.png" width="500">
 
 ```{r}
 a["mRNA"]
@@ -85,15 +85,15 @@ a <- a[-3]
 
 * __Show__ versus __change__
 
-x[-2] <img src="red_triangle.jpg" width="30"> x <span style="color:red">unchanged</span> !
+x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">unchanged</span> !
 
-x <- x[-2] <img src="red_triangle.jpg" width="30"> x <span style="color:red">reassigned</span> !
+x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">reassigned</span> !
 
 <h3>Numeric vector manipulation</h3>
 
 * Adding 2 to a vector adds 2 to **each element** of the vector
 
-<img src="vector_addition.png" width="300">
+<img src="vector_addition.png" width="350">
 
 > Same goes for subtractions, multiplications and divisions...
 
