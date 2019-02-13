@@ -4,7 +4,7 @@
 
 * Available for Windows, Mac OS and LINUX
 
-![](rstudio_logo.png "RStudio")
+![](rstudio_logo.png  =50x)
 
 <h2>RStudio access</h2>
 * [RStudio Desktop installation](https://www.rstudio.com/products/rstudio/download)
