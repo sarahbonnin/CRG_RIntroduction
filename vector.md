@@ -1,7 +1,7 @@
 <h2>Vectors</h2>
 
 A vector is a sequence of data elements from the **same type**.
-|:---:|:---:|:---:|:---:|
+| :-: | :-: | :-: | :-: |
 | 329 | 45 | 12 | 28 |
 
 <h3>Creating a vector</h3>
@@ -43,8 +43,7 @@ names(a) <- b
 
 * Get the length (number of elements) of a vector
 
-```{r, eval=TRUE}
-a <- 1:6
+```{r}
 length(a)
 ```
 
