@@ -1,22 +1,17 @@
-## Exercice 1. Basics in R
+## Exercice 1. Getting started.
 
-# Create the script "exercise1.R" (in R Studio: File -> New File) 
-# and save it to the "Rintro/day1" directory: 
-# you will save all the commands of exercise 1 in that  script.
-# Remember you can comment the code using #.
+Create the script "exercise1.R" (in R Studio: File -> New File) and save it to the "Rcourse/Module11" directory: you will save all the commands of exercise 1 in that  script.
+Remember you can comment the code using #.
 
-#From the console:
-1. Go to Rintro/day1.
+1. From the terminal, go to Rintro/day1.
 First check where you currently are with getwd(); 
 then go to Rintro/day1 with setwd()
 <details><summary>correction</summary>
-<p>
 ```{r}
 getwd()
 setwd("Rintro/day1")
 setwd("/users/bi/sbonnin/Rintro/day1")
 ```
-</p>
 </details>
 
 2. Using R as a calculator, calculate the square root of 654.
