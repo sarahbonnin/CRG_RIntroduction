@@ -2,52 +2,7 @@
 
 A vector is a sequence of data elements from the **same type**.
 
-| :-: | :-: | :-: | :-: |
 | 329 | 45 | 12 | 28 |
-
-| | | | |
-|-|-|-|-|
-| 329 | 45 | 12 | 28 |
-
-<table style="width: 60%">
-    <colgroup>
-       <col span="1" style="width: 33%;">
-       <col span="1" style="width: 33%;">
-       <col span="1" style="width: 33%;">
-    </colgroup>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-</table>
-
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td markdown="span">First column **fields**</td>
-<td markdown="span">Some descriptive text.</td>
-<td markdown="span">test</td>
-</tr>
-<tr>
-<td markdown="span">Second column</td>
-<td markdown="span">Some more descriptive text.</td>
-<td markdown="span">test</td>
-</tr>
-</tbody>
-</table>
 
 
 <h3>Creating a vector</h3>
@@ -92,5 +47,58 @@ names(a) <- b
 ```{r}
 length(a)
 ```
+
+* Extracting elements from vector **a**
+
+ + extract elements using their position (index) in the vector:
+
+<img src="vector_indices.png" width="300">
+
+```{r}
+a <- 1:6
+a[1]
+a[c(1,3)]
+a[2:4]
+```
+
+ + extract elements using their names:
+
+<img src="vector_indices_names.png" width="300">
+
+```{r}
+a["mRNA"]
+a[c("miRNA", "lncRNA")]            
+```
+
+* Replacing a vector's value
+
+```{r}
+a[2] <- 31
+a["miRNA"] <- 31
+```
+
+* Removing a vector's element
+
+```{r}
+a <- a[-3]
+```
+
+* __Show__ versus __change__
+
+x[-2] <img src="red_triangle.jpg" width="30"> x <span style="color:red">unchanged</span> !
+
+x <- x[-2] <img src="red_triangle.jpg" width="30"> x <span style="color:red">reassigned</span> !
+
+<h3>Numeric vector manipulation</h3>
+
+* Adding 2 to a vector adds 2 to **each element** of the vector
+
+<img src="vector_addition.png" width="300">
+
+> Same goes for subtractions, multiplications and divisions...
+
+* Which elements of a are equal to 2?
+
+
 
 
