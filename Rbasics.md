@@ -1,4 +1,4 @@
-<h2>R basics</b2>
+<h2>R basics</h2>
 <h3>Arithmetic operators</h3>
 
 | Operator  | Function      |
