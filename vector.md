@@ -25,9 +25,9 @@ A vector is a sequence of data elements from the **same type**.
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
-<col width="50%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
 <thead>
 <tr class="header">
