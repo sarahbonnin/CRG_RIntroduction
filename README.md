@@ -31,7 +31,10 @@
 * [Exercise 1](https://sbcrg.github.io/CRG_RIntroduction/exercise1): Getting started.
 * [Data types](https://sbcrg.github.io/CRG_RIntroduction/datatype)
 * [Data structures](https://sbcrg.github.io/CRG_RIntroduction/datastructure)
-
+  + [Vector](https://sbcrg.github.io/CRG_RIntroduction/vector)
+  + [Matrix](https://sbcrg.github.io/CRG_RIntroduction/matrix)
+  + [Data frame](https://sbcrg.github.io/CRG_RIntroduction/dataframe)
+  + [Factor](https://sbcrg.github.io/CRG_RIntroduction/factor)
 <h3>Module 2</h3>
 * [Input / Output](https://sbcrg.github.io/CRG_RIntroduction/inout)
 * [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
