@@ -25,21 +25,6 @@ Given the following table:
 | lncRNA      | 28      |
 
 
- <table style="width:50%; background-color: #f5f5f5;">
-  <tr>
-    <th>type of RNA</th>
-    <th>Total</th>
-  </tr>
-  <tr>
-    <td>mRNA</td>
-    <td>329</td>
-  </tr>
-  <tr>
-    <td>miRNA</td>
-    <td>45</td>
-  </tr>
-</table> 
-
 Calculate the total number of RNAs reported in the table:
 ```{r}
 329 + 45 + 12 + 28
@@ -54,7 +39,7 @@ What is the percentage of miRNA?
 <img src="objects_box.png" alt="rstudio logo" width="300"/>
 
 <h2>R syntax</h2>
-<img src="rsyntax1.png" alt="rstudio logo" width="250"/>
+<img src="rsyntax1.png" alt="rstudio logo" width="350"/>
 
 <h3>Assignment operators</h3>
 + **<-** or **=**
