@@ -1,18 +1,18 @@
-<h3> Instructor </h3>
-Sarah Bonnin - [CRG bioinformatics unit](https://biocore.crg.eu/)
-
 <h3> Date and time </h3>
-Dates:
+<b>Dates:</b>
 * Day 1 & 2: Monday 18th & Tuesday 19th February, 2019
 * Day 3 & 4: Monday 25th & Tuesday 26th February, 2019
 * Day 5 & 6: Monday 4th & Tuesday 5th March, 2019
 * Day 6 & 7: Monday 11th & Tuesday 12th March, 2019
 
-Time: 
+<b>Time:</b>
 * 10:00-13:30 <br>
 
-Place: 
+<b>Place:</b>
 * CRG Training center
+
+<h3> Instructor </h3>
+Sarah Bonnin - [CRG bioinformatics unit](https://biocore.crg.eu/)
 
 <h2> Program </h2>
 
