@@ -7,11 +7,26 @@ Remember you can comment the code using #.
 First check where you currently are with getwd(); 
 then go to Rintro/day1 with setwd()
 <details><summary>correction</summary>
+
 ```{r}
 getwd()
 setwd("Rintro/day1")
 setwd("/users/bi/sbonnin/Rintro/day1")
 ```
+
+</details>
+
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
 </details>
 
 2. Using R as a calculator, calculate the square root of 654.
@@ -41,12 +56,13 @@ myobject <- 87
 ```{r}
 myobject <- myobject - 1
 ```
-# 7. Create a new object mysqrt that will store 
-# the square root of myobject.
+7. Create a new object mysqrt that will store the square root of myobject.
+```{r}
 mysqrt <- sqrt(myobject)
+```
 
-# 8. Create a new object mydiv that will store 
-# the result of myobject divided by mysqrt.
+8. Create a new object mydiv that will store the result of myobject divided by mysqrt.
+```{r}
 mydiv <- myobject / mysqrt
-
+```
 
