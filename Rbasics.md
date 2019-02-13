@@ -1,4 +1,5 @@
-<h2>Arithmetic operators</h2>
+<h2>R basics</b2>
+<h3>Arithmetic operators</h3>
 
 | Operator  | Function      |
 |:--------: |:-------------:|
@@ -13,7 +14,7 @@
 ```
 Type **Enter** for R to interpret the command.
 
-<h3>Simple calculaion</h3>
+<h3>Simple calculations</h3>
 
 Given the following table:
 

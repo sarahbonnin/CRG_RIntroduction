@@ -15,7 +15,7 @@
 ![](rstudio_login.png "RStudio login")
 
 <h2>RStudio interface</h2>
-* 4 Windows:
+* 4 panels:
 + top-left: script and documents
 + bottom-left: R terminal
 + top-right: objects, history and environment
