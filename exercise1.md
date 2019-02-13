@@ -8,6 +8,7 @@ First check where you currently are with getwd();
 then go to Rintro/day1 with setwd()
 
 <details>
+<summary>correction</summary>
 
 ```{r}
 getwd()
