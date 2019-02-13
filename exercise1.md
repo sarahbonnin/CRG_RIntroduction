@@ -3,9 +3,9 @@
 Create the script "exercise1.R" (in R Studio: File -> New File) and save it to the "Rcourse/Module11" directory: you will save all the commands of exercise 1 in that  script.
 <br>Remember you can comment the code using #.
 
-1- From the terminal, go to Rintro/day1.
+**1- From the terminal, go to Rintro/day1.
 First check where you currently are with getwd(); 
-then go to Rintro/day1 with setwd()
+then go to Rintro/day1 with setwd()**
 
 <details>
 <summary>
@@ -21,7 +21,7 @@ setwd("/users/bi/sbonnin/Rcourse/Module1")
 </details>
 
 
-2- Using R as a calculator, calculate the square root of 654.
+**2- Using R as a calculator, calculate the square root of 654.**
 
 <details>
 <summary>
@@ -34,7 +34,7 @@ sqrt(654)
 
 </details>
 
-3- Using R as a calculator, calculate the percentage of males and females currently present in the classroom.
+**3- Using R as a calculator, calculate the percentage of males and females currently present in the classroom.**
 
 <details>
 <summary>
@@ -48,8 +48,8 @@ correction
 
 </details>
 
-4- Create a new object myobject with value 60.
-Show myobject in the console.
+**4- Create a new object myobject with value 60.
+Show myobject in the console.**
 
 <details>
 <summary>
@@ -63,7 +63,7 @@ myobject
 
 </details>
 
-5- Reassign myobject with value 87.
+**5- Reassign myobject with value 87.**
 
 <details>
 <summary>
@@ -76,7 +76,7 @@ myobject <- 87
 
 </details>
 
-6- Subtract 1 to myobject. Reassign.
+**6- Subtract 1 to myobject. Reassign.**
 
 <details>
 <summary>
@@ -89,7 +89,7 @@ myobject <- myobject - 1
 
 </details>
 
-7- Create a new object mysqrt that will store the square root of myobject.
+**7- Create a new object mysqrt that will store the square root of myobject.**
 
 <details>
 <summary>
@@ -102,7 +102,7 @@ mysqrt <- sqrt(myobject)
 
 </details>
 
-8- Create a new object mydiv that will store the result of myobject divided by mysqrt.
+**8- Create a new object mydiv that will store the result of myobject divided by mysqrt.**
 
 <details>
 <summary>
