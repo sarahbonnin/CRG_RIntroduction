@@ -25,7 +25,7 @@ Given the following table:
 | lncRNA      | 28      |
 
 
- <table style="width:50%"; background-color: #f5f5f5;>
+ <table style="width:50%; background-color: #f5f5f5;">
   <tr>
     <th>type of RNA</th>
     <th>Total</th>
