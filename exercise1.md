@@ -6,43 +6,16 @@ Remember you can comment the code using #.
 1. From the terminal, go to Rintro/day1.
 First check where you currently are with getwd(); 
 then go to Rintro/day1 with setwd()
+
 <details><summary>correction</summary>
 
-getwd()<br>
-setwd("Rintro/day1")<br>
-setwd("/users/bi/sbonnin/Rintro/day1")<br>
+```{r}
+getwd()
+setwd("Rcourse/Module1")
+setwd("/users/bi/sbonnin/Rcourse/Module1")
+```
 
 </details>
-
-
-<details>
-  <summary>Click to expand!</summary>
-  
-  ```r
-    getwd()
-    a < 1 + 3
-  ```
-
-</details>
-
-
-<details>
-<summary>I could use some help...</summary>
-<p>
-
-```c#
-public class Order
-{
-    public int OrderId { get; set; }
-    public int CustomerId { get; set; }
-
-    public List<int> Products { get; set; }
-}
-\```
-
-</p>
-</details>
-
 
 
 
@@ -58,13 +31,6 @@ print("hello world!")
 </p>
 </details>
 
-
-<details>
-  <summary>Click to expand</summary>
-  ```
-  getwd()
-   ```
-</details>
 
 
 
