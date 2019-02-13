@@ -10,8 +10,10 @@ Sarah Bonnin - [CRG bioinformatics unit](https://biocore.crg.eu/)
 * Day 5 & 6: 
 * Day 6 & 7: 
 
-Time: 10:00-13:30
+Time: 10:00-13:30 <br>
 Place: CRG Training center
+
+* <h3>[R intro](https://sbcrg.github.io/CRG_RIntroduction/day1/Rintro)</h3>
 
 
 
