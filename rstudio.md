@@ -4,7 +4,7 @@
 
 * Available for Windows, Mac OS and LINUX
 
-<img src="rstudio_logo.png" alt="rstudio logo" width="100"/>
+<img src="rstudio_logo.png" alt="rstudio logo" width="250"/>
 
 <h2>RStudio access</h2>
 * [RStudio Desktop installation](https://www.rstudio.com/products/rstudio/download)
@@ -21,7 +21,7 @@
 + top-right: objects, history and environment
 + bottom-right: folder tree, plot window, packages, help window, viewer
 
-![](rstudio_interface.png "RStudio windows")
+<img src="rstudio_interface.png" alt="rstudio logo" width="1000"/>
 
 <h2>Setting up the folder structure for the course</h2>
 Rcourse

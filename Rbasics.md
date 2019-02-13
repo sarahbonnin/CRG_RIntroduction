@@ -2,11 +2,11 @@
 
 | Operator  | Function      |
 | --------- |:-------------:|
-| +         | addition      |
-| -         | subtraction   |
-| /         | division      |
-| *	    | multiplication|
-| ^ or **   | exponential   |
+|     +     | addition      |
+|     -     | subtraction   |
+|     /     | division      |
+|     *     | multiplication|
+|  ^ or **  | exponential   |
 
 ```{r}
 10 - 2
