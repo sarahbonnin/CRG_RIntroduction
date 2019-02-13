@@ -8,12 +8,20 @@ First check where you currently are with getwd();
 then go to Rintro/day1 with setwd()
 <details><summary>correction</summary>
 
-```{r}
-getwd()
-setwd("Rintro/day1")
-setwd("/users/bi/sbonnin/Rintro/day1")
-```
+getwd()<br>
+setwd("Rintro/day1")<br>
+setwd("/users/bi/sbonnin/Rintro/day1")<br>
 
+</details>
+
+
+<details>
+  <summary>Click to expand!</summary>
+  
+  ```r
+    getwd()
+    a < 1 + 3
+  ```
 </details>
 
 
