@@ -44,4 +44,6 @@ help(getwd)
 ```{r}
 example(mean)
 ```
+<br>
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

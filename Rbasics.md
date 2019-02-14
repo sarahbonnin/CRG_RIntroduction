@@ -63,4 +63,6 @@ B <- B + 10<br>
 ```
 <span style="color:red">some **B changed !!** text</span><br>
 
+<br>
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

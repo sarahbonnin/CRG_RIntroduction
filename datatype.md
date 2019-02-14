@@ -23,4 +23,6 @@ class(b)
 typeof(b)
 ```
 
+<br>
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

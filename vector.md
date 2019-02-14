@@ -99,6 +99,8 @@ x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">rea
 
 * Which elements of a are equal to 2?
 
+<br>
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
 
 

@@ -17,9 +17,7 @@
 * Access through a command-line interpreter:
 ![](rterminal.png "R command line")
 
-<h2></h2>
-<h2></h2>
-<h2></h2>
-<h2></h2>
-<h2></h2>
+
+
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

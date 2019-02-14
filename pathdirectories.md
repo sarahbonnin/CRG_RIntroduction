@@ -35,3 +35,7 @@ setwd("..")
 ```
 You are now in: "/nfs/users/bi/sbonnin/Rcourse"
 
+<br>
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+
+

@@ -33,4 +33,6 @@ Ctrl + cmd + <img src="arrow_up.png" width="40"/> : Browse command history.
 
 <img src="tab_functions.png" width="300"/>
 
+<br>
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
