@@ -146,7 +146,7 @@ b <- c(2, 3, 0)
 a * b
 ```
 
-<img src="vector_multiply.png" width="350">
+<img src="vector_multiply.png" width="250">
 
 * Multiplying a vector by another **shorter** vector
 
@@ -156,10 +156,10 @@ b <- c(2, 3, 0)
 a * b
 ```
 
-<img src="vector_multi_recycle.png" width="350">
+<img src="vector_multi_recycle.png" width="300">
 
 
-> Vector **a** is "recycled" !
+ > Vector **a** is "recycled" !
 
 
 <br>
