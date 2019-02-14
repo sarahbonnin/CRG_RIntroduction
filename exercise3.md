@@ -41,7 +41,7 @@ rep(x=c("miRNA", "mRNA"), times=c(10, 2))
 
 </details>
 
-**4- What does table(w) output?**
+**4- What is the output of table(w) ? What does the table function do ?**
 
 **5- Type w[grep(pattern="mRNA", x=w)] and w[w == "mRNA"]**
 <br> Is there a difference between the two outputs?
@@ -54,6 +54,7 @@ correction
 ```{r}
 w[grep(pattern="mRNA", w)]
 w[w == "mRNA"]
+# no difference between the outputs
 ```
 
 </details>
@@ -69,18 +70,21 @@ correction
 ```{r}
 w[grep(pattern="RNA", w)]
 w[w == "RNA"]
+# grep outputs 5 values but == outputs none
 ```
 
 </details>
 
 What is the difference between **==** and **grep** ?
 
+
 <details>
 <summary>
 correction
 </summary>
 
-== looks for exact matches.
+>= looks for exact matches.
+<br>
 grep looks for **patterns**.
 
 </details>
@@ -170,6 +174,17 @@ tt <- "Introduction to R course"
 
 How many characters does tt contain? Use nchar().
 
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+nchar(tt)
+```
+
+</details>
+
 **4- Remove "Introduction to R" from tt.**
 <br>You can try with either substr() or gsub()
 
@@ -185,6 +200,7 @@ gsub(pattern="Introduction to R ", x=tt)
 
 </details>
 
+> Go to [Factors](https://sbcrg.github.io/CRG_RIntroduction/factor)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

@@ -242,7 +242,7 @@ Go to [Exercise 3](https://sbcrg.github.io/CRG_RIntroduction/exercise3): Charact
 myvector <- c(1, 2, 3, 1, 2, 3, 1, 2, 3)
 ```
 
-**Create the same vector using the rep() function (?rep) **
+**Create the same vector using the rep() function (?rep)**
 
 <details>
 <summary>
