@@ -34,5 +34,7 @@ Ctrl + cmd + <img src="arrow_up.png" width="40"/> : Browse command history.
 <img src="tab_functions.png" width="300"/>
 
 <br>
+Time for [Exercise 1](https://sbcrg.github.io/CRG_RIntroduction/exercise1): Getting started!
+<br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

@@ -28,7 +28,6 @@ from CRG [Bioinformatics core facility](https://biocore.crg.eu/)
 * [R basics](https://sbcrg.github.io/CRG_RIntroduction/Rbasics)
 * [Functions (usage of)](https://sbcrg.github.io/CRG_RIntroduction/functionsbasics)
 * [R scripts](https://sbcrg.github.io/CRG_RIntroduction/Rscripts)
-* [Exercise 1](https://sbcrg.github.io/CRG_RIntroduction/exercise1): Getting started.
 * [Data types](https://sbcrg.github.io/CRG_RIntroduction/datatype)
 * [Data structures](https://sbcrg.github.io/CRG_RIntroduction/datastructure)
   + [Vector](https://sbcrg.github.io/CRG_RIntroduction/vector)

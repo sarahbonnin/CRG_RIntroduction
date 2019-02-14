@@ -91,16 +91,74 @@ x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">rea
 
 <h3>Numeric vector manipulation</h3>
 
-* Adding 2 to a vector adds 2 to **each element** of the vector
+<h4>Logical operators</h4>
+| Operator  | Function      |
+|:--------: |:-------------:|
+|     <     | less than      |
+|     <=    | less than or equal to   |
+|     >     | greater than  |
+|     >=    | greater than or equal to|
+|     ==    | exactly equal to   |
+|     !=    | not equal to |
 
+
+* Which elements of **a** are equal to 2?
+```{r}
+a <- 1:5
+a == 2
+```
+<img src="vector_equal.png" width="350">
+
+* Which elements of **a** are superior to 2?
+```{r}
+a <- 1:5
+a > 2
+```
+<img src="vector_super.png" width="350">
+
+* Extract elements of a vector that comply with the condition
+```{r}
+a <- 1:5
+a >= 2
+a[a >= 2]
+```
+<img src="vector_subvector.png" width="350">
+
+<h4>Operations</h3>
+
+* Adding 2 to a vector adds 2 to **each element** of the vector
+```{r}
+a <- 1:5
+a + 2
+```
 <img src="vector_addition.png" width="350">
 
 > Same goes for subtractions, multiplications and divisions...
 
-* Which elements of a are equal to 2?
+* Multiplying a vector by another vector of equal length
+```{r}
+a <- c(2, 4, 6)
+b <- c(2, 3, 0)
+a * b
+```
+<img src="vector_multiply.png" width="350">
+
+* Multiplying a vector by another **shorter** vector
+```{r}
+a <- c(2, 4, 6, 3, 1)
+b <- c(2, 3, 0)
+a * b
+```
+<img src="vector_multi_recycle.png" width="350">
+
+
+> Vector **a** is "recycled" !
+
 
 <br>
+
+
+
+
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
-
-
 
