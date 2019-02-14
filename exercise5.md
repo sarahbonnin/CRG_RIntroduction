@@ -17,7 +17,7 @@ setwd("/users/bi/sbonnin/Rcourse/Module1")
 
 </details>
 
-**1- Create the following data frame:
+**1- Create the following data frame:**
 
 |43|181|M|
 |34|172|F|
@@ -165,6 +165,7 @@ mydf1:
 |4|10|
 
 mydf2:
+
 |1|paul|
 |2|helen|
 |3|emily|
@@ -237,7 +238,7 @@ download.file("https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_data
 
 </details>
 
-**2- The function dir() lists the files and directories present in the current directory: check if **genes_dataframe.RData** was copied.
+**2- The function dir() lists the files and directories present in the current directory: check if genes_dataframe.RData was copied.**
 
 <details>
 <summary>
