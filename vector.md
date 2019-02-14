@@ -93,9 +93,9 @@ x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">rea
 
 <h4>Logical operators</h4>
 
-| Operator  | Function      |
+| Operator  | Description   |
 |:--------: |:-------------:|
-|     <     | less than      |
+|     <     | less than    |
 |     <=    | less than or equal to   |
 |     >     | greater than  |
 |     >=    | greater than or equal to|
@@ -160,6 +160,63 @@ a * b
 
 
  > Vector **a** is "recycled" !
+
+* Summary statistics
+
+| Function  | Description   |
+|:--------: |:-------------:|
+|     mean(x)  | mean / average |
+|    median(x) | median |
+|     min(x)   | greater than |
+|     max(x)   | greater than or equal to |
+|     var(x)   | exactly equal to |
+| summary(x) | mean, median, min, max, quartiles |
+
+```{r}
+a <- c(1, 3, 12, 45, 3, 2)
+summary(a)
+```
+
+<h3>Combining vectors</h3>
+
+* From 2 vectors **a** and **b** you can create a vector **d**
+
+```{r}
+a <- 2:5
+b <- 4:6
+d <- c(a, b)
+```
+ 
+ > The elements of **b** are added after the elements of **a**
+
+* Likewise, you can add elements at the end of a vector
+
+```{r}
+d <- c(d, 19)
+```
+
+<h3>Comparing vectors</h3>
+
+* The **%in%** operator
+
+Which elements of **a** are also found in **b* ?
+
+```{r}
+a <- 2:6
+b <- 4:10
+a %in% b
+```
+
+<img src="vector_in.png" width="150">
+
+Retrieve actual elements of **a** that are found in **b**:
+
+```{r}
+a <- 2:6
+b <- 4:10
+a[a %in% b]
+```
+
 
 
 <br>
