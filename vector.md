@@ -210,7 +210,7 @@ b <- 4:10
 a %in% b
 ```
 
-<img src="vector_in.png" width="150">
+<img src="vector_in.png" width="300">
 
 Retrieve actual elements of **a** that are found in **b**:
 
