@@ -1,0 +1,289 @@
+## Exercise 4. Matrix manipulation
+
+Create the script "exercise4.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 4 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+getwd()
+setwd("Rcourse/Module1")
+setwd("/users/bi/sbonnin/Rcourse/Module1")
+```
+
+</details>
+
+**1- Create three numeric vectors x, y, z, each of 4 elements of your choice.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+x <- 2:5
+y <- 6:9
+z <- 7:4
+```
+
+Use rbind() to create a matrix **mat** (3 rows and 4 columns) out of x, y and z.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mat <- rbind(x, y, z)
+```
+
+</details>
+
+**2- Create the same matrix now using the matrix function.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mat <- matrix(data=c(x, y, z), nrow=3, ncol=4, byrow=TRUE)
+```
+
+</details>
+
+**3- Add names to mat's columns: "a", "b", "c", "d", respectively.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+colnames(mat) <- c("a", "b", "c", "d")
+```
+
+</details>
+
+**4- Calculate the sum of each row, and the sum of each column**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+rowSums(mat); colSums(mat)
+```
+
+</details>
+
+**5- Create the matrix mat2 as:
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mat2 <- matrix(c(seq(from=1, to=10, by=2), 5:1, rep(x=2017, times=5)), ncol=3)
+```
+
+</details>
+
+What does function seq() do?
+
+<details>
+<summary>
+correction
+</summary>
+
+**seq** generate sequences of numbers. Here, it creates a sequences from 1 to 10 with a step of 2 numbers.
+
+</details>
+
+**6- What are the dimensions of mat2 (number of rows and number of columns)?**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# number of rows
+nrow(mat2)
+# number of columns
+ncol(mat2)
+# dimensions: number of rows, number of columns
+dim(mat2)
+```
+
+</details>
+
+**7- Add column names to mat2: "day", "month" and "year", respectively.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+colnames(mat2) <- c("day", "month", "year")
+```
+
+</details>
+
+**8- Add row names to mat2: letters "A" to "E"**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+rownames(mat2) <- c("A", "B", "C", "D", "E")
+rownames(mat2) <- LETTERS[1:5]
+```
+
+</details>
+
+**9- Shows row(s) of mat2 where the month column is greater than or equal to 3.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# select column month
+mat2[, "month"]
+# element(s) of column month that is (are) greater than or equal to 3
+mat2[,"month"] >= 3
+# finally select row(s) where the month columns is greater than or equal to 3
+mat2[mat2[,"month"] >= 3,]
+```
+
+</details>
+
+**10- Replace all elements of mat2 that are equal to 2017 with 2018.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# which elements of mat2 that are exactly equal to 2017
+mat2==2017
+# retrieve actual elements
+mat2[mat2==2017]
+# replace all 2017 with 2018
+mat2[mat2==2017] <- 2018
+```
+
+</details>
+
+**11- Multiply all elements of the 2nd column of mat2 by 7. Reassign mat2!**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# multiply all elements of the 2nd column of mat2 by 7
+mat2[,2] * 7
+# reassign mat2 with the new values of column 2
+mat2[,2] <- mat2[,2] * 7
+```
+
+</details>
+
+**12- Add the column named "time" to mat2, that contains values 8, 12, 11, 10, 8. Save in the new object mat3.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+mat3 <- cbind(mat2, time=c(8, 12, 11, 10, 8))
+```
+
+</details>
+
+**13- Replace all elements of mat3 that are less than 3 by NA.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+# which elements of mat3 that are less than 3
+mat3 < 3
+# actually elements of mat3 that are less than 3
+mat3[mat3 < 3]
+# reassign elements of mat3 that are less than 3 with NA
+mat3[mat3 < 3] <- NA
+```
+
+</details>
+
+**14- Remove rows from mat3 if a NA is present. Save in the new object mat4.**
+
+<details> 
+<summary>
+correction
+</summary>
+
+```{r}
+mat4 <- na.omit(mat3)
+```
+
+</details>
+
+**15- Retrieve the smaller value of each column of mat4.**
+
+Try different approaches:
+
+* Retrieve the minimum for each column one by one.
+
+<details> 
+<summary>
+correction
+</summary>
+
+```{r}
+min(mat4[,"day"])
+min(mat4[,"month"])
+min(mat4[,"year"])
+min(mat4[,"time"])
+```
+
+</details>
+
+* Retrieve the minimum of all columns simultaneously using the apply() function.
+
+<details> 
+<summary>
+correction 
+</summary>
+
+```{r}
+# mat4: object
+# 2: by column
+# min: function to apply
+apply(mat4, 2, min)
+```
+
+</details>
+
+> Go to [Exercise 5](https://sbcrg.github.io/CRG_RIntroduction/exercise5): Data frame manipulation
+<br>
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+
