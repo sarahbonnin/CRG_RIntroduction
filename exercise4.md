@@ -57,7 +57,7 @@ mat <- matrix(data=c(x, y, z), nrow=3, ncol=4, byrow=TRUE)
 
 </details>
 
-**3- Add names to mat's columns: "a", "b", "c", "d", respectively.
+**3- Add names to mat's columns: "a", "b", "c", "d", respectively.**
 
 <details>
 <summary>
@@ -83,7 +83,7 @@ rowSums(mat); colSums(mat)
 
 </details>
 
-**5- Create the matrix mat2 as:
+**5- Create the matrix mat2 as:**
 
 <details>
 <summary>
