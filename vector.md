@@ -89,6 +89,25 @@ x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">unchange
 
 x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">reassigned</span> !
 
+<h3>Combining vectors</h3>
+
+* From 2 vectors **a** and **b** you can create a vector **d**
+
+```{r}
+a <- 2:5
+b <- 4:6
+d <- c(a, b)
+```
+
+ > The elements of **b** are added after the elements of **a**
+
+* Likewise, you can add elements at the end of a vector
+
+```{r}
+d <- c(d, 19)
+```
+
+
 <h3>Numeric vector manipulation</h3>
 
 <h4>Logical operators</h4>
@@ -101,7 +120,9 @@ x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">rea
 |     >=    | greater than or equal to|
 |     ==    | exactly equal to   |
 |     !=    | not equal to |
-
+|    !x     | not x |
+|   x \| y | x OR y |
+|   x & y | x AND y |
 
 * Which elements of **a** are equal to 2?
 ```{r}
@@ -177,24 +198,6 @@ a <- c(1, 3, 12, 45, 3, 2)
 summary(a)
 ```
 
-<h3>Combining vectors</h3>
-
-* From 2 vectors **a** and **b** you can create a vector **d**
-
-```{r}
-a <- 2:5
-b <- 4:6
-d <- c(a, b)
-```
- 
- > The elements of **b** are added after the elements of **a**
-
-* Likewise, you can add elements at the end of a vector
-
-```{r}
-d <- c(d, 19)
-```
-
 <h3>Comparing vectors</h3>
 
 * The **%in%** operator
@@ -217,12 +220,33 @@ b <- 4:10
 a[a %in% b]
 ```
 
+<h3>Character vector manipulation</h3>
 
+Character vectors are manipulated similarly to numeric ones.
+
+* The **%in%** operator:
+
+```{r}
+k <- c("mRNA", "miRNA", "snoRNA", "RNA", "lincRNA")
+p <- c("mRNA","lincRNA", "tRNA", "miRNA")
+k %in% p
+k[k %in% p]
+```
+
+* Select elements from vector **m** that are not *exon*
+
+```{r}
+m <- c("exon", "intron", "exon")
+m != "exon"
+m[m != "exon"]
+```
 
 <br>
 
+<br>
+Go to [Exercise 2](https://sbcrg.github.io/CRG_RIntroduction/exercise2): Numeric vector manipulation !
+<br>
 
 
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+ > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

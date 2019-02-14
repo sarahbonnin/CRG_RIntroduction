@@ -1,9 +1,9 @@
 ## Exercice 1. Getting started.
 
-Create the script "exercise1.R" (in R Studio: File -> New File) and save it to the "Rcourse/Module11" directory: you will save all the commands of exercise 1 in that  script.
+Create the script "exercise1.R" (in R Studio: File -> New File) and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 1 in that  script.
 <br>Remember you can comment the code using #.
 
-**1- From the terminal, go to Rintro/day1.
+**1- From the terminal, go to Rcourse/Module1.
 First check where you currently are with getwd(); 
 then go to Rintro/day1 with setwd()**
 
