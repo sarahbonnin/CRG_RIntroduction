@@ -92,6 +92,7 @@ x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">rea
 <h3>Numeric vector manipulation</h3>
 
 <h4>Logical operators</h4>
+
 | Operator  | Function      |
 |:--------: |:-------------:|
 |     <     | less than      |
@@ -124,31 +125,37 @@ a[a >= 2]
 ```
 <img src="vector_subvector.png" width="350">
 
-<h4>Operations</h3>
+<h4>Operations on vectors</h4>
 
 * Adding 2 to a vector adds 2 to **each element** of the vector
+
 ```{r}
 a <- 1:5
 a + 2
 ```
+
 <img src="vector_addition.png" width="350">
 
 > Same goes for subtractions, multiplications and divisions...
 
 * Multiplying a vector by another vector of equal length
+
 ```{r}
 a <- c(2, 4, 6)
 b <- c(2, 3, 0)
 a * b
 ```
+
 <img src="vector_multiply.png" width="350">
 
 * Multiplying a vector by another **shorter** vector
+
 ```{r}
 a <- c(2, 4, 6, 3, 1)
 b <- c(2, 3, 0)
 a * b
 ```
+
 <img src="vector_multi_recycle.png" width="350">
 
 
