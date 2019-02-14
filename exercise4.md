@@ -29,6 +29,7 @@ x <- 2:5
 y <- 6:9
 z <- 7:4
 ```
+</details>
 
 Use rbind() to create a matrix **mat** (3 rows and 4 columns) out of x, y and z.
 
