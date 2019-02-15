@@ -1,4 +1,4 @@
-<h2> Date & time </h2>
+<h2>Dates, time & location</h2>
 
 <h3>Dates:</h3>
 * Module 1: Monday 18th & Tuesday 19th February, 2019
@@ -9,7 +9,7 @@
 <h3>Time:</h3>
 * 10:00-13:30 <br>
 
-<h3>Place:</h3>
+<h3>Location:</h3>
 * CRG Training center
 
 <h2> Instructors </h2>
@@ -18,7 +18,7 @@
 from the CRG [Bioinformatics core facility](https://biocore.crg.eu/)
 
 <h2>Learning objectives</h2>
-<img src="images/learningobjectives.png"  width="600"/>
+<a href="https://sbcrg.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>
 
 <h2> Program </h2>
 
