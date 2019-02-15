@@ -12,7 +12,7 @@
 * [RStudio access from the CRG server](http://rstudio.linux.crg.es/)
 	+ Access with CRG credentials
 
-![](rstudio_login.png "RStudio login")
+![](images/rstudio_login.png "RStudio login")
 
 <h2>RStudio interface</h2>
 * 4 panels:
@@ -24,14 +24,15 @@
 <img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/>
 
 <h2>Setting up the folder structure for the course</h2>
-Rcourse
-|-Module1
-|-Module2
-|-Module3
-|-Module4
+Rcourse<br>
+  |-Module1<br>
+  |-Module2<br>
+  |-Module3<br>
+  |-Module4<br>
 
-![](rstudio_folder.png "RStudio create folder")
+![](images/rstudio_folder.png "RStudio create folder")
 
+ > Go to [Paths and directories]((https://sbcrg.github.io/CRG_RIntroduction/pathdirectories)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

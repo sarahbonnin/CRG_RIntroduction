@@ -8,7 +8,7 @@
 * The shortcut to your home directoryis <b>~</b>
 
 <h2>Tree of directories</h2>
-![](tree_directories.png "Tree of directories")
+![](images/tree_directories.png "Tree of directories")
 
 <h2>Navigate with R terminal</h2>
 
@@ -21,20 +21,21 @@ getwd()
 * Change working directory
 Go to a directory giving the absolute path: 
 ```{r}
-setwd("/nfs/users/bi/sbonnin/Rcourse")
+setwd("$HOME/Rcourse")
 ```
 Go to a directory giving the relative path:
 ```{r}
 setwd("Module1")
 ```
-You are now in: "/nfs/users/bi/sbonnin/Rcourse/Module1"
+You are now in: "$HOME/Rcourse/Module1"
 <br>
 Move one directory "up" the tree with:
 ```{r} 
 setwd("..")
 ```
-You are now in: "/nfs/users/bi/sbonnin/Rcourse"
+You are now in: "$HOME/Rcourse"
 
+ > Go to [R basics](https://sbcrg.github.io/CRG_RIntroduction/Rbasics)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

@@ -44,6 +44,8 @@ help(getwd)
 ```{r}
 example(mean)
 ```
+
+ > Go to [R scripts](https://sbcrg.github.io/CRG_RIntroduction/Rscripts)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
