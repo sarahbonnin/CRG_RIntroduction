@@ -37,10 +37,10 @@ What is the percentage of miRNA?
 
 <h2>Objects in R</h2>
 
-<img src="objects_box.png" alt="rstudio logo" width="300"/>
+<img src="images/objects_box.png" alt="rstudio logo" width="300"/>
 
 <h2>R syntax</h2>
-<img src="rsyntax1.png" alt="rstudio logo" width="350"/>
+<img src="images/rsyntax1.png" alt="rstudio logo" width="350"/>
 
 <h3>Assignment operators</h3>
 + **<-** or **=**

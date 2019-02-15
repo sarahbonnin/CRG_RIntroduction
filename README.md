@@ -18,7 +18,7 @@
 from the CRG [Bioinformatics core facility](https://biocore.crg.eu/)
 
 <h2>Learning objectives</h2>
-<img src="learningobjectives.png"  width="600"/>
+<img src="images/learningobjectives.png"  width="600"/>
 
 <h2> Program </h2>
 

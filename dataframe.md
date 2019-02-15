@@ -21,7 +21,7 @@ d <- data.frame(c("Maria", "Juan", "Alba"),
 <br>
 Very similar to matrix manipulation.
 
-<img src="df_fetch.png" width="450"/>
+<img src="images/df_fetch.png" width="450"/>
 
 
 > Go to [2-dimension objects manipulation](https://sbcrg.github.io/CRG_RIntroduction/2d_manip)

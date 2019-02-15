@@ -52,7 +52,7 @@ length(a)
 
  + extract elements using their position (index) in the vector:
 
-<img src="vector_indices.png" width="500">
+<img src="images/vector_indices.png" width="500">
 
 ```{r}
 a <- 1:6
@@ -63,7 +63,7 @@ a[2:4]
 
  + extract elements using their names:
 
-<img src="vector_indices_names.png" width="500">
+<img src="images/vector_indices_names.png" width="500">
 
 ```{r}
 a["mRNA"]
@@ -85,9 +85,9 @@ a <- a[-3]
 
 * __Show__ versus __change__
 
-x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">unchanged</span> !
+x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">unchanged</span> !
 
-x <- x[-2] <img src="red_triangle.jpg" width="40"> x <span style="color:red">reassigned</span> !
+x <- x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">reassigned</span> !
 
 <h3>Combining vectors</h3>
 
@@ -129,14 +129,14 @@ d <- c(d, 19)
 a <- 1:5
 a == 2
 ```
-<img src="vector_equal.png" width="350">
+<img src="images/vector_equal.png" width="350">
 
 * Which elements of **a** are superior to 2?
 ```{r}
 a <- 1:5
 a > 2
 ```
-<img src="vector_super.png" width="350">
+<img src="images/vector_super.png" width="350">
 
 * Extract elements of a vector that comply with the condition
 ```{r}
@@ -144,7 +144,7 @@ a <- 1:5
 a >= 2
 a[a >= 2]
 ```
-<img src="vector_subvector.png" width="350">
+<img src="images/vector_subvector.png" width="350">
 
 <h4>Operations on vectors</h4>
 
@@ -155,7 +155,7 @@ a <- 1:5
 a + 2
 ```
 
-<img src="vector_addition.png" width="350">
+<img src="images/vector_addition.png" width="350">
 
 > Same goes for subtractions, multiplications and divisions...
 
@@ -167,7 +167,7 @@ b <- c(2, 3, 0)
 a * b
 ```
 
-<img src="vector_multiply.png" width="250">
+<img src="images/vector_multiply.png" width="250">
 
 * Multiplying a vector by another **shorter** vector
 
@@ -177,7 +177,7 @@ b <- c(2, 3, 0)
 a * b
 ```
 
-<img src="vector_multi_recycle.png" width="300">
+<img src="images/vector_multi_recycle.png" width="300">
 
 
  > Vector **a** is "recycled" !
@@ -210,7 +210,7 @@ b <- 4:10
 a %in% b
 ```
 
-<img src="vector_in.png" width="300">
+<img src="images/vector_in.png" width="300">
 
 Retrieve actual elements of **a** that are found in **b**:
 

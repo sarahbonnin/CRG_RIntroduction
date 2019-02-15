@@ -41,13 +41,13 @@ b <- matrix(c(1, 0, 34, 44, 12, 4),
 
 Vectors have one index per element (1-dimension); matrices have **two indices (2-dimensions)** per element, corresponding to the corresponding row and the column:
 
-<img src="matrix_indices.png" alt="rstudio logo" width="200"/>
+<img src="images/matrix_indices.png" alt="rstudio logo" width="200"/>
 
  + Fetching elements of a matrix:
 
 The "coordinates" of an element in a 2-dimensional object will be first the row (on the left), then the column (on the right):
 
-<img src="matrix_rc.png" alt="rstudio logo" width="200"/>
+<img src="images/matrix_rc.png" alt="rstudio logo" width="200"/>
 
 * Matrix manipulation:
 

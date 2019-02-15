@@ -35,7 +35,7 @@ rownames(d) <- c("Patient1", "Patient2", "Patient3")
 
 Column and/or row names can be used to retrieve elements or sets of elements from a 2-dimensional object:
 
-<img src="df_names.png" width="450"/>
+<img src="images/df_names.png" width="450"/>
 
 
 ```{r}
@@ -113,7 +113,7 @@ d[d$Age > 24, ]
 d[ d$Age >= 25 & d$Vegetarian == TRUE, ]
 ```
 
-<img src="df_col2_col3.png" width="550"/>
+<img src="images/df_col2_col3.png" width="650"/>
 
 <h4>More useful commands</h4>
 

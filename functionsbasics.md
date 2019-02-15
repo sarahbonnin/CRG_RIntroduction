@@ -10,7 +10,7 @@ and has the task of outputting the current working directory.
 
 You can recognize a function with the **round brackets**: function**()**
  
-<img src="func_arg1.png"  width="250"/>
+<img src="images/func_arg1.png"  width="250"/>
 
 An function can also take *arguments/parameters*
 ```{r}
@@ -20,7 +20,7 @@ setwd(dir="Rcourse")
 
 * Assign output of a function to an object
 
-<img src="func_arg2.png"  width="250"/>
+<img src="images/func_arg2.png"  width="250"/>
 
 * Getting help
 
@@ -32,7 +32,7 @@ help(getwd)
 ```
 
 + From the RStudio bottom-right panel:
-<img src="func_help.png"  width="400"/>
+<img src="images/func_help.png"  width="400"/>
 
 * The help pages show:
 + required/optional argument(s), if any.

@@ -5,10 +5,10 @@
   + File -> New File -> R Script
   + Once the file has opened: File -> Save 
   + Specify a name: ***the extension .R is automatically added***
-  <img src="rscript_rstudio.png" width="400"/>
+  <img src="images/rscript_rstudio.png" width="400"/>
 
 * Execute commands or blocks of commands from RStudio:
-<img src="rscript_rstudio_cmd.png" width="400"/>
+<img src="images/rscript_rstudio_cmd.png" width="400"/>
 
 <h3>R syntax</h3>
 
@@ -21,17 +21,17 @@ a <- 10
 A + 1
 # Will throw an error because A and a are different
 ```
-<img src="syntax_error.png" width="400"/>
+<img src="images/syntax_error.png" width="400"/>
 
 <h3>RStudio tips in the console</h3>
 
-<img src="arrow_up.png" width="40"/> Upper arrow: goes to the commands previously typed.
+<img src="images/arrow_up.png" width="40"/> Upper arrow: goes to the commands previously typed.
 
-Ctrl + cmd + <img src="arrow_up.png" width="40"/> : Browse command history.
+Ctrl + cmd + <img src="images/arrow_up.png" width="40"/> : Browse command history.
 
-<img src="tab_key.png" width="50"/> Type a letter in the console + "tab": R Studio proposes the different functions or object stored which start with that letter. e.g. get + "tab":
+<img src="images/tab_key.png" width="50"/> Type a letter in the console + "tab": R Studio proposes the different functions or object stored which start with that letter. e.g. get + "tab":
 
-<img src="tab_functions.png" width="300"/>
+<img src="images/tab_functions.png" width="300"/>
 
 <br>
 Time for [Exercise 1](https://sbcrg.github.io/CRG_RIntroduction/exercise1): Getting started!
