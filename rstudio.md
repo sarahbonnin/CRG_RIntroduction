@@ -11,15 +11,16 @@
 
 * [RStudio access from the CRG server](http://rstudio.linux.crg.es/)
 	+ Access with CRG credentials
+	+ For those who don't have access to the CRG server, use the guest accounts.
 
 ![](images/rstudio_login.png "RStudio login")
 
 <h2>RStudio interface</h2>
 * 4 panels:
-+ top-left: script and documents
-+ bottom-left: R terminal
-+ top-right: objects, history and environment
-+ bottom-right: folder tree, plot window, packages, help window, viewer
+	+ top-left: script and documents
+	+ bottom-left: R terminal
+	+ top-right: objects, history and environment
+	+ bottom-right: folder tree, plot window, packages, help window, viewer
 
 <img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/>
 

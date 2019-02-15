@@ -32,6 +32,7 @@ help(getwd)
 ```
 
 	+ From the RStudio bottom-right panel:
+
 <img src="images/func_help.png"  width="400"/>
 
 * The help pages show:

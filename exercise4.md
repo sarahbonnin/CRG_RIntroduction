@@ -12,7 +12,7 @@ correction
 ```{r}
 getwd()
 setwd("Rcourse/Module1")
-setwd("$HOME/Rcourse/Module1")
+setwd("~/Rcourse/Module1")
 ```
 
 </details>
