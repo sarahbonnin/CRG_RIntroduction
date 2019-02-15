@@ -1,4 +1,4 @@
-## Exercise 3. Character vector manipulation
+## Exercise 3a. Character vector manipulation
 
 Create the script "exercise3.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 3 in that script.
 <br>Remember you can comment the code using #.

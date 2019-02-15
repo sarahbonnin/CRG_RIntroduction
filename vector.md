@@ -129,14 +129,14 @@ d <- c(d, 19)
 a <- 1:5
 a == 2
 ```
-<img src="images/vector_equal.png" width="350">
+<img src="images/vector_equal.png" width="450">
 
 * Which elements of **a** are superior to 2?
 ```{r}
 a <- 1:5
 a > 2
 ```
-<img src="images/vector_super.png" width="350">
+<img src="images/vector_super.png" width="450">
 
 * Extract elements of a vector that comply with the condition
 ```{r}
@@ -144,7 +144,7 @@ a <- 1:5
 a >= 2
 a[a >= 2]
 ```
-<img src="images/vector_subvector.png" width="350">
+<img src="images/vector_subvector.png" width="500">
 
 <h4>Operations on vectors</h4>
 
@@ -167,7 +167,7 @@ b <- c(2, 3, 0)
 a * b
 ```
 
-<img src="images/vector_multiply.png" width="250">
+<img src="images/vector_multiply.png" width="220">
 
 * Multiplying a vector by another **shorter** vector
 
@@ -210,7 +210,7 @@ b <- 4:10
 a %in% b
 ```
 
-<img src="images/vector_in.png" width="300">
+<img src="images/vector_in.png" width="350">
 
 Retrieve actual elements of **a** that are found in **b**:
 

@@ -22,16 +22,16 @@ setwd(dir="Rcourse")
 
 <img src="images/func_arg2.png"  width="250"/>
 
-* Getting help
+* Getting help: <br>
 
-	+ From the terminal:
+From the terminal:
 
 ```{r}
 help(getwd)
 ?getwd
 ```
 
-	+ From the RStudio bottom-right panel:
+From the RStudio bottom-right panel:<br>
 
 <img src="images/func_help.png"  width="400"/>
 
@@ -41,7 +41,7 @@ help(getwd)
 	+ examples.
 	+ detailed description.
 
-* Example of a function
+* Get the example of a function:
 ```{r}
 example(mean)
 ```

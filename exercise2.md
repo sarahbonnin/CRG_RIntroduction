@@ -1,4 +1,4 @@
-## Exercise 2. Numeric vector manipulation
+## Exercise 2a. Numeric vector manipulation
 
 Create the script "exercise2.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 2 in that script.
 <br>Remember you can comment the code using #.

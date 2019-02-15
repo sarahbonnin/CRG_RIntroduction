@@ -3,12 +3,12 @@
 A matrix is a **2 dimensional** vector.
 <br>
 All columns in a matrix must have:
- + the same **type** (numeric, character or logical)
- + the same **length**
+	+ the same **type** (numeric, character or logical)
+	+ the same **length**
 
-* Creating a matrix
+<h3>Creating a matrix</h3>
 
- + From vectors with the **rbind** function:
+* From vectors with the **rbind** function:
 
 ```{r}
 x <- c(1, 44)
@@ -18,7 +18,7 @@ z <- c(34, 4)
 b <- rbind(x, y, z)
 ```
 
- + From vectors with the **cbind** function:
+* From vectors with the **cbind** function:
 
 ```{r}
 i <- c(1, 0, 34)
@@ -27,7 +27,7 @@ j <- c(44, 12, 4)
 b <- cbind(i, j)
 ```
 
- + From scratch with the *matrix* function:
+* From scratch with the *matrix* function:
 
 ```{r}
 # nrow: number of rows
@@ -37,39 +37,40 @@ b <- matrix(c(1, 0, 34, 44, 12, 4),
 	ncol=2)
 ```
 
-* 2-dimensional object
+<h3>Two-dimensional object</h3>
 
-Vectors have one index per element (1-dimension); matrices have **two indices (2-dimensions)** per element, corresponding to the corresponding row and the column:
+Vectors have one index per element (1-dimension).<br>
+Matrices have **two indices (2-dimensions)** per element, corresponding to the corresponding row and the column:
 
 <img src="images/matrix_indices.png" alt="rstudio logo" width="200"/>
 
- + Fetching elements of a matrix:
+Fetching elements of a matrix:
 
 The "coordinates" of an element in a 2-dimensional object will be first the row (on the left), then the column (on the right):
 
 <img src="images/matrix_rc.png" alt="rstudio logo" width="200"/>
 
-* Matrix manipulation:
+<h3>Matrix manipulation</h3>
 
- + Add 1 to all elements of a matrix
+* Add 1 to all elements of a matrix
 
 ```{r}
 b <- b + 1
 ```
 
- + Multiply by 3 all elements of a matrix
+* Multiply by 3 all elements of a matrix
 
 ```{r}
 b <- b * 3
 ```
 
- + Subtract 2 to each element of the first row of a matrix
+* Subtract 2 to each element of the first row of a matrix
 
 ```{r}
 b[1, ] <- b[1, ] - 2
 ```
 
- + Replace elements that comply a condition:
+* Replace elements that comply a condition:
 
 ```{r}
 # Replace all elements that are greater than 3 with NA

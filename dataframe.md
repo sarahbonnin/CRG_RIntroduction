@@ -2,12 +2,14 @@
 
 A data frame is a 2-dimensional structure.
 <br> It is more general than a matrix.
-<br>
-All columns in a matrix:
+<br><br>
+All columns in a data frame:
  + can be of different **types** (numeric, character or logical)
  + must havethe same **length**
 
-* Create a data frame with the **data.frame** function:
+<h3>Create a data frame</h3> 
+
+* With the **data.frame** function:
 
 ```{r}
 
@@ -17,7 +19,18 @@ d <- data.frame(c("Maria", "Juan", "Alba"),
 	stringsAsFactors = FALSE)
 ```
 
-* Data frame manipulation:
+* Converting a matrix into a data frame:
+
+```{r}
+# create a matrix
+b <- matrix(c(1, 0, 34, 44, 12, 4), 
+        nrow=3,
+        ncol=2)
+# convert as data frame
+b_df <- as.data.frame(b)
+```
+
+<h3>Data frame manipulation:</h3>
 <br>
 Very similar to matrix manipulation.
 

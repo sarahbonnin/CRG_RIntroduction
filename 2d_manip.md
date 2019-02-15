@@ -52,17 +52,13 @@ d$Name== d[,1] is d[, "Name"]
 
 ```
 
-* Create objects already with names
-
- * Matrix:
-
+* Include names as you create objects:
+	+ Matrix:
 ```{r}
 m <- matrix(1:4, ncol=2, 
 	dimnames=list(c("row1", "row2"), c("col1", "col2")))
 ```
-
- * Data frame:
-
+	+ Data frame:
 ```{r}
 df <- data.frame(col1=1:2, col2=1:2, 
 	row.names=c("row1", "row2"))
@@ -146,10 +142,12 @@ colSums(b)
 
 Powerful tool to apply a command to all rows or all columns of a data frame or a matrix.<br>
 For example, instead of calculating the sum of each row, you might be interested in calculating the average or median?
-<br>
-*apply* takes 3 arguments:
+<br><br>
+**apply** takes 3 arguments:
 - first argument: 2-dimensional object
-- second argument: apply by row or by column? 1: per row; 2: per column
+- second argument: apply by row or by column?
+	+ 1: by row
+	+ 2: by column
 - third argument: function to apply to either rows or columns
 
 ```{r}

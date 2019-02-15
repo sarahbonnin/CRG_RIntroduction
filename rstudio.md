@@ -22,7 +22,7 @@
 	+ top-right: objects, history and environment
 	+ bottom-right: folder tree, plot window, packages, help window, viewer
 
-<img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/>
+<a href="https://sbcrg.github.io/CRG_RIntroduction/images/rstudio_interface.png"><img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/></a>
 
 <h2>Setting up the folder structure for the course</h2>
 Rcourse<br>

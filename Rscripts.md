@@ -29,7 +29,7 @@ A + 1
 
 Ctrl + cmd + <img src="images/arrow_up.png" width="40"/> : Browse command history.
 
-<img src="images/tab_key.png" width="50"/> Type a letter in the console + "tab": R Studio proposes the different functions or object stored which start with that letter. e.g. get + "tab":
+<img src="images/tab_key.png" width="50"/> Type a letter in the console + "tab": R Studio proposes the different functions or object stored which start with that letter. <br> for example, type **get + "tab"**:
 
 <img src="images/tab_functions.png" width="350"/>
 

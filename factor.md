@@ -1,10 +1,10 @@
 <h2>Factors</h2>
 
-* A factor is vector object (1 dimension) used to specify a discrete classification (grouping) of the components of other vectors.
+* A factor is vector object (1 dimension) used to specify a **discrete classification (grouping)** of the components of other vectors.
 
-* Factors are mainly used for statistical modeling, and can also be useful for graphing.
+* Factors are mainly used for **statistical modeling**, and can also be useful for graphing.
 
-* You can create factors with the *factor* function, for example:
+* You can create factors with the **factor** function, for example:
 
 ```{r}
 e <- factor(c("high", "low", "medium", "low"))
@@ -24,7 +24,7 @@ str(e)
 str(e2)
 ```
 
-* Groups in factors are called *levels*. Levels can be **ordered**. Then, some operations applied on numeric vectors can be used:
+* Groups in factors are called **levels**. Levels can be **ordered**. Then, some operations applied on numeric vectors can be used:
 
 ```{r}
 # unordered factor:

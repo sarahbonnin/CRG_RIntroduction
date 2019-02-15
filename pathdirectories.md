@@ -8,7 +8,9 @@
 * The shortcut to your home directory is <font size="20"> <b>~</b></font>
 
 <h2>Tree of directories</h2>
-![](images/tree_directories.png "Tree of directories")
+
+<a href="https://sbcrg.github.io/CRG_RIntroduction/images/tree_directories.png"><img src="images/tree_directories.png" alt="rstudio logo" width="1000"/></a>
+
 
 <h2>Navigate with R terminal</h2>
 
