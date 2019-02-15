@@ -17,7 +17,7 @@ setwd("~/Rcourse/Module2")
 
 </details>
 
-**1- Download directory **i_o_files** in your current directory with:** 
+**1- Download folder "i_o_files" in your current directory with:** 
 
 ```{r}
 # system invokes the OS command specified by command.
@@ -44,7 +44,7 @@ length(z)
 
 </details>
 
-**3- Sort z and save the sorted vector in zsorted.
+**3- Sort z and save the sorted vector in zsorted.**
 
 <details>
 <summary>

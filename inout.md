@@ -43,7 +43,7 @@ Useful arguments:
 
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="600/"></a>
 
-> Go to [Exercise 6]((https://sbcrg.github.io/CRG_RIntroduction/exercise6)
+> Go to [Exercise 6](https://sbcrg.github.io/CRG_RIntroduction/exercise6): Input and Output !
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
