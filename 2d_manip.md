@@ -105,7 +105,7 @@ d[d[,"Age"] > 24, ]
 d[d$Age > 24, ]
 ```
 
-<img src="df_col2.png" width="450"/>
+<img src="images/df_col2.png" width="450"/>
 
  + Select patients (rows) based on 2 criteria: age of the patient (column 2) should be great than or equal to 25, and the patient should be vegetarian (column 3):
 
@@ -113,7 +113,7 @@ d[d$Age > 24, ]
 d[ d$Age >= 25 & d$Vegetarian == TRUE, ]
 ```
 
-<img src="df_col2_col3.png" width="450"/>
+<img src="df_col2_col3.png" width="550"/>
 
 <h4>More useful commands</h4>
 

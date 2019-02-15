@@ -1,4 +1,5 @@
 <h2> Date & time </h2>
+
 <h3>Dates:</h3>
 * Module 1: Monday 18th & Tuesday 19th February, 2019
 * Module 2: Monday 25th & Tuesday 26th February, 2019
@@ -14,10 +15,10 @@
 <h2> Instructors </h2>
 [Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu) (Module 4)<br>
 [Sarah Bonnin](mailto:sarah.bonnin@crg.eu) (Module 1, 2, 3)<br>
-from CRG [Bioinformatics core facility](https://biocore.crg.eu/)
+from the CRG [Bioinformatics core facility](https://biocore.crg.eu/)
 
 <h2>Learning objectives</h2>
-<img src="learningobjectives.png"  width="500"/>
+<img src="learningobjectives.png"  width="600"/>
 
 <h2> Program </h2>
 
@@ -38,18 +39,14 @@ from CRG [Bioinformatics core facility](https://biocore.crg.eu/)
 <h3>Module 2</h3>
 * [Input / Output](https://sbcrg.github.io/CRG_RIntroduction/inout)
 * [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
-* [](https://sbcrg.github.io/CRG_RIntroduction/)
-* [](https://sbcrg.github.io/CRG_RIntroduction/)
-* [](https://sbcrg.github.io/CRG_RIntroduction/)
-* [](https://sbcrg.github.io/CRG_RIntroduction/)
+* [Regular expressions (Regex)](https://sbcrg.github.io/CRG_RIntroduction/regex)
 
 <h3>Module 3</h3>
 * [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
 * [Graphing with ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
 
-
 <h3>Module 4</h3>
-
+* Exploratory data analysis.
 
 
 
