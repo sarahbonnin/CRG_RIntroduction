@@ -172,7 +172,7 @@ mydf2:
 |4|john|
 |5|mark|
 
-The column names are "id", "age" for mydf1, "id", "name" for mydf2
+With column names: **"id", "age"** for mydf1, and **"id", "name"** for mydf2.
 
 <details>
 <summary>
@@ -224,8 +224,7 @@ mydf3[order(mydf3$age, decreasing = TRUE), ]
 
 ## Exercise 5c
 
-**1- Download [this file](https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData) to your current directory.**
-Use the **download.file** function.
+**1- **Using the download.file function**, download [this file](https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData) to your current directory.** (Right click on "this file" -> Copy link location to get the full path).
 
 <details>
 <summary>
