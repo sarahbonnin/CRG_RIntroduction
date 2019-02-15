@@ -32,7 +32,7 @@ Rcourse<br>
 
 ![](images/rstudio_folder.png "RStudio create folder")
 
- > Go to [Paths and directories]((https://sbcrg.github.io/CRG_RIntroduction/pathdirectories)
+ > Go to [Paths and directories](https://sbcrg.github.io/CRG_RIntroduction/pathdirectories)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

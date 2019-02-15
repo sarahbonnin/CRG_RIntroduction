@@ -23,6 +23,7 @@ class(b)
 typeof(b)
 ```
 
+ > Go to [data structures](https://sbcrg.github.io/CRG_RIntroduction/datastructure)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

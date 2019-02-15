@@ -5,7 +5,7 @@
 * Your home directory is the one that hosts your personal folder:
 + for CRG users: /nfs/users/[yourgroup]/[yourlogin]
 
-* The shortcut to your home directoryis <b>~</b>
+* The shortcut to your home directory is <font size="20"> <b>~</b></font>
 
 <h2>Tree of directories</h2>
 ![](images/tree_directories.png "Tree of directories")

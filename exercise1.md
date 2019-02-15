@@ -15,7 +15,7 @@ correction
 ```{r}
 getwd()
 setwd("Rcourse/Module1")
-setwd("/users/bi/sbonnin/Rcourse/Module1")
+setwd("$HOME/Rcourse/Module1")
 ```
 
 </details>
@@ -42,8 +42,10 @@ correction
 </summary>
 
 ```{r}
-(14/18) * 100
-(4/18) * 100
+# 6 males out of 19 students:
+(6/19) * 100
+# 13 females out of 19 students
+(13/19) * 100
 ```
 
 </details>
@@ -114,6 +116,8 @@ mydiv <- myobject / mysqrt
 ```
 
 </details>
+
+ > Got to [Data types](https://sbcrg.github.io/CRG_RIntroduction/datatype)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

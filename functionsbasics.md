@@ -24,21 +24,21 @@ setwd(dir="Rcourse")
 
 * Getting help
 
-+ From the terminal:
+	+ From the terminal:
 
 ```{r}
 help(getwd)
 ?getwd
 ```
 
-+ From the RStudio bottom-right panel:
+	+ From the RStudio bottom-right panel:
 <img src="images/func_help.png"  width="400"/>
 
 * The help pages show:
-+ required/optional argument(s), if any.
-+ default values for each argument(s), if any.
-+ examples.
-+ detailed description.
+	+ required/optional argument(s), if any.
+	+ default values for each argument(s), if any.
+	+ examples.
+	+ detailed description.
 
 * Example of a function
 ```{r}
