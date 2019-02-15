@@ -1,4 +1,4 @@
-<h2>Input / Output<h2>
+<h2>Input / Output</h2>
 
 We will learn how to:
 	+ Read in a file
