@@ -5,14 +5,14 @@ A data frame is a 2-dimensional structure.
 <br><br>
 All columns in a data frame:
  + can be of different **types** (numeric, character or logical)
- + must havethe same **length**
+ + must have the same **length**
 
 <h3>Create a data frame</h3> 
 
 * With the **data.frame** function:
 
 ```{r}
-
+# stringsAsFactors: ensures that characters are treated as characters and not as factors
 d <- data.frame(c("Maria", "Juan", "Alba"), 
 	c(23, 25, 31),
 	c(TRUE, TRUE, FALSE),

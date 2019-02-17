@@ -22,9 +22,7 @@ a <- c(1, 2, 3, 4, 5, 6)
 # both ends (1 and 6) are included
 ```
 
-* Character vectors
-
- + Each element is between (single or double) quotes.
+* Character vectors:  Each element is entered between (single or double) quotes.
 
 | mRNA | miRNA | snoRNA | lncRNA |
 
@@ -34,7 +32,7 @@ b <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
 
 <h3>Vector manipulation</h3>
 
-* A vector can be named: each element of the vector can be assigned a name (number or character)
+* A vector can be **named**: each element of the vector can be assigned a name (number or character)
 
 ```{r}
 names(a) <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
@@ -49,28 +47,24 @@ length(a)
 ```
 
 * Extracting elements from vector **a**
+	+ extract elements using their position (index) in the vector:
+	<img src="images/vector_indices.png" width="500">
 
- + extract elements using their position (index) in the vector:
+	```{r}
+	a <- 1:6
+	a[1]
+	a[c(1,3)]
+	a[2:4]
+	```
+	+ extract elements using their names:
+	<img src="images/vector_indices_names.png" width="500">
 
-<img src="images/vector_indices.png" width="500">
+	```{r}
+	a["mRNA"]
+	a[c("miRNA", "lncRNA")]            
+	```
 
-```{r}
-a <- 1:6
-a[1]
-a[c(1,3)]
-a[2:4]
-```
-
- + extract elements using their names:
-
-<img src="images/vector_indices_names.png" width="500">
-
-```{r}
-a["mRNA"]
-a[c("miRNA", "lncRNA")]            
-```
-
-* Replacing a vector's value
+* Reassigning a vector's element
 
 ```{r}
 a[2] <- 31
@@ -138,7 +132,7 @@ a > 2
 ```
 <img src="images/vector_super.png" width="450">
 
-* Extract elements of a vector that comply with the condition
+* Extract elements of a vector that comply with a condition:
 ```{r}
 a <- 1:5
 a >= 2
@@ -148,7 +142,7 @@ a[a >= 2]
 
 <h4>Operations on vectors</h4>
 
-* Adding 2 to a vector adds 2 to **each element** of the vector
+* Adding 2 to a vector adds 2 to **each element** of the vector:
 
 ```{r}
 a <- 1:5
@@ -188,9 +182,9 @@ a * b
 |:--------: |:-------------:|
 |     mean(x)  | mean / average |
 |    median(x) | median |
-|     min(x)   | greater than |
-|     max(x)   | greater than or equal to |
-|     var(x)   | exactly equal to |
+|     min(x)   | minimum |
+|     max(x)   | maximum |
+|     var(x)   | variance |
 | summary(x) | mean, median, min, max, quartiles |
 
 ```{r}

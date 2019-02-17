@@ -110,7 +110,7 @@ y[ y < 7 ]
 
 </details>
 
-**8- Show all elements of y that are greater or equal to 4 ***and*** less than 9.**
+**8- Show all elements of y that are greater or equal to 4 and less than 9.**
 
 <details>
 <summary>
@@ -154,7 +154,7 @@ mean(x); median(x); min(x); max(x)
 
 </details>
 
-**11- Run the summary() function on x. <br>What additional information to you obtain ?**
+**11- Run the summary() function on x. <br>What additional information do you obtain ?**
 
 <details>
 <summary>

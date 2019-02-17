@@ -1,7 +1,7 @@
 <h2>Data types</h2>
 
 Each object has a data type:
-* Numeric (numbers - integers or double)
+* Numeric (number - integer or double)
 * Character (text)
 * Logical (TRUE / FALSE)
 
@@ -11,16 +11,16 @@ Number:
 ```{r}
 a <- 10
 mode(a)
-class(a)
 typeof(a)
+str(a)
 ```
 
 Text:
 ```{r}
 b <- "word"
 mode(b)
-class(b)
 typeof(b)
+str(b)
 ```
 
  > Go to [data structures](https://sbcrg.github.io/CRG_RIntroduction/datastructure)

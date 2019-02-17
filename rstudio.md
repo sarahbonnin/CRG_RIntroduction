@@ -17,10 +17,10 @@
 
 <h2>RStudio interface</h2>
 * 4 panels:
-	+ top-left: script and documents
+	+ top-left: scripts and files
 	+ bottom-left: R terminal
 	+ top-right: objects, history and environment
-	+ bottom-right: folder tree, plot window, packages, help window, viewer
+	+ bottom-right: tree of folders, graph window, packages, help window, viewer
 
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/rstudio_interface.png"><img src="images/rstudio_interface.png" alt="rstudio logo" width="1000"/></a>
 

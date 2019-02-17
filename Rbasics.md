@@ -9,6 +9,7 @@
 |     *     | multiplication|
 |  ^ or **  | exponential   |
 
+In the R terminal:
 ```{r}
 10 - 2
 ```
@@ -37,6 +38,7 @@ What is the percentage of miRNA?
 
 <h2>Objects in R</h2>
 
+Everything that stores any kind of data in R is an **object**:
 <img src="images/objects_box.png" alt="rstudio logo" width="300"/>
 
 <h2>R syntax</h2>
@@ -46,7 +48,7 @@ What is the percentage of miRNA?
 + **<-** or **=**
 + Essentially the same but, to avoid confusions:
   + Use **<-** for assignments
-  + Keep **=** for arguments
+  + Keep **=** for functions arguments
 
 <h3>Assigning data to an object</h3>
 
@@ -57,11 +59,15 @@ B <- 10
 ```{r}
 B + 10
 ```
-<span style="color:red">some **B unchanged !!** text</span><br>
+
+<span style="color:red">**B unchanged !!**</span><br>
 ```{r}
-B <- B + 10<br>
+B <- B + 10
 ```
-<span style="color:red">some **B changed !!** text</span><br>
+
+<span style="color:red">**B changed !!**</span><br>
+
+* You can see the objects you created in the upper right panel in RStudio: the environment.
 
  > Go to [Functions in R](https://sbcrg.github.io/CRG_RIntroduction/functionsbasics)
 <br>

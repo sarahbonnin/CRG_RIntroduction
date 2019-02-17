@@ -85,16 +85,9 @@ rowSums(mat); colSums(mat)
 
 **5- Create the matrix mat2 as:**
 
-<details>
-<summary>
-correction
-</summary>
-
 ```{r}
 mat2 <- matrix(c(seq(from=1, to=10, by=2), 5:1, rep(x=2017, times=5)), ncol=3)
 ```
-
-</details>
 
 What does function seq() do?
 
@@ -217,7 +210,7 @@ mat3 <- cbind(mat2, time=c(8, 12, 11, 10, 8))
 
 </details>
 
-**13- Replace all elements of mat3 that are less than 3 by NA.**
+**13- Replace all elements of mat3 that are less than 3 with NA.**
 
 <details>
 <summary>

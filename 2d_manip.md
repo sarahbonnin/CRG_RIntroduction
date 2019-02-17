@@ -48,7 +48,7 @@ d["Patient3", "Age"]
 d[3,2]
 
 # for data frames only, the $ sign can be used to retrieve columns:
-d$Name== d[,1] is d[, "Name"]
+# d$Name is d[,1] is d[, "Name"]
 
 ```
 
@@ -113,7 +113,7 @@ d[ d$Age >= 25 & d$Vegetarian == TRUE, ]
 
 <h4>More useful commands</h4>
 
-* Add a row or a column with **rbind** and **cbind**, repsctively
+* Add a row or a column with **rbind** and **cbind**, respectively
 
 ```{r}
 # add a column
@@ -141,7 +141,7 @@ colSums(b)
 * The **apply** function
 
 Powerful tool to apply a command to all rows or all columns of a data frame or a matrix.<br>
-For example, instead of calculating the sum of each row, you might be interested in calculating the average or median?
+For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn't exist !
 <br><br>
 **apply** takes 3 arguments:
 - first argument: 2-dimensional object
@@ -151,8 +151,8 @@ For example, instead of calculating the sum of each row, you might be interested
 - third argument: function to apply to either rows or columns
 
 ```{r}
-# average value of each row of b
-apply(b, 1, mean)
+# median value of each row of b
+apply(b, 1, median)
 # median value of each column of b
 apply(b, 2, median)
 ```

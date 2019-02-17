@@ -15,7 +15,7 @@
 <h2> Instructors </h2>
 [Julia Ponomarenko](mailto:julia.ponomarenko@crg.eu) (Module 4)<br>
 [Sarah Bonnin](mailto:sarah.bonnin@crg.eu) (Module 1, 2, 3)<br>
-from the CRG [Bioinformatics core facility](https://biocore.crg.eu/)
+from the CRG [Bioinformatics core facility](https://biocore.crg.eu/ (office 460, 4th floor hotel side))
 
 <h2>Learning objectives</h2>
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/learningobjectives.png"><img src="images/learningobjectives.png"  width="600"/></a>

@@ -5,7 +5,7 @@ Create the script "exercise1.R" (in R Studio: File -> New File) and save it to t
 
 **1- From the terminal, go to Rcourse/Module1.
 First check where you currently are with getwd(); 
-then go to Rintro/day1 with setwd()**
+then go to Rcourse/Module1 with setwd()**
 
 <details>
 <summary>
@@ -50,8 +50,8 @@ correction
 
 </details>
 
-**4- Create a new object myobject with value 60.
-Show myobject in the console.**
+**4- Create a new object "myobject" with value 60.
+Show "myobject" in the terminal.**
 
 <details>
 <summary>
@@ -91,7 +91,7 @@ myobject <- myobject - 1
 
 </details>
 
-**7- Create a new object mysqrt that will store the square root of myobject.**
+**7- Create a new object "mysqrt" that will store the square root of "myobject".**
 
 <details>
 <summary>
@@ -104,7 +104,7 @@ mysqrt <- sqrt(myobject)
 
 </details>
 
-**8- Create a new object mydiv that will store the result of myobject divided by mysqrt.**
+**8- Create a new object "mydiv" that will store the result of "myobject" divided by "mysqrt".**
 
 <details>
 <summary>

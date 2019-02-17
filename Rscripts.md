@@ -1,7 +1,7 @@
 <h2>R scripts</h2>
 
 <h3>Create and save a script</h3>
-* Store commands in a .R/.r script. Create in RStudio with: 
+* Store commands in a .R/.r script. Create and save a script in RStudio with: 
   + File -> New File -> R Script
   + Once the file has opened: File -> Save 
   + Specify a name: ***the extension .R is automatically added***
@@ -12,7 +12,7 @@
 
 <h3>R syntax</h3>
 
-* Case sensitive
+* Case sensitive: **g** is not **G**
 * Comment lines start with **#**
 * Commands are separated by a **new line** or **;**
 ```{r}
@@ -25,8 +25,9 @@ A + 1
 
 <h3>RStudio tips in the console</h3>
 
-<img src="images/arrow_up.png" width="40"/> Upper arrow: goes to the commands previously typed.
+Ctrl + Enter: execute the current line.<br>
 
+<img src="images/arrow_up.png" width="40"/> Upper arrow: goes to the commands previously typed.
 Ctrl + cmd + <img src="images/arrow_up.png" width="40"/> : Browse command history.
 
 <img src="images/tab_key.png" width="50"/> Type a letter in the console + "tab": R Studio proposes the different functions or object stored which start with that letter. <br> for example, type **get + "tab"**:

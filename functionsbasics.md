@@ -1,8 +1,8 @@
 <h2>Functions</h2>
 
-In programming, a function is a section of a program that performs a specific task.
+In programming, a function is a section of a program that **performs a specific task**.
 
-For example function getwd is used as:
+For example, the function **getwd** is used as:
 ```{r}
 getwd()
 ```
@@ -10,15 +10,15 @@ and has the task of outputting the current working directory.
 
 You can recognize a function with the **round brackets**: function**()**
  
-<img src="images/func_arg1.png"  width="250"/>
-
-An function can also take *arguments/parameters*
+A function can also take *arguments/parameters*
 ```{r}
 setwd(dir="Rcourse")
 ```
-**setwd** changes the current working directory. 
+**setwd** changes the current working directory and takes one argument **dir**. 
 
-* Assign output of a function to an object
+<img src="images/func_arg1.png"  width="250"/>
+
+* Assign the output of a function to an object:
 
 <img src="images/func_arg2.png"  width="250"/>
 
@@ -33,7 +33,7 @@ help(getwd)
 
 From the RStudio bottom-right panel:<br>
 
-<img src="images/func_help.png"  width="400"/>
+<img src="images/func_help.png"  width="500"/>
 
 * The help pages show:
 	+ required/optional argument(s), if any.
@@ -45,6 +45,8 @@ From the RStudio bottom-right panel:<br>
 ```{r}
 example(mean)
 ```
+
+* Need more help? Ask your favourite **Web search engine !**
 
  > Go to [R scripts](https://sbcrg.github.io/CRG_RIntroduction/Rscripts)
 <br>

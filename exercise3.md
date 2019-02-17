@@ -140,7 +140,7 @@ names(g) <- w
 
 ## Exercise 3b.
 
-**1- Use the sub() function to replace miRNA with microRNA in the ***names*** of g.**
+**1- Use the sub() function to replace miRNA with microRNA in the *names* of g.**
 
 <details>
 <summary>
