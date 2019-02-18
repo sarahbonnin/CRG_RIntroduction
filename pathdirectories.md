@@ -8,10 +8,12 @@
 <h2>Tree of directories</h2>
 
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/tree_directories.png"><img src="images/tree_directories.png" alt="rstudio logo" width="1000"/></a>
-
-* <font size="15"> <b>~</b></font>: shortcut to the home directory
-* <font size="15"> <b>.</b></font>: current directory
-* <font size="15"> <b>..</b></font>: one directory up the tree
+<br>
+<font size="12"> <b>~</b></font>: shortcut to the home directory
+<br>
+<font size="12"> <b>.</b></font>: current directory
+<br>
+<font size="12"> <b>..</b></font>: one directory up the tree
 
 
 <h2>Navigate the tree of directory with the R terminal</h2>
