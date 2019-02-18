@@ -23,7 +23,7 @@ b <- rbind(x, y, z)
 ```{r}
 i <- c(1, 0, 34)
 j <- c(44, 12, 4)
-# rbind: bind rows
+# cbind: bind columns
 b <- cbind(i, j)
 ```
 
