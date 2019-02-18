@@ -15,10 +15,10 @@ str(e)
 * Example of a character vector versus a factor
 
 ```{r}
-# character vector
-e2 <- c("high", "low", "medium", "low")
 # factor
 e <- factor(c("high", "low", "medium", "low"))
+# character vector
+e2 <- c("high", "low", "medium", "low")
 # Check the structure of both objects
 str(e)
 str(e2)
