@@ -39,15 +39,16 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
   + [Matrix](https://sbcrg.github.io/CRG_RIntroduction/matrix)
   + [Data frame](https://sbcrg.github.io/CRG_RIntroduction/dataframe)
   + [2D structure manipulation](https://sbcrg.github.io/CRG_RIntroduction/2d_manip)
-        + [Exercise 4: Matrices](https://sbcrg.github.io/CRG_RIntroduction/exercise4)
-        + [Exercise 5: Data frames](https://sbcrg.github.io/CRG_RIntroduction/exercise5)
+	+ [Exercise 4: Matrices](https://sbcrg.github.io/CRG_RIntroduction/exercise4)
+	+ [Exercise 5: Data frames](https://sbcrg.github.io/CRG_RIntroduction/exercise5)
 <h3>Module 2</h3>
 * [Missing values](https://sbcrg.github.io/CRG_RIntroduction/na)
 * [Input / Output](https://sbcrg.github.io/CRG_RIntroduction/inout)
-        + [Exercise 6: Input / Output](https://sbcrg.github.io/CRG_RIntroduction/exercise6)
+	+ [Exercise 6: Input / Output](https://sbcrg.github.io/CRG_RIntroduction/exercise6)
 * [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
-        + [Exercise 7: Packages](https://sbcrg.github.io/CRG_RIntroduction/exercise7)
+	+ [Exercise 7: Packages](https://sbcrg.github.io/CRG_RIntroduction/exercise7)
 * [Regular expressions (Regex)](https://sbcrg.github.io/CRG_RIntroduction/regex)
+	+ [Exercise 7: Packages](https://sbcrg.github.io/CRG_RIntroduction/exercise8)
 
 <h3>Module 3</h3>
 * [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)

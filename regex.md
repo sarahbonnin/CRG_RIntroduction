@@ -99,7 +99,7 @@ grep(pattern="^expression", colnames(df_regex))
 df_regex[, grep(pattern="^expression", colnames(df_regex))]
 ```
 
-Go to [Basic plots](https://sbcrg.github.io/CRG_RIntroduction/exercise8): Basic plots.
+Go to [Exercise 8](https://sbcrg.github.io/CRG_RIntroduction/exercise8): Regular expressions.
 <br>
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
