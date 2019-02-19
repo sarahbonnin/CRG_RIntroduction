@@ -53,12 +53,19 @@ install.packages("ggplot2")
 ```
 
 * Install a bioconductor package:
-
-``{r}
+	+ From R version >= 3.5.0
+```{r}
 # Install Bioconductor package manager
 install.packages("BiocManager")
 # Install Bioconductor package
 BiocManager::install("DESeq2")
+```
+	+ From older R versions
+```{r}
+# Source (=load into environment) script containing biocLite function
+source("http://www.bioconductor.org/biocLite.R")
+# Use biocLite function to install Bioconductor package
+biocLite("DESeq2")
 ```
 
 <h3>Load a package</h3>
