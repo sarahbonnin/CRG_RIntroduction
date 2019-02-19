@@ -225,7 +225,7 @@ mydf3[order(mydf3$age, decreasing = TRUE), ]
 
 ## Exercise 5c
 
-**1- Using the download.file function, download [this file](https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData) to your current directory.** (Right click on "this file" -> Copy link location to get the full path).
+**1- Using the download.file function, download [this file](https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData) to your current directory.** (Right click on "this file" -> Copy link location to get the full path).
 
 <details>
 <summary>
@@ -233,7 +233,8 @@ correction
 </summary>
 
 ```{r}
-download.file("https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
+# failing: download.file("https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
+download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData")
 ```
 
 </details>
