@@ -17,11 +17,11 @@ All other packages:
 * [CRAN](https://cran.r-project.org): Comprehensive R Archive Network
 	+ 13735<sup>*</sup> packages available
 	+ find packages in https://cran.r-project.org/web/packages/
-	<img src="images/cran_packages.png" width="450"/>
+	<img src="images/cran_packages.png" width="550"/>
 * [Bioconductor](https://www.bioconductor.org/):
 	+ 1649<sup>*</sup> packages available
 	+ find packages in https://bioconductor.org/packages
-	<img src="images/bioc_packages.png" width="450"/>
+	<img src="images/bioc_packages.png" width="550"/>
 
 *<sup>*</sup>As of February 2019*
 
@@ -45,11 +45,20 @@ There are different types of Bioconductor packages:
 <h3>Install a package</h3>
 
 * With RStudio:
-<img src="images/bioc_install.png" width="450"/>
+<img src="images/bioc_install.png" width="550"/>
 
 * From the console:
 ```{r}
 install.packages("ggplot2")
+```
+
+* Install a bioconductor package:
+
+``{r}
+# Install Bioconductor package manager
+install.packages("BiocManager")
+# Install Bioconductor package
+BiocManager::install("DESeq2")
 ```
 
 <h3>Load a package</h3>
