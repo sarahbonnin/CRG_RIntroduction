@@ -144,17 +144,17 @@ Powerful tool to apply a command to all rows or all columns of a data frame or a
 For example, instead of calculating the sum of each row, you might be interested in calculating the median ? But rowMedians doesn't exist !
 <br><br>
 **apply** takes 3 arguments:
-- first argument: 2-dimensional object
-- second argument: apply by row or by column?
+- first argument **X**: 2-dimensional object
+- second argument **MARGIN**: apply by row or by column?
 	+ 1: by row
 	+ 2: by column
-- third argument: function to apply to either rows or columns
+- third argument **FUN**: function to apply to either rows or columns
 
 ```{r}
 # median value of each row of b
-apply(b, 1, median)
+apply(X=b, MARGIN=1, FUN=median)
 # median value of each column of b
-apply(b, 2, median)
+apply(X=b, MARGIN=2, FUN=median)
 ```
 
 > Time to go to [Exercise 4](https://sbcrg.github.io/CRG_RIntroduction/exercise4): Matrix manipulation
