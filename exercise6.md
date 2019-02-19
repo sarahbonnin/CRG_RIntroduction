@@ -522,6 +522,8 @@ write.table(ex6, "ex6c_output.txt",
 
 </details>
 
+> Go to [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
+
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

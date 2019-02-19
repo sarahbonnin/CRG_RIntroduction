@@ -36,7 +36,7 @@ write(mygenes, file="gene_list.txt")
 * Read a file into a data frame with the **read.table** function:
 
 ```{r}
-a <- read.table("file.txt")
+a <- read.table(file="file.txt")
 ```
 
 Useful arguments:

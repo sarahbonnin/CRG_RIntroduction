@@ -1,5 +1,93 @@
+<h2>Library and packages</h2>
 
+* **Packages** are collections of R functions, data, and compiled code in a well-defined format.
 
+* The directory where packages are stored is called the **library**.
+
+*Source of definitions: http://www.statmethods.net/interface/packages.html*
+
+<h3>R base</h3>
+
+A set a standard packages (~ 25) supplied with R by default (example: packages base, stats, graphics).
+
+<h3>R contrib</h3>
+
+All other packages:
+
+* [CRAN](https://cran.r-project.org): Comprehensive R Archive Network
+	+ 13735<sup>*</sup> packages available
+	+ find packages in https://cran.r-project.org/web/packages/
+	<img src="images/cran_packages.png" width="450"/>
+* [Bioconductor](https://www.bioconductor.org/):
+	+ 1649<sup>*</sup> packages available
+	+ find packages in https://bioconductor.org/packages
+	<img src="images/bioc_packages.png" width="450"/>
+
+*<sup>*</sup>As of February 2019*
+
+<h4>Bioconductor</h4>
+
+Sets of R packages specialized in bioinformatics analysis.<br>
+
+Bioconductor supports most types of genomics and NGS data (e.g. limma, DESeq2, BayesPeak) and integrates:
+* Specific data classes (e.g. Granges from GenomicRanges)
+* Integrates command line tools (e.g Rsamtools)
+* Annotation tools (e.g. biomaRt)
+
+There are different types of Bioconductor packages:
+* Software: set of functions
+	+ e.g. DESeq2(NGS data analysis)
+* Annotation: annotation of specific arrays, organisms, events, etc.
+	+ e.g. BSgenome.Hsapiens.UCSC.hg38
+* Experiment: data that can be loaded and used
+	+ e.g. ALL (acute lymphoblastic leukemia dataset)
+
+<h3>Install a package</h3>
+
+* With RStudio:
+<img src="images/bioc_install.png" width="450"/>
+
+* From the console:
+```{r}
+install.packages("ggplot2")
+```
+
+<h3>Load a package</h3>
+
+* With RStudio:
+<img src="images/bioc_load.png" width="450"/>
+
+* From the console:
+```{r}
+library("ggplot2")
+```
+
+<h3>List functions from a package</h3>
+
+* With RStudio
+<img src="images/rstudio_ggplot2.png" width="450"/>
+
+* From the console
+```{r}
+ls("package:ggplot2")
+```
+
+<h3>RStudio server at CRG</h3>
+
+If you can't install packages (permission issues), it means you first need to specify a writeable directory to install the packages into.<br>
+
+Follow the steps below:
+
+```{r}
+# Go to your home directory
+setwd("~")
+# Create a directory where to store the packages
+dir.create("R_packages")
+# Add directory location to the library path
+.libPaths("~/R_packages/")
+```
+
+> Go to [Exercise 7](https://sbcrg.github.io/CRG_RIntroduction/exercise7): Library and packages.
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

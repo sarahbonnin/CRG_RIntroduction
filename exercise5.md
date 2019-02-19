@@ -370,6 +370,8 @@ diff_genes <- df_genes[df_genes$pvalue_KOvsWT < 0.05 &
 
 How many rows (genes) were selected?
 
+> Go to [Input/Output](https://sbcrg.github.io/CRG_RIntroduction/inout).
+
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
