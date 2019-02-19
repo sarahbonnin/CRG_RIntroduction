@@ -52,6 +52,8 @@ correction
 </summary>
 
 ```{r}
+mat <- matrix(data=c(x, y, z), nrow=3, ncol=4)
+# Try with the "byrow=TRUE" parameter: what is different ?
 mat <- matrix(data=c(x, y, z), nrow=3, ncol=4, byrow=TRUE)
 ```
 
