@@ -48,7 +48,7 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 * [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
 	+ [Exercise 7: Packages](https://sbcrg.github.io/CRG_RIntroduction/exercise7)
 * [Regular expressions (Regex)](https://sbcrg.github.io/CRG_RIntroduction/regex)
-	+ [Exercise 7: Packages](https://sbcrg.github.io/CRG_RIntroduction/exercise8)
+	+ [Exercise 8: Regular expressions](https://sbcrg.github.io/CRG_RIntroduction/exercise8)
 
 <h3>Module 3</h3>
 * [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
