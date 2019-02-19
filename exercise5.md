@@ -38,7 +38,8 @@ correction
 df <- data.frame(Age=c(43, 34, 22, 27), 
                  Height=c(181, 172, 189, 167),
                  Sex=c("M", "F", "M", "F"),
-                 row.names = c("John", "Jessica", "Steve", "Rachel"))
+                 row.names = c("John", "Jessica", "Steve", "Rachel"),
+                 stringsAsFactors=FALSE)
 ```
 
 </details>
