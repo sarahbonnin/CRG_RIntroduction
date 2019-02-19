@@ -234,7 +234,7 @@ correction
 
 ```{r}
 # failing: download.file("https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
-download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData")
+download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData", "genes_dataframe.RData")
 ```
 
 </details>
