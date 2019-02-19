@@ -48,6 +48,25 @@ example(mean)
 
 * Need more help? Ask your favourite **Web search engine !**
 
+* **Note on arguments**
+
+The help page shows the compulsory arguments in the **Usage** section: in the help page of getwd and setwd (above), you can see that getwd doesn't take any compulsory argument, and setwd takes one compulsory argument that is called dir.
+<br>
+Compulsory arguments can be given **with their names**: in such case you don't need to respect a specific order, or **without their names**, in which case you have to respect the order specified in the help page!<br>
+For example, the **rep.int** function (a variant of the rep function) takes 2 arguments (see in help page): **x** and **times**, in that order:
+
+```{r}
+# use arguments with their names:
+rep.int(x=1, times=3)
+# use arguments with their names without respecting the order:
+rep.int(times=3, x=1)
+# use arguments without their names but respecting the order:
+rep.int(1, 3)
+# use arguments without their names without respecting the order:
+rep.int(3, 1)
+# It works, but is not giving the expected output!
+```
+
  > Go to [R scripts](https://sbcrg.github.io/CRG_RIntroduction/Rscripts)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
