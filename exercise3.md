@@ -195,7 +195,7 @@ correction
 
 ```{r}
 substr(x=tt, start=17, stop=nchar(tt))
-gsub(pattern="Introduction to R ", x=tt)
+gsub(pattern="Introduction to R", replacement="", x=tt)
 ```
 
 </details>
