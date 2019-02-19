@@ -19,6 +19,24 @@ d <- data.frame(c("Maria", "Juan", "Alba"),
 	stringsAsFactors = FALSE)
 ```
 
+* Example why "stringsAsFactors = FALSE" is useful
+
+```{r}
+# Create a data frame with default parameters
+df <- data.frame(label=rep("test",5), column2=1:5)
+# Replace one value
+df[2,1] <- "yes"
+# Throws an error and doesn't replace the value !
+```
+
+```{r}
+# Create a data frame with 
+df2 <- data.frame(label=rep("test",5), column2=1:5, stringsAsFactors = FALSE)
+# Replace one value
+df2[2,1] <- "yes"
+# Works!
+```
+
 * Converting a matrix into a data frame:
 
 ```{r}
