@@ -57,5 +57,8 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 <h3>Module 4</h3>
 * Exploratory data analysis.
 
+<h2>Resources</h2>
+
+You can find [here](https://sbcrg.github.io/CRG_RIntroduction/resources) a list of useful resources.
 
 
