@@ -2,7 +2,7 @@
 
 <h3>General R resources</h3>
 
-* [Official up-to-date introduction to R](from the R Core Team)](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
+* [Official up-to-date introduction to R (from the R Core Team)](https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
 
 * [Cookbook for R](http://www.cookbook-r.com/)
 
