@@ -73,7 +73,7 @@ a <- as.matrix(read.table(file="file.txt"))
 
 Useful arguments:
 
-<a href="https://sbcrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="5500/"></a>
+<a href="https://sbcrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="550/"></a>
 
 * Write a data frame or matrix to a file:
 

@@ -30,17 +30,17 @@ All other packages:
 
 Set of R packages specialized in the analysis of bioinformatics data.<br>
 
-Bioconductor supports most types of genomics and NGS data (e.g. limma, DESeq2, BayesPeak) and integrates:
+Bioconductor supports most types of **genomics and NGS data** (e.g. limma, DESeq2, BayesPeak) and integrates:
 * Specific data classes (e.g. Granges from GenomicRanges)
 * Integrates command line tools (e.g Rsamtools)
 * Annotation tools (e.g. biomaRt)
 
 There are different types of Bioconductor packages:
-* Software: set of functions
+* **Software**: set of functions
 	+ e.g. DESeq2 (NGS data analysis)
-* Annotation: annotation of specific arrays, organisms, events, etc.
+* **Annotation**: annotation of specific arrays, organisms, events, etc.
 	+ e.g. BSgenome.Hsapiens.UCSC.hg38
-* Experiment: data that can be loaded and used
+* **Experiment**: data that can be loaded and used
 	+ e.g. ALL (acute lymphoblastic leukemia dataset)
 
 <h3>Install a package</h3>

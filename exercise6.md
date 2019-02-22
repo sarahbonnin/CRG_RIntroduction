@@ -20,8 +20,8 @@ setwd("~/Rcourse/Module2")
 **1- Download folder "i_o_files" in your current directory with:** 
 
 ```{r}
-# system invokes the OS command specified by command.
-system("svn export https://github.com/sbcrg/CRG_RIntroduction/trunk/i_o_files")
+# system invokes the OS command specified by the "command" argument.
+system(command="svn export https://github.com/sbcrg/CRG_RIntroduction/trunk/i_o_files")
 ```
 
 All files that will be used for exercise 6 are found in the **i_o_files** folder ! 
@@ -113,7 +113,8 @@ correction
 
 ```{r}
 # change field separator to ","
-fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt", sep=",")
+fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt", 
+	sep=",")
 dim(fs)
 ```
 
@@ -478,7 +479,7 @@ correction
 </summary>
 
 ```{r}
-write.table(ex6, "ex6c_output.txt", 
+write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE)
 ```
 
@@ -492,7 +493,7 @@ correction
 </summary>
 
 ```{r}
-write.table(ex6, "ex6c_output.txt", 
+write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE,
             quote = FALSE)
 ```
@@ -507,7 +508,7 @@ correction
 </summary>
 
 ```{r}
-write.table(ex6, "ex6c_output.txt", 
+write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE,
             quote = FALSE,
             sep="\t")
@@ -521,7 +522,7 @@ correction
 </summary>
 
 ```{r}
-write.table(ex6, "ex6c_output.txt", 
+write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE,
             quote = FALSE,
             sep=",")
