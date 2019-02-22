@@ -8,7 +8,8 @@
 
 <h3>R base</h3>
 
-A set a standard packages (~ 25) supplied with R by default (example: packages base, stats, graphics).
+A set a standard packages which are supplied with R by default.<br>
+Example: package base (write, table, rownames functions), package utils (read.table, str functions), package stats (var, na.omit, median functions).
 
 <h3>R contrib</h3>
 
@@ -27,7 +28,7 @@ All other packages:
 
 <h4>Bioconductor</h4>
 
-Sets of R packages specialized in bioinformatics analysis.<br>
+Set of R packages specialized in the analysis of bioinformatics data.<br>
 
 Bioconductor supports most types of genomics and NGS data (e.g. limma, DESeq2, BayesPeak) and integrates:
 * Specific data classes (e.g. Granges from GenomicRanges)
@@ -36,7 +37,7 @@ Bioconductor supports most types of genomics and NGS data (e.g. limma, DESeq2, B
 
 There are different types of Bioconductor packages:
 * Software: set of functions
-	+ e.g. DESeq2(NGS data analysis)
+	+ e.g. DESeq2 (NGS data analysis)
 * Annotation: annotation of specific arrays, organisms, events, etc.
 	+ e.g. BSgenome.Hsapiens.UCSC.hg38
 * Experiment: data that can be loaded and used
@@ -53,14 +54,14 @@ install.packages("ggplot2")
 ```
 
 * Install a bioconductor package:
-	+ From R version >= 3.5.0
+	+ For R version >= 3.5.0
 ```{r}
 # Install Bioconductor package manager
 install.packages("BiocManager")
 # Install Bioconductor package
 BiocManager::install("DESeq2")
 ```
-	+ From older R versions
+	+ For older R versions
 ```{r}
 # Source (=load into environment) script containing biocLite function
 source("http://www.bioconductor.org/biocLite.R")
@@ -78,9 +79,16 @@ biocLite("DESeq2")
 library("ggplot2")
 ```
 
+<h3>Check what packages are currently loaded</h3>
+
+```{r}
+sessionInfo()
+```
+
 <h3>List functions from a package</h3>
 
-* With RStudio
+* With RStudio <br>
+
 <img src="images/rstudio_ggplot2.png" width="450"/>
 
 * From the console
@@ -90,7 +98,7 @@ ls("package:ggplot2")
 
 <h3>RStudio server at CRG</h3>
 
-If you can't install packages (permission issues), it means you first need to specify a writeable directory to install the packages into.<br>
+If you can't install packages (permission issues), you first need to specify a writeable directory to install the packages into.<br>
 
 Follow the steps below:
 
