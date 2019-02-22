@@ -29,26 +29,27 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 * [R basics](https://sbcrg.github.io/CRG_RIntroduction/Rbasics)
 * [Functions (usage of)](https://sbcrg.github.io/CRG_RIntroduction/functionsbasics)
 * [R scripts](https://sbcrg.github.io/CRG_RIntroduction/Rscripts)
-	+ [Exercise 1: R basics](https://sbcrg.github.io/CRG_RIntroduction/exercise1)
+	+ [Exercise 1](https://sbcrg.github.io/CRG_RIntroduction/exercise1): R basics
 * [Data types](https://sbcrg.github.io/CRG_RIntroduction/datatype)
 * [Data structures](https://sbcrg.github.io/CRG_RIntroduction/datastructure)
   + [Vector](https://sbcrg.github.io/CRG_RIntroduction/vector)
-	+ [Exercise 2: Numeric vectors](https://sbcrg.github.io/CRG_RIntroduction/exercise2)
-	+ [Exercise 3: Character vectors](https://sbcrg.github.io/CRG_RIntroduction/exercise3)
+	+ [Exercise 2](https://sbcrg.github.io/CRG_RIntroduction/exercise2): Numeric vectors
+	+ [Exercise 3](https://sbcrg.github.io/CRG_RIntroduction/exercise3): Character vectors]
   + [Factor](https://sbcrg.github.io/CRG_RIntroduction/factor)
   + [Matrix](https://sbcrg.github.io/CRG_RIntroduction/matrix)
   + [Data frame](https://sbcrg.github.io/CRG_RIntroduction/dataframe)
   + [2D structure manipulation](https://sbcrg.github.io/CRG_RIntroduction/2d_manip)
-	+ [Exercise 4: Matrices](https://sbcrg.github.io/CRG_RIntroduction/exercise4)
-	+ [Exercise 5: Data frames](https://sbcrg.github.io/CRG_RIntroduction/exercise5)
+	+ [Exercise 4](https://sbcrg.github.io/CRG_RIntroduction/exercise4): Matrices
+	+ [Exercise 5](https://sbcrg.github.io/CRG_RIntroduction/exercise5): Data frames
 <h3>Module 2</h3>
 * [Missing values](https://sbcrg.github.io/CRG_RIntroduction/na)
 * [Input / Output](https://sbcrg.github.io/CRG_RIntroduction/inout)
-	+ [Exercise 6: Input / Output](https://sbcrg.github.io/CRG_RIntroduction/exercise6)
+	+ [Exercise 6](https://sbcrg.github.io/CRG_RIntroduction/exercise6): Input / Output
 * [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
-	+ [Exercise 7: Packages](https://sbcrg.github.io/CRG_RIntroduction/exercise7)
-* [Regular expressions (Regex)](https://sbcrg.github.io/CRG_RIntroduction/regex)
-	+ [Exercise 8: Regular expressions](https://sbcrg.github.io/CRG_RIntroduction/exercise8)
+	+ [Exercise 7](https://sbcrg.github.io/CRG_RIntroduction/exercise7): Packages
+* [Regular expressions](https://sbcrg.github.io/CRG_RIntroduction/regex) (Regex)
+	+ [Exercise 8](https://sbcrg.github.io/CRG_RIntroduction/exercise8): Regular expressions
+* [Lists](https://sbcrg.github.io/CRG_RIntroduction/list): a more complex data structure
 
 <h3>Module 3</h3>
 * [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
