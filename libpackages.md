@@ -50,20 +50,20 @@ There are different types of Bioconductor packages:
 
 * From the console:
 ```{r}
-install.packages("ggplot2")
+install.packages(pkgs="ggplot2")
 ```
 
 * Install a bioconductor package:
 	+ For R version >= 3.5.0
 ```{r}
 # Install Bioconductor package manager
-install.packages("BiocManager")
+install.packages(pkgs="BiocManager")
 # Install Bioconductor package
 BiocManager::install("DESeq2")
 ```
 	+ For older R versions
 ```{r}
-# Source (=load into environment) script containing biocLite function
+# Source (load into environment) script containing biocLite function
 source("http://www.bioconductor.org/biocLite.R")
 # Use biocLite function to install Bioconductor package
 biocLite("DESeq2")

@@ -25,13 +25,17 @@ correction
 </summary>
 
 ```{r}
-install.packages(c("ggplot2", "WriteXLS"))
+# Install the 2 packages at once
+install.packages(pkgs=c("ggplot2", "WriteXLS"))
+# Load in the environment
 library(c("ggplot2", "WriteXLS"))
 ```
 
+Check with sessionInfo() that the packages were loaded.
+
 </details>
 
-**2- ggplot2 loads automatically the diamonds dataset in the working environment: you can treat it as an object after ggplot2 is loaded.**
+**2- ggplot2 loads automatically the diamonds dataset in the working environment: you can use it as an object after ggplot2 is loaded.**
 
 What are the dimensions of diamonds? What are the column names of diamond?
 
@@ -41,7 +45,9 @@ correction
 </summary>
 
 ```{r}
+# Dimensions of diamonds
 dim(diamonds)
+# Column names of diamonds
 colnames(diamonds)
 ```
 
@@ -59,12 +65,13 @@ correction
 </summary>
 
 ```{r}
+# Select columns
 diams1 <- diamonds[,c("carat", "cut", "color", "price")]
 ```
 
 </details>
 
-**4- Install and load the package dplyr.**
+**4- Install and load the package dplyr from the Console.**
 
 <details>
 <summary>
@@ -72,13 +79,15 @@ correction
 </summary>
 
 ```{r}
-install.packages("dplyr")
+# Install package
+install.packages(pkgs="dplyr")
+# Load package
 library("dplyr")
 ```
 
 </details>
 
-**5- Use the function sample_n from dplyr package to randomly sample 200 lines of diams1: save in diams object.**
+**5- Use the function "sample_n" from the dplyr package to randomly sample 200 lines of diams1: save in diams object.**
 
 <details>
 <summary>
@@ -86,6 +95,7 @@ correction
 </summary>
 
 ```{r}
+# Subset data frame
 diams <- sample_n(tbl=diams1, size=200)
 ```
 
