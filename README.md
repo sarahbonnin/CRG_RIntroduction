@@ -49,7 +49,7 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 	+ [Exercise 7](https://sbcrg.github.io/CRG_RIntroduction/exercise7): Packages
 * [Regular expressions](https://sbcrg.github.io/CRG_RIntroduction/regex) (Regex)
 	+ [Exercise 8](https://sbcrg.github.io/CRG_RIntroduction/exercise8): Regular expressions
-* [Lists](https://sbcrg.github.io/CRG_RIntroduction/list): a more complex data structure
+* List: a more complex data structure
 
 <h3>Module 3</h3>
 * [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
