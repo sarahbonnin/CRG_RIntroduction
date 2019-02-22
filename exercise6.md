@@ -44,7 +44,7 @@ length(z)
 
 </details>
 
-**3- Sort z and save the sorted vector in zsorted.**
+**3- Sort z: save sorted vector in object "zsorted".**
 
 <details>
 <summary>
@@ -136,7 +136,7 @@ dim(fs_c)
 
 </details>
 
-* Change the default field separator.
+* Check head(fs_c) and change the default field separator to an appropriate one.
 
 <details>
 <summary>
@@ -186,8 +186,7 @@ Is R complaining ?<br>
  
 Check "manually" the file (in the R Studio file browser).<br>
 
-* The skip argument allows you to ignore one or more line(s) before reading in a file. Introduce this argument and read the file again.
-What are now the dimensions of sk?
+* The skip argument allows you to ignore one or more line(s) before reading in a file. Introduce this argument with the appropriate number of lines to skip, and read the file again.<br>
 
 <details>
 <summary>
@@ -202,8 +201,11 @@ dim(sk)
 
 </details>
 
+* Is R still complaining? 
+What are now the dimensions of sk ?
+
 * Change the default field separator.
-What are now the dimensions of sk?
+What are now the dimensions of sk ?
 
 <details>
 <summary>
@@ -234,9 +236,9 @@ cl <- read.table("i_o_files/ex6b_IO_comment.txt")
 
 </details>
 
-Is R complaining again ? Check manually the file and try to find out what is wrong.<br>
+Is R complaining again ? Check manually the file and try to find out what is wrong...<br>
 
-Adjust the comment.char argument and read the file again.
+What os the comment.char argument used for ? Adjust the comment.char argument and read the file again.
 
 <details>
 <summary>        
@@ -283,7 +285,7 @@ fin <- read.table("i_o_files/ex6b_IO_final.txt")
 
 </details>
 
-* Adjust the appropriate parameters to obtain the data frame "fin" of dimensions 167 x 4.
+* Adjust the appropriate parameters according to what you have learnt, in order to obtain the data frame "fin" of dimensions 167 x 4.
 
 <details>
 <summary>
@@ -354,7 +356,7 @@ colnames(ex6)
 
 </details>
 
-**4- Name the first column of ex6 "Country".**
+**4- Change the name of the first column of ex6 from "State" to "Country".**
 
 <details>
 <summary>
@@ -373,6 +375,8 @@ colnames(ex6)[1] <- "Country"
 </details>
 
 **5- How many countries are in the Eurozone, according to ex6 ?**
+
+Remember the table function.
 
 <details>
 <summary>
@@ -398,7 +402,7 @@ ex6$Eurozone
 # elements of the Eurozone column that are exactly TRUE
 ex6$Eurozone==TRUE
 # extract actual values that are TRUE
-ex6$Eurozone[ex6$Eurozone==TRUE
+ex6$Eurozone[ex6$Eurozone==TRUE]
 # reassign all elements that are TRUE with "yes"
 ex6$Eurozone[ex6$Eurozone==TRUE] <- "yes"
 # same with FALSE
@@ -407,7 +411,7 @@ ex6$Eurozone[ex6$Eurozone==FALSE] <- "no"
 
 </details>
 
-**7- In the column Country: how many country names from the list contain the letter "c" ?**
+**7- In the column Country: how many country names from the list contain the letter "c" (capital- or lower-case) ?**
 
 Remember the grep function. Check the help page.
 
@@ -417,14 +421,17 @@ correction
 </summary>
 
 ```{r}
+# country names with "c" (lower-case)
+grep("c", ex6$Country)
+# country names with "c" or "C" (ignoring case)
 grep("c", ex6$Country, ignore.case = TRUE)
+# show actual country names
 grep("c", ex6$Country, value=TRUE, ignore.case = TRUE)
 ```
 
 </details>
 
-**8- How many people live, according to that table:**
-
+**8- According to that data frame: how many people live:**
 + in the European union (whole table) ?
 + in the Eurozone ?
 
@@ -448,7 +455,7 @@ sum(ex6$Population[ex6$Eurozone == "yes"])
 
 **9- Write ex6 into file ex6c_output.txt**
 
-*After each of the following steps, check the output file in RStudio*
+*After each of the following steps, check the output file in the RStudio file browser (lower-right panel).*
 
 * Try with the default arguments.
 
