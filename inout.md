@@ -88,6 +88,7 @@ Useful arguments:
 
 <a href="https://sbcrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/writetable.png" width="550/"></a>
 
+* Note that "\t" stands for tab-delimitation
 
 > Go to [Exercise 6](https://sbcrg.github.io/CRG_RIntroduction/exercise6): Input and Output !
 <br>
