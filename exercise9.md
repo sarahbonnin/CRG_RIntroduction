@@ -1,0 +1,90 @@
+## Exercise 9: For loop
+
+Create the script "exercise9.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 9 in that script.
+<br>Remember you can comment the code using #.
+
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+getwd()
+setwd("~/Rcourse/Module2")
+```
+
+</details>
+
+
+**1- Write a for loop that iterates over 2 to 10 and prints the square root of each number (function sqrt()).**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(i in 2:10){
+	print(sqrt(i))
+}
+```
+
+</details>
+
+
+**2- Write a for loop that iterates over 5 to 15 and prints a vector of 2 elements containing each number and its the square root**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(i in 5:15){
+	veci <- c(i, sqrt(i))
+        print(veci)
+}
+```
+
+</details>
+
+**3- Create the following matrix**
+
+```{r}
+mat1 <- matrix(rnorm(40), nrow=20)
+```
+
+* Write a for loop that iterates over each row of mat1 and prints the minimum value of each row**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(j in 1:nrow(mat1)){
+	# extract the row
+	rowj <- mat1[j,]
+	# print rowj
+	print(rowj)
+	# print minimum value in row
+	print(min(rowj))
+}       
+```     
+
+</details>
+
+**2- Create the following data frame** 
+
+```{r}
+df2 <- data.frame(age=c(32, 45, 12, 67, 40, 27), 
+	citizenship=c("England", "India", "Spain", "Brasil", "Tunisia", "Poland"), 
+	row.names=paste(rep(c("Patient", "Doctor"), c(4, 2)), 1:6, sep=""),
+	stringsAsFactors=FALSE)
+
+```
+
+> Go to [Conditional statement](https://sbcrg.github.io/CRG_RIntroduction/conditional).
+
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
