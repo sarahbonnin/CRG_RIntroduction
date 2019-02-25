@@ -107,6 +107,14 @@ gsub(pattern="@",
         x=vec_ad)
 ```
 
+* Substitute "es" and "it" by "eu"
+
+```{r}
+gsub(pattern="es$|it$", 
+	replacement="eu", 
+	x=vec_ad)
+```
+
 <h3>Predefined variables to use in regular expressions:</h3>
 
 | [:lower:] | Lower-case letters |
