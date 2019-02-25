@@ -17,7 +17,7 @@ setwd("~/Rcourse/Module2")
 
 </details>
 
-**1- Install and load the packages ggplot2 WriteXLS**
+**1- Install and load the packages ggplot2 and WriteXLS**
 
 <details>
 <summary>
