@@ -4,32 +4,62 @@
 
 <h3>"for" loop</h3>
 
-Example:
+Structure of the **for loop**:
 
 ```{r}
-for(i in 1:10){
-    print(i)
+for(i in vector_expression){
+    action_command
 }
 ```
 
-The loop here will execute the chunk of code **n times**, **n** being the length of the vector **1:10**.
-<br>
+3 main elements:
+* **i** is the loop variable: it is updated at each iteration.
+* **vector_expression**: value attributed to **i** at each iteration (the number of iterations is the **length of vector_expression**).
+* **action_command**: what is to be done at each iteration.
+
 Note the usage of **curly brakets {}** to start and end the loop!
+<br>
+<img src="images/forloop1.png" width="350"/>
+<br>
+<img src="images/forloop2.png" width="450"/>
 
-<img src="images/forloop1.png" width="400"/>
 
-<img src="images/forloop2.png" width="500"/>
+* Example:
 
-
-* 
 ```{r}
-for(j in c("apple", "pear", "grape")){
-	print(i)
-	print(nchar(i))
+for(i in 2:5){
+	y <- i*2
+	print(y)
+}
+
+```
+
+* Example of a for loop that iterates over a character vector:
+
+```{r}
+# Character vector
+myfruits <- c("apple", "pear", "grape")
+# For loop
+for(j in myfruits){
+	print(j)
+	print(nchar(j))
 }
 ```
 
-Go to [Exercise 8](https://sbcrg.github.io/CRG_RIntroduction/exercise8): Regular expressions.
+* Example of a for loop that iterates over each row of a matrix, and print the minimum value of that row :
+
+```{r}
+# Matrix
+mymat <- matrix(rnorm(800), 
+	nrow=50)
+# For loop over mymat rows
+for(i in 1:nrow(mymat)){
+	print(i)
+	print(min(mymat[i,]))
+}
+```
+
+Go to [Exercise 9](https://sbcrg.github.io/CRG_RIntroduction/exercise9): For loops.
 <br>
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
