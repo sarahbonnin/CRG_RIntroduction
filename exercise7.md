@@ -27,8 +27,9 @@ correction
 ```{r}
 # Install the 2 packages at once
 install.packages(pkgs=c("ggplot2", "WriteXLS"))
-# Load in the environment
-library(c("ggplot2", "WriteXLS"))
+# Load in the environment (one by one)
+library("ggplot2")
+library("WriteXLS")
 ```
 
 Check with sessionInfo() that the packages were loaded.
