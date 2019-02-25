@@ -17,7 +17,7 @@ setwd("~/Rcourse/Module2")
 </details>
 
 
-**1- Create vector as:**
+**1- Create vector vec2 as:**
 
 
 ```{r}
@@ -104,6 +104,40 @@ for(k in 1:nrow(mat4)){
 ```
 
 </details>
+
+**3- For loop, if statement and regular expression**
+
+Create vector vec3 as:
+
+```{r}
+vec3 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
+```
+
+Look over each element of vec3.<br>
+If the element is a human gene (all upper-case characters), print a vector of two elements: the name of the gene and "human gene".<br>
+If the element is a mouse gene (only the first character is in upper-case), print a vector of two elements: the name of the gene and "mouse gene".<br>
+*Use a regular expression in the if statement!*
+<br>
+
+> TIP: when grep do not find a match, it returns an element of **length 0**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(gene in vec3){
+	if(length(pattern=grep("^[A-Z0-9]+$", x=gene)) != 0){
+		print(c(gene, "human gene"))
+	}else if(length(pttern=grep("^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
+		print(c(gene, "mouse gene"))
+	}
+}
+```
+
+</details>
+
 
 
 
