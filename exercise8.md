@@ -56,7 +56,7 @@ vector1 <- c("L2_sample1_GTAGCG.fastq.gz", "L1_sample2_ATTGCC.fastq.gz",
 	"L1_sample3_TGTTAC.fastq.gz", "L4_sample4_ATGGTA.fastq.gz")
 ```
 
-Use gsub and an appropriate regular expression to remove all but "sample1", "sample2", "sample3" and "sample4" in vector1.
+Use gsub and an appropriate regular expression to remove all but "sample1", "sample2", "sample3" and "sample4" from vector1.
 
 <details>
 <summary>
