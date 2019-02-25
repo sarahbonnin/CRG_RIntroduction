@@ -49,6 +49,10 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 	+ [Exercise 7](https://sbcrg.github.io/CRG_RIntroduction/exercise7): Packages
 * [Regular expressions](https://sbcrg.github.io/CRG_RIntroduction/regex) (Regex)
 	+ [Exercise 8](https://sbcrg.github.io/CRG_RIntroduction/exercise8): Regular expressions
+* [For loops](https://sbcrg.github.io/CRG_RIntroduction/forloop)
+	+ [Exercise9](https://sbcrg.github.io/CRG_RIntroduction/exercise9): For loops
+* [Conditional statement](https://sbcrg.github.io/CRG_RIntroduction/conditional): "if" statement.
+	+ [Exercise10](https://sbcrg.github.io/CRG_RIntroduction/exercise10): "if" statement 
 * List: a more complex data structure
 
 <h3>Module 3</h3>

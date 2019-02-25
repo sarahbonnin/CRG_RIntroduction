@@ -70,6 +70,6 @@ gsub("L[124]{1}_|_[ATGC]{6}.fastq.gz", "", vector1)
 
 </details>
 
-> Go to [Basic plots](https://sbcrg.github.io/CRG_RIntroduction/baseplot).
+> Go to [For loops](https://sbcrg.github.io/CRG_RIntroduction/forloop).
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
