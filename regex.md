@@ -2,9 +2,9 @@
 
 Regular expressions are tools to **describe patterns in strings**.
 
-<h3>Simple matches with grep</h3>
+<h3>Find simple matches with grep</h3>
 
-* Find a pattern anywhere in the string:
+* Find a pattern anywhere in the string (outputs the index of the element):
 
 ```{r}
 # By default, outputs the index of the element matching the pattern
@@ -12,7 +12,7 @@ grep(pattern="Gen",
 	x="Genomics")
 ```
 
-* Show element instead of the index
+* Show actual element where the pattern is found (instead of the index only):
 
 ```{r}
 # Set value=TRUE
@@ -21,7 +21,7 @@ grep(pattern="Gen",
 	value=TRUE)
 ```
 
-* Make search non case sensitive
+* Non case-sensitive search:
 
 ```{r}
 # Enter the pattern in lower-case, but case is ignores with ignore.case=TRUE
@@ -61,7 +61,8 @@ grep(pattern="^[gt]+",
 * Create a vector of email addresses:
 
 ```{r}
-vec_ad <- c("marie.curie@yahoo.es", "albert.einstein01@hotmail.com", "charles.darwin1809@gmail.com", "rosalind.franklin@aol.it")
+vec_ad <- c("marie.curie@yahoo.es", "albert.einstein01@hotmail.com", 
+	"charles.darwin1809@gmail.com", "rosalind.franklin@aol.it")
 ```
 
 * Keep only email addresses finishing with "es":
@@ -72,6 +73,10 @@ grep(pattern="es$",
         value=TRUE)
 ```
 
+<h3>Substitute or remove matching patterns with gsub</h3>
+
+From the same vector of email addresses:
+
 * Remove the "@" symbol and the email provider from each address
 
 ```{r}
@@ -79,6 +84,15 @@ gsub(pattern="@[a-z.]+",
         replacement="",
         x=vec_ad)
 ```
+
+* Substitute the "@" symbol with "_at_"
+
+```{r}
+gsub(pattern="@",
+        replacement="_at_",
+        x=vec_ad)
+```
+
 
 <h3>Predefined variables to use in regular expressions:</h3>
 
@@ -112,7 +126,7 @@ gsub(pattern="[[:digit:]]*@[[:print:]]+",
         x=vec_ad)
 ```
 
-<h3>Use grep and regular expressions to retrieve column by their names</h3>
+<h3>Use grep and regular expressions to retrieve columns by their names</h3>
 
 Example of a data frame:
 
