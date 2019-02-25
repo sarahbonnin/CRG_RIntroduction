@@ -31,7 +31,9 @@ grep(pattern="gen",
 	ignore.case=TRUE)
 ```
 
-<h3>Special characters used for pattern recognition:</h3>
+<h3>Regular expressions to find more flexible patterns</h3>
+
+<h4>Special characters used for pattern recognition:</h4>
 
 | $ | Find pattern at the end of the string |
 | ^ | Find pattern at the beginning of the string |
@@ -41,8 +43,20 @@ grep(pattern="gen",
 | * | One or more allowed, but optional |
 | ? | One allowed, but optional |
 
+<h4>Match your own pattern inside **[]**</h4>
 
-* Match anything contained between brackets at least once: here, match any element that contains either "g" or "t":
+[abc]: matches a, b, or c.<br>
+^[^abc]: matches a, b or c at the beginning of the element.<br>
+^A[abc]+: matches A as the first character of the element, then either a, b or c<br>
+^A[abc]*: matches A as the first character of the element, then optionally either a, b or c<br>
+^A[abc]{1}_: matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore<br><br>
+
+[a-z]: matches every character between a and z.<br>
+[A-Z]: matches every character between A and Z.<br>
+[0-9]: matches every number between 0 and 9.<br>
+
+
+* Match anything contained between brackets (here either g or t) at least once:
 
 ```{r}
 grep(pattern="[gt]+", 
@@ -58,7 +72,7 @@ grep(pattern="^[gt]+",
         value=TRUE)
 ```
 
-* Create a vector of email addresses:
+* **Create a vector of email addresses:**
 
 ```{r}
 vec_ad <- c("marie.curie@yahoo.es", "albert.einstein01@hotmail.com", 
@@ -93,7 +107,6 @@ gsub(pattern="@",
         x=vec_ad)
 ```
 
-
 <h3>Predefined variables to use in regular expressions:</h3>
 
 | [:lower:] | Lower-case letters |
@@ -113,13 +126,13 @@ gsub(pattern="@[[:lower:][:punct:]]+",
 	replacement="", 
 	x=vec_ad)
 ```
-	* Same thing but remove additionally any number BEFORE the @
+	* Same thing but remove additionally any number(s) BEFORE the @ (if any):
 ```{r}
 gsub(pattern="[[:digit:]]*@[[:lower:][:punct:]]+",
         replacement="",
         x=vec_ad)
 ```
-	* Same but simplified
+	* Same but simplified:
 ```{r}
 gsub(pattern="[[:digit:]]*@[[:print:]]+",
         replacement="",
@@ -141,7 +154,8 @@ df_regex <- data.frame(expression1=1:4,
 	stringsAsFactors=FALSE)
 
 # Select column names that start with "expression"
-grep(pattern="^expression", colnames(df_regex))
+grep(pattern="^expression", 
+	x=colnames(df_regex))
 
 # Select columns from df_regex if their names start with "expression"
 df_regex[, grep(pattern="^expression", colnames(df_regex))]
