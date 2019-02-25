@@ -65,7 +65,9 @@ correction
 
 ```{r}
 # | is used as OR
-gsub("L[124]{1}_|_[ATGC]{6}.fastq.gz", "", vector1)
+gsub(pattern="L[124]{1}_|_[ATGC]{6}.fastq.gz", 
+	replacement="", 
+	x=vector1)
 ```
 
 </details>
