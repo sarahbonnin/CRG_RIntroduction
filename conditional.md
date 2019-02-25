@@ -59,9 +59,11 @@ if(condition1){
 }
 ```
 
+<img src="images/ifelseif.png" width="450"/>
+
 If the **condition1** is TRUE, then proceeds to the **action_command1**; if the **condition1** is FALSE, test for **condition2**: if the **condition2** is TRUE, proceed to the **action_command2**; if neither **condition1** nor **condition2** are TRUE, then proceed to the **action_command3**.
 <br>
-*Note that you can add up as many **else if** statements as you want.**
+*Note that you can add up as many **else if** statements as you want.*
 
 * Example without **else**
 
@@ -91,7 +93,7 @@ if(k <= 3){
 }
 ```
 
-* **For loop** and **if statement**:
+* **If statement** in **For loop**:
 
 ```{r}
 # Matrix
@@ -107,7 +109,6 @@ for(i in 1:nrow(mymat)){
 	}
 }
 ```
-
 
 Go to [Exercise 10](https://sbcrg.github.io/CRG_RIntroduction/exercise10): "If" statement.
 <br>

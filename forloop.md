@@ -18,10 +18,8 @@ for(i in vector_expression){
 * **action_command**: what is to be done at each iteration.
 
 Note the usage of **curly brakets {}** to start and end the loop!
-<br>
-<img src="images/forloop1.png" width="350"/>
-<br>
-<img src="images/forloop2.png" width="450"/>
+<br><br>
+<img src="images/forloop1.png" width="300"/><img src="images/forloop2.png" width="450"/>
 
 
 * Example:
