@@ -24,7 +24,7 @@ setwd("~/Rcourse/Module2")
 vec2 <- c("kiwi", "apple", "pear", "grape")
 ```
 
-* Use an if statement and the %in% function to check whether "apple" is present in vec2 (print that there is an apple!)
+* Use an if statement and the %in% function to check whether "apple" is present in vec2 (in such case print "there is an apple!")
 
 <details>
 <summary>
@@ -118,13 +118,13 @@ Create vector vec4 as:
 vec4 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
 ```
 
-Lookp over each element of vec4 and test:
+Loop over each element of "vec4":
 * If the element is a **human gene (all upper-case characters)**, print a vector of two elements: the name of the gene and "human gene".<br>
 * If the element is a **mouse gene (only the first character is in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
-*Use a regular expression in the if statement!*
-<br>
 
->TIP: when grep does not find a match, it returns an element of **length 0** !
+> Tip1: *Use a regular expression in the if statement!*<br>
+> Tip2: *when grep does not find a match, it returns an element of **length 0** !*
+<br>
 
 <details>
 <summary>
