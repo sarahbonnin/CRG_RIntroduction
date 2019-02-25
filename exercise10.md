@@ -118,7 +118,7 @@ Create vector vec4 as:
 vec4 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
 ```
 
-Look over each element of vec4:
+Lookp over each element of vec4 and test:
 * If the element is a **human gene (all upper-case characters)**, print a vector of two elements: the name of the gene and "human gene".<br>
 * If the element is a **mouse gene (only the first character is in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
 *Use a regular expression in the if statement!*
@@ -133,16 +133,15 @@ correction
 
 ```{r}
 for(gene in vec4){
-	if(length(pattern=grep("^[A-Z0-9]+$", x=gene)) != 0){
+	if(length(grep(pattern="^[A-Z0-9]+$", x=gene)) != 0){
 		print(c(gene, "human gene"))
-	}else if(length(pttern=grep("^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
+	}else if(length(grep(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
 		print(c(gene, "mouse gene"))
 	}
 }
 ```
 
 </details>
-
 
 
 
