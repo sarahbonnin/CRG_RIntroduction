@@ -70,7 +70,7 @@ write(zsorted, "ex6a_output.txt")
 
 </details>
 
-**5- Check the output. Save the content of zsorted again but this time setting the argument "ncolumns" to 1: how is it different?**
+**5- Check the file you produced in the RStudio file browser (click on the file in bottom-right panel "Files" tab). Save the content of zsorted again but this time setting the argument "ncolumns" to 1: how is the file different?**
 
 <details>
 <summary>
