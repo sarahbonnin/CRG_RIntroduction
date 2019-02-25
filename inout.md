@@ -23,14 +23,16 @@ If non-numeric, you need to specify the type of data contained in the file:
 # specify the type of data to scan
 scan(file="file.txt", 
 	what="character")
-scan(file="~/file.txt", )
+scan(file="~/file.txt", 
+	what="character")
 ```
 
 Regarding paths of files:<br>
 If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:
 
 ```{r}
-scan(file="~/file.txt", )
+scan(file="~/file.txt", 
+	what="character")
 ```
 
 * Write the content of a vector in a file:
