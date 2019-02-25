@@ -33,7 +33,7 @@ for(i in 2:10){
 </details>
 
 
-**2- Write a for loop that iterates over 5 to 15 and prints a vector of 2 elements containing each number and its the square root**
+**2- Write a for loop that iterates over 5 to 15 and prints a vector of 2 elements containing each number and its square root**
 
 <details>
 <summary>
@@ -55,7 +55,7 @@ for(i in 5:15){
 mat1 <- matrix(rnorm(40), nrow=20)
 ```
 
-* Write a for loop that iterates over each row of mat1 and prints the minimum value of each row**
+* Write a for loop that iterates over each row of mat1 and prints the median value of each row.
 
 <details>
 <summary>
@@ -68,22 +68,13 @@ for(j in 1:nrow(mat1)){
 	rowj <- mat1[j,]
 	# print rowj
 	print(rowj)
-	# print minimum value in row
-	print(min(rowj))
+	# print median value in row
+	print(median(rowj))
 }       
 ```     
 
 </details>
 
-**2- Create the following data frame** 
-
-```{r}
-df2 <- data.frame(age=c(32, 45, 12, 67, 40, 27), 
-	citizenship=c("England", "India", "Spain", "Brasil", "Tunisia", "Poland"), 
-	row.names=paste(rep(c("Patient", "Doctor"), c(4, 2)), 1:6, sep=""),
-	stringsAsFactors=FALSE)
-
-```
 
 > Go to [Conditional statement](https://sbcrg.github.io/CRG_RIntroduction/conditional).
 

@@ -53,7 +53,6 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 	+ [Exercise9](https://sbcrg.github.io/CRG_RIntroduction/exercise9): For loops
 * [Conditional statement](https://sbcrg.github.io/CRG_RIntroduction/conditional): "if" statement.
 	+ [Exercise10](https://sbcrg.github.io/CRG_RIntroduction/exercise10): "if" statement 
-* List: a more complex data structure
 
 <h3>Module 3</h3>
 * [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
