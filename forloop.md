@@ -32,19 +32,19 @@ for(i in 2:5){
 
 ```
 
-* Example of a for loop that iterates over a character vector:
+* Example of a **for loop** that iterates over a character vector:
 
 ```{r}
 # Character vector
 myfruits <- c("apple", "pear", "grape")
-# For loop
+# For loop that prints the current element and its number of characters
 for(j in myfruits){
 	print(j)
 	print(nchar(j))
 }
 ```
 
-* Example of a for loop that iterates over each row of a matrix, and print the minimum value of that row :
+* Example of a **for loop** that iterates over each row of a matrix, and prints the minimum value of that row :
 
 ```{r}
 # Matrix
