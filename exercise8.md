@@ -11,7 +11,6 @@ correction
 
 ```{r}
 getwd()
-setwd("Rcourse/Module2")
 setwd("~/Rcourse/Module2")
 ```
 
@@ -30,7 +29,7 @@ df2 <- data.frame(age=c(32, 45, 12, 67, 40, 27),
 
 ```
 
-Create a smaller data frame df3 that contains only the Patient and not the Doctor information, using grep
+Using grep: create a smaller data frame df3 that contains only the Patient but NOT the Doctor information.
 
 <details>
 <summary>
@@ -53,10 +52,11 @@ df3 <- df2[grep("Patient", rownames(df2)), ]
 Build this vector of file names:
 
 ```{r}
-vector1 <- c("L2_sample1_GTAGCG.fastq.gz", "L1_sample2_ATTGCC.fastq.gz", "L1_sample3_TGTTAC.fastq.gz", "L4_sample4_ATGGTA.fastq.gz")
+vector1 <- c("L2_sample1_GTAGCG.fastq.gz", "L1_sample2_ATTGCC.fastq.gz", 
+	"L1_sample3_TGTTAC.fastq.gz", "L4_sample4_ATGGTA.fastq.gz")
 ```
 
-Use gsub and the regular expressions to remove all but sample1, sample2, sample3 and sample4
+Use gsub and an appropriate regular expression to remove all but "sample1", "sample2", "sample3" and "sample4" in vector1.
 
 <details>
 <summary>
