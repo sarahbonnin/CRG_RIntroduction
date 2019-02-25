@@ -56,7 +56,12 @@ if("grapefruit" %in% vec2){
 
 </details>
 
-* Add an **else** section in case neither grapefruit nor pear is found in vec2.
+* Add an **else** section in case neither grapefruit nor pear is found in vec2.<br>
+Test your **if** statement also on vec3:
+
+```{r}
+vec3 <- c("cherry", "strawberry", "blueberry", "peach")
+```
 
 <details>
 <summary>
@@ -69,7 +74,7 @@ if("grapefruit" %in% vec2){
 }else if("pear" %in% vec2){
         print("there is no grapefruit but there is a pear")
 }else{
-	print("there is neither grapefruit nor pear")
+	print("no grapefruit and no pear")
 }
 ```
 
@@ -107,19 +112,19 @@ for(k in 1:nrow(mat4)){
 
 **3- For loop, if statement and regular expression**
 
-Create vector vec3 as:
+Create vector vec4 as:
 
 ```{r}
-vec3 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
+vec4 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
 ```
 
-Look over each element of vec3.<br>
-If the element is a human gene (all upper-case characters), print a vector of two elements: the name of the gene and "human gene".<br>
-If the element is a mouse gene (only the first character is in upper-case), print a vector of two elements: the name of the gene and "mouse gene".<br>
+Look over each element of vec4:
+* If the element is a **human gene (all upper-case characters)**, print a vector of two elements: the name of the gene and "human gene".<br>
+* If the element is a **mouse gene (only the first character is in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
 *Use a regular expression in the if statement!*
 <br>
 
-> TIP: when grep do not find a match, it returns an element of **length 0**
+>TIP: when grep does not find a match, it returns an element of **length 0** !
 
 <details>
 <summary>
@@ -127,7 +132,7 @@ correction
 </summary>
 
 ```{r}
-for(gene in vec3){
+for(gene in vec4){
 	if(length(pattern=grep("^[A-Z0-9]+$", x=gene)) != 0){
 		print(c(gene, "human gene"))
 	}else if(length(pttern=grep("^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
