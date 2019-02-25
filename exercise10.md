@@ -106,6 +106,5 @@ for(k in 1:nrow(mat4)){
 </details>
 
 
-> Go to [Lists](https://sbcrg.github.io/CRG_RIntroduction/list).
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
