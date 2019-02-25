@@ -10,7 +10,7 @@ if(condition){
 }
 ```
 
-If the **condition** is TRUE, then proceeds to the **action_command**; if it is FALSE, nothing happens.
+If the **condition** is TRUE, then proceed to the **action_command**; if it is FALSE, nothing happens.
 <br>
 
 ```{r}
@@ -35,7 +35,7 @@ if(condition){
 }
 ```
 
-If the **condition** is TRUE, then proceeds to the **action_command1**; if the **condition** is FALSE, proceed to **action_command2**.
+If the **condition** is TRUE, then proceed to the **action_command1**; if the **condition** is FALSE, proceed to **action_command2**.
 
 ```{r}
 k <- 3
@@ -61,8 +61,8 @@ if(condition1){
 
 <img src="images/ifelseif.png" width="450"/>
 
-If the **condition1** is TRUE, then proceeds to the **action_command1**; if the **condition1** is FALSE, test for **condition2**: if the **condition2** is TRUE, proceed to the **action_command2**; if neither **condition1** nor **condition2** are TRUE, then proceed to the **action_command3**.
-<br>
+If the **condition1** is TRUE, then proceed to the **action_command1**; if the **condition1** is FALSE, test for **condition2**: if the **condition2** is TRUE, proceed to the **action_command2**; if neither **condition1** nor **condition2** are TRUE, then proceed to the **action_command3**.
+<br><br>
 *Note that you can add up as many **else if** statements as you want.*
 
 * Example without **else**
@@ -83,10 +83,11 @@ if(k < 0){
 
 ```{r}
 k <- 10
+
 # print if value is <= 3
 if(k <= 3){
   print("less than or equal to 3")
-}else if(k > 8){
+}else if(k >= 8){
   print("greater than or equal to 8")
 }else{
   print("greater than 3 and less than 8")
@@ -99,7 +100,8 @@ if(k <= 3){
 # Matrix
 mymat <- matrix(rnorm(800), 
         nrow=50)
-# Loop over rows of mymat and print row if the median is > 0
+	
+# Loop over rows of mymat and print row if its median value is > 0
 for(i in 1:nrow(mymat)){
 	# extract the current row
 	rowi <- mymat[i,]
