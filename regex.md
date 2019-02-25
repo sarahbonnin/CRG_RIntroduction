@@ -45,15 +45,15 @@ grep(pattern="gen",
 
 <h4>Match your own pattern inside **[]**</h4>
 
-[abc]: matches a, b, or c.<br>
-^[^abc]: matches a, b or c at the beginning of the element.<br>
-^A[abc]+: matches A as the first character of the element, then either a, b or c<br>
-^A[abc]*: matches A as the first character of the element, then optionally either a, b or c<br>
-^A[abc]{1}_: matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore<br><br>
+\[abc\]: matches a, b, or c.<br>
+^\[^abc\]: matches a, b or c at the beginning of the element.<br>
+^A\[abc\]+: matches A as the first character of the element, then either a, b or c<br>
+^A\[abc\]*: matches A as the first character of the element, then optionally either a, b or c<br>
+^A\[abc\]{1}_: matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore<br><br>
 
-[a-z]: matches every character between a and z.<br>
-[A-Z]: matches every character between A and Z.<br>
-[0-9]: matches every number between 0 and 9.<br>
+\[a-z\]: matches every character between a and z.<br>
+\[A-Z\]: matches every character between A and Z.<br>
+\[0-9\]: matches every number between 0 and 9.<br>
 
 
 * Match anything contained between brackets (here either g or t) at least once:
