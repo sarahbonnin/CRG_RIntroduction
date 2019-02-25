@@ -122,8 +122,8 @@ Loop over each element of "vec4":
 * If the element is a **human gene (all upper-case characters)**, print a vector of two elements: the name of the gene and "human gene".<br>
 * If the element is a **mouse gene (only the first character is in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
 
-> Tip1: *Use a regular expression in the if statement!*<br>
-> Tip2: *when grep does not find a match, it returns an element of **length 0** !*
+> Tip 1: *Use grep and a regular expression in the if statement !*<br>
+> Tip 2: *When grep does not find a match, it returns an element of **length 0** !*
 <br>
 
 <details>
