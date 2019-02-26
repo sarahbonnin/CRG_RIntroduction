@@ -17,14 +17,14 @@ setwd("~/Rcourse/Module2")
 </details>
 
 
-**1- Create vector as:**
+**1- Create vector vec2 as:**
 
 
 ```{r}
 vec2 <- c("kiwi", "apple", "pear", "grape")
 ```
 
-* Use an if statement and the %in% function to check whether "apple" is present in vec2 (print that there is an apple!)
+* Use an if statement and the %in% function to check whether "apple" is present in vec2 (in such case print "there is an apple!")
 
 <details>
 <summary>
@@ -33,7 +33,7 @@ correction
 
 ```{r}
 if("apple" %in% vec2){
-        print("there is an apple there")
+	print("there is an apple there")
 }
 ```
 
@@ -50,13 +50,18 @@ correction
 if("grapefruit" %in% vec2){
         print("there is a grapefruit there")
 }else if("pear" %in% vec2){
-        print("there is no grapefruit but there is a pear")
+	print("there is no grapefruit but there is a pear")
 }
 ```
 
 </details>
 
-* Add an **else** section in case neither grapefruit nor pear is found in vec2.
+* Add an **else** section in case neither grapefruit nor pear is found in vec2.<br>
+Test your **if** statement also on vec3:
+
+```{r}
+vec3 <- c("cherry", "strawberry", "blueberry", "peach")
+```
 
 <details>
 <summary>
@@ -69,7 +74,7 @@ if("grapefruit" %in% vec2){
 }else if("pear" %in% vec2){
         print("there is no grapefruit but there is a pear")
 }else{
-        print("there is neither grapefruit nor pear")
+	print("no grapefruit and no pear")
 }
 ```
 
@@ -81,7 +86,7 @@ Create the following matrix:
 
 ```{r}
 mat4 <- matrix(c(2, 34, 1, NA, 89, 7, 12, NA, 0, 38),
-        nrow=5)
+	nrow=5)
 ```
 
 Loop over rows with **for** of mat4 and print row number and entire row **if** you find an NA.
@@ -94,12 +99,45 @@ correction
 
 ```{r}
 for(k in 1:nrow(mat4)){
-        # extract row
-        rowk <- mat4[k,]
-        if(any(is.na(rowk))){
-                print(k)
-                print(rowk)
-        }
+	# extract row
+	rowk <- mat4[k,]
+	if(any(is.na(rowk))){
+		print(k)
+		print(rowk)
+	}
+}
+```
+
+</details>
+
+**3- For loop, if statement and regular expression**
+
+Create vector vec4 as:
+
+```{r}
+vec4 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
+```
+
+Loop over each element of "vec4":
+* If the element is a **human gene (all upper-case characters)**, print a vector of two elements: the name of the gene and "human gene".<br>
+* If the element is a **mouse gene (only the first character is in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
+
+> Tip 1: *Use grep and a regular expression in the if statement !*<br>
+> Tip 2: *When grep does not find a match, it returns an element of **length 0** !*
+<br>
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+for(gene in vec4){
+	if(length(grep(pattern="^[A-Z0-9]+$", x=gene)) != 0){
+		print(c(gene, "human gene"))
+	}else if(length(grep(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
+		print(c(gene, "mouse gene"))
+	}
 }
 ```
 
