@@ -13,6 +13,12 @@ A vector is a sequence of data elements from the **same type**.
 a <- c(329, 45, 12, 28)
 ```
 
+You can create an empty vector with:
+
+```{r}
+vecempty <- vector()
+```
+
 * Create a sequence of consecutive numbers:
 
 ```{r}
