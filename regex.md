@@ -33,6 +33,15 @@ grep(pattern="gen",
 
 * Show if it DOESN'T match the pattern with **inv=TRUE**:
 
+```{r}
+# Shows what doesn't match
+grep(pattern="gen",
+        x="Genomics",
+        value=TRUE,
+        ignore.case=TRUE,
+	inv=TRUE)
+```
+
 <h3>Regular expressions to find more flexible patterns</h3>
 
 <h4>Special characters used for pattern recognition:</h4>
