@@ -47,5 +47,3 @@ Check this [R blogger post on missing/null values](https://www.r-bloggers.com/r-
 <br>
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
-
-
