@@ -52,9 +52,9 @@ plot(x, y,
 ```
 <img src="images/plots/scatter3.png" width="350"/>
 
-See the different type of points:
+See the different types of points that you can use:
 
-<img src="images/plots/pointtype.png" width="350"/>
+<img src="images/plots/pointtype.png" width="250"/>
 
 <h3>Bar plots</h3>
 
