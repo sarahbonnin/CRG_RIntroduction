@@ -1,19 +1,16 @@
----
-title: "MODULE II. Introduction to Exploratory Data Analysis & Descriptive Statistics."
-author: "Julia Ponomarenko, CRG Bioinformatics core facility."
-date: "October 4, 2017"
-output:
-  html_document:
-    toc: true
-    toc_depth: 4
-    theme: readable
----
-<br/>
+## MODULE 4. Introduction to Exploratory Data Analysis & Descriptive Statistics
 
-"In statistics, **exploratory data analysis (EDA)** is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task." (Wikipedia)
+Author: Julia Ponomarenko, CRG Bioinformatics core facility.
+Date: March 11-12, 2019
+
+__Objectives: To learn how to analyze data sets, applying methods of descriptive statistics and visualization in R.__
 
 <br/>
-"**Descriptive statistics** aim to summarize **a sample**, rather than use the data to learn about **the population** that the sample of data is thought to represent. This generally means that **descriptive statistics**, unlike **inferential statistics**, are not developed on the basis of probability theory." (Wikipedia)
+
+In statistics, **Exploratory Data Analysis (EDA)** is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task. (Wikipedia)
+
+<br/>
+__Descriptive statistics__ aim to summarize __a sample__, rather than use the data to learn about **the population** that the sample of data is thought to represent. This generally means that **descriptive statistics**, unlike **inferential statistics**, are not developed on the basis of probability theory. (Wikipedia)
 
 <br/>
 <br/>
@@ -28,13 +25,12 @@ library(car)
 ```
 
 <br/>
-Let's explore the dataset "Davis" from the car package. It is called "Self-Reports of Height and Weight Description".
-The Davis data frame has 200 rows and 5 columns. The subjects were men and women engaged in regular exercise. There are some missing data. This data frame contains the following columns:
-<br/>sex    - A factor with levels: F, female; M, male. 
-<br/>weight - Measured weight in kg.
-<br/>height - Measured height in cm.
-<br/>repwt  - Reported weight in kg.
-<br/>repht  - Reported height in cm.
+Let's explore the dataset "Davis" from the car package. It is called "Self-Reports of Height and Weight Description". The subjects were men and women engaged in regular exercise. This data frame contains the following columns:
+- sex    - F, female; M, male 
+- weight - measured weight in kg
+- height - measured height in cm
+- repwt  - reported weight in kg
+- repht  - reported height in cm
 
 ```{r, results="hide"}
 data <- Davis
@@ -44,12 +40,7 @@ data <- Davis
 #### Data dimentionality
 ```{r, results="hide"}
 dim(data) # first thing to do to see how many rows and columns
-names(data) # columns names
-
-class(data)  # should be "data.frame""
-sapply(data[1,], class)  # to see types of variables in each column
-
-str(data) # gives all the above in one command !!!
+str(data) 
 
 head(data)
 tail(data)
@@ -58,15 +49,78 @@ summary(data)  # shows quantiles for each column and how many NA !!!!
 ```
 <br/>
 
-#### Missing (NA) values in data
+#### Missing (NA) values in data: functions _complete.cases(), na.omit(), all.equal()_
+How many rows do not contain missing values (i.e., not a single 'NA')?
 ```{r, results="hide"}
-#How many rows contain missing values (i.e., at least one 'NA')
+sum(complete.cases(data)) 
+x <- data[complete.cases(data), ] # here they are
+y <- na.omit(data)
+all.equal(x,y)
+```
+<br/>
+How many rows contain missing values (i.e., at least one 'NA')?
+```{r, results="hide"}
 sum(!complete.cases(data)) 
 data[!complete.cases(data), ] # here they are
 ```
 
 <br/>
+#### Looking at the subset of data: functions _subset(), _
+```{r, results="hide"}
+d <- data[data$weight < 60,] # rows with weight below 60 kg
+str(d)
+summary(d)
 
+all.equal(d, subset(data, weight < 60)) # same as the above !!!
+
+x <- data[data$weight > 50 & data$repwt <= 66,] 
+x  # the result looks strange!?
+x[!complete.cases(x),]
+na.omit(x)  # we cannot do this because this removes rows that contain at least one NA in any column
+
+y <- data[which(data$weight > 50 & data$repwt <= 66),] # use which() to exclude NA values
+y
+dim(y)
+y[!complete.cases(y), ]
+
+z <- data[data$weight > 50 & !is.na(data$weight) & data$repwt <= 66 & !is.na(data$repwt),] # or omit NA explicitly
+z
+all.equal(y,z)
+
+# While using subset() is more convenient
+w <- subset(data, weight > 50 & repwt <= 66) 
+all.equal(y,w)
+
+# subet() allows to select also variables
+x1 <- subset(data, weight > 50 & repwt <= 66, select = c(sex, weight, repwt)) 
+x1
+x2 <- subset(data, weight > 50 & repwt <= 66, select = c(-height, -repht)) 
+all.equal(x1,x2)
+```
+<br/>
+
+#### Excercises: 
+1. How many people shorter than 170 cm reported that they are taller?
+2. What proportion of men and women in the dataset did not report their height?
+3. Is it true that the same men who did not report height also did not report weight?
+4. Is it true for women?
+```{r, results="hide", echo=FALSE}
+x <- subset(data, height < 170 & repht >=170)
+nrow(x)
+
+x <- subset(data, sex == 'M' & is.na(repht))
+nrow(x)
+nrow(x)/nrow(subset(data, sex == 'M'))
+nrow(subset(data, sex == 'F' & is.na(repht)))/nrow(subset(data, sex == 'F'))
+
+all.equal(subset(data, sex == 'M' & is.na(repht)), subset(data, sex == 'M' & is.na(repwt)))
+
+all.equal(subset(data, sex == 'F' & is.na(repht)), subset(data, sex == 'F' & is.na(repwt)))
+
+```
+<br/>
+
+<br/>
 #### Exploring a specific column
 ```{r, results="hide"}
 length(data$repwt)
@@ -119,21 +173,7 @@ table(cut(x, quantile(x)), cut(y, quantile(y, na.rm = TRUE)))
 <br/>
 
 
-#### Looking at subset of data
-```{r, results="hide"}
-d <- data[data$weight < 60,] # rows with weight below 60 kg
-str(d)
-summary(d)
 
-d <- subset(data, weight < 60) # same as the above !!!
-
-data[data$weight < 60 & data$repwt >= 60,] # the results looks strange !!!
-data[which(data$weight < 60 & data$repwt >= 60),] # use which() to exclude NA values
-subset(data, weight < 60 & repwt >= 60) # same as the above
-subset(data, weight < 60 & repwt >= 60, select = c(sex, weight, repwt)) # same as the above but allows to select at the same time variables
-subset(data, weight < 60 & repwt >= 60, select = c(-height, -repht)) # gives the same result as above !!! 
-```
-<br/>
 <br/>
 
 ### Descriptive Statistics 
@@ -194,20 +234,20 @@ sd(d$weight)
 
 ### Plots
 #### Box-plot
-```{r}
+```{r, results="hide"}
 boxplot(data$weight) # we can clearly see three outliers as individual dots
 data[which(data$weight > upper_limit), ] # here they are
 ```
 
 <br/>
-**How to plot box-plots side-by-side on one graph**
-```{r}
+How to plot box-plots side-by-side on one graph?
+```{r, results="hide"}
 boxplot(data$weight ~ data$sex)
 boxplot(data$weight ~ data$sex, outline = FALSE) # boxplot has a parameter "outline" not to show outliers! (But it doesn't change your data)
 ```
 
 <br/>
-**Bonus: How to plot together data from two or more vectors of different lengths?**
+How to plot together data from two or more vectors of different lengths?
 ```{r, results="hide", warning = FALSE}
 #install.packages("reshape2")
 library(reshape2) # for melt() to use below for transforming a data frame from the wide to the long format
@@ -234,7 +274,7 @@ boxplot(data = meltdf, value ~ variable)
 
 <br/>
 
-**Bonus: Now to make the above plot more informative and look "publication-ready"?**
+Now to make the above plot more informative and look "publication-ready"?
 ```{r, results="hide"}
 # Define the plot parameters
 y_limits <- c(30, 130)
@@ -292,8 +332,8 @@ hist(d$weight)
 ```
 <br/>
 
-**You can control for the size of bins!**
-```{r}
+Control for the size of bins
+```{r, results="hide"}
 bin_size <- 5
 start <- 30
 end <- 120
@@ -303,7 +343,7 @@ hist(d$weight, breaks = bins, col = "blue")
 
 <br/>
 
-**Bonus: Two overlaying histograms on one graph**
+Two overlaying histograms on one graph
 ```{r, results="hide"}
 male <- d[which(d$sex == "M"),] # we use data with outliers removed
 female <- d[which(d$sex == "F"),]
@@ -318,7 +358,7 @@ legend("topright", legend = c("Females", "Males"), fill = colors, bty = "n", bor
 ```
 <br/>
 
-**Bonus: The same graph as above with bins of size 2 and using colors <- c(rgb(1, 0, 1, 0.7), rgb(0, 0, 1, 0.5))**
+The same graph as above with bins of size 2 and using colors <- c(rgb(1, 0, 1, 0.7), rgb(0, 0, 1, 0.5))
 ```{r, results = "hide"}
 male <- d[which(d$sex == "M"),] # we use data with outliers removed
 female <- d[which(d$sex == "F"),]
@@ -353,7 +393,7 @@ legend("topleft",legend = c("Females", "Males"), col = 1:2, pch = 20)
 <br/>
 
 Colors are taken in the order from the currently setup **palette()** . 
-```{r}
+```{r, results="hide"}
 palette()
 ```
 
@@ -372,7 +412,7 @@ palette("default") # reset back to the default
 <br/>
 
 #### Empirical cumulative distribution functions (eCDFs)
-**eCDF(x) = the proportion of observations which values are <= x**
+eCDF(x) = the proportion of observations which values are <= x
 ```{r, results="hide"}
 weight.ecdf = ecdf(d$weight) # obtain empirical CDF values
 
@@ -382,7 +422,7 @@ plot(weight.ecdf, xlab = "Quantiles of weight, kg", main = "Empirical cumulative
 <br/>
 
 Let's draw the vertical lines depicting median, Q1, and Q2, using function abline(v = ...).
-```{r}
+```{r, results="hide"}
 plot(weight.ecdf, xlab = "Quantiles of weight, kg", main = "Empirical cumulative distribution of weights")
 summary(d$weight)
 x <- unname(summary(d$weight)) # a vector of 6 elements {min, Q1, median, mean, Q3, max}
