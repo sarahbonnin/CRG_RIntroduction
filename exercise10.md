@@ -123,7 +123,8 @@ Loop over each element of "vec4":
 * If the element is a **mouse gene (only the first character is in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
 
 > Tip 1: *Use grep and a regular expression in the if statement !*<br>
-> Tip 2: *When grep does not find a match, it returns an element of **length 0** !*
+> Tip 2: *When grep does not find a match, it returns an element of **length 0** !*<br>
+> Tip 3: *You can also use grepl: check the help page*
 <br>
 
 <details>
@@ -138,6 +139,15 @@ for(gene in vec4){
 	}else if(length(grep(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
 		print(c(gene, "mouse gene"))
 	}
+}
+
+# With grepl
+for(gene in vec4){
+        if(grepl(pattern="^[A-Z0-9]+$", x=gene)){
+                print(c(gene, "human gene"))
+        }else if(grepl(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)){
+                print(c(gene, "mouse gene"))
+        }
 }
 ```
 
