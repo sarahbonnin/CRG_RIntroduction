@@ -46,7 +46,7 @@ grep(pattern="gen",
 <h4>Match your own pattern inside **[]**</h4>
 
 \[abc\]: matches a, b, or c.<br>
-^\[^abc\]: matches a, b or c at the beginning of the element.<br>
+^\[abc\]: matches a, b or c at the beginning of the element.<br>
 ^A\[abc\]+: matches A as the first character of the element, then either a, b or c<br>
 ^A\[abc\]*: matches A as the first character of the element, then optionally either a, b or c<br>
 ^A\[abc\]{1}_: matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore<br>
