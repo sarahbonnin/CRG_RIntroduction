@@ -12,24 +12,26 @@ grep(pattern="Gen",
 	x="Genomics")
 ```
 
-* Show actual element where the pattern is found (instead of the index only):
+* Show actual element where the pattern is found (instead of the index only) with **value=TRUE**:
 
 ```{r}
 # Set value=TRUE
-grep(pattern="Gen", 
+grep(pattern="Gen",
         x="Genomics",
-	value=TRUE)
+        value=TRUE)
 ```
 
-* Non case-sensitive search:
+* Non case-sensitive search with **ignore.case=TRUE**:
 
 ```{r}
-# Enter the pattern in lower-case, but case is ignores with ignore.case=TRUE
+# Enter the pattern in lower-case, but case is ignored
 grep(pattern="gen",
         x="Genomics",
         value=TRUE,
-	ignore.case=TRUE)
+        ignore.case=TRUE)
 ```
+
+* Show if it DOESN'T match the pattern with **inv=TRUE**:
 
 <h3>Regular expressions to find more flexible patterns</h3>
 
