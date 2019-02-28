@@ -3,11 +3,10 @@
 R-base package graphics offers functions for producing many plots, for example:
 
 * scatter plots - plot()
-* dot plots - dotchart()
-* histograms - hist()
-* box plots - boxplot() 
 * bar plots - barplot()
 * pie charts - pie()
+* box plots - boxplot()
+* histograms - hist()
 
 <h3>Scatter plots</h3>
 
@@ -52,9 +51,23 @@ plot(x, y,
 ```
 <img src="images/plots/scatter3.png" width="350"/>
 
-See the different types of points that you can use:
+<h4>Different type of points that you can use:</h4>
 
 <img src="images/plots/pointtype.png" width="250"/>
+
+<h4>About</h4>
+
+* Codes 1 to 8 are shortcuts for "black", "red", "green", "blue", "cyan", "magenta", "yellow", "grey".
+
+* There is a larger set of build-in colors that you can use:
+```{r}
+# see all 657 possible build-in colors:
+colors()
+
+# looking for blue only? You are down to 66 options:
+grep("blue", colors(), value=TRUE)
+``` 
+You can also find them [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
 
 <h3>Bar plots</h3>
 
