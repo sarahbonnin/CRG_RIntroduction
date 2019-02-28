@@ -60,6 +60,7 @@ plot(x, y,
 * Codes 1 to 8 are shortcuts for "black", "red", "green", "blue", "cyan", "magenta", "yellow", "grey".
 
 * There is a larger set of build-in colors that you can use:
+
 ```{r}
 # see all 657 possible build-in colors:
 colors()
@@ -67,6 +68,7 @@ colors()
 # looking for blue only? You are down to 66 options:
 grep("blue", colors(), value=TRUE)
 ``` 
+
 You can also find them [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
 
 <h3>Bar plots</h3>
@@ -208,6 +210,7 @@ hist(x,
 
 
 
-
+Go to [how to save plots](https://sbcrg.github.io/CRG_RIntroduction/io_plots)
+<br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
