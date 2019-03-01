@@ -106,7 +106,7 @@ venn.diagram(vlist,
 
 
 
-Go to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
+Go to [exercise 11](https://sbcrg.github.io/CRG_RIntroduction/exercise11): base plots.
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

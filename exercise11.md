@@ -1,6 +1,6 @@
-## Exercise 10: If statement
+## Exercise 11: Base plots
 
-Create the script "exercise10.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 10 in that script.
+Create the script "exercise11.R" and save it to the "Rcourse/Module3" directory: you will save all the commands of exercise 11 in that script.
 <br>Remember you can comment the code using #.
 
 
@@ -9,22 +9,36 @@ Create the script "exercise10.R" and save it to the "Rcourse/Module2" directory:
 correction
 </summary>
 
-```{r}
+```{r}	
 getwd()
-setwd("~/Rcourse/Module2")
+setwd("~/Rcourse/Module3")
 ```
 
 </details>
 
+* **11a- scatter plot**
 
-**1- Create vector vec2 as:**
-
+**1- Create the following data frame**
 
 ```{r}
-vec2 <- c("kiwi", "apple", "pear", "grape")
+genes <- data.frame(sample1=rnorm(300),
+                    sample2=rnorm(300))
 ```
 
-* Use an if statement and the %in% function to check whether "apple" is present in vec2 (in such case print "there is an apple!")
+**2- Create a scatter plot showing sample1 (x-axis) vs sample2 (y-axis) of genes.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}	
+plot(genes$sample1, genes$sample2)
+```
+
+</details>
+
+**3- Change the point type and color.**
 
 <details>
 <summary>
@@ -32,14 +46,15 @@ correction
 </summary>
 
 ```{r}
-if("apple" %in% vec2){
-	print("there is an apple there")
-}
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3)
 ```
 
 </details>
 
-* Use an if statement and the %in% function to check whether "grapefruit" is present in vec2: if "grapefruit" is not found, test for a second condition (using **else if**) that checks if "pear" is found.
+**4- Change x-axis and y-axis labels to "Sample 1" and "Sample 2", respectively.**
 
 <details>
 <summary>
@@ -47,21 +62,17 @@ correction
 </summary>
 
 ```{r}
-if("grapefruit" %in% vec2){
-        print("there is a grapefruit there")
-}else if("pear" %in% vec2){
-	print("there is no grapefruit but there is a pear")
-}
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3,
+     xlab="Sample 1", 
+     ylab="Sample 2")
 ```
 
 </details>
 
-* Add an **else** section in case neither grapefruit nor pear is found in vec2.<br>
-Test your **if** statement also on vec3:
-
-```{r}
-vec3 <- c("cherry", "strawberry", "blueberry", "peach")
-```
+**5- Add a title to the plot.**
 
 <details>
 <summary>
@@ -69,28 +80,20 @@ correction
 </summary>
 
 ```{r}
-if("grapefruit" %in% vec2){
-        print("there is a grapefruit there")
-}else if("pear" %in% vec2){
-        print("there is no grapefruit but there is a pear")
-}else{
-	print("no grapefruit and no pear")
-}
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3,
+     xlab="Sample 1", 
+     ylab="Sample 2",
+     main="scatter plot")
 ```
 
 </details>
 
-**2- If statement in for loop**
-
-Create the following matrix:
-
-```{r}
-mat4 <- matrix(c(2, 34, 1, NA, 89, 7, 12, NA, 0, 38),
-	nrow=5)
-```
-
-Loop over rows with **for** of mat4 and print row number and entire row **if** you find an NA.
-
+**6- Add a vertical red line that starts at the median expression value of sample 1. Do it in two steps:**<br>
+a. calculate the median expression of genes in sample 1.<br>
+b. plot a vertical line using abline().
 
 <details>
 <summary>
@@ -98,34 +101,35 @@ correction
 </summary>
 
 ```{r}
-for(k in 1:nrow(mat4)){
-	# extract row
-	rowk <- mat4[k,]
-	if(any(is.na(rowk))){
-		print(k)
-		print(rowk)
-	}
-}
+# median expression of sample1
+med1 <- median(genes$sample1)
+
+# plot
+plot(genes$sample1, 
+     genes$sample2, 
+     col="lightblue", 
+     pch=3,
+     xlab="Sample 1", 
+     ylab="Sample 2",
+     main="scatter plot")
+
+# vertical line
+abline(v=med1, col="red")
 ```
 
 </details>
 
-**3- For loop, if statement and regular expression**
+* **11b- bar plot + pie chart**
 
-Create vector vec4 as:
+**1- Create the following vector**
 
 ```{r}
-vec4 <- c("Oct4", "DEPP", "RSU1", "Hk2", "ZNF37A", "C1QL1", "Shh", "Cdkn2a")
+genes_significance <- rep(c("enriched", "depleted", "none"), c(20, 32, 248))
 ```
 
-Loop over each element of "vec4":
-* If the element is a **human gene (all upper-case characters)**, print a vector of two elements: the name of the gene and "human gene".<br>
-* If the element is a **mouse gene (only the first character is in upper-case)**, print a vector of two elements: the name of the gene and "mouse gene".<br>
 
-> Tip 1: *Use grep and a regular expression in the if statement !*<br>
-> Tip 2: *When grep does not find a match, it returns an element of **length 0** !*<br>
-> Tip 3: *You can also use grepl: check the help page*
-<br>
+**2- The vector describes whether a gene is up- (enriched) or down- (depleted) regulated, or not regulated (none).**<br>
+Produce a barplot that displays this information: how many genes are enriched, depleted, or not regulated.
 
 <details>
 <summary>
@@ -133,26 +137,168 @@ correction
 </summary>
 
 ```{r}
-for(gene in vec4){
-	if(length(grep(pattern="^[A-Z0-9]+$", x=gene)) != 0){
-		print(c(gene, "human gene"))
-	}else if(length(grep(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)) != 0){
-		print(c(gene, "mouse gene"))
-	}
-}
-
-# With grepl
-for(gene in vec4){
-        if(grepl(pattern="^[A-Z0-9]+$", x=gene)){
-                print(c(gene, "human gene"))
-        }else if(grepl(pattern="^[A-Z]{1}[a-z0-9]+$", x=gene)){
-                print(c(gene, "mouse gene"))
-        }
-}
+barplot(table(genes_significance))
 ```
 
 </details>
 
+**3- Color the bars of the boxplot, each in a different color (3 colors of your choice)**
 
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+barplot(table(genes_significance), 
+  col=c("blue", "red", "grey"))
+```
+
+</details>
+
+**4- Use the argument "names.arg" in barplot() to rename the bars:**
+Change depleted to "Down", enriched to "Up", none to "Not significant"
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+barplot(table(genes_significance), 
+  col=c("blue", "red", "grey"), 
+  names.arg=c("Down", "Up", "Not significant"))
+```
+
+</details>
+
+**5- The "las" argument allow to rotate the x-axis labels for a better visibility.**
+Try value 2 for las: what happens? 
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+barplot(table(genes_significance), 
+  col=c("blue", "red", "grey"), 
+  names.arg=c("Down", "Up", "Not significant"), 
+  las=2)
+```
+
+</details>
+
+**6- Create a pie chart of the same information (Enriched, Depleted, None)**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+pie(table(genes_significance))
+```
+
+</details>
+
+Change the color of the slices, the labels, and add a title.
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+pie(table(genes_significance), 
+    col=c("blue", "red", "grey"), 
+    main="pie chart", 
+    labels=c("Down", "Up", "Not significant"))
+```
+
+</details>
+
+* **11c- histogram**
+
+**1- Use genes object from exercise 11a to create a histogram of the gene expression distribution of sample 1.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1)
+```
+
+</details>
+
+**2- Repeat the histogram but change argument breaks to 50.**<br>
+What is the difference ?
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1, 
+  breaks=50)
+```
+
+</details>
+
+**3- Color this histogram in light blue.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1, 
+  breaks=50, 
+  col="lightblue")
+```
+
+</details>
+
+**4- Zoom in the histogram: show only the distribution of expression values from 0 to 2 (x-axis) using the xlim argument.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+hist(genes$sample1, 
+  breaks=50, 
+  col="lightblue",
+  xlim=c(0, 2))
+```
+
+</details>
+
+**5- Save the histogram in a pdf file.**
+
+<details>
+<summary>
+correction
+</summary>
+
+```{r}
+pdf("myhistogram.pdf")
+
+hist(genes$sample1, 
+    breaks=50, 
+    col="lightblue", 
+    xlim=c(0, 2))
+
+dev.off()
+```
+
+</details>
+
+Go to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
