@@ -1,6 +1,6 @@
 <h2>Plots from other packages</h2>
 
-<h3>heatmap.2 function from gplots package<h3>
+<h3>heatmap.2 function from gplots package</h3>
 
 The **heatmap.2** function from the **gplots** package is highly customizable.
 
@@ -51,6 +51,9 @@ heatmap.2(mat,
 Create up to a 4-way Venn Diagram
 
 ```{r}
+# load packahe
+library(VennDiagram)
+
 # Prepare character vectors
 v1 <- c("DKK1", "NPC1", "NAPG", "ERG", "VHL", "BTD", "MALL", "HAUS1")
 v2 <- c("SMAD4", "DKK1", "ASXL3", "ERG", "CKLF", "TIAM1", "VHL", "BTD", "EMP1", "MALL", "PAX3")
@@ -80,7 +83,13 @@ venn.diagram(vlist,
 More parameters:
 
 ```{r}
-# 
+# main : title
+# sub : sub-title
+# main.col : color of title font
+# fill : color of circles
+# col : color of circle lines
+# cat.col : color of category labels
+
 venn.diagram(vlist,     
         filename="Venn_3way_more.png",
         imagetype="png",
