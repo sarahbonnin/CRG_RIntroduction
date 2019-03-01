@@ -71,8 +71,9 @@ Color the points according to another column in the data frame:
 ```{r}
 # Build a data frame from df1: add a column with "yes" and "no"
 df2 <- data.frame(df1, grouping=rep(c("yes", "no"), c(80, 120)))
+
 # Plot and add the color parameter in the aes():
-ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) + geom_point()
+pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) + geom_point()
 ```
 
 <img src="images/plots/scatter3_gg.png" width="350"/>
@@ -127,7 +128,7 @@ Do you want to change the default colors?<br>
 * Integrate either the **scale_color_manual()** or **scale_fill_manual** layers*
 
 ```{r}
-ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + 
+pbox <- ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + 
 	geom_boxplot() +
 	scale_fill_manual(values=c("slateblue2", "chocolate"))
 ```
@@ -148,7 +149,7 @@ Customize a bit:
 
 ```{r}
 # Save the plot in the object "p"
-p <- ggplot(data=df2, aes(x=grouping, fill=grouping)) + geom_bar()
+pbar <- ggplot(data=df2, aes(x=grouping, fill=grouping)) + geom_bar()
 
 # Change x axis label with scale_x_discrete:
 p2 <- p + scale_x_discrete(name="counts of yes / no")
@@ -160,7 +161,7 @@ p3 <- p2 + coord_flip()
 p4 <- p3 + scale_fill_manual(values=c("yellow", "cyan"))
 
 # Show intermediary and final plots
-p
+pbar
 p2
 p3
 p4
@@ -190,7 +191,7 @@ ggplot(df_long, aes(x=value, fill=variable)) + geom_histogram()
 By default, the histograms are **stacked**: change to position **dodge**:
 
 ```{r}
-ggplot(df_long, aes(x=value, fill=variable)) + 
+phist <- ggplot(df_long, aes(x=value, fill=variable)) + 
 	geom_histogram(position='dodge')
 ```
 
@@ -240,6 +241,18 @@ ggsave("myplot.ps", plot=p, device="ps")
 # Change the height and width (and units of width and height):
 ggsave("myplot.pdf", width = 20, height = 20, units = "cm")
 ```
+
+You can also organize several plots on one page
+
+One way to do it is to use the **gridExtra** package:
+
+```{r}
+# ncol, nrow: arrange plots in such number of columns and rows
+grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
+grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
+```
+
+
 
 <h3>Volcano plots</h3>
 
