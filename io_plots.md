@@ -2,6 +2,7 @@
 
 <h3>With R Studio</h3>
 
+<img src="images/rstudio_plotsave.png" width="450"/>
 
 <h3>With the console</h3>
 
@@ -59,7 +60,7 @@ plot(2:20)
 dev.off()
 ```
 
-<h4>Plot several figures in one page<h4>
+<h4>Plot several figures in one page</h4>
 
 ```{r}
 jpeg("myfile_multi.jpeg")

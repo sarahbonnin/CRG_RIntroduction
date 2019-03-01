@@ -55,13 +55,16 @@ plot(x, y,
 
 <img src="images/plots/pointtype.png" width="250"/>
 
-<h4>About</h4>
+<h4>About colors</h4>
 
-* Codes 1 to 8 are shortcuts for "black", "red", "green", "blue", "cyan", "magenta", "yellow", "grey".
+* Codes 1 to 8 are taken from the **palette()** function: "black", "red", "green3", "blue", "cyan", "magenta", "yellow", "gray".
 
 * There is a larger set of build-in colors that you can use:
 
 ```{r}
+# see the 8-color palette:
+palette()
+
 # see all 657 possible build-in colors:
 colors()
 

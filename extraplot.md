@@ -14,7 +14,7 @@ mat <- matrix(rnorm(1200), ncol=6)
 # heatmap with the defaults parameters
 heatmap.2(mat)
 ```
-<img src="images/plots/heatmap1.png" width="350"/>
+<img src="images/plots/heatmap1.png" width="450"/>
 
 You can play with the parameters:
 
@@ -43,7 +43,7 @@ heatmap.2(mat,
 	xlab="Samples")
 ```
 
-<img src="images/plots/heatmap2.png" width="350"/>
+<img src="images/plots/heatmap2.png" width="450"/>
 
 
 <h3>venn.diagram function from VennDiagram package</h3>
@@ -69,7 +69,7 @@ venn.diagram(vlist[1:2],
 	imagetype="png")
 ```
 
-<img src="images/plots/Venn_2way.png" width="350"/>
+<img src="images/plots/Venn_2way.png" width="450"/>
 
 ```{r}
 # 3-way Venn
@@ -78,7 +78,7 @@ venn.diagram(vlist,
         imagetype="png")
 ```
 
-<img src="images/plots/Venn_3way.png" width="350"/>
+<img src="images/plots/Venn_3way.png" width="450"/>
 
 More parameters:
 
@@ -102,7 +102,7 @@ venn.diagram(vlist,
 
 ```
 
-<img src="images/plots/Venn_3way_more.png" width="350"/>
+<img src="images/plots/Venn_3way_more.png" width="450"/>
 
 
 
