@@ -89,7 +89,7 @@ ggplot(data=df2, aes(x=grouping, y=sample1)) + geom_boxplot()
 What if you want to plot both sample1 and sample2 ?<br>
 *Need to convert into a **long** format*
 
-<img src="images/plots/wide2long.png" width="350"/>
+<img src="images/plots/wide2long.png" width="500"/>
 
 Plotting both sample1 and sample2:
 
@@ -216,7 +216,7 @@ p + theme_light()
 
 <h3>About saving plots in files</h3>
 
-<h4>The same as for regular plots applies</h4>
+The same as for regular plots applies:
 
 ```{r}
 png("myggplot.png")
@@ -240,9 +240,7 @@ ggsave("myplot.ps", plot=p, device="ps")
 ggsave("myplot.pdf", width = 20, height = 20, units = "cm")
 ```
 
-<h3>Specific scatter plots</h3>
-
-<h4>Volcano plot</h4>
+<h3>Volcano plots</h3>
 
 A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
 <br>
@@ -264,20 +262,34 @@ de <- tmp[complete.cases(tmp), ]
 ggplot(data=de, aes(x=log2FoldChange, y=pvalue)) + geom_point()
 ```
 
+<img src="images/plots/volcano1_gg.png" width="350"/>
+
 Doesn't look quite like a Volcano plot...<br>
 Convert the p-value into a -log10(p-value)
 
 ```{r}
 # Convert directly in the aes()
 p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point()
+```
 
+<img src="images/plots/volcano2_gg.png" width="350"/>
+
+```{r}
 # Add more simple "theme"
 p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point() + theme_minimal()
+```
 
+<img src="images/plots/volcano3_gg.png" width="350"/>
+
+```{r}
 # Add vertical lines for log2FoldChange thresholds, and one horizontal line for the p-value threshold 
 p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
 	geom_hline(yintercept=-log10(0.05), col="red")
+```
 
+<img src="images/plots/volcano4_gg.png" width="350"/>
+
+```{r}
 # The significantly differentially expressed genes are the ones found in the upper-left and upper-right corners.
 # Add a column to the data frame to specify if they are UP- or DOWN- regulated (log2FoldChange respectively positive or negative)
 
@@ -294,10 +306,18 @@ p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed))
 # Add lines as before...
 p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
         geom_hline(yintercept=-log10(0.05), col="red")
+```
 
+<img src="images/plots/volcano5_gg.png" width="350"/>
+
+```{r}
 # Change point color:
 p3 <- p2 + scale_color_manual(values=c("blue", "black", "red"))
+```
 
+<img src="images/plots/volcano6_gg.png" width="350"/>
+
+```{r}
 # Now write down the name of genes beside the points...
 # Create a new column "delabel" to de, that will contain the name of genes differentially expressed (NA in case they are not)
 de$delabel <- NA
@@ -307,7 +327,11 @@ ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label
 	geom_point() + 
 	theme_minimal() +
 	geom_text()
+```
 
+<img src="images/plots/volcano7_gg.png" width="350"/>
+
+```{r}
 # Finally, we can organize the labels nicely using the "ggrepel" package and the geom_text_repel() function
 # load library
 library(ggrepel)
@@ -321,6 +345,7 @@ ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label
         geom_hline(yintercept=-log10(0.05), col="red")
 ```
 
+<img src="images/plots/volcano8_gg.png" width="350"/>
 
 
 
