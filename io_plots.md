@@ -94,7 +94,7 @@ hist(rnorm(2000))
 dev.off()
 ```
 
-<img src="images/plots/myfile_multi.jpeg" width="400/" >
+<img src="images/plots/myfile_multi4.jpeg" width="400/" >
 
 
 > Go to [Extra plots](https://sbcrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams !
