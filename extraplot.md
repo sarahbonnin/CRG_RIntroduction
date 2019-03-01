@@ -46,7 +46,7 @@ heatmap.2(mat,
 <img src="images/plots/heatmap2.png" width="350"/>
 
 
-<h3>venn.diagram function from VennDiagram package<h3>
+<h3>venn.diagram function from VennDiagram package</h3>
 
 Create up to a 4-way Venn Diagram
 
