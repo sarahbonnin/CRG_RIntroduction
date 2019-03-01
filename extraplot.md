@@ -105,10 +105,8 @@ venn.diagram(vlist,
 <img src="images/plots/Venn_3way_more.png" width="350"/>
 
 
-<img src="images/plots/.png" width="350"/>
 
-
-Go to [how to save plots](https://sbcrg.github.io/CRG_RIntroduction/io_plots)
+Go to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
