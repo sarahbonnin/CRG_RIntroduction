@@ -340,7 +340,7 @@ de <- tmp[complete.cases(tmp), ]
 ggplot(data=de, aes(x=log2FoldChange, y=pvalue)) + geom_point()
 ```
 
-<img src="images/plots/volcano1_gg.png" width="350"/>
+<img src="images/plots/volcano1_gg.png" width="450"/>
 
 Doesn't look quite like a Volcano plot...<br>
 Convert the p-value into a -log10(p-value)
@@ -350,14 +350,14 @@ Convert the p-value into a -log10(p-value)
 p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point()
 ```
 
-<img src="images/plots/volcano2_gg.png" width="350"/>
+<img src="images/plots/volcano2_gg.png" width="450"/>
 
 ```{r}
 # Add more simple "theme"
 p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point() + theme_minimal()
 ```
 
-<img src="images/plots/volcano3_gg.png" width="350"/>
+<img src="images/plots/volcano3_gg.png" width="450"/>
 
 ```{r}
 # Add vertical lines for log2FoldChange thresholds, and one horizontal line for the p-value threshold 
@@ -365,7 +365,7 @@ p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
 	geom_hline(yintercept=-log10(0.05), col="red")
 ```
 
-<img src="images/plots/volcano4_gg.png" width="350"/>
+<img src="images/plots/volcano4_gg.png" width="450"/>
 
 ```{r}
 # The significantly differentially expressed genes are the ones found in the upper-left and upper-right corners.
@@ -386,14 +386,14 @@ p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
         geom_hline(yintercept=-log10(0.05), col="red")
 ```
 
-<img src="images/plots/volcano5_gg.png" width="350"/>
+<img src="images/plots/volcano5_gg.png" width="450"/>
 
 ```{r}
 # Change point color:
 p3 <- p2 + scale_color_manual(values=c("blue", "black", "red"))
 ```
 
-<img src="images/plots/volcano6_gg.png" width="350"/>
+<img src="images/plots/volcano6_gg.png" width="450"/>
 
 ```{r}
 # Now write down the name of genes beside the points...
@@ -407,7 +407,7 @@ ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label
 	geom_text()
 ```
 
-<img src="images/plots/volcano7_gg.png" width="350"/>
+<img src="images/plots/volcano7_gg.png" width="450"/>
 
 ```{r}
 # Finally, we can organize the labels nicely using the "ggrepel" package and the geom_text_repel() function
@@ -423,9 +423,7 @@ ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label
         geom_hline(yintercept=-log10(0.05), col="red")
 ```
 
-<img src="images/plots/volcano8_gg.png" width="350"/>
-
-
+<img src="images/plots/volcano8_gg.png" width="450"/>
 
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)

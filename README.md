@@ -55,8 +55,10 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 	+ [Exercise 10](https://sbcrg.github.io/CRG_RIntroduction/exercise10): "if" statement 
 
 <h3>Module 3</h3>
-* [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/base)
-* [Graphing with ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot)
+* [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
+* [Saving plots in file](https://sbcrg.github.io/CRG_RIntroduction/io_plots)
+* [Extra plots](https://sbcrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams
+* [Graphing with ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
 
 <h3>Module 4</h3>
 * Exploratory data analysis.
