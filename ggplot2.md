@@ -163,12 +163,13 @@ p4 <- p3 + scale_fill_manual(values=c("yellow", "cyan"))
 p
 p2
 p3
+p4
 ```
 
 <img src="images/plots/barplot2_gg.png" width="500"/>
 
 
-<h3>Histograms<h3>
+<h3>Histograms</h3>
 
 ```{r}
 # Simple histogram
