@@ -308,14 +308,14 @@ ggsave("myplot.pdf",
 grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
 ```
 
-<img src="images/plots/gridarrange1.png" width="450"/>
+<img src="images/plots/gridarrange1.png" width="600"/>
 
 ```{r}
 # 1 row and 4 columns
 grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
 ```
 
-<img src="images/plots/gridarrange2.png" width="750"/>
+<img src="images/plots/gridarrange2.png" width="950"/>
 
 
 <h3>Volcano plots</h3>
