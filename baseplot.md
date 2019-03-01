@@ -127,7 +127,7 @@ barplot(xfacttable,
 
 <img src="images/plots/barplot3.png" width="350"/>
 
-# Let's make a stacked barplot: add information about research program
+* Let's make a stacked barplot: add information about research program
 
 ```{r}
 # Create a matrix of number of personal per research program
@@ -211,6 +211,31 @@ boxplot(x,
 ```
 
 <img src="images/plots/boxplot2.png" width="350"/>
+
+* Add an horizontal line at y=0 with **abline()**
+
+```{r}
+# First plot the box plot as before:
+boxplot(x, 
+	xlab="sample",
+	ylab="expression",
+	at=c(1, 2, 4, 5),
+	 main="my boxplot")
+	
+# Then run the abline function
+  # h : y-axis starting point of horizontal line
+  # col : color
+  # lwd : line thickness
+  # lty : line type
+  
+abline(h=0, col="red", lwd=3, lty="dotdash")
+```
+
+<img src="images/plots/boxplot3.png" width="350"/>
+
+* Line types in R:
+
+<img src="images/linetypes-in-r-line-types.png" width="350"/>
 
 
 <h3>Histograms</h3>

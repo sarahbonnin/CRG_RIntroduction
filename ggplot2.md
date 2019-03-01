@@ -143,6 +143,48 @@ pbox <- ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) +
 
 <img src="images/plots/boxplot5_gg.png" width="350"/>
 
+<h3>Dot plots</h3>
+
+Example of the expression of a gene in 2 experimental groups (each with 3 replicates)
+
+```{r}
+# create a named vector with the expression of a gene
+mygene <- c(8.1, 8.2, 8.6, 8.7, 9.4, 8.5)
+
+# the names of each element of the vector are sample names
+names(mygene) <- c("KO1", "KO2", "KO3", "WT1", "WT2", "WT3")
+
+# transform to long format
+mygenelong <- melt(mygene)
+
+# add columns with sample name and experimental group
+mygenelong$sample_name <- rownames(mygenelong)
+mygenelong$group <- gsub("[1-3]{1}", "", mygenelong$sample_name)
+
+# dot plot
+  # add labels with "label" in the aes() and layer geom_text()
+  # nudge_x adjust the labels horizontally
+pdot <- ggplot(data=mygenelong, aes(x=group, y=value, col=group, label=sample_name)) + 
+  geom_point() +
+  geom_text(nudge_x=0.2)
+```
+
+<img src="images/plots/dotplot1_gg.png" width="350"/>
+
+* Add more layers:
+  * **xlab()** to change the x axis label
+  * **ylab()** to change the y axis label
+  * **theme** to manage the legend
+  
+```{r}
+pdot +  xlab(label="Experimental group") +
+  ylab(label="Normalized expression (log2)") +
+  ggtitle(label="Expression of gene 1") +
+  theme(legend.position="none") +
+  theme_bw()
+```
+
+<img src="images/plots/dotplot2_gg.png" width="350"/>
 
 <h3>Bar plots</h3>
 
@@ -210,7 +252,7 @@ phist <- ggplot(df_long, aes(x=value, fill=variable)) +
 
 <h3>About themes</h3>
 
-You can change the default **theme** (background color, grid lines etc. all non-data display):
+You can change the default global **theme** (background color, grid lines etc. all non-data display):
 
 ```{r}
 # go back to a previous plot
