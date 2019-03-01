@@ -32,7 +32,8 @@ ggplot(data=dataframe, aes(x=column1, y=column2)) + geom_point()
 df1 <- data.frame(sample1=rnorm(200), sample2=rnorm(200))
 
 # Plot !
-ggplot(data= df1 , aes(x=sample1, y=sample2)) + geom_point()
+ggplot(data= df1 , aes(x=sample1, y=sample2)) + 
+	geom_point()
 ```
 
 <img src="images/plots/scatter1_gg.png" width="350"/>
@@ -43,7 +44,8 @@ ggplot(data= df1 , aes(x=sample1, y=sample2)) + geom_point()
 	* **geom_vline** to add a vertical line
 	* etc.
 ```{r}
-ggplot(data= df1 , aes(x=sample1, y=sample2)) + geom_point() +
+ggplot(data= df1 , aes(x=sample1, y=sample2)) + 
+  geom_point() +
 	ggtitle("my first ggplot") +
 	geom_vline(xintercept=0)
 ```
@@ -73,7 +75,8 @@ Color the points according to another column in the data frame:
 df2 <- data.frame(df1, grouping=rep(c("yes", "no"), c(80, 120)))
 
 # Plot and add the color parameter in the aes():
-pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) + geom_point()
+pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) + 
+  geom_point()
 ```
 
 <img src="images/plots/scatter3_gg.png" width="350"/>
@@ -102,7 +105,8 @@ library(reshape2)
 df_long <- melt(df2)
 	# all numeric values are organized into only one column: value
 # plot:
-ggplot(data=df_long, aes(x=variable, y=value)) + geom_boxplot()
+ggplot(data=df_long, aes(x=variable, y=value)) + 
+  geom_boxplot()
 ```
 
 <img src="images/plots/boxplot2_gg.png" width="350"/>
@@ -112,20 +116,24 @@ What if now you also want to see the distribution of "yes" and "no" in both samp
 
 ```{r}
 # Either color
-ggplot(data=df_long, aes(x=variable, y=value, color=grouping)) + geom_boxplot()
+ggplot(data=df_long, aes(x=variable, y=value, color=grouping)) + 
+  geom_boxplot()
 ```
 
 <img src="images/plots/boxplot3_gg.png" width="350"/>
 
 ```{r}
 # Or fill
-ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + geom_boxplot()
+ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + 
+  geom_boxplot()
 ```
 
 <img src="images/plots/boxplot4_gg.png" width="350"/>
 
 Do you want to change the default colors?<br>
-* Integrate either the **scale_color_manual()** or **scale_fill_manual** layers*
+* Integrate either layer:
+  * **scale_color_manual()**
+  * **scale_fill_manual**
 
 ```{r}
 pbox <- ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + 
@@ -145,11 +153,14 @@ ggplot(data=df2, aes(x=grouping)) + geom_bar()
 
 <img src="images/plots/barplot1_gg.png" width="350"/>
 
-Customize a bit:
-
+* Customize:
+  * **scale_x_discrete** is used to handle x-axis title and labels
+  * **coord_flip** swaps the x and y axis
+  
 ```{r}
 # Save the plot in the object "p"
-pbar <- ggplot(data=df2, aes(x=grouping, fill=grouping)) + geom_bar()
+pbar <- ggplot(data=df2, aes(x=grouping, fill=grouping)) + 
+  geom_bar()
 
 # Change x axis label with scale_x_discrete:
 p2 <- p + scale_x_discrete(name="counts of yes / no")
@@ -199,7 +210,7 @@ phist <- ggplot(df_long, aes(x=value, fill=variable)) +
 
 <h3>About themes</h3>
 
-You can change the default **theme** (background color, grid lines etc):
+You can change the default **theme** (background color, grid lines etc. all non-data display):
 
 ```{r}
 # go back to a previous plot
@@ -216,9 +227,9 @@ p + theme_light()
 
 <img src="images/plots/themes_gg.png" width="500"/>
 
-<h3>About saving plots in files</h3>
+<h3>Saving plots in files</h3>
 
-The same as for regular plots applies:
+* The same as for regular plots applies:
 
 ```{r}
 png("myggplot.png")
@@ -226,7 +237,7 @@ p
 dev.off()
 ```
 
-You can also used the ggplot2 **ggsave** function:
+* You can also used the ggplot2 **ggsave** function:
 
 ```{r}
 # By default, save the last plot that was produced
@@ -235,24 +246,25 @@ ggsave("lastplot.png")
 # You can pick which plot you want to save:
 ggsave("myplot.png", plot=p)
 
-# You can save in many different formats: "eps", "ps", "tex", "pdf", "jpeg", "tiff", "png", "bmp", "svg", "wmf"
+# Many different formats are available: 
+  # "eps", "ps", "tex", "pdf", "jpeg", "tiff", "png", "bmp", "svg", "wmf"
 ggsave("myplot.ps", plot=p, device="ps")
 
-# Change the height and width (and units of width and height):
-ggsave("myplot.pdf", width = 20, height = 20, units = "cm")
+# Change the height and width (and their unit):
+ggsave("myplot.pdf", 
+  width = 20, 
+  height = 20, 
+  units = "cm")
 ```
 
-You can also organize several plots on one page
-
-One way to do it is to use the **gridExtra** package:
+* You can also organize several plots on one page
+  * One way is to use the **gridExtra** package:
 
 ```{r}
 # ncol, nrow: arrange plots in such number of columns and rows
 grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
 grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
 ```
-
-
 
 <h3>Volcano plots</h3>
 
