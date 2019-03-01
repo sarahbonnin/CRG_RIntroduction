@@ -301,11 +301,15 @@ ggsave("myplot.pdf",
 ```
 
 * You can also organize several plots on one page
-  * One way is to use the **gridExtra** package:
+	* One way is to use the **gridExtra** package:
+	* ncol, nrow: arrange plots in such number of columns and rows
+```{r}
+# 2 rows and 2 columns
+grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
+```
 
 ```{r}
-# ncol, nrow: arrange plots in such number of columns and rows
-grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
+# 1 row and 4 columns
 grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
 ```
 
