@@ -16,7 +16,7 @@ setwd("~/Rcourse/Module3")
 
 </details>
 
-* **11a- scatter plot**
+### 11a- scatter plot
 
 **1- Create the following data frame**
 
@@ -119,7 +119,7 @@ abline(v=med1, col="red")
 
 </details>
 
-* **11b- bar plot + pie chart**
+### 11b- bar plot + pie chart
 
 **1- Create the following vector**
 
@@ -218,7 +218,7 @@ pie(table(genes_significance),
 
 </details>
 
-* **11c- histogram**
+## 11c- histogram
 
 **1- Use genes object from exercise 11a to create a histogram of the gene expression distribution of sample 1.**
 

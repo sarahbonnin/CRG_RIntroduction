@@ -10,7 +10,7 @@
 	+ Pretty !
 	+ Well documented
 
-* All ggplots start with a **base layer** with the **ggplot()** function:
+* All ggplots start with a **base layer** created with the **ggplot()** function:
 
 ```{r}
 ggplot(data=dataframe, aes=(x=column1, y=column2))
@@ -36,7 +36,7 @@ ggplot(data= df1 , aes(x=sample1, y=sample2)) +
 	geom_point()
 ```
 
-<img src="images/plots/scatter1_gg.png" width="350"/>
+<img src="images/plots/scatter1_gg.png" width="400"/>
 
 
 * Add **layers** to that object to customize the plot:
@@ -61,12 +61,12 @@ p <- ggplot(data= df1 , aes(x=sample1, y=sample2))
 p + ggtitle("my first ggplot")
 ```
 
-<img src="images/plots/scatter2_gg.png" width="350"/>
+<img src="images/plots/scatter2_gg.png" width="450"/>
 
 * What is inside the **aes** (aesthetics)function ?
-        * **Anything that varies** !
-                * Actual columns of to be plotted.
-                * Columns with which you want to, for example, color the points.
+	* Anything that varies !
+		* Columns with values to be plotted.
+		* Columns with which you want to, for example, color the points.
 
 Color the points according to another column in the data frame:
 
@@ -79,7 +79,7 @@ pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) +
   geom_point()
 ```
 
-<img src="images/plots/scatter3_gg.png" width="350"/>
+<img src="images/plots/scatter3_gg.png" width="450"/>
 
 <h3>Box plots</h3>
 
@@ -88,17 +88,18 @@ pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) +
 ggplot(data=df2, aes(x=grouping, y=sample1)) + geom_boxplot()
 ```
 
-<img src="images/plots/boxplot1_gg.png" width="350"/>
+<img src="images/plots/boxplot1_gg.png" width="450"/>
 
 What if you want to plot both sample1 and sample2 ?<br>
 *Need to convert into a **long** format*
 
-<img src="images/plots/wide2long.png" width="500"/>
+<img src="images/plots/wide2long.png" width="600"/>
 
 Plotting both sample1 and sample2:
 
 ```{r}
-# load package reshape2
+# install and load package reshape2
+install.packages(reshape2)
 library(reshape2)
 
 # convert to long format
@@ -109,7 +110,7 @@ ggplot(data=df_long, aes(x=variable, y=value)) +
   geom_boxplot()
 ```
 
-<img src="images/plots/boxplot2_gg.png" width="350"/>
+<img src="images/plots/boxplot2_gg.png" width="450"/>
 
 What if now you also want to see the distribution of "yes" and "no" in both sample1 and sample2 ?<br>
 * Integrate a parameter to the **aes()***
@@ -120,7 +121,7 @@ ggplot(data=df_long, aes(x=variable, y=value, color=grouping)) +
   geom_boxplot()
 ```
 
-<img src="images/plots/boxplot3_gg.png" width="350"/>
+<img src="images/plots/boxplot3_gg.png" width="450"/>
 
 ```{r}
 # Or fill
@@ -128,7 +129,7 @@ ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) +
   geom_boxplot()
 ```
 
-<img src="images/plots/boxplot4_gg.png" width="350"/>
+<img src="images/plots/boxplot4_gg.png" width="450"/>
 
 Do you want to change the default colors?<br>
 * Integrate either layer:
@@ -141,7 +142,7 @@ pbox <- ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) +
 	scale_fill_manual(values=c("slateblue2", "chocolate"))
 ```
 
-<img src="images/plots/boxplot5_gg.png" width="350"/>
+<img src="images/plots/boxplot5_gg.png" width="450"/>
 
 <h3>Dot plots</h3>
 
@@ -157,7 +158,7 @@ names(mygene) <- c("KO1", "KO2", "KO3", "WT1", "WT2", "WT3")
 # transform to long format
 mygenelong <- melt(mygene)
 
-# add columns with sample name and experimental group
+# add new columns containing sample names and experimental groups
 mygenelong$sample_name <- rownames(mygenelong)
 mygenelong$group <- gsub("[1-3]{1}", "", mygenelong$sample_name)
 
@@ -169,7 +170,7 @@ pdot <- ggplot(data=mygenelong, aes(x=group, y=value, col=group, label=sample_na
   geom_text(nudge_x=0.2)
 ```
 
-<img src="images/plots/dotplot1_gg.png" width="350"/>
+<img src="images/plots/dotplot1_gg.png" width="450"/>
 
 * Add more layers:
   * **xlab()** to change the x axis label
@@ -184,7 +185,7 @@ pdot +  xlab(label="Experimental group") +
   theme_bw()
 ```
 
-<img src="images/plots/dotplot2_gg.png" width="350"/>
+<img src="images/plots/dotplot2_gg.png" width="450"/>
 
 <h3>Bar plots</h3>
 
@@ -193,7 +194,7 @@ pdot +  xlab(label="Experimental group") +
 ggplot(data=df2, aes(x=grouping)) + geom_bar()
 ```
 
-<img src="images/plots/barplot1_gg.png" width="350"/>
+<img src="images/plots/barplot1_gg.png" width="450"/>
 
 * Customize:
   * **scale_x_discrete** is used to handle x-axis title and labels
@@ -220,7 +221,7 @@ p3
 p4
 ```
 
-<img src="images/plots/barplot2_gg.png" width="500"/>
+<img src="images/plots/barplot2_gg.png" width="600"/>
 
 
 <h3>Histograms</h3>
@@ -231,7 +232,7 @@ ggplot(data=df_long, aes(x=value)) + geom_histogram()
 
 ```
 
-<img src="images/plots/histogram1_gg.png" width="350"/>
+<img src="images/plots/histogram1_gg.png" width="450"/>
 
 Split by sample ("variable" column)
 
@@ -239,7 +240,7 @@ Split by sample ("variable" column)
 ggplot(df_long, aes(x=value, fill=variable)) + geom_histogram()
 ```
 
-<img src="images/plots/histogram2_gg.png" width="350"/>
+<img src="images/plots/histogram2_gg.png" width="450"/>
 
 By default, the histograms are **stacked**: change to position **dodge**:
 
@@ -248,7 +249,7 @@ phist <- ggplot(df_long, aes(x=value, fill=variable)) +
 	geom_histogram(position='dodge')
 ```
 
-<img src="images/plots/histogram3_gg.png" width="350"/>
+<img src="images/plots/histogram3_gg.png" width="450"/>
 
 <h3>About themes</h3>
 
@@ -267,7 +268,7 @@ p + theme_dark()
 p + theme_light() 
 ```
 
-<img src="images/plots/themes_gg.png" width="500"/>
+<img src="images/plots/themes_gg.png" width="600"/>
 
 <h3>Saving plots in files</h3>
 

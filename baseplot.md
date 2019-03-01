@@ -22,22 +22,23 @@ y <- x^2
 # Plot x against y
 plot(x, y)
 ```
-<img src="images/plots/scatter1.png" width="350"/>
+<img src="images/plots/scatter1.png" width="450"/>
 
-* Add parameters: color, point type, title
+* Add arguments:
+	* col: color
+	* pch: type of point
+	* type: "l" for line, "p" for point, "b" for both point and line
+	* main: title of the plot
 
 ```{r}
-# col: color
-# pch: type of point
-# type: "l" for line, "p" for point, "b" for both point and line
-# main: title of the plot
 plot(x, y, 
 	col="red", 
 	pch=2, 
 	type="b", 
 	main="a pretty scatter plot")
 ```
-<img src="images/plots/scatter2.png" width="350"/>
+
+<img src="images/plots/scatter2.png" width="450"/>
 
 * You can play a bit:
 
@@ -49,15 +50,15 @@ plot(x, y,
 	type="b", 
 	main="an even prettier scatter plot")
 ```
-<img src="images/plots/scatter3.png" width="350"/>
+<img src="images/plots/scatter3.png" width="450"/>
 
 <h4>Different type of points that you can use:</h4>
 
-<img src="images/plots/pointtype.png" width="250"/>
+<img src="images/plots/pointtype.png" width="450"/>
 
 <h4>About colors</h4>
 
-* Codes 1 to 8 are taken from the **palette()** function: "black", "red", "green3", "blue", "cyan", "magenta", "yellow", "gray".
+* Color codes 1 to 8 are taken from the **palette()** function and respectively code for: "black", "red", "green3", "blue", "cyan", "magenta", "yellow", "gray".
 
 ```{r}
 # see the 8-color palette:
@@ -70,7 +71,7 @@ palette()
 # see all 657 possible build-in colors:
 colors()
 
-# looking for blue only? You are down to 66 options:
+# looking for blue only? You can pick from 66 blueish options:
 grep("blue", colors(), value=TRUE)
 ``` 
 
@@ -78,42 +79,46 @@ You can also find them [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.
 
 <h3>Bar plots</h3>
 
-*A bar chart or bar plot displays rectangular bars with lengths proportional to the values that they represent.*
+*A bar chart or bar plot displays rectangular bars with **lengths proportional to the values that they represent.***
 
-* A simple bar plot
+* A simple bar plot :
 
 ```{r}
 # Create a vector
 x <- rep(c("PhDstudent", "Postdoc", "Technician", "PI"), c(8,10,5,2))
 
-# Count number of occurences of each string
+# Count number of occurences of each character string
 mytable <- table(x)
 
 # Bar plot using that table
 barplot(mytable)
 ```
 
-<img src="images/plots/barplot1.png" width="350"/>
+<img src="images/plots/barplot1.png" width="450"/>
 
-* Customize a bit
+* Customize a bit :
+	* col : color
+	* main : title of the plot
+	* las : orientation of x-axis labels: "2": perpendicular to axis
 
 ```{r}
-# col: color
-# main: title of the plot
-# las: orientation of x-axis labels: "2": perpendicular to axis
 barplot(mytable,
 	col=1:4,
 	main="bar plot",
 	las=2)
 ```
 
-<img src="images/plots/barplot2.png" width="350"/>
+<img src="images/plots/barplot2.png" width="450"/>
 
-* Customize the ordering of the bars:
+* Customize the ordering of the bars :
+
+By default, the bars are organized in alphabetical order. You can change it with the factors.
 
 ```{r}
 # Create an ordered factor out of x
-xfact <- factor(x, levels=c("PhDstudent", "Postdoc", "Technician", "PI"), ordered=TRUE)
+xfact <- factor(x, 
+	levels=c("PhDstudent", "Postdoc", "Technician", "PI"), 
+	ordered=TRUE)
 
 # Produce the table
 xfacttable <- table(xfact)
@@ -125,12 +130,12 @@ barplot(xfacttable,
         las=2)
 ```
 
-<img src="images/plots/barplot3.png" width="350"/>
+<img src="images/plots/barplot3.png" width="450"/>
 
-* Let's make a stacked barplot: add information about research program
+* Let's make a stacked barplot :
 
 ```{r}
-# Create a matrix of number of personal per research program
+# Create a matrix of number of type of employees per research program :
 barmat <- matrix(c(8, 10, 9, 2, 6, 4, 5, 3, 14, 13, 16, 4, 11, 10, 8, 5),
 	nrow=4,
 	dimnames=list(c("Technician", "PhDstudent", "PostDoc", "PI"), c("BG", "CDB", "GRSCC", "SB")))
@@ -139,7 +144,7 @@ barmat <- matrix(c(8, 10, 9, 2, 6, 4, 5, 3, 14, 13, 16, 4, 11, 10, 8, 5),
 barplot(barmat, col=sample(colors(), 4))
 ```
 
-Add some parameters:
+* Add some parameters:
 
 ```{r}
 # set a random color vector
@@ -159,7 +164,7 @@ legend("topleft",
 	fill=mycolors)
 ```
 
-<img src="images/plots/barplot4.png" width="350"/>
+<img src="images/plots/barplot4.png" width="450"/>
 
 
 <h3>Pie charts</h3>
@@ -180,11 +185,11 @@ pie(mytable,
 	col=c("lightblue", "lightgreen", "salmon", "maroon"))
 ```
 
-<img src="images/plots/pie1.png" width="350"/>
+<img src="images/plots/pie1.png" width="450"/>
 
 <h3>Box plots</h3>
 
-*A boxplot is a convenient way to describe the distribution of the data.*
+*A boxplot is a convenient way to describe the **distribution** of the data.*
 
 * A simple boxplot:
 
@@ -196,23 +201,27 @@ x <- matrix(rnorm(1000), ncol=4)
 boxplot(x)
 ```
 
-<img src="images/plots/boxplot1.png" width="350"/>
+<img src="images/plots/boxplot1.png" width="450"/>
 
-* Add some parameters:
+* Add some arguments :
+	* xlab: x-axis label
+	* ylab: y-axis label
+	* at: position of each box along the x-axis: here we skip position 3 to allow more space between boxes 1/2 and 3/4
 
 ```{r}
-# xlab: x-axis label
-# ylab: y-axis label
-# at: position of each box along the x-axis: here we skip position 3 to allow more space between boxes 1/2 and 3/4
 boxplot(x, 
 	xlab="sample",
 	ylab="expression",
 	at=c(1, 2, 4, 5))
 ```
 
-<img src="images/plots/boxplot2.png" width="350"/>
+<img src="images/plots/boxplot2.png" width="450"/>
 
-* Add an horizontal line at y=0 with **abline()**
+* Add an horizontal line at y=0 with **abline()**; arguments of abline :
+	* h : y-axis starting point of horizontal line (v for a vertical line)
+	* col : color
+	* lwd : line thickness
+	* lty : line type
 
 ```{r}
 # First plot the box plot as before:
@@ -223,24 +232,19 @@ boxplot(x,
 	 main="my boxplot")
 	
 # Then run the abline function
-  # h : y-axis starting point of horizontal line
-  # col : color
-  # lwd : line thickness
-  # lty : line type
-  
 abline(h=0, col="red", lwd=3, lty="dotdash")
 ```
 
-<img src="images/plots/boxplot3.png" width="350"/>
+<img src="images/plots/boxplot3.png" width="450"/>
 
 * Line types in R:
 
-<img src="images/linetypes-in-r-line-types.png" width="350"/>
+<img src="images/linetypes-in-r-line-types.png" width="250"/>
 
 
 <h3>Histograms</h3>
 
-*A histogram graphically summarizes the distribution of the data.*
+*A histogram graphically summarizes the **distribution** of the data.*
 
 * A simple histogram
 
@@ -252,15 +256,15 @@ x <- rnorm(200)
 hist(x)
 ```
 
-<img src="images/plots/histogram1.png" width="350"/>
+<img src="images/plots/histogram1.png" width="450"/>
 
 * Add parameters:
+	* border: color of bar borders
+	* breaks: number of bars the data is divided into
+	* cex.main: size of title
+	* cex.lab: size of axis labels
 
 ```{r}
-# border: color of bar borders
-# breaks: number of bars the data is divided into
-# cex.main: size of title
-# cex.lab: size of axis labels
 hist(x,
 	border="blue",
 	breaks=50,
@@ -270,7 +274,7 @@ hist(x,
 	cex.lab=2)
 ```
 
-<img src="images/plots/histogram2.png" width="350"/>
+<img src="images/plots/histogram2.png" width="450"/>
 
 
 
