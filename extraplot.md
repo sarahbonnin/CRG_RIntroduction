@@ -51,7 +51,7 @@ heatmap.2(mat,
 Create up to a 4-way Venn Diagram
 
 ```{r}
-# load packahe
+# load package
 library(VennDiagram)
 
 # Prepare character vectors

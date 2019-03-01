@@ -59,12 +59,14 @@ plot(x, y,
 
 * Codes 1 to 8 are taken from the **palette()** function: "black", "red", "green3", "blue", "cyan", "magenta", "yellow", "gray".
 
-* There is a larger set of build-in colors that you can use:
-
 ```{r}
 # see the 8-color palette:
 palette()
+```
 
+* There is a larger set of build-in colors that you can use:
+
+```{r}
 # see all 657 possible build-in colors:
 colors()
 
@@ -124,6 +126,40 @@ barplot(xfacttable,
 ```
 
 <img src="images/plots/barplot3.png" width="350"/>
+
+# Let's make a stacked barplot: add information about research program
+
+```{r}
+# Create a matrix of number of personal per research program
+barmat <- matrix(c(8, 10, 9, 2, 6, 4, 5, 3, 14, 13, 16, 4, 11, 10, 8, 5),
+	nrow=4,
+	dimnames=list(c("Technician", "PhDstudent", "PostDoc", "PI"), c("BG", "CDB", "GRSCC", "SB")))
+
+# Plot barplot
+barplot(barmat, col=sample(colors(), 4))
+```
+
+Add some parameters:
+
+```{r}
+# set a random color vector
+mycolors <- sample(colors(), 4)
+
+# plot barplot
+# ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !
+barplot(barmat, 
+	col=mycolors, 
+	ylim=c(0,50),
+	main="stacked barplot")
+
+# add a legend
+# first argument is the legend position
+legend("topleft", 
+	legend=c("Technician", "PhDstudent", "PostDoc", "PI"),
+	fill=mycolors)
+```
+
+<img src="images/plots/barplot4.png" width="350"/>
 
 
 <h3>Pie charts</h3>

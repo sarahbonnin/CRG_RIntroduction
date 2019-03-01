@@ -76,7 +76,28 @@ dev.off()
 
 <img src="images/plots/myfile_multi.jpeg" width="350/" >
 
-> Go to [Exercise 11](https://sbcrg.github.io/CRG_RIntroduction/exercise11): Base plots !
+```{r}
+jpeg("myfile_multi4.jpeg")
+
+# organize the plot in 2 rows and 2 columns
+par(mfrow=c(2, 2))
+
+# top-left
+plot(1:10)
+# top-right
+barplot(table(rep(c("A","B"), c(2,3))))
+# bottom-left
+pie(table(rep(c("A","B"), c(2,3))))
+# bottom-right
+hist(rnorm(2000))
+
+dev.off()
+```
+
+<img src="images/plots/myfile_multi.jpeg" width="400/" >
+
+
+> Go to [Extra plots](https://sbcrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams !
 <br>
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
