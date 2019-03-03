@@ -2,7 +2,9 @@
 
 <h3>heatmap.2 function from gplots package</h3>
 
-The **heatmap.2** function from the **gplots** package is highly customizable.
+A heatmap is a graphical representation of data where the values are represented with **colors**.
+<br>
+The **heatmap.2** function from the **gplots** package allows to produce highly customizable heatmaps.
 
 ```{r}
 # install and load gplots package
@@ -47,7 +49,9 @@ heatmap.2(x=mat,
 
 <h3>venn.diagram function from VennDiagram package</h3>
 
-Create up to a 4-way Venn Diagram
+*A Venn diagram shows all possible logical relations between data sets.*
+<br>
+The **venn.diagram** function from the **VennDiagram** package allows to create up to a 5-way Venn Diagram (i.e. 5 circles representing 5 data sets).
 
 ```{r}
 # load package

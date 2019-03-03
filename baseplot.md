@@ -24,6 +24,8 @@ plot(x, y)
 ```
 <img src="images/plots/scatter1.png" width="450"/>
 
+*Note that if one vector only is given as an input, it will be plotted against the indices of each element*
+
 * Add arguments:
 	* col: color
 	* pch: type of point

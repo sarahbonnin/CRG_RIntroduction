@@ -19,8 +19,8 @@ dev.off()
 
 <h4>Formats</h4>
 
-R supports saving figures in pdf, png, jpeg, tiff, bmp, svg, ps.<br>
-They all come with their own function:
+R supports a variety of file formats for figures: pdf, png, jpeg, tiff, bmp, svg, ps.<br>
+They all come with their own function, for example:
 
 ```{r}
 # TIFF
@@ -59,7 +59,7 @@ png(file="myfile.png", width=500, height=600)
 dev.off()
 ```
 
-*Note that pdf is the only format that supports several pages*:
+*Note that pdf is the only format that supports saving several pages*:
 
 ```{r}
 pdf(file="myfile_pages.pdf")
@@ -72,11 +72,15 @@ dev.off()
 
 <h4>Plot several figures in one page</h4>
 
+You can output more than one plot per page using the **par()** function (sets graphical parameters) and the **mfrow** argument.
+
 ```{r}
 jpeg(file="myfile_multi.jpeg")
 
 # organize the plot in 1 row and 2 columns:
-par(mfrow=c(1,2))
+	# nr: number of rows
+	# nc: number of columns
+par(mfrow=c(nr=1, nc=2))
 
 	plot(1:10)
 	plot(2:20)
@@ -90,7 +94,7 @@ dev.off()
 jpeg(file="myfile_multi4.jpeg")
 
 # organize the plot in 2 rows and 2 columns
-par(mfrow=c(2, 2))
+par(mfrow=c(nr=2, nc=2))
 
 # top-left
 plot(1:10)
