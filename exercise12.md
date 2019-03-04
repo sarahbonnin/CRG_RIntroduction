@@ -31,7 +31,11 @@ library(ggplot2)
 
 </details>
 
-**2- Create the object
+**2- Download the data we will use for plotting:
+
+```{r}
+download.file("https://raw.githubusercontent.com/sbcrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv", "ex12_normalized_intensities.csv", method="curl")
+```
 
 
 
