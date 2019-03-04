@@ -335,6 +335,55 @@ grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
 
 <img src="images/plots/gridarrange2.png" width="950"/>
 
+**WARNING !!**: ggsave and grid.arrange are not directly compatible. To save a file organized by grid.arrange, use the regular functions (pdf, png etc.)
+
+```{r}
+jpeg("grid_arrange_plots.jpg")
+grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
+dev.off()
+```
+
+Got to [Exercise 12](https://sbcrg.github.io/CRG_RIntroduction/exercise12) !
+
+<h3>More about the theme() function</h3>
+
+The **theme()** allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
+<br>
+More details [here](https://ggplot2.tidyverse.org/reference/theme.html)
+
+```{r}
+# Let's the project_long object from exercise 12, and plot boxplots
+boxp <- ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 
+  geom_boxplot()
+  
+# Remove the legend title:
+boxp + theme(legend.title=element_blank())
+
+# Change font of legend text
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"))
+
+# Put legend on the top of the plot
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top")
+  
+# Rotate x-axis labels
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top",
+  axis.text.x = element_text(angle = 90))
+
+# Add a color to the plot's background
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top",
+  axis.text.x = element_text(angle = 90),
+  plot.background = element_rect(fill = "yellow"))
+```
+
+<img src="images/plots/theme_function_gg.png" width="450"/>
+
 
 <h3>Volcano plots</h3>
 
