@@ -56,7 +56,8 @@ Bookmark that [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and 
 
 ```{r}
 # Save in an object
-p <- ggplot(data= df1 , aes(x=sample1, y=sample2))
+p <- ggplot(data= df1 , aes(x=sample1, y=sample2)) 
+	+ geom_point()
 # Add layers to that object
 p + ggtitle("my first ggplot")
 ```
@@ -64,9 +65,19 @@ p + ggtitle("my first ggplot")
 <img src="images/plots/scatter2_gg.png" width="450"/>
 
 * What is inside the **aes** (aesthetics)function ?
-	* Anything that varies !
+	* Anything that varies according to your data !
 		* Columns with values to be plotted.
 		* Columns with which you want to, for example, color the points.
+
+Color all points in red (not depending on the data):
+
+```{r}
+ggplot(data= df1 , aes(x=sample1, y=sample2)) +
+	geom_point(color="red") 
+```
+
+<img src="images/plots/scatter2b_gg.png" width="450"/>
+
 
 Color the points according to another column in the data frame:
 
@@ -83,17 +94,23 @@ pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) +
 
 <h3>Box plots</h3>
 
+* Simple boxplot showing the data distribution of sample 1:
+
 ```{r}
-# Simple boxplot
+ggplot(data=df2, aes(x="", y=sample1)) + geom_boxplot()
+```
+<img src="images/plots/boxplot0_gg.png" width="450"/>
+
+* Split the data into 2 boxes:
+```{r}
 ggplot(data=df2, aes(x=grouping, y=sample1)) + geom_boxplot()
 ```
-
 <img src="images/plots/boxplot1_gg.png" width="450"/>
 
-What if you want to plot both sample1 and sample2 ?<br>
-*Need to convert into a **long** format*
+* What if you want to plot both sample1 and sample2 ?<br>
+*You need to convert into a **long** format*
 
-<img src="images/plots/wide2long.png" width="600"/>
+<img src="images/plots/wide2long.png" width="700"/>
 
 Plotting both sample1 and sample2:
 
@@ -112,11 +129,11 @@ ggplot(data=df_long, aes(x=variable, y=value)) +
 
 <img src="images/plots/boxplot2_gg.png" width="450"/>
 
-What if now you also want to see the distribution of "yes" and "no" in both sample1 and sample2 ?<br>
-* Integrate a parameter to the **aes()***
+* What if now you also want to see the distribution of "yes" and "no" in both sample1 and sample2 ?<br>
+*Integrate a parameter to the **aes()***
 
 ```{r}
-# Either color
+# Either color (color of the box border)
 ggplot(data=df_long, aes(x=variable, y=value, color=grouping)) + 
   geom_boxplot()
 ```
@@ -124,7 +141,7 @@ ggplot(data=df_long, aes(x=variable, y=value, color=grouping)) +
 <img src="images/plots/boxplot3_gg.png" width="450"/>
 
 ```{r}
-# Or fill
+# Or fill (color inside the box)
 ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + 
   geom_boxplot()
 ```
@@ -146,7 +163,7 @@ pbox <- ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) +
 
 <h3>Dot plots</h3>
 
-Example of the expression of a gene in 2 experimental groups (each with 3 replicates)
+Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.
 
 ```{r}
 # create a named vector with the expression of a gene
@@ -226,8 +243,9 @@ p4
 
 <h3>Histograms</h3>
 
+Simple histogram:
+
 ```{r}
-# Simple histogram
 ggplot(data=df_long, aes(x=value)) + geom_histogram()
 
 ```
@@ -242,7 +260,7 @@ ggplot(df_long, aes(x=value, fill=variable)) + geom_histogram()
 
 <img src="images/plots/histogram2_gg.png" width="450"/>
 
-By default, the histograms are **stacked**: change to position **dodge**:
+By default, the histograms are **stacked**: change to position **dodge** (side by side):
 
 ```{r}
 phist <- ggplot(df_long, aes(x=value, fill=variable)) + 
@@ -280,7 +298,7 @@ p
 dev.off()
 ```
 
-* You can also used the ggplot2 **ggsave** function:
+* You can also use the ggplot2 **ggsave** function:
 
 ```{r}
 # By default, save the last plot that was produced
