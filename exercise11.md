@@ -202,7 +202,7 @@ pie(table(genes_significance))
 
 </details>
 
-Change the color of the slices, the labels, and add a title.
+Change the color of the slices, modify the labels, and add a title.
 
 <details>
 <summary>
