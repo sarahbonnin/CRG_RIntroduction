@@ -198,8 +198,9 @@ pdot <- ggplot(data=mygenelong, aes(x=group, y=value, col=group, label=sample_na
 pdot +  xlab(label="Experimental group") +
   ylab(label="Normalized expression (log2)") +
   ggtitle(label="Expression of gene 1") +
-  theme(legend.position="none") +
-  theme_bw()
+  theme_bw() +
+  theme(legend.position="none")
+  
 ```
 
 <img src="images/plots/dotplot2_gg.png" width="450"/>
@@ -223,7 +224,7 @@ pbar <- ggplot(data=df2, aes(x=grouping, fill=grouping)) +
   geom_bar()
 
 # Change x axis label with scale_x_discrete:
-p2 <- p + scale_x_discrete(name="counts of yes / no")
+p2 <- pbar + scale_x_discrete(name="counts of yes / no")
 
 # Swapping x and y axis with coord_flip():
 p3 <- p2 + coord_flip()
