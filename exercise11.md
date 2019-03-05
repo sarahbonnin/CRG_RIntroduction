@@ -299,6 +299,6 @@ dev.off()
 
 </details>
 
-Go to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
+> Go to [Extra plots](https://sbcrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams !
 
 > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
