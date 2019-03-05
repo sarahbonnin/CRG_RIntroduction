@@ -18,7 +18,7 @@ setwd("~/Rcourse/Module3")
 
 ### 12a- Scatter plot
 
-**1- Load ggplot2 package
+**1- Load ggplot2 package**
 
 <details>
 <summary>
@@ -31,13 +31,13 @@ library(ggplot2)
 
 </details>
 
-**2- Download the data we will use for plotting:
+**2- Download the data we will use for plotting:**
 
 ```{r}
 download.file("https://raw.githubusercontent.com/sbcrg/CRG_RIntroduction/master/ex12_normalized_intensities.csv", "ex12_normalized_intensities.csv", method="curl")
 ```
 
-**3- Read file into object "project1"
+**3- Read file into object "project1"**
 
 About this file:
 * It is comma separated (csv format)
@@ -58,7 +58,7 @@ project1 <- read.table("ex12_normalized_intensities.csv",
 
 </details>
 
-**4- Using ggplot, create a simple scatter plot representing gene expression of "sampleB" on the x-axis and "sampleH" on the y-axis.
+**4- Using ggplot, create a simple scatter plot representing gene expression of "sampleB" on the x-axis and "sampleH" on the y-axis.**
 
 <details>
 <summary>
@@ -72,7 +72,7 @@ ggplot(data=project1, aes(x=sampleB, y=sampleH)) +
 
 </details>
 
-**5- Create an extra column to the data frame "project1" (you can call this column "expr_limits"): if the expression of a gene is > 13 in both sampleB and sampleH, set to "high"; if the expression of a gene is < 6 in both sampleB and sampleH, set to "low"; if different, set to "normal".
+**5- Create an extra column to the data frame "project1" (you can call this column "expr_limits"): if the expression of a gene is > 13 in both sampleB and sampleH, set to "high"; if the expression of a gene is < 6 in both sampleB and sampleH, set to "low"; if different, set to "normal".**
 
 <details>
 <summary>
@@ -90,7 +90,7 @@ project1$expr_limits[project1$sampleB < 6 & project1$sampleH < 6] <- "low"
 
 </details>
 
-**6- Color the points of your scatter plot according to the newly created column "expr_limits". Save that plot in the object "p"
+**6- Color the points of your scatter plot according to the newly created column "expr_limits". Save that plot in the object "p"**
 
 <details>
 <summary>
@@ -104,7 +104,7 @@ p <- ggplot(data=project1, aes(x=sampleB, y=sampleH, color=expr_limits)) +
 
 </details>
   
-**7- Add a layer to "p" in order to change the points colors to blue (for low), grey (for normal) and red (for high). Save this plot in the object "p2".
+**7- Add a layer to "p" in order to change the points colors to blue (for low), grey (for normal) and red (for high). Save this plot in the object "p2".**
 
 <details>
 <summary>
@@ -118,7 +118,7 @@ p2 <- p + scale_color_manual(values=c("red", "blue", "grey"))
 </details>
 
 
-**8- Save p2 in a jpeg file.
+**8- Save p2 in a jpeg file.**
 a. Try with RStudio Plots window (Export)<br>
 b. Try  in the console:<br>
 
@@ -137,7 +137,7 @@ dev.off()
 
 ### 12b- Box plot
 
-**1- Convert "project1" from a wide format to a long format: save in the object "project_long"
+**1- Convert "project1" from a wide format to a long format: save in the object "project_long"**
 *Note: remember melt function from reshape2 package.*
 
 <details>
@@ -152,7 +152,7 @@ project_long <- melt(project1)
 
 </details>
 
-**2- Produce a boxplot of the expression of all samples (each sample should be represented by a box)
+**2- Produce a boxplot of the expression of all samples (each sample should be represented by a box)**
 
 <details>
 <summary>
@@ -166,7 +166,7 @@ ggplot(data=project_long, aes(x=variable, y=value)) +
 
 </details>
 
-**3- Modify the previous boxplot so as to obtain 3 "sub-boxplots"" per sample, each representing the expression of either "low", "normal" or "high" genes.
+**3- Modify the previous boxplot so as to obtain 3 "sub-boxplots"" per sample, each representing the expression of either "low", "normal" or "high" genes.**
 
 <details>
 <summary>
@@ -180,7 +180,8 @@ ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) +
 
 </details>
 
-**4- Rotate the x-axis labels (90 degrees angle).<br>
+**4- Rotate the x-axis labels (90 degrees angle).**
+<br>
 This is new ! Google it !!
 
 <details>
@@ -196,7 +197,7 @@ ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) +
 
 </details>
 
-**5- Finally, add a title to the plot.
+**5- Finally, add a title to the plot.**
 
 <details>
 <summary>
@@ -215,7 +216,7 @@ ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) +
 
 ### 12c- Bar plot
 
-**1- Produce a bar plot of how many low/normal/high genes are in the column "expr_limits" of "project1".
+**1- Produce a bar plot of how many low/normal/high genes are in the column "expr_limits" of "project1".**
 
 <details>
 <summary>
@@ -229,7 +230,7 @@ ggplot(data=project1, aes(x=expr_limits)) +
 
 </details>
 
-**2- Add an horizontal line at counts 250 (y-axis). Save the plot in the object "bar"
+**2- Add an horizontal line at counts 250 (y-axis). Save the plot in the object "bar"**
 
 <details>
 <summary>
@@ -244,7 +245,7 @@ bar <- ggplot(data=project1, aes(x=expr_limits)) +
 
 </details>
 
-**3- Swap the x and y axis. Save in bar2.
+**3- Swap the x and y axis. Save in bar2.**
 
 <details>
 <summary>
@@ -257,7 +258,7 @@ bar2 <- bar + coord_flip()
 
 </details>
 
-**4- Save "bar" and "bar2" plots in a "png" file, using the **png()** function: use grid.arrange (from the gridExtra package) to organize both plots in one page !
+**4- Save "bar" and "bar2" plots in a "png" file, using the **png()** function: use grid.arrange (from the gridExtra package) to organize both plots in one page !**
 
 <details>
 <summary>
@@ -275,7 +276,7 @@ dev.off()
 
 ### 12cd- Histogram
 
-**1- Create a simple histogram using project_long (column "value").
+**1- Create a simple histogram using project_long (column "value").**
 
 <details>
 <summary>
@@ -289,7 +290,7 @@ ggplot(data=project_long, aes(x=value)) +
 
 </details>
 
-**2- Notice that you get the following warning message" *stat_bin() using `bins = 30`. Pick better value with `binwidth`.*<br>
+**2- Notice that you get the following warning message" *stat_bin() using `bins = 30`. Pick better value with `binwidth`.***<br>
 Set "bins"" parameter of geom_histogram() to 50.
 
 <details>
@@ -304,7 +305,8 @@ ggplot(data=project_long, aes(x=value)) +
 
 </details>
 
-**3- This histogram plots expression values for **All samples**.<br>
+**3- This histogram plots expression values for **All samples**.**
+<br>
 Change the plot so as to obtain one histograms per sample.
 
 <details>
@@ -319,7 +321,8 @@ ggplot(data=project_long, aes(x=value, fill=variable)) +
 
 </details>
 
-**4- By default, geom_histogram produces a stacked histogram.<br>
+**4- By default, geom_histogram produces a stacked histogram.**
+<br>
 Change the "position" argument to "dodge".
 
 <details>
@@ -334,7 +337,7 @@ hist1 <- ggplot(data=project_long, aes(x=value, fill=variable)) +
   
 </details>
 
-**5- A bit messy ?? Run the following:
+**5- A bit messy ?? Run the following:**
 
 ```{r}
 hist2 <- ggplot(data=project_long, aes(x=value, fill=variable)) + 
@@ -344,8 +347,9 @@ hist2 <- ggplot(data=project_long, aes(x=value, fill=variable)) +
 
 **facet_grid()** is another easy way to split the views!
 
-**6- Change the default colors.<br>
-Try the rainbow() function for coloring
+**6- Change the default colors with scale_fill_manual().**
+<br>
+You can try the rainbow() function for coloring.
 
 <details>
 <summary>
@@ -358,7 +362,8 @@ hist3 <- hist2 + scale_fill_manual(values=rainbow(8))
 
 </details>
 
-**7- Zoom in the plots: set the x-axis limits from from 6 to 13.<br>
+**7- Zoom in the plots: set the x-axis limits from from 6 to 13.**
+<br>
 Add the **xlim()** layer.
 
 <details>
@@ -372,7 +377,7 @@ hist4 <- hist3 + xlim(6, 13)
 
 </details>
 
-**8- Change the default theme to **theme_minimal**
+**8- Change the default theme to theme_minimal()**
 
 <details>
 <summary>
@@ -385,7 +390,7 @@ hist5 <- hist4 + theme_minimal()
 
 </details>
 
-**8- Save that last plot to a file (format of your choice) with **ggsave**
+**9- Save that last plot to a file (format of your choice) with ggsave()**
 
 <details>
 <summary>
