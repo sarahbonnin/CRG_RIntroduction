@@ -13,7 +13,7 @@
 * All ggplots start with a **base layer** created with the **ggplot()** function:
 
 ```{r}
-ggplot(data=dataframe, aes=(x=column1, y=column2))
+ggplot(data=dataframe, aes(x=column1, y=column2))
 ```
 
 *The base layer is setting the grounds but NOT plotting anything*
