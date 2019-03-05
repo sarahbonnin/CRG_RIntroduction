@@ -10,7 +10,14 @@
 	+ Pretty !
 	+ Well documented
 
-* [Histograms](#gg_histo)
+* We will see:
+	* [Scatter plots](#gg_scatter)
+	* [Box plots](#gg_box)
+	* [Dot plots](#gg_dot)
+	* [Bar plots](#gg_bar)
+	* [Histograms](#gg_histo)
+	* [How to save plots](#gg_save)
+	* [Volcano plots](#gg_volc)
 
 <h3>Getting started</h3>
 
@@ -22,7 +29,10 @@ ggplot(data=dataframe, aes(x=column1, y=column2))
 
 *The base layer is setting the grounds but NOT plotting anything*
 
-* Add a layer (with the **+** sign) that describes what kind of plot you want:
+* Add a layer (with the **+** sign) that describes what kind of plot you want.
+
+<a name="gg_scatter"></a>
+<h3>Scatter plot</h3>
 
 ```{r}
 # Example of a scatter plot: add the geom_point() layer
@@ -96,6 +106,7 @@ pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) +
 
 <img src="images/plots/scatter3_gg.png" width="450"/>
 
+<a name="gg_box"></a>
 <h3>Box plots</h3>
 
 * Simple boxplot showing the data distribution of sample 1:
@@ -165,6 +176,7 @@ pbox <- ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) +
 
 <img src="images/plots/boxplot5_gg.png" width="450"/>
 
+<a name="gg_dot"></a>
 <h3>Dot plots</h3>
 
 Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.
@@ -209,6 +221,7 @@ pdot +  xlab(label="Experimental group") +
 
 <img src="images/plots/dotplot2_gg.png" width="450"/>
 
+<a name="gg_bar"></a>
 <h3>Bar plots</h3>
 
 ```{r}
@@ -245,9 +258,8 @@ p4
 
 <img src="images/plots/barplot2_gg.png" width="600"/>
 
-
-<h3>Histograms</h3>
 <a name="gg_histo"></a>
+<h3>Histograms</h3>
 
 Simple histogram on one sample (using the df2 data frame):
 
@@ -302,6 +314,7 @@ p + theme_light()
 
 <img src="images/plots/themes_gg.png" width="600"/>
 
+<a name="gg_save"></a>
 <h3>Saving plots in files</h3>
 
 * The same as for regular plots applies:
@@ -398,7 +411,7 @@ boxp + theme(legend.title=element_blank(),
 
 <img src="images/plots/theme_function_gg.png" width="450"/>
 
-
+<a name="gg_volc"></a>
 <h3>Volcano plots</h3>
 
 A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
