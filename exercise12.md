@@ -68,7 +68,7 @@ correction
 ```{r}
 ggplot(data=project1, aes(x=sampleB, y=sampleH)) + 
   geom_point()
-```{r}
+```
 
 </details>
 
