@@ -2,9 +2,9 @@
 
 Regular expressions are tools to **describe patterns in strings**.
 
-<h3>Simple matches with grep</h3>
+<h3>Find simple matches with grep</h3>
 
-* Find a pattern anywhere in the string:
+* Find a pattern anywhere in the string (outputs the index of the element):
 
 ```{r}
 # By default, outputs the index of the element matching the pattern
@@ -12,26 +12,39 @@ grep(pattern="Gen",
 	x="Genomics")
 ```
 
-* Show element instead of the index
+* Show actual element where the pattern is found (instead of the index only) with **value=TRUE**:
 
 ```{r}
 # Set value=TRUE
-grep(pattern="Gen", 
+grep(pattern="Gen",
         x="Genomics",
-	value=TRUE)
+        value=TRUE)
 ```
 
-* Make search non case sensitive
+* Non case-sensitive search with **ignore.case=TRUE**:
 
 ```{r}
-# Enter the pattern in lower-case, but case is ignores with ignore.case=TRUE
+# Enter the pattern in lower-case, but case is ignored
 grep(pattern="gen",
         x="Genomics",
         value=TRUE,
-	ignore.case=TRUE)
+        ignore.case=TRUE)
 ```
 
-<h3>Special characters used for pattern recognition:</h3>
+* Show if it DOESN'T match the pattern with **inv=TRUE**:
+
+```{r}
+# Shows what doesn't match
+grep(pattern="gen",
+        x="Genomics",
+        value=TRUE,
+        ignore.case=TRUE,
+	inv=TRUE)
+```
+
+<h3>Regular expressions to find more flexible patterns</h3>
+
+<h4>Special characters used for pattern recognition:</h4>
 
 | $ | Find pattern at the end of the string |
 | ^ | Find pattern at the beginning of the string |
@@ -41,8 +54,20 @@ grep(pattern="gen",
 | * | One or more allowed, but optional |
 | ? | One allowed, but optional |
 
+<h4>Match your own pattern inside **[]**</h4>
 
-* Match anything contained between brackets at least once: here, match any element that contains either "g" or "t":
+\[abc\]: matches a, b, or c.<br>
+^\[abc\]: matches a, b or c at the beginning of the element.<br>
+^A\[abc\]+: matches A as the first character of the element, then either a, b or c<br>
+^A\[abc\]*: matches A as the first character of the element, then optionally either a, b or c<br>
+^A\[abc\]{1}_: matches A as the first character of the element, then either a, b or c (one time!) followed by an underscore<br>
+
+\[a-z\]: matches every character between a and z.<br>
+\[A-Z\]: matches every character between A and Z.<br>
+\[0-9\]: matches every number between 0 and 9.<br>
+
+
+* Match anything contained between brackets (here either g or t) at least once:
 
 ```{r}
 grep(pattern="[gt]+", 
@@ -58,10 +83,11 @@ grep(pattern="^[gt]+",
         value=TRUE)
 ```
 
-* Create a vector of email addresses:
+* **Create a vector of email addresses:**
 
 ```{r}
-vec_ad <- c("marie.curie@yahoo.es", "albert.einstein01@hotmail.com", "charles.darwin1809@gmail.com", "rosalind.franklin@aol.it")
+vec_ad <- c("marie.curie@yahoo.es", "albert.einstein01@hotmail.com", 
+	"charles.darwin1809@gmail.com", "rosalind.franklin@aol.it")
 ```
 
 * Keep only email addresses finishing with "es":
@@ -72,12 +98,32 @@ grep(pattern="es$",
         value=TRUE)
 ```
 
+<h3>Substitute or remove matching patterns with gsub</h3>
+
+From the same vector of email addresses:
+
 * Remove the "@" symbol and the email provider from each address
 
 ```{r}
 gsub(pattern="@[a-z.]+",
         replacement="",
         x=vec_ad)
+```
+
+* Substitute the "@" symbol with "_at_"
+
+```{r}
+gsub(pattern="@",
+        replacement="_at_",
+        x=vec_ad)
+```
+
+* Substitute "es" and "it" by "eu"
+
+```{r}
+gsub(pattern="es$|it$", 
+	replacement="eu", 
+	x=vec_ad)
 ```
 
 <h3>Predefined variables to use in regular expressions:</h3>
@@ -99,20 +145,20 @@ gsub(pattern="@[[:lower:][:punct:]]+",
 	replacement="", 
 	x=vec_ad)
 ```
-	* Same thing but remove additionally any number BEFORE the @
+	* Same thing but remove additionally any number(s) BEFORE the @ (if any):
 ```{r}
 gsub(pattern="[[:digit:]]*@[[:lower:][:punct:]]+",
         replacement="",
         x=vec_ad)
 ```
-	* Same but simplified
+	* Same but simplified:
 ```{r}
 gsub(pattern="[[:digit:]]*@[[:print:]]+",
         replacement="",
         x=vec_ad)
 ```
 
-<h3>Use grep and regular expressions to retrieve column by their names</h3>
+<h3>Use grep and regular expressions to retrieve columns by their names</h3>
 
 Example of a data frame:
 
@@ -127,7 +173,8 @@ df_regex <- data.frame(expression1=1:4,
 	stringsAsFactors=FALSE)
 
 # Select column names that start with "expression"
-grep(pattern="^expression", colnames(df_regex))
+grep(pattern="^expression", 
+	x=colnames(df_regex))
 
 # Select columns from df_regex if their names start with "expression"
 df_regex[, grep(pattern="^expression", colnames(df_regex))]
