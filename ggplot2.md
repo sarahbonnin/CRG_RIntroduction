@@ -10,6 +10,10 @@
 	+ Pretty !
 	+ Well documented
 
+* [Histograms](#gg_histo)
+
+<h3>Getting started</h3>
+
 * All ggplots start with a **base layer** created with the **ggplot()** function:
 
 ```{r}
@@ -243,6 +247,7 @@ p4
 
 
 <h3>Histograms</h3>
+<a name="gg_histo"></a>
 
 Simple histogram on one sample (using the df2 data frame):
 
