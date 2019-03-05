@@ -116,8 +116,8 @@ Plotting both sample1 and sample2:
 
 ```{r}
 # install and load package reshape2
-install.packages(reshape2)
-library(reshape2)
+install.packages("reshape2")
+library("reshape2")
 
 # convert to long format
 df_long <- melt(df2)
@@ -223,8 +223,8 @@ ggplot(data=df2, aes(x=grouping)) + geom_bar()
 pbar <- ggplot(data=df2, aes(x=grouping, fill=grouping)) + 
   geom_bar()
 
-# Change x axis label with scale_x_discrete:
-p2 <- pbar + scale_x_discrete(name="counts of yes / no")
+# Change x axis label with scale_x_discrete and change order of the bars:
+p2 <- pbar + scale_x_discrete(name="counts of yes / no", limits=c("yes", "no"))
 
 # Swapping x and y axis with coord_flip():
 p3 <- p2 + coord_flip()
@@ -244,7 +244,15 @@ p4
 
 <h3>Histograms</h3>
 
-Simple histogram:
+Simple histogram on one sample (using the df2 data frame):
+
+```{r}
+ggplot(data=df1, aes(x=sample1)) + geom_histogram()
+
+```
+<img src="images/plots/histogram0_gg.png" width="450"/>
+
+Histogram on more samples (using df_long):
 
 ```{r}
 ggplot(data=df_long, aes(x=value)) + geom_histogram()
@@ -253,7 +261,7 @@ ggplot(data=df_long, aes(x=value)) + geom_histogram()
 
 <img src="images/plots/histogram1_gg.png" width="450"/>
 
-Split by sample ("variable" column)
+Split the data per sample ("variable" column that represents here the samples):
 
 ```{r}
 ggplot(df_long, aes(x=value, fill=variable)) + geom_histogram()
@@ -457,8 +465,15 @@ p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
 <img src="images/plots/volcano5_gg.png" width="450"/>
 
 ```{r}
-# Change point color:
+## Change point color 
+
+# 1. by default, it is assigned to the categories in an alphabetical order):
 p3 <- p2 + scale_color_manual(values=c("blue", "black", "red"))
+
+# 2. to automate a bit: ceate a named vector: the values are the colors to be used, the names are the categories they will be assigned to:
+mycolors <- c("blue", "red", "black")
+names(mycolors) <- c("DOWN", "UP", "NO")
+p3 <- p2 + scale_colour_manual(values = mycolors)
 ```
 
 <img src="images/plots/volcano6_gg.png" width="450"/>
