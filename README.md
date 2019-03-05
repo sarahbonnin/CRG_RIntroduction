@@ -57,7 +57,7 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 <h3>Module 3</h3>
 * ["Base" plots](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
 * [Saving plots in file](https://sbcrg.github.io/CRG_RIntroduction/io_plots)
-	+ [Exercise 4](https://sbcrg.github.io/CRG_RIntroduction/exercise11): "Base" plots.
+	+ [Exercise 11](https://sbcrg.github.io/CRG_RIntroduction/exercise11): "Base" plots.
 * [Extra plots](https://sbcrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams.
 * [Graphing with ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
 	+ [Exercise 12](https://sbcrg.github.io/CRG_RIntroduction/exercise12): ggplot2.
