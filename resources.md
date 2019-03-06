@@ -24,6 +24,8 @@
 
 * [ggplot2 cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
 
+* [ggplot2 short tutorial to get started](https://turbofuture.com/computers/Starting-with-ggplot2-in-R)
+
 * [The R Graph Gallery](https://www.r-graph-gallery.com/)
 	* [for ggplot2](https://www.r-graph-gallery.com/portfolio/ggplot2-package/) 
 
