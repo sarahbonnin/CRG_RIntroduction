@@ -52,7 +52,7 @@ correction
 ```{r}
 project1 <- read.table("ex12_normalized_intensities.csv", 
   sep=",", 
-  header=T, 
+  header=TRUE, 
   row.names = 1)
 ```
 
