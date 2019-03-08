@@ -24,7 +24,7 @@
 * All ggplots start with a **base layer** created with the **ggplot()** function:
 
 ```{r}
-ggplot(data=dataframe, aes(x=column1, y=column2))
+ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
 ```
 
 *The base layer is setting the grounds but NOT plotting anything*
@@ -36,7 +36,7 @@ ggplot(data=dataframe, aes(x=column1, y=column2))
 
 ```{r}
 # Example of a scatter plot: add the geom_point() layer
-ggplot(data=dataframe, aes(x=column1, y=column2)) + geom_point()
+ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
 ```
 
 * Example of a simple scatter plot:
@@ -46,7 +46,7 @@ ggplot(data=dataframe, aes(x=column1, y=column2)) + geom_point()
 df1 <- data.frame(sample1=rnorm(200), sample2=rnorm(200))
 
 # Plot !
-ggplot(data= df1 , aes(x=sample1, y=sample2)) + 
+ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
 	geom_point()
 ```
 
@@ -58,9 +58,9 @@ ggplot(data= df1 , aes(x=sample1, y=sample2)) +
 	* **geom_vline** to add a vertical line
 	* etc.
 ```{r}
-ggplot(data= df1 , aes(x=sample1, y=sample2)) + 
+ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
   geom_point() +
-	ggtitle("my first ggplot") +
+	ggtitle(label="my first ggplot") +
 	geom_vline(xintercept=0)
 ```
 
@@ -70,10 +70,10 @@ Bookmark that [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and 
 
 ```{r}
 # Save in an object
-p <- ggplot(data= df1 , aes(x=sample1, y=sample2)) 
+p <- ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) 
 	+ geom_point()
 # Add layers to that object
-p + ggtitle("my first ggplot")
+p + ggtitle(label="my first ggplot")
 ```
 
 <img src="images/plots/scatter2_gg.png" width="450"/>
@@ -86,7 +86,7 @@ p + ggtitle("my first ggplot")
 Color all points in red (not depending on the data):
 
 ```{r}
-ggplot(data= df1 , aes(x=sample1, y=sample2)) +
+ggplot(data=df1 , mapping=aes(x=sample1, y=sample2)) +
 	geom_point(color="red") 
 ```
 
@@ -100,7 +100,7 @@ Color the points according to another column in the data frame:
 df2 <- data.frame(df1, grouping=rep(c("yes", "no"), c(80, 120)))
 
 # Plot and add the color parameter in the aes():
-pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) + 
+pscat <- ggplot(data=df2, mapping=aes(x=sample1, y=sample2, color=grouping)) + 
   geom_point()
 ```
 
@@ -112,13 +112,13 @@ pscat <- ggplot(data=df2, aes(x=sample1, y=sample2, color=grouping)) +
 * Simple boxplot showing the data distribution of sample 1:
 
 ```{r}
-ggplot(data=df2, aes(x="", y=sample1)) + geom_boxplot()
+ggplot(data=df2, mapping=aes(x="", y=sample1)) + geom_boxplot()
 ```
 <img src="images/plots/boxplot0_gg.png" width="450"/>
 
 * Split the data into 2 boxes:
 ```{r}
-ggplot(data=df2, aes(x=grouping, y=sample1)) + geom_boxplot()
+ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
 ```
 <img src="images/plots/boxplot1_gg.png" width="450"/>
 
@@ -135,10 +135,10 @@ install.packages("reshape2")
 library("reshape2")
 
 # convert to long format
-df_long <- melt(df2)
+df_long <- melt(data=df2)
 	# all numeric values are organized into only one column: value
 # plot:
-ggplot(data=df_long, aes(x=variable, y=value)) + 
+ggplot(data=df_long, mapping=aes(x=variable, y=value)) + 
   geom_boxplot()
 ```
 
@@ -149,7 +149,7 @@ ggplot(data=df_long, aes(x=variable, y=value)) +
 
 ```{r}
 # Either color (color of the box border)
-ggplot(data=df_long, aes(x=variable, y=value, color=grouping)) + 
+ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping)) + 
   geom_boxplot()
 ```
 
@@ -157,7 +157,7 @@ ggplot(data=df_long, aes(x=variable, y=value, color=grouping)) +
 
 ```{r}
 # Or fill (color inside the box)
-ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + 
+ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
   geom_boxplot()
 ```
 
@@ -169,7 +169,7 @@ Do you want to change the default colors?<br>
   * **scale_fill_manual**
 
 ```{r}
-pbox <- ggplot(data=df_long, aes(x=variable, y=value, fill=grouping)) + 
+pbox <- ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
 	geom_boxplot() +
 	scale_fill_manual(values=c("slateblue2", "chocolate"))
 ```
@@ -189,7 +189,7 @@ mygene <- c(8.1, 8.2, 8.6, 8.7, 9.4, 8.5)
 names(mygene) <- c("KO1", "KO2", "KO3", "WT1", "WT2", "WT3")
 
 # transform to long format
-mygenelong <- melt(mygene)
+mygenelong <- melt(data=mygene)
 
 # add new columns containing sample names and experimental groups
 mygenelong$sample_name <- rownames(mygenelong)
@@ -198,7 +198,7 @@ mygenelong$group <- gsub("[1-3]{1}", "", mygenelong$sample_name)
 # dot plot
   # add labels with "label" in the aes() and layer geom_text()
   # nudge_x adjust the labels horizontally
-pdot <- ggplot(data=mygenelong, aes(x=group, y=value, col=group, label=sample_name)) + 
+pdot <- ggplot(data=mygenelong, mapping=aes(x=group, y=value, col=group, label=sample_name)) + 
   geom_point() +
   geom_text(nudge_x=0.2)
 ```
@@ -226,7 +226,7 @@ pdot +  xlab(label="Experimental group") +
 
 ```{r}
 # A simple bar plot
-ggplot(data=df2, aes(x=grouping)) + geom_bar()
+ggplot(data=df2, mapping=aes(x=grouping)) + geom_bar()
 ```
 
 <img src="images/plots/barplot1_gg.png" width="450"/>
@@ -237,7 +237,7 @@ ggplot(data=df2, aes(x=grouping)) + geom_bar()
   
 ```{r}
 # Save the plot in the object "p"
-pbar <- ggplot(data=df2, aes(x=grouping, fill=grouping)) + 
+pbar <- ggplot(data=df2, mapping=aes(x=grouping, fill=grouping)) + 
   geom_bar()
 
 # Change x axis label with scale_x_discrete and change order of the bars:
@@ -264,7 +264,7 @@ p4
 Simple histogram on one sample (using the df2 data frame):
 
 ```{r}
-ggplot(data=df1, aes(x=sample1)) + geom_histogram()
+ggplot(data=df1, mapping=aes(x=sample1)) + geom_histogram()
 
 ```
 <img src="images/plots/histogram0_gg.png" width="450"/>
@@ -272,7 +272,7 @@ ggplot(data=df1, aes(x=sample1)) + geom_histogram()
 Histogram on more samples (using df_long):
 
 ```{r}
-ggplot(data=df_long, aes(x=value)) + geom_histogram()
+ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
 
 ```
 
@@ -281,7 +281,7 @@ ggplot(data=df_long, aes(x=value)) + geom_histogram()
 Split the data per sample ("variable" column that represents here the samples):
 
 ```{r}
-ggplot(df_long, aes(x=value, fill=variable)) + geom_histogram()
+ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + geom_histogram()
 ```
 
 <img src="images/plots/histogram2_gg.png" width="450"/>
@@ -289,7 +289,7 @@ ggplot(df_long, aes(x=value, fill=variable)) + geom_histogram()
 By default, the histograms are **stacked**: change to position **dodge** (side by side):
 
 ```{r}
-phist <- ggplot(df_long, aes(x=value, fill=variable)) + 
+phist <- ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + 
 	geom_histogram(position='dodge')
 ```
 
@@ -301,7 +301,7 @@ You can change the default global **theme** (background color, grid lines etc. a
 
 ```{r}
 # go back to a previous plot
-p <- ggplot(data=df_long, aes(x=value)) + geom_histogram()
+p <- ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
 
 # Try different themes
 p + theme_bw()
@@ -329,17 +329,17 @@ dev.off()
 
 ```{r}
 # By default, save the last plot that was produced
-ggsave("lastplot.png")
+ggsave(filename="lastplot.png")
 
 # You can pick which plot you want to save:
-ggsave("myplot.png", plot=p)
+ggsave(filename="myplot.png", plot=p)
 
 # Many different formats are available: 
   # "eps", "ps", "tex", "pdf", "jpeg", "tiff", "png", "bmp", "svg", "wmf"
-ggsave("myplot.ps", plot=p, device="ps")
+ggsave(filename="myplot.ps", plot=p, device="ps")
 
 # Change the height and width (and their unit):
-ggsave("myplot.pdf", 
+ggsave(filename="myplot.pdf", 
   width = 20, 
   height = 20, 
   units = "cm")

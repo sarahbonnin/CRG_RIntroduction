@@ -66,7 +66,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project1, aes(x=sampleB, y=sampleH)) + 
+ggplot(data=project1, mapping=aes(x=sampleB, y=sampleH)) + 
   geom_point()
 ```
 
@@ -98,7 +98,7 @@ correction
 </summary>
 
 ```{r}
-p <- ggplot(data=project1, aes(x=sampleB, y=sampleH, color=expr_limits)) + 
+p <- ggplot(data=project1, mapping=aes(x=sampleB, y=sampleH, color=expr_limits)) + 
   geom_point()
 ```
 
@@ -147,7 +147,7 @@ correction
 
 ```{r}
 library(reshape2)
-project_long <- melt(project1)
+project_long <- melt(data=project1)
 ```
 
 </details>
@@ -160,7 +160,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project_long, aes(x=variable, y=value)) + 
+ggplot(data=project_long, mapping=aes(x=variable, y=value)) + 
   geom_boxplot()
 ```
 
@@ -174,7 +174,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 
+ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) + 
   geom_boxplot()
 ```
 
@@ -190,7 +190,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 
+ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) + 
   geom_boxplot() + 
   theme(axis.text.x = element_text(angle = 90))
 ```
@@ -205,7 +205,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 
+ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) + 
   geom_boxplot() + 
   theme(axis.text.x = element_text(angle = 90)) +
   ggtitle("My boxplots")
@@ -224,7 +224,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project1, aes(x=expr_limits)) + 
+ggplot(data=project1, mapping=aes(x=expr_limits)) + 
   geom_bar()
 ```
 
@@ -238,7 +238,7 @@ correction
 </summary>
 
 ```{r}
-bar <- ggplot(data=project1, aes(x=expr_limits)) + 
+bar <- ggplot(data=project1, mapping=aes(x=expr_limits)) + 
   geom_bar() + 
   geom_hline(yintercept=250)
 ```
@@ -284,7 +284,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project_long, aes(x=value)) + 
+ggplot(data=project_long, mapping=aes(x=value)) + 
   geom_histogram()
 ```
 
@@ -299,7 +299,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project_long, aes(x=value)) + 
+ggplot(data=project_long, mapping=aes(x=value)) + 
   geom_histogram(bins=50)
 ```
 
@@ -315,7 +315,7 @@ correction
 </summary>
 
 ```{r}
-ggplot(data=project_long, aes(x=value, fill=variable)) + 
+ggplot(data=project_long, mapping=aes(x=value, fill=variable)) + 
   geom_histogram(bins=50)
 ```
 
@@ -331,7 +331,7 @@ correction
 </summary>
 
 ```{r}
-hist1 <- ggplot(data=project_long, aes(x=value, fill=variable)) + 
+hist1 <- ggplot(data=project_long, mapping=aes(x=value, fill=variable)) + 
   geom_histogram(position="dodge")
 ```
   
@@ -340,7 +340,7 @@ hist1 <- ggplot(data=project_long, aes(x=value, fill=variable)) +
 **5- A bit messy ?? Run the following:**
 
 ```{r}
-hist2 <- ggplot(data=project_long, aes(x=value, fill=variable)) + 
+hist2 <- ggplot(data=project_long, mapping=aes(x=value, fill=variable)) + 
   geom_histogram(bins=50) + 
   facet_grid(~variable)
 ```
@@ -398,7 +398,7 @@ correction
 </summary>
 
 ```{r}
-ggsave("myhistograms.png", plot=hist5, device="png", width=20)
+ggsave(filename="myhistograms.png", plot=hist5, device="png", width=20)
 ```
 
 </details>
