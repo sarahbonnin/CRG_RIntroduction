@@ -63,7 +63,7 @@ from the CRG [Bioinformatics core facility](https://biocore.crg.eu/) (office 460
 	+ [Exercise 12](https://sbcrg.github.io/CRG_RIntroduction/exercise12): ggplot2.
 
 <h3>Module 4</h3>
-* [Exploratory data analysis](https://github.com/sbcrg/CRG_RIntroduction/blob/master/Module4_1_EDA_Mar_2019.html)
+* [Exploratory data analysis](https://rawgit.com/sbcrg/CRG_RIntroduction/master/Module4_1_EDA_Mar_2019.html)
 
 <h2>Resources</h2>
 
