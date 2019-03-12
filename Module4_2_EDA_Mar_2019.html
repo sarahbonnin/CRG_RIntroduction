@@ -831,8 +831,14 @@ data$D1[data$D1 &lt;= 10] &lt;- NA</code></pre>
 <h4>How to change a value of a specific data point</h4>
 <pre class="r"><code>data[data$SEX==&quot;M&quot; &amp; data$DRUG==&quot;ART&quot;,]$E
 
-df &lt;- data
+# difficult way
 df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;, ]$E[df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;, ]$E == 911] &lt;- 500 # or NA
+df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;,]$E
+
+# simpler way
+df &lt;- data
+df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;,]$E
+df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot; &amp; df$E == 911 &amp; !is.na(df$E), ]$E &lt;- 500
 df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;,]$E</code></pre>
 <p><br /></p>
 </div>
