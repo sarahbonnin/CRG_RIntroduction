@@ -227,10 +227,11 @@ $(document).ready(function () {
 <li><a href="#correct-non-numeric-values-changing-them-to-na">Correct non-numeric values, changing them to NA</a></li>
 <li><a href="#write-corrected-data-frame-in-the-file">Write corrected data frame in the file</a></li>
 <li><a href="#explore-and-remove-outliers">Explore and remove outliers</a></li>
+<li><a href="#how-to-change-a-value-of-a-specific-data-point">How to change a value of a specific data point</a></li>
 <li><a href="#make-a-data-frame-with-statistical-data">Make a data frame with statistical data</a></li>
 <li><a href="#format-a-data-frame">Format a data frame</a></li>
 <li><a href="#write-a-data-frame-in-the-file">Write a data frame in the file</a></li>
-<li><a href="#write-a-table-using-comma-as-a-decimal-separator-instead-of-dot">Write a table using comma as a decimal separator instead of dot</a></li>
+<li><a href="#write-a-table-using-as-a-decimal-separator-instead-of-a-dot-a-comma">Write a table using as a decimal separator instead of a dot a comma</a></li>
 </ul></li>
 </ul>
 </div>
@@ -826,9 +827,19 @@ data$U_2[data$U_2 &gt; 10] &lt;- NA
 data$D1[data$D1 &lt;= 10] &lt;- NA</code></pre>
 <p><br /></p>
 </div>
+<div id="how-to-change-a-value-of-a-specific-data-point" class="section level4">
+<h4>How to change a value of a specific data point</h4>
+<pre class="r"><code>data[data$SEX==&quot;M&quot; &amp; data$DRUG==&quot;ART&quot;,]$E
+
+df &lt;- data
+df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;, ]$E[df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;, ]$E == 911] &lt;- 500 # or NA
+df[df$SEX==&quot;M&quot; &amp; df$DRUG==&quot;ART&quot;,]$E</code></pre>
+<p><br /></p>
+</div>
 <div id="make-a-data-frame-with-statistical-data" class="section level4">
 <h4>Make a data frame with statistical data</h4>
-<pre class="r"><code>d &lt;- data[data$SEX == &quot;F&quot; &amp; data$DRUG == &quot;ART&quot;,]
+<pre class="r"><code>#let's make first a data frame for only one group
+d &lt;- data[data$SEX == &quot;F&quot; &amp; data$DRUG == &quot;ART&quot;,]
 
 result &lt;- list()
 names &lt;- c(&quot;N&quot;, &quot;mean&quot;, &quot;sd&quot;)
@@ -836,7 +847,7 @@ count &lt;- 1
 for (i in colnames(d)){
   print(i)
   if (i == &quot;SEX&quot; | i == &quot;DRUG&quot; | i == &quot;ID&quot;) next;
-  x &lt;- d[ , grep(i, colnames(d)) ]
+  x &lt;- d[ ,i]
   x &lt;- x[!is.na(x)]
   v &lt;- c(i, length(x), mean(x), sd(x))
   result[[count]] &lt;- v
@@ -859,7 +870,7 @@ for (sex in levels(data$SEX)){
     for (i in colnames(d)){
       print(i)
       if (i == &quot;SEX&quot; | i == &quot;DRUG&quot; | i == &quot;ID&quot;) next;
-      x &lt;- d[ , grep(i, colnames(d)) ]
+      x &lt;- d[ ,i]
       x &lt;- x[!is.na(x)]
       v &lt;- c(i, length(x), mean(x), sd(x))
       result[[count]] &lt;- v
@@ -902,8 +913,8 @@ write.table(df, conn, row.names = T, col.names = NA, sep = &quot;,&quot;)
 close(conn)</code></pre>
 <p><br /></p>
 </div>
-<div id="write-a-table-using-comma-as-a-decimal-separator-instead-of-dot" class="section level4">
-<h4>Write a table using comma as a decimal separator instead of dot</h4>
+<div id="write-a-table-using-as-a-decimal-separator-instead-of-a-dot-a-comma" class="section level4">
+<h4>Write a table using as a decimal separator instead of a dot a comma</h4>
 <pre class="r"><code>df_comma &lt;- format(df, decimal.mark=&quot;,&quot;)
 
 conn &lt;- file(&quot;Results_comma.txt&quot;, &quot;w&quot;)
