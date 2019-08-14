@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8.4 Exercice 1. Getting started. | Introduction to R</title>
-  <meta name="description" content="8.4 Exercice 1. Getting started. | Introduction to R" />
+  <title>11.8 Exercise 3. Character vector manipulation | Introduction to R</title>
+  <meta name="description" content="11.8 Exercise 3. Character vector manipulation | Introduction to R" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8.4 Exercice 1. Getting started. | Introduction to R" />
+  <meta property="og:title" content="11.8 Exercise 3. Character vector manipulation | Introduction to R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8.4 Exercice 1. Getting started. | Introduction to R" />
+  <meta name="twitter:title" content="11.8 Exercise 3. Character vector manipulation | Introduction to R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio-tips-in-the-console.html">
-<link rel="next" href="data-types.html">
+<link rel="prev" href="exercise-2-numeric-vector-manipulation.html">
+<link rel="next" href="factors.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -194,52 +194,98 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercice-1.-getting-started." class="section level2">
-<h2><span class="header-section-number">8.4</span> Exercice 1. Getting started.</h2>
-<p>Create the script “exercise1.R” (in R Studio: File -&gt; New File) and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 1 in that script. <br>Remember you can comment the code using #.</p>
-<p><strong>1- From the terminal, go to Rcourse/Module1. First check where you currently are with getwd(); then go to Rcourse/Module1 with setwd()</strong></p>
+<div id="exercise-3.-character-vector-manipulation" class="section level2">
+<h2><span class="header-section-number">11.8</span> Exercise 3. Character vector manipulation</h2>
+<div id="exercise-3a." class="section level3">
+<h3><span class="header-section-number">11.8.1</span> Exercise 3a.</h3>
+<p>Create the script “exercise3.R” and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 3 in that script. <br>Remember you can comment the code using #.</p>
+<p><strong>1- Go to Rcourse/Module1 First check where you currently are with getwd(); then go to Rcourse/Module1 with setwd()</strong></p>
 <p><details> <summary> correction </summary></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()
 <span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)
 <span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</code></pre></div>
 <p></details></p>
-<p><strong>2- Using R as a calculator, calculate the square root of 654.</strong></p>
+<p><strong>2- Create vector w as:</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">w &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dt">x=</span><span class="kw">c</span>(<span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;mRNA&quot;</span>), <span class="dt">times=</span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">2</span>))</code></pre></div>
+<p><strong>3- View vector w in the console: how does function rep() work ?</strong> <br>Play with the <strong>times</strong> argument.</p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">654</span>)</code></pre></div>
-<pre><code>## [1] 25.57342</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="kw">c</span>(<span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;mRNA&quot;</span>), <span class="dt">times=</span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">4</span>))</code></pre></div>
+<pre><code>## [1] &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;mRNA&quot;  &quot;mRNA&quot;  &quot;mRNA&quot;  &quot;mRNA&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rep</span>(<span class="dt">x=</span><span class="kw">c</span>(<span class="st">&quot;miRNA&quot;</span>, <span class="st">&quot;mRNA&quot;</span>), <span class="dt">times=</span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">2</span>))</code></pre></div>
+<pre><code>##  [1] &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot;
+##  [9] &quot;miRNA&quot; &quot;miRNA&quot; &quot;mRNA&quot;  &quot;mRNA&quot;</code></pre>
 <p></details></p>
-<p><strong>3- Using R as a calculator, calculate the percentage of males and females currently present in the classroom.</strong></p>
+<p><strong>4- What is the output of table(w) ? What does the table function do ?</strong></p>
+<p><strong>5- Type w[grep(pattern=“mRNA”, x=w)] and w[w == “mRNA”]</strong> <br> Is there a difference between the two outputs?</p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 6 males out of 19 students:</span>
-(<span class="dv">6</span><span class="op">/</span><span class="dv">19</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
-<pre><code>## [1] 31.57895</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 13 females out of 19 students</span>
-(<span class="dv">13</span><span class="op">/</span><span class="dv">19</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
-<pre><code>## [1] 68.42105</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">w[<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;mRNA&quot;</span>, w)]</code></pre></div>
+<pre><code>## [1] &quot;mRNA&quot; &quot;mRNA&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">w[w <span class="op">==</span><span class="st"> &quot;mRNA&quot;</span>]</code></pre></div>
+<pre><code>## [1] &quot;mRNA&quot; &quot;mRNA&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># no difference between the outputs</span></code></pre></div>
 <p></details></p>
-<p><strong>4- Create a new object “myobject” with value 60. Show “myobject” in the terminal.</strong></p>
+<p><strong>6- Now type w[grep(pattern=“RNA”, w)] and w[w == “RNA”]</strong> <br> Is there a difference between the two outputs?</p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span><span class="dv">60</span>
-myobject</code></pre></div>
-<pre><code>## [1] 60</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">w[<span class="kw">grep</span>(<span class="dt">pattern=</span><span class="st">&quot;RNA&quot;</span>, w)]</code></pre></div>
+<pre><code>## [1] &quot;miRNA&quot; &quot;miRNA&quot; &quot;miRNA&quot; &quot;mRNA&quot;  &quot;mRNA&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">w[w <span class="op">==</span><span class="st"> &quot;RNA&quot;</span>]</code></pre></div>
+<pre><code>## character(0)</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># grep outputs 5 values but == outputs none</span></code></pre></div>
 <p></details></p>
-<p><strong>5- Reassign myobject with value 87.</strong></p>
+<p>What is the difference between <strong>==</strong> and <strong>grep</strong> ?</p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span><span class="dv">87</span></code></pre></div>
+<blockquote>
+<p>= looks for exact matches. <br> grep looks for <strong>patterns</strong>.</p>
+</blockquote>
 <p></details></p>
-<p><strong>6- Subtract 1 to myobject. Reassign.</strong></p>
+<p><strong>7- Create vector g as:</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">g &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;hsa-let-7a&quot;</span>, <span class="st">&quot;hsa-mir-1&quot;</span>, <span class="st">&quot;CLC&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;LPA&quot;</span>)</code></pre></div>
+<p>How many elements do w and g contain?</p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span>myobject <span class="op">-</span><span class="st"> </span><span class="dv">1</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(w); <span class="kw">length</span>(g)</code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 5</code></pre>
 <p></details></p>
-<p><strong>7- Create a new object “mysqrt” that will store the square root of “myobject”.</strong></p>
+<p><strong>8- Do vectors w and g have the same length? Use the function identical() to check this.</strong></p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mysqrt &lt;-<span class="st"> </span><span class="kw">sqrt</span>(myobject)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">identical</span>(<span class="dt">x=</span><span class="kw">length</span>(w), <span class="dt">y=</span><span class="kw">length</span>(g))</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
 <p></details></p>
-<p><strong>8- Create a new object “mydiv” that will store the result of “myobject” divided by “mysqrt”.</strong></p>
+<p><strong>9- Name the elements of g using the elements of w.</strong><br> (i.e. the names of each element of g will be the elements of w).</p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mydiv &lt;-<span class="st"> </span>myobject <span class="op">/</span><span class="st"> </span>mysqrt</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(g) &lt;-<span class="st"> </span>w</code></pre></div>
+<p></details></p>
+<p><strong>If you have time</strong>, continue with Exercise 3b below.<br></p>
+</div>
+<div id="exercise-3b." class="section level3">
+<h3><span class="header-section-number">11.8.2</span> Exercise 3b.</h3>
+<p><strong>1- Use the sub() function to replace miRNA with microRNA in the <em>names</em> of g.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(g) &lt;-<span class="st"> </span><span class="kw">sub</span>(<span class="dt">pattern=</span><span class="st">&quot;miRNA&quot;</span>, <span class="dt">replacement=</span><span class="st">&quot;microRNA&quot;</span>, <span class="dt">x=</span><span class="kw">names</span>(g))</code></pre></div>
+<p></details></p>
+<p><strong>2- Count how many microRNAs and mRNAs there are in g based on the column names.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(<span class="kw">names</span>(g))</code></pre></div>
+<pre><code>## 
+## microRNA     mRNA 
+##        3        2</code></pre>
+<p></details></p>
+<p><strong>3- Create vector tt as:</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tt &lt;-<span class="st"> &quot;Introduction to R course&quot;</span></code></pre></div>
+<p>How many characters does tt contain? Use nchar().</p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nchar</span>(tt)</code></pre></div>
+<pre><code>## [1] 24</code></pre>
+<p></details></p>
+<p><strong>4- Remove “Introduction to R” from tt.</strong> <br>You can try with either substr() or gsub()</p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">substr</span>(<span class="dt">x=</span>tt, <span class="dt">start=</span><span class="dv">17</span>, <span class="dt">stop=</span><span class="kw">nchar</span>(tt))</code></pre></div>
+<pre><code>## [1] &quot;R course&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gsub</span>(<span class="dt">pattern=</span><span class="st">&quot;Introduction to R&quot;</span>, <span class="dt">replacement=</span><span class="st">&quot;&quot;</span>, <span class="dt">x=</span>tt)</code></pre></div>
+<pre><code>## [1] &quot; course&quot;</code></pre>
 <p></details></p>
 
+</div>
 </div>
 <!-- </div> -->
             </section>
@@ -247,8 +293,8 @@ myobject</code></pre></div>
           </div>
         </div>
       </div>
-<a href="rstudio-tips-in-the-console.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-2-numeric-vector-manipulation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="factors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

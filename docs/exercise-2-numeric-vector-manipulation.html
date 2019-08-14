@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8.4 Exercice 1. Getting started. | Introduction to R</title>
-  <meta name="description" content="8.4 Exercice 1. Getting started. | Introduction to R" />
+  <title>11.7 Exercise 2. Numeric vector manipulation | Introduction to R</title>
+  <meta name="description" content="11.7 Exercise 2. Numeric vector manipulation | Introduction to R" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8.4 Exercice 1. Getting started. | Introduction to R" />
+  <meta property="og:title" content="11.7 Exercise 2. Numeric vector manipulation | Introduction to R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8.4 Exercice 1. Getting started. | Introduction to R" />
+  <meta name="twitter:title" content="11.7 Exercise 2. Numeric vector manipulation | Introduction to R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rstudio-tips-in-the-console.html">
-<link rel="next" href="data-types.html">
+<link rel="prev" href="character-vector-manipulation.html">
+<link rel="next" href="exercise-3-character-vector-manipulation.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -194,61 +194,156 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercice-1.-getting-started." class="section level2">
-<h2><span class="header-section-number">8.4</span> Exercice 1. Getting started.</h2>
-<p>Create the script “exercise1.R” (in R Studio: File -&gt; New File) and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 1 in that script. <br>Remember you can comment the code using #.</p>
-<p><strong>1- From the terminal, go to Rcourse/Module1. First check where you currently are with getwd(); then go to Rcourse/Module1 with setwd()</strong></p>
+<div id="exercise-2.-numeric-vector-manipulation" class="section level2">
+<h2><span class="header-section-number">11.7</span> Exercise 2. Numeric vector manipulation</h2>
+<div id="exercise-2a." class="section level3">
+<h3><span class="header-section-number">11.7.1</span> Exercise 2a.</h3>
+<p>Create the script “exercise2.R” and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 2 in that script. <br>Remember you can comment the code using #.</p>
+<p><strong>1- Go to Rcourse/Module1 First check where you currently are with getwd(); then go to Rcourse/Module1 with setwd()</strong></p>
 <p><details> <summary> correction </summary></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()
 <span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)
 <span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</code></pre></div>
 <p></details></p>
-<p><strong>2- Using R as a calculator, calculate the square root of 654.</strong></p>
+<p><strong>2- Create a numeric vector y which contains the numbers from 2 to 11, both included.</strong> <br>Show y in the terminal.</p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">654</span>)</code></pre></div>
-<pre><code>## [1] 25.57342</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>)
+<span class="co"># same as</span>
+y &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">:</span><span class="dv">11</span>
+<span class="co"># show in terminal:</span>
+y</code></pre></div>
+<pre><code>##  [1]  2  3  4  5  6  7  8  9 10 11</code></pre>
 <p></details></p>
-<p><strong>3- Using R as a calculator, calculate the percentage of males and females currently present in the classroom.</strong></p>
+<p><strong>3- How many elements are in y? I.e what is the length of vector y ?</strong></p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 6 males out of 19 students:</span>
-(<span class="dv">6</span><span class="op">/</span><span class="dv">19</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
-<pre><code>## [1] 31.57895</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 13 females out of 19 students</span>
-(<span class="dv">13</span><span class="op">/</span><span class="dv">19</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
-<pre><code>## [1] 68.42105</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">length</span>(y)</code></pre></div>
+<pre><code>## [1] 10</code></pre>
 <p></details></p>
-<p><strong>4- Create a new object “myobject” with value 60. Show “myobject” in the terminal.</strong></p>
+<p><strong>4- Show the 2nd element of y.</strong></p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span><span class="dv">60</span>
-myobject</code></pre></div>
-<pre><code>## [1] 60</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y[<span class="dv">2</span>]</code></pre></div>
+<pre><code>## [1] 3</code></pre>
 <p></details></p>
-<p><strong>5- Reassign myobject with value 87.</strong></p>
+<p><strong>5- Show the 3rd and the 6th elements of y.</strong></p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span><span class="dv">87</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y[<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">6</span>)]</code></pre></div>
+<pre><code>## [1] 4 7</code></pre>
 <p></details></p>
-<p><strong>6- Subtract 1 to myobject. Reassign.</strong></p>
+<p><strong>6- Remove the 4th element of y: reassign. What is now the length of y ?</strong></p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span>myobject <span class="op">-</span><span class="st"> </span><span class="dv">1</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># remove 4th element and reassign</span>
+y &lt;-<span class="st"> </span>y[<span class="op">-</span><span class="dv">4</span>]
+<span class="co"># length of y</span>
+<span class="kw">length</span>(y)</code></pre></div>
+<pre><code>## [1] 9</code></pre>
 <p></details></p>
-<p><strong>7- Create a new object “mysqrt” that will store the square root of “myobject”.</strong></p>
+<p><strong>7- Show all elements of y that are less than 7.</strong></p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mysqrt &lt;-<span class="st"> </span><span class="kw">sqrt</span>(myobject)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># which elements of y are less than 7:</span>
+y <span class="op">&lt;</span><span class="st"> </span><span class="dv">7</span></code></pre></div>
+<pre><code>## [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># show those elements </span>
+y[ y <span class="op">&lt;</span><span class="st"> </span><span class="dv">7</span> ]</code></pre></div>
+<pre><code>## [1] 2 3 4 6</code></pre>
 <p></details></p>
-<p><strong>8- Create a new object “mydiv” that will store the result of “myobject” divided by “mysqrt”.</strong></p>
+<p><strong>8- Show all elements of y that are greater or equal to 4 and less than 9.</strong></p>
 <p><details> <summary> correction </summary></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mydiv &lt;-<span class="st"> </span>myobject <span class="op">/</span><span class="st"> </span>mysqrt</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y[ y <span class="op">&gt;=</span><span class="st"> </span><span class="dv">4</span> <span class="op">&amp;</span><span class="st"> </span>y <span class="op">&lt;</span><span class="st"> </span><span class="dv">9</span> ]</code></pre></div>
+<pre><code>## [1] 4 6 7 8</code></pre>
+<p></details></p>
+<p><strong>9- Create the vector x of 1000 random numbers from the normal distribution:</strong> <br><strong><em>First read the help page of the rnorm() function.</em></strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># help page for the rnorm function</span>
+<span class="kw">help</span>(rnorm)
+<span class="co"># produce a vector of 1000 random numbers from the normal distribution</span>
+x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000</span>)</code></pre></div>
+<p></details></p>
+<p><strong>10. What are the mean, median, minimum and maximum values of x?</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(x); <span class="kw">median</span>(x); <span class="kw">min</span>(x); <span class="kw">max</span>(x)</code></pre></div>
+<pre><code>## [1] -0.009308331</code></pre>
+<pre><code>## [1] -0.06192855</code></pre>
+<pre><code>## [1] -2.596223</code></pre>
+<pre><code>## [1] 3.199388</code></pre>
+<p></details></p>
+<p><strong>11- Run the summary() function on x. <br>What additional information do you obtain ?</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(x)</code></pre></div>
+<pre><code>##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+## -2.596000 -0.640300 -0.061930 -0.009308  0.627700  3.199000</code></pre>
+<p></details></p>
+<p><strong>12- Create vector y2 as:</strong><br></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y2 &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">11</span>, <span class="dv">5</span>, <span class="dv">62</span>,  <span class="dv">18</span>, <span class="dv">2</span>, <span class="dv">8</span>)</code></pre></div>
+<p><strong>13. What is the sum of all elements in y2 ?</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(y2)</code></pre></div>
+<pre><code>## [1] 107</code></pre>
+<p></details></p>
+<p><strong>14- Which elements of y2 are also present in y ? <br>Note: remember the %in% operator.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y2[ y2 <span class="op">%in%</span><span class="st"> </span>y ]</code></pre></div>
+<pre><code>## [1] 11  2  8</code></pre>
+<p></details></p>
+<p><strong>15- Multiply each element of y2 by 1.5: reassign.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y2 &lt;-<span class="st"> </span>y2 <span class="op">*</span><span class="st"> </span><span class="fl">1.5</span></code></pre></div>
+<p></details></p>
+<p><strong>16- Use the function any() to check if the number 3 is present.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># &quot;Given a set of logical vectors, is at least one of the values true?&quot;</span>
+<span class="kw">any</span>( y2 <span class="op">==</span><span class="st"> </span><span class="dv">3</span> )</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p></details></p>
+</div>
+<div id="exercise-2b." class="section level3">
+<h3><span class="header-section-number">11.7.2</span> Exercise 2b.</h3>
+<p><strong>1- Create the vector myvector as:</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myvector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</code></pre></div>
+<p><strong>Create the same vector using the rep() function (?rep)</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myvector &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">3</span>)</code></pre></div>
+<p></details></p>
+<p><strong>2- Reassign the 5th, 6th and 7th position of myvector with the values 8, 12 and 32, respectively.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># reassign one by one</span>
+myvector[<span class="dv">5</span>] &lt;-<span class="st"> </span><span class="dv">8</span>
+myvector[<span class="dv">6</span>] &lt;-<span class="st"> </span><span class="dv">12</span>
+myvector[<span class="dv">7</span>] &lt;-<span class="st"> </span><span class="dv">32</span>
+<span class="co"># or reassign all at once</span>
+myvector[<span class="dv">5</span><span class="op">:</span><span class="dv">7</span>] &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">32</span>)</code></pre></div>
+<p></details></p>
+<p><strong>3- Calculate the fraction/percentage of each element of myvector (relative to the sum of all elements of the vector). <br>sum() can be useful.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># sum of all elements of the vector</span>
+mytotal &lt;-<span class="st"> </span><span class="kw">sum</span>(myvector)
+<span class="co"># divide each element by the sum</span>
+myvector <span class="op">/</span><span class="st"> </span>mytotal</code></pre></div>
+<pre><code>## [1] 0.015625 0.031250 0.046875 0.015625 0.125000 0.187500 0.500000 0.031250
+## [9] 0.046875</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># multiply by 100 to get a percentage</span>
+(myvector <span class="op">/</span><span class="st"> </span>mytotal) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
+<pre><code>## [1]  1.5625  3.1250  4.6875  1.5625 12.5000 18.7500 50.0000  3.1250  4.6875</code></pre>
+<p></details></p>
+<p><strong>4- Add vector c(2, 4, 6, 7) to myvector (combining both vectors): reassign!</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create the new vector</span>
+newvector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">7</span>)
+<span class="co"># combine both myvector and newvector</span>
+<span class="kw">c</span>(myvector, newvector)</code></pre></div>
+<pre><code>##  [1]  1  2  3  1  8 12 32  2  3  2  4  6  7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># reassign myvector</span>
+myvector &lt;-<span class="st"> </span><span class="kw">c</span>(myvector, newvector)</code></pre></div>
 <p></details></p>
 
 </div>
-<!-- </div> -->
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="rstudio-tips-in-the-console.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="data-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="character-vector-manipulation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-3-character-vector-manipulation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
