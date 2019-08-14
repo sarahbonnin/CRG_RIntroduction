@@ -1,6 +1,6 @@
 # R basics
 
-<h3>Arithmetic operators</h3>
+## Arithmetic operators
 
 | Operator  | Function      |
 |:--------: |:-------------:|
@@ -16,7 +16,7 @@ In the R terminal:
 ```
 Type **Enter** for R to interpret the command.
 
-<h3>Simple calculations</h3>
+## Simple calculations
 
 Given the following table:
 
@@ -37,7 +37,7 @@ What is the percentage of miRNA?
 ( 45 / 414 ) * 100
 ```
 
-<h2>Objects in R</h2>
+## Objects in R
 
 Everything that stores any kind of data in R is an **object**:
 <img src="images/objects_box.png" alt="rstudio logo" width="300"/>
@@ -51,12 +51,10 @@ Everything that stores any kind of data in R is an **object**:
   + Use **<-** for assignments
   + Keep **=** for functions arguments
 
-<h3>Assigning data to an object</h3>
+## Assigning data to an object
 
 * Assigning a value to the object **B**:
-```{r}
 B <- 10
-```
 
 * Reassigning: modifying the content of an object:
 ```{r}
@@ -72,7 +70,4 @@ B <- B + 10
 
 * You can see the objects you created in the upper right panel in RStudio: the environment.
 
- > Go to [Functions in R](https://sbcrg.github.io/CRG_RIntroduction/functionsbasics)
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

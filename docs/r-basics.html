@@ -107,7 +107,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a></li>
-<li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a></li>
+<li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
+<li class="chapter" data-level="5.1" data-path="r-basics.html"><a href="r-basics.html#arithmetic-operators"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="5.2" data-path="r-basics.html"><a href="r-basics.html#simple-calculations"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
+<li class="chapter" data-level="5.3" data-path="r-basics.html"><a href="r-basics.html#objects-in-r"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
+<li class="chapter" data-level="5.4" data-path="r-basics.html"><a href="r-basics.html#assigning-data-to-an-object"><i class="fa fa-check"></i><b>5.4</b> Assigning data to an object</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a></li>
 <li class="chapter" data-level="8" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>8</b> Exercice 1. Getting started.</a></li>
@@ -134,9 +139,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="r-basics" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> R basics</h1>
-<h3>
-Arithmetic operators
-</h3>
+<div id="arithmetic-operators" class="section level2">
+<h2><span class="header-section-number">5.1</span> Arithmetic operators</h2>
 <table>
 <thead>
 <tr class="header">
@@ -171,9 +175,9 @@ Arithmetic operators
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">10</span> <span class="op">-</span><span class="st"> </span><span class="dv">2</span></code></pre></div>
 <pre><code>## [1] 8</code></pre>
 <p>Type <strong>Enter</strong> for R to interpret the command.</p>
-<h3>
-Simple calculations
-</h3>
+</div>
+<div id="simple-calculations" class="section level2">
+<h2><span class="header-section-number">5.2</span> Simple calculations</h2>
 <p>Given the following table:</p>
 <table>
 <thead>
@@ -207,9 +211,9 @@ Simple calculations
 <p>What is the percentage of miRNA?</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">( <span class="dv">45</span> <span class="op">/</span><span class="st"> </span><span class="dv">414</span> ) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
 <pre><code>## [1] 10.86957</code></pre>
-<h2>
-Objects in R
-</h2>
+</div>
+<div id="objects-in-r" class="section level2">
+<h2><span class="header-section-number">5.3</span> Objects in R</h2>
 <p>Everything that stores any kind of data in R is an <strong>object</strong>: <img src="images/objects_box.png" alt="rstudio logo" width="300"/></p>
 <h2>
 R syntax
@@ -224,28 +228,23 @@ Assignment operators
 <li>Use <strong>&lt;-</strong> for assignments</li>
 <li>Keep <strong>=</strong> for functions arguments</li>
 </ul>
-<h3>
-Assigning data to an object
-</h3>
+</div>
+<div id="assigning-data-to-an-object" class="section level2">
+<h2><span class="header-section-number">5.4</span> Assigning data to an object</h2>
 <ul>
-<li>Assigning a value to the object <strong>B</strong>:</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">B &lt;-<span class="st"> </span><span class="dv">10</span></code></pre></div>
-<ul>
-<li>Reassigning: modifying the content of an object:</li>
+<li><p>Assigning a value to the object <strong>B</strong>: B &lt;- 10</p></li>
+<li><p>Reassigning: modifying the content of an object:</p></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">B <span class="op">+</span><span class="st"> </span><span class="dv">10</span></code></pre></div>
-<pre><code>## [1] 20</code></pre>
+<pre><code>## [1] 30</code></pre>
 <p><span style="color:red"><strong>B unchanged !!</strong></span><br></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">B &lt;-<span class="st"> </span>B <span class="op">+</span><span class="st"> </span><span class="dv">10</span></code></pre></div>
 <p><span style="color:red"><strong>B changed !!</strong></span><br></p>
 <ul>
 <li>You can see the objects you created in the upper right panel in RStudio: the environment.</li>
 </ul>
-<blockquote>
-<p>Go to <a href="https://sbcrg.github.io/CRG_RIntroduction/functionsbasics">Functions in R</a> <br> <a href="https://sbcrg.github.io/CRG_RIntroduction">back to home page</a></p>
-</blockquote>
 
+</div>
 </div>
             </section>
 
