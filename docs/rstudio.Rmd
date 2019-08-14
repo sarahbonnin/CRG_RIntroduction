@@ -1,0 +1,30 @@
+# R Studio
+
+* Free and open source IDE (Integrated Development Environment) for R
+
+* Available for Windows, Mac OS and LINUX
+
+<img src="http://442r58kc8ke1y38f62ssb208-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png" alt="rstudio logo" width="250"/>
+
+<h2>RStudio access</h2>
+* [RStudio Desktop installation](https://www.rstudio.com/products/rstudio/download)
+
+* [RStudio access from the CRG server](http://rstudio.linux.crg.es/)
+	+ Access with CRG credentials
+	+ For those who don't have access to the CRG server, use the guest accounts.
+
+
+<h2>RStudio interface</h2>
+* 4 panels:
+	+ top-left: scripts and files
+	+ bottom-left: R terminal
+	+ top-right: objects, history and environment
+	+ bottom-right: tree of folders, graph window, packages, help window, viewer
+
+<h2>Setting up the folder structure for the course</h2>
+Rcourse<br>
+  |-Module1<br>
+  |-Module2<br>
+  |-Module3<br>
+  |-Module4<br>
+
