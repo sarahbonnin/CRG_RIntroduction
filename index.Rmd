@@ -13,6 +13,7 @@ link-citations: yes
 # Before we start
 
 <h2>Dates, time & location</h2>
+test to see if that works
 
 <h3>Dates:</h3>
 * Module 1: Monday 18th & Tuesday 19th February, 2019
