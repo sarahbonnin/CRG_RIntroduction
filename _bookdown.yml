@@ -8,7 +8,10 @@ language:
 delete_merged_file: true
 rmd_files: ["index.Rmd", "Rintro.Rmd", "rstudio.Rmd", "pathdirectories.Rmd", "Rbasics.Rmd", "functionbasics.Rmd", "Rscripts.Rmd", "exercise1.Rmd", "datatypes.Rmd"]
 output:
-  bookdown::html_book:
+  bookdown::gitbook:
     theme: cosmo
+    highlight: tango
 output_dir: "docs"
 output_format: html
+
+
