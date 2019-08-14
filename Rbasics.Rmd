@@ -45,7 +45,8 @@ Everything that stores any kind of data in R is an **object**:
 <h2>R syntax</h2>
 <img src="images/rsyntax1.png" alt="rstudio logo" width="350"/>
 
-<h3>Assignment operators</h3>
+## Assignment operators
+
 + **<-** or **=**
 + Essentially the same but, to avoid confusions:
   + Use **<-** for assignments

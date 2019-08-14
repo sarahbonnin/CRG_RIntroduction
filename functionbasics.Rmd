@@ -67,7 +67,3 @@ rep.int(3, 1)
 # It works, but is not giving the expected output!
 ```
 
- > Go to [R scripts](https://sbcrg.github.io/CRG_RIntroduction/Rscripts)
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
-

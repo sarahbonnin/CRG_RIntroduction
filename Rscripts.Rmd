@@ -1,6 +1,7 @@
 # R scripts
 
-<h3>Create and save a script</h3>
+## Create and save a script
+
 * Store commands in a .R/.r script. Create and save a script in RStudio with: 
   + File -> New File -> R Script
   + Once the file has opened: File -> Save 
@@ -10,7 +11,7 @@
 * Execute commands or blocks of commands from RStudio:
 <img src="images/rscript_rstudio_cmd.png" width="500"/>
 
-<h3>R syntax</h3>
+## R syntax
 
 * Case sensitive: **g** is not **G**
 * Comment lines start with **#**
@@ -23,7 +24,7 @@ A + 1
 ```
 <img src="images/syntax_error.png" width="500"/>
 
-<h3>RStudio tips in the console</h3>
+## RStudio tips in the console
 
 Ctrl + Enter: execute the current line.<br>
 
@@ -33,9 +34,3 @@ Ctrl + cmd + <img src="images/arrow_up.png" width="40"/> : Browse command histor
 <img src="images/tab_key.png" width="50"/> Type a letter in the console + "tab": R Studio proposes the different functions or object stored which start with that letter. <br> for example, type **get + "tab"**:
 
 <img src="images/tab_functions.png" width="350"/>
-
-<br>
-Time for [Exercise 1](https://sbcrg.github.io/CRG_RIntroduction/exercise1): Getting started!
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
-
