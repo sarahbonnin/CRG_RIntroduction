@@ -4,7 +4,7 @@ date: "`r Sys.Date()`"
 book_filename: "r-intro-crg"
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Part"
 delete_merged_file: true
 rmd_files: ["index.Rmd", "Rintro.Rmd", "rstudio.Rmd", "pathdirectories.Rmd", "Rbasics.Rmd", "functionbasics.Rmd", "Rscripts.Rmd", "exercise1.Rmd", "datatypes.Rmd"]
 output:
