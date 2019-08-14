@@ -1,12 +1,12 @@
-#Repetitive execution
+# Repetitive execution
 
 **Loops** are used to repeat a specific block of code.
 
-##"for" loop
+<br>
 
 Structure of the **for loop**:
 
-```{r}
+```{r, eval=F}
 for(i in vector_expression){
     action_command
 }
@@ -56,8 +56,3 @@ for(i in 1:nrow(mymat)){
 	print(min(mymat[i,]))
 }
 ```
-
-Go to [Exercise 9](https://sbcrg.github.io/CRG_RIntroduction/exercise9): For loops.
-<br>
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)

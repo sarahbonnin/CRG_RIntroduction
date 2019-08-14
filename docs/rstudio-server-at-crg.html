@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>12.7 RStudio server at CRG | Introduction to R</title>
+  <meta name="description" content="12.7 RStudio server at CRG | Introduction to R" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="12.7 RStudio server at CRG | Introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="12.7 RStudio server at CRG | Introduction to R" />
+  
+  
+  
+
+<meta name="author" content="Sarah Bonnin" />
+
+
+<meta name="date" content="2019-08-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="list-functions-from-a-package.html">
+<link rel="next" href="exercise-7-library-and-packages.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
+<li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
+<li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
+<li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
+<li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="5.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
+<li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
+<li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
+<li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
+<li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
+<li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
+<li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a></li>
+<li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a><ul>
+<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="vectors.html"><a href="vectors.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
+<li class="chapter" data-level="9.1.2" data-path="vectors.html"><a href="vectors.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
+<li class="chapter" data-level="9.1.3" data-path="vectors.html"><a href="vectors.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
+<li class="chapter" data-level="9.1.4" data-path="vectors.html"><a href="vectors.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
+<li class="chapter" data-level="9.1.5" data-path="vectors.html"><a href="vectors.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
+<li class="chapter" data-level="9.2.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
+<li class="chapter" data-level="9.3.2" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices.html"><a href="matrices.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices.html"><a href="matrices.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
+<li class="chapter" data-level="9.5.3" data-path="matrices.html"><a href="matrices.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="data-frames.html"><a href="data-frames.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
+<li class="chapter" data-level="9.6.2" data-path="data-frames.html"><a href="data-frames.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
+<li class="chapter" data-level="9.7.2" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="exercise-4-matrix-manipulation.html"><a href="exercise-4-matrix-manipulation.html"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
+<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
+<li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
+<li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a><ul>
+<li class="chapter" data-level="11.1" data-path="on-vectors.html"><a href="on-vectors.html"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
+<li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
+<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
+<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
+<li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
+<li class="chapter" data-level="12.2" data-path="r-contrib.html"><a href="r-contrib.html"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
+<li class="chapter" data-level="12.3" data-path="install-a-package.html"><a href="install-a-package.html"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
+<li class="chapter" data-level="12.4" data-path="load-a-package.html"><a href="load-a-package.html"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
+<li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
+<li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
+<li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
+<li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
+<li class="chapter" data-level="13.2" data-path="regular-expressions-to-find-more-flexible-patterns.html"><a href="regular-expressions-to-find-more-flexible-patterns.html"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
+<li class="chapter" data-level="13.3" data-path="substitute-or-remove-matching-patterns-with-gsub.html"><a href="substitute-or-remove-matching-patterns-with-gsub.html"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
+<li class="chapter" data-level="13.4" data-path="predefined-variables-to-use-in-regular-expressions.html"><a href="predefined-variables-to-use-in-regular-expressions.html"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
+<li class="chapter" data-level="13.5" data-path="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
+<li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>14</b> Repetitive execution</a><ul>
+<li class="chapter" data-level="14.1" data-path="exercise-9-for-loop.html"><a href="exercise-9-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: For loop</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>15</b> Conditional statement</a><ul>
+<li class="chapter" data-level="15.1" data-path="exercise-10-if-statement.html"><a href="exercise-10-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: If statement</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rstudio-server-at-crg" class="section level2">
+<h2><span class="header-section-number">12.7</span> RStudio server at CRG</h2>
+<p>If you can’t install packages (permission issues), you first need to specify a writeable directory to install the packages into.<br></p>
+<p>Follow the steps below:</p>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb364-1" data-line-number="1"><span class="co"># Go to your home directory</span></a>
+<a class="sourceLine" id="cb364-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;~&quot;</span>)</a>
+<a class="sourceLine" id="cb364-3" data-line-number="3"><span class="co"># Create a directory where to store the packages</span></a>
+<a class="sourceLine" id="cb364-4" data-line-number="4"><span class="kw">dir.create</span>(<span class="st">&quot;R_packages&quot;</span>)</a>
+<a class="sourceLine" id="cb364-5" data-line-number="5"><span class="co"># Add directory location to the library path</span></a>
+<a class="sourceLine" id="cb364-6" data-line-number="6"><span class="kw">.libPaths</span>(<span class="st">&quot;~/R_packages/&quot;</span>)</a></code></pre></div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="list-functions-from-a-package.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-7-library-and-packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "red",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["r-intro-crg.pdf", "r-intro-crg.epub"],
+"toc": {
+"collapse": "section"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

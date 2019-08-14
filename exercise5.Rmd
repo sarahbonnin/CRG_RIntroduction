@@ -36,7 +36,7 @@ And Column names: Age, Height, Sex.
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 df <- data.frame(Age=c(43, 34, 22, 27), 
                  Height=c(181, 172, 189, 167),
                  Sex=c("M", "F", "M", "F"),
@@ -53,7 +53,7 @@ df <- data.frame(Age=c(43, 34, 22, 27),
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 str(df)
 ```
 
@@ -69,7 +69,7 @@ Try different approaches:
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 mean(df$Age)
 mean(df$Height)
 ```
@@ -83,7 +83,7 @@ mean(df$Height)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # we have to remove the Sex column: we can calculate the average only with numbers
 apply(df[,-3], 2, mean)
 apply(df[,1:2], 2, mean)
@@ -99,7 +99,7 @@ apply(df[,-grep("Sex", colnames(df))], 2, mean)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # Georges= allows us to enter the row name at the same time as we add a row
 df <- rbind(df, Georges=c(53, 168, "M"))
 ```
@@ -114,7 +114,7 @@ Use Patient1, Patient2, etc. instead of actual names.
 correction
 </summary>
 
-```{r} 
+```{r, eval=F} 
 rownames(df) <- c("Patient1", "Patient2", "Patient3", "Patient4", "Patient5")
 # try also the paste function!
 rownames(df) <- paste("Patient", 1:5, sep="")
@@ -129,7 +129,7 @@ rownames(df) <- paste("Patient", 1:5, sep="")
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # which elements are female ("F" in the "Sex" colum)
 df$Sex=="F"
 # retrieve rows that contain the female entries, and save in df2
@@ -145,7 +145,7 @@ df2 <- df[df$Sex=="F",]
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # which entries are males
 df$Sex=="M"
 # which entries are greater than 170 in column "Height"
@@ -182,7 +182,7 @@ With column names: **"id", "age"** for mydf1, and **"id", "name"** for mydf2.
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 mydf1 <- data.frame(id=1:4, age=c(14,12,15,10))
 mydf2 <- data.frame(id=1:5, name=c("paul", "helen", "emily", "john", "mark"))
 ```
@@ -197,7 +197,7 @@ Look for the help page of **merge** and/or Google it!
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # input 2 data frames
 # "by" columns indicate by which column you want to merge the data
 merge(x=mydf1, y=mydf2, by.x="id", by.y="id")
@@ -214,7 +214,7 @@ Look for the help page of **order**.
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # order the age column (default is increasing order)
 order(mydf3$age)
 # order the age column by decreasing order
@@ -234,7 +234,7 @@ mydf3[order(mydf3$age, decreasing = TRUE), ]
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # failing: download.file("https://github.com/sbcrg/CRG_RIntroduction/blob/master/genes_dataframe.RData", "genes_dataframe.RData")
 download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData", "genes_dataframe.RData")
 ```
@@ -248,7 +248,7 @@ download.file("https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_datafram
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 dir()
 ```
 
@@ -262,7 +262,7 @@ Use the *load* function.
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 load("genes_dataframe.RData")
 ```
 
@@ -275,7 +275,7 @@ load("genes_dataframe.RData")
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 ls()
 ```
 
@@ -289,7 +289,7 @@ You can use a variety of functions: str, head, tail, dim, colnames, rownames, cl
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 str(df_genes)
 head(df_genes)
 tail(df_genes)
@@ -308,7 +308,7 @@ class(df_genes)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # rows where pvalue_KOvsWT < 0.05 
 df_genes$pvalue_KOvsWT < 0.05
 # rows where log2FoldChange_KOvsWT > 0.5
@@ -332,7 +332,7 @@ How many rows (genes) were selected?
 correction       
 </summary>
 
-```{r}
+```{r, eval=F}
 # extract gene symbol column
 up$gene_symbol
 # use grep to get the genes matching the pattern "Zfp"
@@ -350,7 +350,7 @@ For the selection of log2FoldChange: give the **abs** function a try!
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # rows where pvalue_KOvsWT < 0.05
 df_genes$pvalue_KOvsWT < 0.05
 # rows where log2FoldChange_KOvsWT > 0.5

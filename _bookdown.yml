@@ -6,7 +6,7 @@ language:
   ui:
     chapter_name: "Part"
 delete_merged_file: true
-rmd_files: ["index.Rmd", "Rintro.Rmd", "rstudio.Rmd", "pathdirectories.Rmd", "Rbasics.Rmd", "functionbasics.Rmd", "Rscripts.Rmd", "exercise1.Rmd", "datatypes.Rmd", "datastructure.Rmd", "vector.Rmd", "exercise2.Rmd", "exercise3.Rmd", "factor.Rmd", "matrix.Rmd", "dataframe.Rmd", "2d_manip.Rmd", "exercise4.Rmd", "exercise5.Rmd"]
+rmd_files: ["index.Rmd", "Rintro.Rmd", "rstudio.Rmd", "pathdirectories.Rmd", "Rbasics.Rmd", "functionbasics.Rmd", "Rscripts.Rmd", "exercise1.Rmd", "datatypes.Rmd", "datastructure.Rmd", "vector.Rmd", "exercise2.Rmd", "exercise3.Rmd", "factor.Rmd", "matrix.Rmd", "dataframe.Rmd", "2d_manip.Rmd", "exercise4.Rmd", "exercise5.Rmd", "na.Rmd", "inout.Rmd", "exercise6.Rmd", "libpackages.Rmd", "exercise7.Rmd", "regex.Rmd", "exercise8.Rmd", "forloop.Rmd", "exercise9.Rmd", "conditional.Rmd", "exercise10.Rmd"]
 output:
   bookdown::gitbook:
     theme: cosmo

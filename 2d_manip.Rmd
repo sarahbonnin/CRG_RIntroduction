@@ -1,6 +1,6 @@
-#Two-dimensional structures manipulation
+## Two-dimensional structures manipulation
 
-##Dimensions
+### Dimensions
 
 * Get the number of rows and the number of columns:
 
@@ -64,7 +64,7 @@ df <- data.frame(col1=1:2, col2=1:2,
 	row.names=c("row1", "row2"))
 ```
 
-##Manipulation
+### Manipulation
 
 Same principle as vectors... but in 2 dimensions!
 <br>
@@ -157,8 +157,4 @@ apply(X=b, MARGIN=1, FUN=median)
 apply(X=b, MARGIN=2, FUN=median)
 ```
 
-> Time to go to [Exercise 4](https://sbcrg.github.io/CRG_RIntroduction/exercise4): Matrix manipulation
-<br>
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

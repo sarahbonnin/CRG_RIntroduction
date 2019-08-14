@@ -9,7 +9,7 @@ Create the script "exercise7.R" and save it to the "Rcourse/Module2" directory: 
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 getwd()
 setwd("Rcourse/Module2")
 setwd("~/Rcourse/Module2")
@@ -24,7 +24,7 @@ setwd("~/Rcourse/Module2")
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # Install the 2 packages at once
 install.packages(pkgs=c("ggplot2", "WriteXLS"))
 # Load in the environment (one by one)
@@ -45,7 +45,7 @@ What are the dimensions of diamonds? What are the column names of diamond?
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # Dimensions of diamonds
 dim(diamonds)
 # Column names of diamonds
@@ -65,7 +65,7 @@ Note: diamonds is a data frame: you can test it with is.data.frame(diamonds) (re
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # Select columns
 diams1 <- diamonds[,c("carat", "cut", "color", "price")]
 ```
@@ -79,7 +79,7 @@ diams1 <- diamonds[,c("carat", "cut", "color", "price")]
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # Install package
 install.packages(pkgs="dplyr")
 # Load package
@@ -95,7 +95,7 @@ library("dplyr")
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # Subset data frame
 diams <- sample_n(tbl=diams1, size=200)
 ```
@@ -114,7 +114,7 @@ Note: read about and play with the different options of both functions and check
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # Write a text file with write.table
 write.table(x=diams, 
 	file="diamonds200.txt",
@@ -132,8 +132,3 @@ WriteXLS(x=diams,
 ```
 
 </details>
-
-
-> Go to [Regular expressions](https://sbcrg.github.io/CRG_RIntroduction/regex).
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)

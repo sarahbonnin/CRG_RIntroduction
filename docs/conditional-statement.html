@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Part15 Conditional statement | Introduction to R</title>
+  <meta name="description" content="Part15 Conditional statement | Introduction to R" />
+  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Part15 Conditional statement | Introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Part15 Conditional statement | Introduction to R" />
+  
+  
+  
+
+<meta name="author" content="Sarah Bonnin" />
+
+
+<meta name="date" content="2019-08-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercise-9-for-loop.html">
+<link rel="next" href="exercise-10-if-statement.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
+<li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
+<li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
+<li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
+<li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="5.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
+<li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
+<li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
+<li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
+<li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
+<li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
+<li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a></li>
+<li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a><ul>
+<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="vectors.html"><a href="vectors.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
+<li class="chapter" data-level="9.1.2" data-path="vectors.html"><a href="vectors.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
+<li class="chapter" data-level="9.1.3" data-path="vectors.html"><a href="vectors.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
+<li class="chapter" data-level="9.1.4" data-path="vectors.html"><a href="vectors.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
+<li class="chapter" data-level="9.1.5" data-path="vectors.html"><a href="vectors.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
+<li class="chapter" data-level="9.2.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
+<li class="chapter" data-level="9.3.2" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices.html"><a href="matrices.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices.html"><a href="matrices.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
+<li class="chapter" data-level="9.5.3" data-path="matrices.html"><a href="matrices.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="data-frames.html"><a href="data-frames.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
+<li class="chapter" data-level="9.6.2" data-path="data-frames.html"><a href="data-frames.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
+<li class="chapter" data-level="9.7.2" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="exercise-4-matrix-manipulation.html"><a href="exercise-4-matrix-manipulation.html"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
+<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
+<li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
+<li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a><ul>
+<li class="chapter" data-level="11.1" data-path="on-vectors.html"><a href="on-vectors.html"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
+<li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
+<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
+<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
+<li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
+<li class="chapter" data-level="12.2" data-path="r-contrib.html"><a href="r-contrib.html"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
+<li class="chapter" data-level="12.3" data-path="install-a-package.html"><a href="install-a-package.html"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
+<li class="chapter" data-level="12.4" data-path="load-a-package.html"><a href="load-a-package.html"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
+<li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
+<li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
+<li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
+<li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
+<li class="chapter" data-level="13.2" data-path="regular-expressions-to-find-more-flexible-patterns.html"><a href="regular-expressions-to-find-more-flexible-patterns.html"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
+<li class="chapter" data-level="13.3" data-path="substitute-or-remove-matching-patterns-with-gsub.html"><a href="substitute-or-remove-matching-patterns-with-gsub.html"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
+<li class="chapter" data-level="13.4" data-path="predefined-variables-to-use-in-regular-expressions.html"><a href="predefined-variables-to-use-in-regular-expressions.html"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
+<li class="chapter" data-level="13.5" data-path="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
+<li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>14</b> Repetitive execution</a><ul>
+<li class="chapter" data-level="14.1" data-path="exercise-9-for-loop.html"><a href="exercise-9-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: For loop</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>15</b> Conditional statement</a><ul>
+<li class="chapter" data-level="15.1" data-path="exercise-10-if-statement.html"><a href="exercise-10-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: If statement</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="conditional-statement" class="section level1">
+<h1><span class="header-section-number">Part15</span> Conditional statement</h1>
+<p><br></p>
+<h3>
+“if” statement
+</h3>
+<p>Structure of the <strong>if statement</strong>:</p>
+<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb430-1" data-line-number="1"><span class="cf">if</span>(condition){</a>
+<a class="sourceLine" id="cb430-2" data-line-number="2">    action_command</a>
+<a class="sourceLine" id="cb430-3" data-line-number="3">}</a></code></pre></div>
+<p>If the <strong>condition</strong> is TRUE, then proceed to the <strong>action_command</strong>; if it is FALSE, nothing happens.
+<br></p>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb431-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb431-2" data-line-number="2"><span class="co"># print if value is &gt; 3</span></a>
+<a class="sourceLine" id="cb431-3" data-line-number="3"><span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb431-4" data-line-number="4">  <span class="kw">print</span>(k)</a>
+<a class="sourceLine" id="cb431-5" data-line-number="5">}</a></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb433-1" data-line-number="1"><span class="co"># print if value is &lt; 3</span></a>
+<a class="sourceLine" id="cb433-2" data-line-number="2"><span class="cf">if</span>(k <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb433-3" data-line-number="3">  <span class="kw">print</span>(k)</a>
+<a class="sourceLine" id="cb433-4" data-line-number="4">}</a></code></pre></div>
+<h4>
+With <strong>else</strong>
+</h4>
+<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb434-1" data-line-number="1"><span class="cf">if</span>(condition){</a>
+<a class="sourceLine" id="cb434-2" data-line-number="2">    action_command1</a>
+<a class="sourceLine" id="cb434-3" data-line-number="3">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb434-4" data-line-number="4">    action_command2</a>
+<a class="sourceLine" id="cb434-5" data-line-number="5">}</a></code></pre></div>
+<p>If the <strong>condition</strong> is TRUE, then proceed to the <strong>action_command1</strong>; if the <strong>condition</strong> is FALSE, proceed to <strong>action_command2</strong>.</p>
+<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb435-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb435-2" data-line-number="2"><span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb435-3" data-line-number="3">  <span class="kw">print</span>(<span class="st">&quot;greater than 3&quot;</span>)</a>
+<a class="sourceLine" id="cb435-4" data-line-number="4">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb435-5" data-line-number="5">  <span class="kw">print</span>(<span class="st">&quot;less than 3&quot;</span>)</a>
+<a class="sourceLine" id="cb435-6" data-line-number="6">}</a></code></pre></div>
+<pre><code>## [1] &quot;less than 3&quot;</code></pre>
+<h4>
+With <strong>else if</strong>
+</h4>
+<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb437-1" data-line-number="1"><span class="cf">if</span>(condition1){</a>
+<a class="sourceLine" id="cb437-2" data-line-number="2">    action_command1</a>
+<a class="sourceLine" id="cb437-3" data-line-number="3">}<span class="cf">else</span> <span class="cf">if</span>(condition2){</a>
+<a class="sourceLine" id="cb437-4" data-line-number="4">    action_command2</a>
+<a class="sourceLine" id="cb437-5" data-line-number="5">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb437-6" data-line-number="6">    action_command3</a>
+<a class="sourceLine" id="cb437-7" data-line-number="7">}</a></code></pre></div>
+<p><img src="images/ifelseif.png" width="450"/></p>
+<p>If the <strong>condition1</strong> is TRUE, then proceed to the <strong>action_command1</strong>; if the <strong>condition1</strong> is FALSE, test for <strong>condition2</strong>: if the <strong>condition2</strong> is TRUE, proceed to the <strong>action_command2</strong>; if neither <strong>condition1</strong> nor <strong>condition2</strong> are TRUE, then proceed to the <strong>action_command3</strong>.
+<br><br>
+<em>Note that you can add up as many <strong>else if</strong> statements as you want.</em></p>
+<ul>
+<li>Example without <strong>else</strong></li>
+</ul>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb438-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">-2</span></a>
+<a class="sourceLine" id="cb438-2" data-line-number="2"><span class="co"># Test whether k is positive or negative or equal to 0</span></a>
+<a class="sourceLine" id="cb438-3" data-line-number="3"><span class="cf">if</span>(k <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb438-4" data-line-number="4">    <span class="kw">print</span>(<span class="st">&quot;negative&quot;</span>)</a>
+<a class="sourceLine" id="cb438-5" data-line-number="5">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb438-6" data-line-number="6">    <span class="kw">print</span>(<span class="st">&quot;positive&quot;</span>)</a>
+<a class="sourceLine" id="cb438-7" data-line-number="7">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">==</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb438-8" data-line-number="8">    <span class="kw">print</span>(<span class="st">&quot;is 0&quot;</span>)</a>
+<a class="sourceLine" id="cb438-9" data-line-number="9">}</a></code></pre></div>
+<pre><code>## [1] &quot;negative&quot;</code></pre>
+<ul>
+<li>Example with <strong>else</strong></li>
+</ul>
+<div class="sourceCode" id="cb440"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb440-1" data-line-number="1">k &lt;-<span class="st"> </span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb440-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb440-3" data-line-number="3"><span class="co"># print if value is &lt;= 3</span></a>
+<a class="sourceLine" id="cb440-4" data-line-number="4"><span class="cf">if</span>(k <span class="op">&lt;=</span><span class="st"> </span><span class="dv">3</span>){</a>
+<a class="sourceLine" id="cb440-5" data-line-number="5">  <span class="kw">print</span>(<span class="st">&quot;less than or equal to 3&quot;</span>)</a>
+<a class="sourceLine" id="cb440-6" data-line-number="6">}<span class="cf">else</span> <span class="cf">if</span>(k <span class="op">&gt;=</span><span class="st"> </span><span class="dv">8</span>){</a>
+<a class="sourceLine" id="cb440-7" data-line-number="7">  <span class="kw">print</span>(<span class="st">&quot;greater than or equal to 8&quot;</span>)</a>
+<a class="sourceLine" id="cb440-8" data-line-number="8">}<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb440-9" data-line-number="9">  <span class="kw">print</span>(<span class="st">&quot;greater than 3 and less than 8&quot;</span>)</a>
+<a class="sourceLine" id="cb440-10" data-line-number="10">}</a></code></pre></div>
+<pre><code>## [1] &quot;greater than or equal to 8&quot;</code></pre>
+<ul>
+<li><strong>If statement</strong> in <strong>For loop</strong>:</li>
+</ul>
+<div class="sourceCode" id="cb442"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb442-1" data-line-number="1"><span class="co"># Matrix</span></a>
+<a class="sourceLine" id="cb442-2" data-line-number="2">mymat &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">800</span>), </a>
+<a class="sourceLine" id="cb442-3" data-line-number="3">        <span class="dt">nrow=</span><span class="dv">50</span>)</a>
+<a class="sourceLine" id="cb442-4" data-line-number="4">    </a>
+<a class="sourceLine" id="cb442-5" data-line-number="5"><span class="co"># Loop over rows of mymat and print row if its median value is &gt; 0</span></a>
+<a class="sourceLine" id="cb442-6" data-line-number="6"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(mymat)){</a>
+<a class="sourceLine" id="cb442-7" data-line-number="7">    <span class="co"># extract the current row</span></a>
+<a class="sourceLine" id="cb442-8" data-line-number="8">    rowi &lt;-<span class="st"> </span>mymat[i,]</a>
+<a class="sourceLine" id="cb442-9" data-line-number="9">    <span class="co"># if median of row is &gt; 0, print row</span></a>
+<a class="sourceLine" id="cb442-10" data-line-number="10">    <span class="cf">if</span>(<span class="kw">median</span>(rowi) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>){</a>
+<a class="sourceLine" id="cb442-11" data-line-number="11">        <span class="kw">print</span>(rowi)</a>
+<a class="sourceLine" id="cb442-12" data-line-number="12">    }</a>
+<a class="sourceLine" id="cb442-13" data-line-number="13">}</a></code></pre></div>
+<pre><code>##  [1] -0.0443712  0.7023702 -0.1509980 -0.8800271  1.3539865  0.6624102
+##  [7]  2.1273885 -0.4360377  0.7204163  0.3840255 -0.2402673  1.1909510
+## [13] -0.3098716 -0.2967331  0.8799700 -1.2471564
+##  [1]  0.04176632  0.71824565  2.20722563 -0.33225047  1.87017702
+##  [6]  0.74666407 -1.79232963  0.31757594 -0.07670374  1.89367459
+## [11]  0.61320465  0.61087032 -0.83647763 -0.47458851  0.71295106
+## [16]  0.88674144
+##  [1]  0.3064051  1.2610266  1.2334493 -0.1682879 -0.0876572  0.2376254
+##  [7]  1.8000489  0.1025640 -1.0301920  0.3624123 -0.5631726 -0.2910638
+## [13] -0.6597370  2.1047643  0.4529010  0.4531663
+##  [1]  0.40164522  0.03259181 -0.63477488  0.25542981  0.29493557
+##  [6]  1.44110598  0.48295945  0.80184889 -0.26241651 -1.01101589
+## [11] -1.58402682 -1.86571199 -0.06225686  1.79203151 -0.57714308
+## [16]  1.34822440
+##  [1] -0.01400819  1.49600362  1.37136525 -1.28131856  0.14650990
+##  [6]  1.01942485  0.35745783 -0.01404180 -0.02181451  2.84746573
+## [11] -0.06424402  0.52657731  1.93270610 -0.39010719  1.02921269
+## [16] -0.45966676
+##  [1]  1.75525958 -1.07048780  1.20576749 -0.06439208 -2.40197810
+##  [6] -0.33589784  0.37401780  0.76733385 -0.82090538  0.62237445
+## [11]  0.29051778 -0.47376349  2.15266059 -0.05671766  0.50192450
+## [16]  1.17927000
+##  [1]  0.17511357 -0.21003106  0.42975397  0.40090066  0.91478036
+##  [6]  0.28689985 -0.87761751  2.10053381  2.01229880 -1.37315127
+## [11] -1.39450478  0.08516530  0.86819862  0.16376365 -0.45797172
+## [16] -0.09869248
+##  [1]  0.59682851  1.35208811 -1.11548171  0.28147491  1.15270315
+##  [6]  0.66754342 -0.74301723 -0.12376315  0.03378066  0.51115513
+## [11]  1.07162422  1.26242916  1.09711548  1.88736889  0.34936200
+## [16]  0.23633079
+##  [1]  0.6977037 -1.1163996  1.6644138  0.6376791 -1.6919209 -0.1292113
+##  [7]  0.5800763  0.7406424 -1.4436785 -0.6667423 -1.8919478  0.2177890
+## [13] -1.0044626  0.4613470  0.5213610 -1.1710662
+##  [1]  0.12872641  1.16023360 -1.35860192 -0.48137384 -1.09269608
+##  [6]  1.17711280  0.49790170  0.19538876  0.91124191  1.12701813
+## [11]  1.60049558 -0.07815487 -0.62443279 -0.72575390 -1.15366902
+## [16] -0.93685425
+##  [1]  0.1876588 -0.5880942  0.1356852  0.7049385  0.8526668  0.4866596
+##  [7] -1.6205144  1.1857220 -1.2798560  0.6804238  0.8553402  1.4365837
+## [13]  0.1150067  0.4393824 -1.3938550  1.5629128
+##  [1]  1.056605670 -0.139692603 -0.860417897  0.009025348  0.531154924
+##  [6]  0.864470114 -0.567178338 -0.122295691  1.413858856  0.859521800
+## [11] -0.953295696 -0.552028158  0.836268574 -0.292121988  0.069096055
+## [16]  0.763204266
+##  [1]  1.3095856 -0.1597877  1.3248074  1.3251620 -0.4656955 -0.9440189
+##  [7]  1.2585144  1.3188121  0.9007756 -0.4233006 -0.1688757  1.0275388
+## [13]  0.8913414 -0.6681651 -0.5043619 -1.5084947
+##  [1] -0.4721311  1.1326869  1.6391923  0.1708410  0.1619351  2.0947631
+##  [7]  0.4483038 -1.5448819  1.3160376 -0.9970951 -1.2341167  0.7706559
+## [13]  0.6655442  0.5148147 -0.4002519 -0.7486906
+##  [1] -1.246303652 -0.947177633  2.142978060  0.505986913 -0.759867002
+##  [6]  0.832162582  1.149850890  0.735450072 -0.740204200  0.506423057
+## [11] -0.275799544  0.424773700  0.538221587  0.706978564 -0.003884384
+## [16] -0.581516634
+##  [1]  0.83974912 -0.93639173  0.16964539  0.19936138  0.86368518
+##  [6]  0.10984597  1.34151597  2.77673024 -0.99295663  0.19709880
+## [11] -1.80044554  1.48000810  1.48043876 -1.30628027 -0.71897024
+## [16] -0.01973633
+##  [1]  0.60725397 -0.17132262  1.10041511 -0.06023266 -1.10307671
+##  [6] -0.38234630 -0.06472884  0.86832224  0.61191930  0.51078027
+## [11]  2.18595523  0.22145652  0.74749817 -1.70773462  1.23748768
+## [16]  0.40917292
+##  [1]  1.0400865  0.5576516  1.1464224 -0.1056245  1.7760981  0.8912099
+##  [7]  0.6655806 -0.0928806  1.0321872  0.5213983 -0.1756217  1.0075416
+## [13]  0.6719771 -0.2531033  1.3290168 -0.3290259
+##  [1]  1.0262487 -0.2037882  0.6924167  0.1121103 -1.2553152 -1.1890492
+##  [7]  0.6436646 -0.6184186  0.3040373  0.5244058  0.5562697  0.3235119
+## [13]  0.7221516 -1.6203423 -0.9533028  0.2418760
+##  [1]  2.03134486  0.34802808 -0.02398067  0.26365542 -0.56541311
+##  [6] -0.90866733  1.69734125 -0.65594744  1.23955797 -0.55993709
+## [11]  0.12842924 -0.14811032  0.27907139 -0.62272707  0.64148338
+## [16] -0.58834746
+##  [1]  1.5434195 -0.9201572 -0.2629421 -2.5944994  0.6895552 -1.3680615
+##  [7]  0.3708570  1.4759049 -0.2123348  0.1378067 -0.8584913  1.5329471
+## [13] -1.5273174  0.3217339  0.1866769  1.7896243
+##  [1]  0.37049093 -1.95128904  0.65898226  0.89289263  0.65960124
+##  [6]  0.49639439  0.94992236 -0.11060017  1.17222894  0.21141797
+## [11] -0.03668256 -1.31697320 -0.76801848 -1.26114728  1.15785423
+## [16]  0.12790264
+##  [1] -0.81833791 -0.05425086  0.41078362  2.30316767  0.46351970
+##  [6]  0.97809833  1.53966579 -0.30796603  2.04800875 -1.77176486
+## [11]  1.77027884  1.00920200 -0.49430410  0.58995472  2.83364529
+## [16] -1.35462355
+##  [1] -0.5651631 -1.6950795  1.6461096  2.0723339  0.6582718 -0.9049774
+##  [7]  0.8177769 -0.5511294 -0.1700790  0.3219460  0.9677140  0.4333339
+## [13]  1.4378567  0.3051244 -0.2516687  0.9294884
+##  [1] -0.830638674  0.388862145 -0.354392918 -0.412662832 -1.358141203
+##  [6]  2.392729382  0.190691029  1.163345787 -0.008883585 -0.174829919
+## [11] -0.505704499  1.265554785  1.464002307  1.261267521 -0.768466902
+## [16]  0.186432314</code></pre>
+<!--chapter:end:conditional.Rmd--> 
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercise-9-for-loop.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-10-if-statement.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "red",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["r-intro-crg.pdf", "r-intro-crg.epub"],
+"toc": {
+"collapse": "section"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

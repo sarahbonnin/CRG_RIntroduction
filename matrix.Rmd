@@ -1,4 +1,4 @@
-#Matrices
+## Matrices
 
 * A matrix is a **2 dimensional** vector.
 
@@ -6,7 +6,7 @@
 	+ the same **type** (numeric, character or logical)
 	+ the same **length**
 
-##Creating a matrix
+### Creating a matrix
 
 * From vectors with the **rbind** function:
 
@@ -37,7 +37,7 @@ b <- matrix(c(1, 0, 34, 44, 12, 4),
 	ncol=2)
 ```
 
-##Two-dimensional object
+### Two-dimensional object
 
 Vectors have one index per element (1-dimension).<br>
 Matrices have **two indices (2-dimensions)** per element, corresponding to the row and the column:
@@ -50,7 +50,7 @@ The "coordinates" of an element in a 2-dimensional object will be first the row 
 
 <img src="images/matrix_rc.png" alt="rstudio logo" width="200"/>
 
-##Matrix manipulation
+### Matrix manipulation
 
 * Add 1 to all elements of a matrix
 
@@ -76,9 +76,5 @@ b[1, ] <- b[1, ] - 2
 # Replace all elements that are greater than 3 with NA
 b[ b>3 ] <- NA
 ```
-
-> Go to [Data frames](https://sbcrg.github.io/CRG_RIntroduction/dataframe)
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
 

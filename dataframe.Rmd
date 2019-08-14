@@ -1,4 +1,4 @@
-#Data frames
+## Data frames
 
 A data frame is a 2-dimensional structure.
 <br> It is more general than a matrix.
@@ -7,7 +7,7 @@ All columns in a data frame:
  + can be of different **types** (numeric, character or logical)
  + must have the same **length**
 
-##Create a data frame 
+### Create a data frame 
 
 * With the **data.frame** function:
 
@@ -48,15 +48,10 @@ b <- matrix(c(1, 0, 34, 44, 12, 4),
 b_df <- as.data.frame(b)
 ```
 
-##Data frame manipulation:
+### Data frame manipulation:
 <br>
 Very similar to matrix manipulation.
 
 <img src="images/df_fetch.png" width="450"/>
 
-
-> Go to [2-dimension objects manipulation](https://sbcrg.github.io/CRG_RIntroduction/2d_manip)
-<br>
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

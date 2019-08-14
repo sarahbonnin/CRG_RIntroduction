@@ -1,10 +1,12 @@
-#Conditional statement
+# Conditional statement
 
-##"if" statement
+<br>
+
+<h3>"if" statement</h3>
 
 Structure of the **if statement**:
 
-```{r}
+```{r, eval=F}
 if(condition){
     action_command
 }
@@ -13,7 +15,7 @@ if(condition){
 If the **condition** is TRUE, then proceed to the **action_command**; if it is FALSE, nothing happens.
 <br>
 
-```{r}
+```{r, eval=F}
 k <- 10
 # print if value is > 3
 if(k > 3){
@@ -27,7 +29,7 @@ if(k < 3){
 
 <h4>With **else**</h4>
 
-```{r}
+```{r, eval=F}
 if(condition){
     action_command1
 }else{
@@ -37,7 +39,7 @@ if(condition){
 
 If the **condition** is TRUE, then proceed to the **action_command1**; if the **condition** is FALSE, proceed to **action_command2**.
 
-```{r}
+```{r, eval=F}
 k <- 3
 if(k > 3){
   print("greater than 3")
@@ -49,7 +51,7 @@ if(k > 3){
 
 <h4>With **else if**</h4>
 
-```{r}
+```{r, eval=F}
 if(condition1){
     action_command1
 }else if(condition2){
@@ -67,7 +69,7 @@ If the **condition1** is TRUE, then proceed to the **action_command1**; if the *
 
 * Example without **else**
 
-```{r}
+```{r, eval=F}
 k <- -2
 # Test whether k is positive or negative or equal to 0
 if(k < 0){
@@ -81,7 +83,7 @@ if(k < 0){
 
 * Example with **else**
 
-```{r}
+```{r, eval=F}
 k <- 10
 
 # print if value is <= 3
@@ -96,7 +98,7 @@ if(k <= 3){
 
 * **If statement** in **For loop**:
 
-```{r}
+```{r, eval=F}
 # Matrix
 mymat <- matrix(rnorm(800), 
         nrow=50)
@@ -111,8 +113,3 @@ for(i in 1:nrow(mymat)){
 	}
 }
 ```
-
-Go to [Exercise 10](https://sbcrg.github.io/CRG_RIntroduction/exercise10): "If" statement.
-<br>
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)

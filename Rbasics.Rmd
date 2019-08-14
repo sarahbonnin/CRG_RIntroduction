@@ -58,12 +58,12 @@ Everything that stores any kind of data in R is an **object**:
 B <- 10
 
 * Reassigning: modifying the content of an object:
-```{r}
+```{r, eval=FALSE}
 B + 10
 ```
 
 <span style="color:red">**B unchanged !!**</span><br>
-```{r}
+```{r, eval=FALSE}
 B <- B + 10
 ```
 

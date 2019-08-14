@@ -1,4 +1,4 @@
-## Exercise 6a. Input / output
+## Exercise 6. 
 
 Create the script "exercise6.R" and save it to the "Rcourse/Module2" directory: you will save all the commands of exercise 6 in that script.
 <br>Remember you can comment the code using #.
@@ -17,9 +17,11 @@ setwd("~/Rcourse/Module2")
 
 </details>
 
+### Exercise 6a. Input / output
+
 **1- Download folder "i_o_files" in your current directory with:** 
 
-```{r}
+```{r, eval=F}
 # system invokes the OS command specified by the "command" argument.
 system(command="svn export https://github.com/sarahbonnin/CRG_RIntroduction/trunk/i_o_files")
 ```
@@ -35,7 +37,7 @@ How many elements are in z?
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # scan content of the file
 z <- scan("i_o_files/ex6a_input.txt")
 # number of elements (length of vector)
@@ -51,7 +53,7 @@ length(z)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 zsorted <- sort(z)
 ```
 
@@ -64,7 +66,7 @@ zsorted <- sort(z)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 write(zsorted, "ex6a_output.txt")
 ```
 
@@ -77,13 +79,13 @@ write(zsorted, "ex6a_output.txt")
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 write(zsorted, "ex6a_output.txt", ncolumns=1)
 ```
 
 </details>
 
-## Exercise 6b - I/O on data frame: play with the arguments of read.table
+### Exercise 6b - I/O on data frame: play with the arguments of read.table
   
 **1- field separator**
 
@@ -95,7 +97,7 @@ What are the dimensions of fs?
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # read in file with default parameters
 fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt")
 dim(fs)
@@ -111,7 +113,7 @@ What are now the dimensions of fs?
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # change field separator to ","
 fs <- read.table("i_o_files/ex6b_IO_commas_noheader.txt", 
 	sep=",")
@@ -130,7 +132,7 @@ What are the dimensions of fs_c ?
 correction
 </summary>
 
-```{r} 
+```{r, eval=F} 
 fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt")
 dim(fs_c)
 ```
@@ -144,7 +146,7 @@ dim(fs_c)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt", 
                    sep=",")
 ```
@@ -155,11 +157,11 @@ fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt",
 What are now the dimensions of fs_c ?
 
 <details>
-<summary>          
+<summary>
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt", 
                    sep=",", 
                    header=TRUE)
@@ -171,13 +173,12 @@ fs_c <- read.table("i_o_files/ex6b_IO_commas_header.txt",
 
 * Read ex6b_IO_skip.txt in object sk.
 
-
 <details>
-<summary>          
+<summary>
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 sk <- read.table("i_o_files/ex6b_IO_skip.txt")
 ```
 
@@ -194,7 +195,7 @@ Check "manually" the file (in the R Studio file browser).<br>
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 sk <- read.table("i_o_files/ex6b_IO_skip.txt",
                  skip=2)
 dim(sk)
@@ -213,7 +214,7 @@ What are now the dimensions of sk ?
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 sk <- read.table("i_o_files/ex6b_IO_skip.txt",
                  skip=2,
                  sep=",",
@@ -227,11 +228,11 @@ sk <- read.table("i_o_files/ex6b_IO_skip.txt",
 * Read ex6b_IO_comment.txt in object cl.
 
 <details>
-<summary>        
-correction       
-</summary>       
+<summary>
+correction
+</summary>
 
-```{r}
+```{r, eval=F}
 cl <- read.table("i_o_files/ex6b_IO_comment.txt")
 ```
 
@@ -242,11 +243,11 @@ Is R complaining again ? Check manually the file and try to find out what is wro
 What os the comment.char argument used for ? Adjust the comment.char argument and read the file again.
 
 <details>
-<summary>        
-correction       
-</summary>        
+<summary>
+correction
+</summary>
 
-```{r}
+```{r, eval=F}
 cl <- read.table("i_o_files/ex6b_IO_comment.txt",
                  comment.char = "*")
 ```
@@ -257,11 +258,11 @@ cl <- read.table("i_o_files/ex6b_IO_comment.txt",
 What are now the dimensions of cl?
 
 <details>
-<summary>        
-correction       
-</summary>        
+<summary>
+correction
+</summary>
 
-```{r}
+```{r, eval=F}
 cl <- read.table("i_o_files/ex6b_IO_comment.txt",
                  comment.char = "*",
                  sep=",",
@@ -280,7 +281,7 @@ dim(cl)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 fin <- read.table("i_o_files/ex6b_IO_final.txt")
 ```
 
@@ -293,7 +294,7 @@ fin <- read.table("i_o_files/ex6b_IO_final.txt")
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 fin <- read.table("i_o_files/ex6b_IO_final.txt",
                   sep=",",
                   header=TRUE,
@@ -304,7 +305,7 @@ fin <- read.table("i_o_files/ex6b_IO_final.txt",
 
 </details>
 
-## Exercice 6c - I/O on a data frame
+### Exercice 6c - I/O on a data frame
 
 **1- Read in file ex6c_input.txt in ex6 object**
 
@@ -313,11 +314,11 @@ Warning: the file has a header !
 Check the structure of ex6 (remember the **str** command).
 
 <details>
-<summary>         
-correction        
+<summary>
+correction
 </summary>
 
-```{r}
+```{r, eval=F}
 ex6 <- read.table("i_o_files/ex6c_input.txt", 
                   header=TRUE)
 str(ex6)
@@ -331,11 +332,11 @@ str(ex6)
 Check again the structure: what has changed ?
 
 <details>
-<summary>         
-correction        
+<summary>
+correction
 </summary>
 
-```{r}
+```{r, eval=F}
 ex6 <- read.table("i_o_files/ex6c_input.txt", 
                   header=TRUE,
                   as.is=TRUE)
@@ -347,11 +348,11 @@ str(ex6)
 **3- What are the column names of ex6 ?**
 
 <details>
-<summary>         
-correction        
+<summary>
+correction
 </summary>
 
-```{r}
+```{r, eval=F}
 colnames(ex6)
 ```
 
@@ -364,7 +365,7 @@ colnames(ex6)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # extract all column names of ex6
 colnames(ex6)
 # extract the name of the first column only
@@ -384,7 +385,7 @@ Remember the table function.
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 table(ex6$Eurozone)
 ```
 
@@ -397,7 +398,7 @@ table(ex6$Eurozone)
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # select the Eurozone column
 ex6$Eurozone
 # elements of the Eurozone column that are exactly TRUE
@@ -421,7 +422,7 @@ Remember the grep function. Check the help page.
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 # country names with "c" (lower-case)
 grep("c", ex6$Country)
 # country names with "c" or "C" (ignoring case)
@@ -436,12 +437,12 @@ grep("c", ex6$Country, value=TRUE, ignore.case = TRUE)
 + in the European union (whole table) ?
 + in the Eurozone ?
 
-<details> 
-<summary> 
+<details>
+<summary>
 correction
 </summary>
   
-```{r}
+```{r, eval=F}
 # sum the whole population column
 sum(ex6$Population)
 # select elements of ex6 where Eurozone is "yes"
@@ -465,7 +466,7 @@ sum(ex6$Population[ex6$Eurozone == "yes"])
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 write.table(ex6, file="ex6c_output.txt")
 ```
 
@@ -478,7 +479,7 @@ write.table(ex6, file="ex6c_output.txt")
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE)
 ```
@@ -492,7 +493,7 @@ write.table(ex6, file="ex6c_output.txt",
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE,
             quote = FALSE)
@@ -507,7 +508,7 @@ write.table(ex6, file="ex6c_output.txt",
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE,
             quote = FALSE,
@@ -521,7 +522,7 @@ write.table(ex6, file="ex6c_output.txt",
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 write.table(ex6, file="ex6c_output.txt", 
             row.names = FALSE,
             quote = FALSE,
@@ -530,8 +531,5 @@ write.table(ex6, file="ex6c_output.txt",
 
 </details>
 
-> Go to [Library and packages](https://sbcrg.github.io/CRG_RIntroduction/libpackages)
 
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

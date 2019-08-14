@@ -1,4 +1,4 @@
-#Factors
+## Factors
 
 * A factor is a vector object (1 dimension) used to specify a **discrete classification (grouping)** of the components of other vectors.
 
@@ -35,9 +35,5 @@ max(e) # throws an error
 e_ord <- factor(e, levels=c("low", "medium", "high"), ordered=TRUE)
 max(e_ord) # outputs "high"
 ```
-
-> Go to [Matrix](https://sbcrg.github.io/CRG_RIntroduction/matrix)
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
 

@@ -9,7 +9,7 @@ Create the script "exercise8.R" and save it to the "Rcourse/Module2" directory: 
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 getwd()
 setwd("~/Rcourse/Module2")
 ```
@@ -71,7 +71,3 @@ gsub(pattern="L[124]{1}_|_[ATGC]{6}.fastq.gz",
 ```
 
 </details>
-
-> Go to [For loops](https://sbcrg.github.io/CRG_RIntroduction/forloop).
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)

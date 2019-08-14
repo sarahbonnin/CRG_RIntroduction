@@ -9,7 +9,7 @@ Create the script "exercise10.R" and save it to the "Rcourse/Module2" directory:
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 getwd()
 setwd("~/Rcourse/Module2")
 ```
@@ -153,6 +153,3 @@ for(gene in vec4){
 
 </details>
 
-
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)

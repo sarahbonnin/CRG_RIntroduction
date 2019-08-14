@@ -1,15 +1,15 @@
-#Input / Output
+# Input / Output
 
 We will learn how to:
 * Read in a file
 * Write out a file
 * Save a graph in a file (Module 3)
 
-##On vectors
+## On vectors
 
 * Read a file as a vector with the **scan** function
 
-```{r}
+```{r, eval=F}
 # Read in file
 scan(file="file.txt")
 # Save in  object
@@ -19,7 +19,7 @@ k <- scan(file="file.txt")
 By default, scans "double" (numeric) elements: it fails if the input contains characters.<br>
 If non-numeric, you need to specify the type of data contained in the file: 
 
-```{r}
+```{r, eval=F}
 # specify the type of data to scan
 scan(file="file.txt", 
 	what="character")
@@ -30,14 +30,14 @@ scan(file="~/file.txt",
 Regarding paths of files:<br>
 If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:
 
-```{r}
+```{r, eval=F}
 scan(file="~/file.txt", 
 	what="character")
 ```
 
 * Write the content of a vector in a file:
 
-```{r}
+```{r, eval=F}
 # create a vector
 mygenes <- c("SMAD4", "DKK1", "ASXL3", "ERG", "CKLF", "TIAM1", "VHL", "BTD", "EMP1", "MALL", "PAX3")
 # write in a file
@@ -48,7 +48,7 @@ write(x=mygenes,
 Regarding paths of files:<br>
 When you write a file, you can also specify a full or relative path:
 
-```{r}
+```{r, eval=F}
 # Write to home directory
 write(x=mygenes,
         file="~/gene_list.txt")
@@ -58,17 +58,17 @@ write(x=mygenes,
 ```
 
 
-##On data frames or matrices
+## On data frames or matrices
 
 * Read in a file into a data frame with the **read.table** function:
 
-```{r}
+```{r, eval=F}
 a <- read.table(file="file.txt")
 ```
 
 You can convert it as a matrix, if needed, with:
 
-```{r}
+```{r, eval=F}
 a <- as.matrix(read.table(file="file.txt"))
 ```
 
@@ -79,7 +79,7 @@ Useful arguments:
 
 * Write a data frame or matrix to a file:
 
-```{r}
+```{r, eval=F}
 write.table(x=a,
 	file="file.txt")
 ```
@@ -90,7 +90,4 @@ Useful arguments:
 
 * Note that "\t" stands for tab-delimitation
 
-> Go to [Exercise 6](https://sbcrg.github.io/CRG_RIntroduction/exercise6): Input and Output !
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 
