@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 What is R ? | Introduction to R</title>
-  <meta name="description" content="Chapter 2 What is R ? | Introduction to R" />
+  <title>Chapter 8 Exercice 1. Getting started. | Introduction to R</title>
+  <meta name="description" content="Chapter 8 Exercice 1. Getting started. | Introduction to R" />
   <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 What is R ? | Introduction to R" />
+  <meta property="og:title" content="Chapter 8 Exercice 1. Getting started. | Introduction to R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 What is R ? | Introduction to R" />
+  <meta name="twitter:title" content="Chapter 8 Exercice 1. Getting started. | Introduction to R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="what-is-rstudio.html">
+<link rel="prev" href="r-scripts.html">
+<link rel="next" href="data-types.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -132,29 +132,53 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="what-is-r" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> What is R ?</h1>
-<ul>
-<li><p>Programming language and environment for <strong>data manipulation</strong>, <strong>statistical computing</strong>, and <strong>graphical display</strong>.</p></li>
-<li><p>Implementation of the S programming language</p></li>
-<li>Created at the University of Auckland, New Zealand:
-<ul>
-<li>Initial version released in 1995</li>
-<li>Stable version released in 2000</li>
-</ul></li>
-<li><strong>Free and open source !</strong>
-<ul>
-<li><a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></li>
-</ul></li>
-<li><p>Interactive, flexible</p></li>
-<li>Very active community of developers and users!
-<ul>
-<li>Many resources and forums available</li>
-</ul></li>
-<li><p>Access through a command-line interpreter: <img src="images/rterminal.png" title="R command line" /></p></li>
-</ul>
+<div id="exercice-1.-getting-started." class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Exercice 1. Getting started.</h1>
+<p>Create the script “exercise1.R” (in R Studio: File -&gt; New File) and save it to the “Rcourse/Module1” directory: you will save all the commands of exercise 1 in that script. <br>Remember you can comment the code using #.</p>
+<p><strong>1- From the terminal, go to Rcourse/Module1. First check where you currently are with getwd(); then go to Rcourse/Module1 with setwd()</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()
+<span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module1&quot;</span>)
+<span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module1&quot;</span>)</code></pre></div>
+<p></details></p>
+<p><strong>2- Using R as a calculator, calculate the square root of 654.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">654</span>)</code></pre></div>
+<pre><code>## [1] 25.57342</code></pre>
+<p></details></p>
+<p><strong>3- Using R as a calculator, calculate the percentage of males and females currently present in the classroom.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 6 males out of 19 students:</span>
+(<span class="dv">6</span><span class="op">/</span><span class="dv">19</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
+<pre><code>## [1] 31.57895</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 13 females out of 19 students</span>
+(<span class="dv">13</span><span class="op">/</span><span class="dv">19</span>) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></code></pre></div>
+<pre><code>## [1] 68.42105</code></pre>
+<p></details></p>
+<p><strong>4- Create a new object “myobject” with value 60. Show “myobject” in the terminal.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span><span class="dv">60</span>
+myobject</code></pre></div>
+<pre><code>## [1] 60</code></pre>
+<p></details></p>
+<p><strong>5- Reassign myobject with value 87.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span><span class="dv">87</span></code></pre></div>
+<p></details></p>
+<p><strong>6- Subtract 1 to myobject. Reassign.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">myobject &lt;-<span class="st"> </span>myobject <span class="op">-</span><span class="st"> </span><span class="dv">1</span></code></pre></div>
+<p></details></p>
+<p><strong>7- Create a new object “mysqrt” that will store the square root of “myobject”.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mysqrt &lt;-<span class="st"> </span><span class="kw">sqrt</span>(myobject)</code></pre></div>
+<p></details></p>
+<p><strong>8- Create a new object “mydiv” that will store the result of “myobject” divided by “mysqrt”.</strong></p>
+<p><details> <summary> correction </summary></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mydiv &lt;-<span class="st"> </span>myobject <span class="op">/</span><span class="st"> </span>mysqrt</code></pre></div>
+<p></details></p>
 <blockquote>
-<p>Go to <a href="https://sbcrg.github.io/CRG_RIntroduction/rstudio">RStudio</a> <br> <a href="https://sbcrg.github.io/CRG_RIntroduction">back to home page</a></p>
+<p>Got to <a href="https://sbcrg.github.io/CRG_RIntroduction/datatype">Data types</a> <br> <a href="https://sbcrg.github.io/CRG_RIntroduction">back to home page</a></p>
 </blockquote>
 
 </div>
@@ -163,8 +187,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="what-is-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-scripts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
