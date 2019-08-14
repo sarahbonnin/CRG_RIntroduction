@@ -1,10 +1,10 @@
-#How to save plots
+# How to save plots
 
-##With R Studio
+## With R Studio
 
 <img src="images/rstudio_plotsave.png" width="450"/>
 
-##With the console
+## With the console
 
 ```{r}
 # Open the file that will contain your plot (the name is up to you)
@@ -109,9 +109,3 @@ dev.off()
 ```
 
 <img src="images/plots/myfile_multi4.jpeg" width="500/" >
-
-
-> Go to [Exercise 11](https://sbcrg.github.io/CRG_RIntroduction/exercise11).
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
-

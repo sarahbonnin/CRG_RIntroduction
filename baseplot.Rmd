@@ -1,4 +1,4 @@
-#Basic plots in R
+# Basic plots in R
 
 R-base package graphics offers functions for producing many plots, for example:
 
@@ -8,7 +8,7 @@ R-base package graphics offers functions for producing many plots, for example:
 * box plots - boxplot()
 * histograms - hist()
 
-##Scatter plots
+## Scatter plots
 
 *A scatter plot has points that show the **relationship** between two sets of data.*
 
@@ -79,7 +79,7 @@ grep("blue", colors(), value=TRUE)
 
 You can also find them [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
 
-##Bar plots
+## Bar plots
 
 *A bar chart or bar plot displays rectangular bars with **lengths proportional to the values that they represent.***
 
@@ -169,7 +169,7 @@ legend("topleft",
 <img src="images/plots/barplot4.png" width="450"/>
 
 
-##Pie charts
+## Pie charts
 
 *A pie chart is a circular charts which is divided into slices, illustrating proportions.*
 
@@ -189,7 +189,7 @@ pie(mytable,
 
 <img src="images/plots/pie1.png" width="450"/>
 
-##Box plots
+## Box plots
 
 *A boxplot is a convenient way to describe the **distribution** of the data.*
 
@@ -244,7 +244,7 @@ abline(h=0, col="red", lwd=3, lty="dotdash")
 <img src="images/linetypes-in-r-line-types.png" width="250"/>
 
 
-##Histograms
+## Histograms
 
 *A histogram graphically summarizes the **distribution** of the data.*
 
@@ -277,10 +277,4 @@ hist(x,
 ```
 
 <img src="images/plots/histogram2.png" width="450"/>
-
-
-
-Go to [how to save plots](https://sbcrg.github.io/CRG_RIntroduction/io_plots)
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

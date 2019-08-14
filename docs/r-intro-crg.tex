@@ -1579,19 +1579,19 @@ correction
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -0.0024426
+## [1] -0.02391837
 \end{verbatim}
 
 \begin{verbatim}
-## [1] -0.01987436
+## [1] 0.008704591
 \end{verbatim}
 
 \begin{verbatim}
-## [1] -4.276704
+## [1] -3.31392
 \end{verbatim}
 
 \begin{verbatim}
-## [1] 3.721429
+## [1] 3.251748
 \end{verbatim}
 
 \textbf{11- Run the summary() function on x. What additional information do you obtain ?}
@@ -1606,7 +1606,7 @@ correction
 
 \begin{verbatim}
 ##      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-## -4.277000 -0.689500 -0.019870 -0.002443  0.625900  3.721000
+## -3.314000 -0.695400  0.008705 -0.023920  0.635100  3.252000
 \end{verbatim}
 
 \textbf{12- Create vector y2 as:}
@@ -4246,19 +4246,27 @@ There are different types of Bioconductor packages:
 ## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 ## 
 ## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## [1] grid      stats     graphics  grDevices utils     datasets  methods  
+## [8] base     
 ## 
 ## other attached packages:
-## [1] ggplot2_2.2.1
+## [1] ggrepel_0.8.0       gridExtra_2.3       reshape2_1.4.3     
+## [4] VennDiagram_1.6.20  futile.logger_1.4.3 gplots_3.0.1.1     
+## [7] ggplot2_2.2.1      
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] Rcpp_1.0.2       rstudioapi_0.7   knitr_1.24       magrittr_1.5    
-##  [5] munsell_0.4.3    colorspace_1.3-2 rlang_0.4.0      stringr_1.4.0   
-##  [9] plyr_1.8.4       tools_3.3.2      grid_3.3.2       gtable_0.2.0    
-## [13] xfun_0.8         tinytex_0.15     htmltools_0.3.6  yaml_2.2.0      
-## [17] lazyeval_0.2.1   digest_0.6.20    tibble_2.1.3     crayon_1.3.4    
-## [21] bookdown_0.12    evaluate_0.14    rmarkdown_1.14.3 stringi_1.4.3   
-## [25] pillar_1.4.2     scales_0.5.0     pkgconfig_2.0.1
+##  [1] Rcpp_1.0.2           pillar_1.4.2         formatR_1.5         
+##  [4] plyr_1.8.4           bitops_1.0-6         futile.options_1.0.1
+##  [7] tools_3.3.2          digest_0.6.20        evaluate_0.14       
+## [10] tibble_2.1.3         gtable_0.2.0         pkgconfig_2.0.1     
+## [13] rlang_0.4.0          rstudioapi_0.7       yaml_2.2.0          
+## [16] xfun_0.8             stringr_1.4.0        knitr_1.24          
+## [19] gtools_3.5.0         caTools_1.17.1       rmarkdown_1.14.3    
+## [22] bookdown_0.12        gdata_2.18.0         lambda.r_1.2.2      
+## [25] magrittr_1.5         scales_0.5.0         htmltools_0.3.6     
+## [28] colorspace_1.3-2     labeling_0.3         tinytex_0.15        
+## [31] KernSmooth_2.23-15   stringi_1.4.3        lazyeval_0.2.1      
+## [34] munsell_0.4.3        crayon_1.3.4
 \end{verbatim}
 
 \hypertarget{list-functions-from-a-package}{%
@@ -4955,105 +4963,105 @@ Note the usage of \textbf{curly brakets \{\}} to start and end the loop!
 
 \begin{verbatim}
 ## [1] 1
-## [1] -2.281851
+## [1] -1.681215
 ## [1] 2
-## [1] -1.278704
+## [1] -2.656713
 ## [1] 3
-## [1] -1.758846
+## [1] -1.279117
 ## [1] 4
-## [1] -1.086473
+## [1] -0.5766446
 ## [1] 5
-## [1] -2.261945
+## [1] -1.324002
 ## [1] 6
-## [1] -2.105386
+## [1] -1.461177
 ## [1] 7
-## [1] -1.631014
+## [1] -1.815276
 ## [1] 8
-## [1] -1.735083
+## [1] -2.92914
 ## [1] 9
-## [1] -1.849288
+## [1] -0.942627
 ## [1] 10
-## [1] -2.04397
+## [1] -1.04553
 ## [1] 11
-## [1] -1.892094
+## [1] -1.720531
 ## [1] 12
-## [1] -1.607064
+## [1] -1.324036
 ## [1] 13
-## [1] -1.997987
+## [1] -1.746764
 ## [1] 14
-## [1] -1.898659
+## [1] -2.211511
 ## [1] 15
-## [1] -2.669472
+## [1] -2.111103
 ## [1] 16
-## [1] -1.749975
+## [1] -2.100649
 ## [1] 17
-## [1] -0.9498798
+## [1] -1.528876
 ## [1] 18
-## [1] -1.124963
+## [1] -2.916698
 ## [1] 19
-## [1] -0.6238186
+## [1] -1.788218
 ## [1] 20
-## [1] -1.569462
+## [1] -2.013857
 ## [1] 21
-## [1] -0.7128029
+## [1] -1.785508
 ## [1] 22
-## [1] -1.613293
+## [1] -2.493525
 ## [1] 23
-## [1] -2.531049
+## [1] -1.530827
 ## [1] 24
-## [1] -1.633086
+## [1] -1.106697
 ## [1] 25
-## [1] -1.026743
+## [1] -2.234091
 ## [1] 26
-## [1] -1.191333
+## [1] -2.568365
 ## [1] 27
-## [1] -1.650943
+## [1] -2.016208
 ## [1] 28
-## [1] -2.006542
+## [1] -1.47522
 ## [1] 29
-## [1] -1.542367
+## [1] -1.912081
 ## [1] 30
-## [1] -1.556476
+## [1] -2.408094
 ## [1] 31
-## [1] -1.819371
+## [1] -1.503151
 ## [1] 32
-## [1] -1.141169
+## [1] -1.550905
 ## [1] 33
-## [1] -1.515073
+## [1] -2.26003
 ## [1] 34
-## [1] -2.740146
+## [1] -2.632427
 ## [1] 35
-## [1] -1.687516
+## [1] -2.839692
 ## [1] 36
-## [1] -1.543791
+## [1] -1.273405
 ## [1] 37
-## [1] -1.069926
+## [1] -1.836478
 ## [1] 38
-## [1] -2.173883
+## [1] -1.815765
 ## [1] 39
-## [1] -1.725881
+## [1] -2.213236
 ## [1] 40
-## [1] -1.538689
+## [1] -1.280489
 ## [1] 41
-## [1] -0.3736716
+## [1] -2.114598
 ## [1] 42
-## [1] -1.685601
+## [1] -2.182374
 ## [1] 43
-## [1] -1.973906
+## [1] -2.253696
 ## [1] 44
-## [1] -2.458968
+## [1] -1.256809
 ## [1] 45
-## [1] -2.028095
+## [1] -1.711123
 ## [1] 46
-## [1] -2.060121
+## [1] -1.532162
 ## [1] 47
-## [1] -1.51852
+## [1] -1.484722
 ## [1] 48
-## [1] -1.353344
+## [1] -1.740881
 ## [1] 49
-## [1] -1.310166
+## [1] -0.4600944
 ## [1] 50
-## [1] -1.880703
+## [1] -2.426708
 \end{verbatim}
 
 \hypertarget{exercise-9-for-loop}{%
@@ -5152,46 +5160,46 @@ correction
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -1.426074  1.567936
-## [1] 0.07093107
-## [1] -0.2923305 -0.7264357
-## [1] -0.5093831
-## [1]  0.2802764 -0.5765799
-## [1] -0.1481518
-## [1] -0.8333338  0.1189056
-## [1] -0.3572141
-## [1] -0.2053112 -1.1162466
-## [1] -0.6607789
-## [1] -0.9001538  0.6344393
-## [1] -0.1328572
-## [1] -0.1561286  0.7755513
-## [1] 0.3097114
-## [1]  1.1316134 -0.4716209
-## [1] 0.3299963
-## [1] 0.3560698 1.5721636
-## [1] 0.9641167
-## [1] 0.2666173 0.2086493
-## [1] 0.2376333
-## [1]  0.63159641 -0.08313833
-## [1] 0.274229
-## [1] -0.1191863 -0.2183160
-## [1] -0.1687511
-## [1] -0.07855972  0.17627241
-## [1] 0.04885635
-## [1] -0.7207866 -0.3078621
-## [1] -0.5143243
-## [1] -0.7787821 -1.1064297
-## [1] -0.9426059
-## [1] -1.602712  1.150602
-## [1] -0.2260552
-## [1]  0.09832890 -0.03826973
-## [1] 0.03002959
-## [1] 0.2754761 1.5711289
-## [1] 0.9233025
-## [1]  1.16296099 -0.04964327
-## [1] 0.5566589
-## [1]  0.1836257 -1.0311462
-## [1] -0.4237603
+## [1] 0.9138048 2.6924122
+## [1] 1.803108
+## [1] -0.6336137 -1.2136390
+## [1] -0.9236263
+## [1] 0.3592968 0.6920782
+## [1] 0.5256875
+## [1] 2.3559399 0.3427669
+## [1] 1.349353
+## [1]  0.8889268 -0.3653844
+## [1] 0.2617712
+## [1] -0.3926807  0.4740828
+## [1] 0.04070103
+## [1] 1.5418843 0.5989939
+## [1] 1.070439
+## [1] 0.1398520 0.6419099
+## [1] 0.3908809
+## [1] 1.603770 1.301566
+## [1] 1.452668
+## [1] -1.680994 -1.730071
+## [1] -1.705533
+## [1] -1.2868636  0.3993078
+## [1] -0.4437779
+## [1] 1.7453556 0.8992381
+## [1] 1.322297
+## [1] -0.3734876  1.4146045
+## [1] 0.5205584
+## [1] 0.3865025 1.1299310
+## [1] 0.7582167
+## [1]  0.625502 -1.189436
+## [1] -0.2819668
+## [1] -0.5901393 -0.8340699
+## [1] -0.7121046
+## [1] -0.7114478  1.1741674
+## [1] 0.2313598
+## [1]  0.1353460 -0.6035526
+## [1] -0.2341033
+## [1] -0.01470024 -0.38020845
+## [1] -0.1974543
+## [1] 0.5073383 1.5589946
+## [1] 1.033166
 \end{verbatim}
 
 \hypertarget{conditional-statement}{%
@@ -5218,15 +5226,6 @@ If the \textbf{condition} is TRUE, then proceed to the \textbf{action\_command};
 \ControlFlowTok{if}\NormalTok{(k }\OperatorTok{>}\StringTok{ }\DecValTok{3}\NormalTok{)\{}
   \KeywordTok{print}\NormalTok{(k)}
 \NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 10
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \CommentTok{# print if value is < 3}
 \ControlFlowTok{if}\NormalTok{(k }\OperatorTok{<}\StringTok{ }\DecValTok{3}\NormalTok{)\{}
   \KeywordTok{print}\NormalTok{(k)}
@@ -5258,10 +5257,6 @@ If the \textbf{condition} is TRUE, then proceed to the \textbf{action\_command1}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## [1] "less than 3"
-\end{verbatim}
 
 With \textbf{else if}
 
@@ -5300,10 +5295,6 @@ If the \textbf{condition1} is TRUE, then proceed to the \textbf{action\_command1
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## [1] "negative"
-\end{verbatim}
-
 \begin{itemize}
 \tightlist
 \item
@@ -5324,10 +5315,6 @@ If the \textbf{condition1} is TRUE, then proceed to the \textbf{action\_command1
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## [1] "greater than or equal to 8"
-\end{verbatim}
 
 \begin{itemize}
 \tightlist
@@ -5352,90 +5339,6 @@ If the \textbf{condition1} is TRUE, then proceed to the \textbf{action\_command1
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-##  [1]  0.9163559  0.7349928 -0.3772329  1.8846106  1.8660998 -0.4275973
-##  [7] -0.9926951 -0.6496524 -1.3389813 -0.2507018  1.0190404  1.2624915
-## [13]  0.2633816  0.5655954  0.9427435 -1.3802493
-##  [1]  0.1479990  0.3879150 -0.7901787 -0.3531613 -0.6177629  1.6146533
-##  [7]  1.4207582  0.0679865 -1.9111646  2.3818324  0.8704155  0.2746928
-## [13]  0.4210446 -0.2882419  2.0833951  1.1803731
-##  [1] -1.18213195  1.07708663 -0.92247614  0.10125880  3.30162107
-##  [6]  0.03840533  0.20534091 -1.02017511 -0.19410326  1.49001195
-## [11]  0.13081432 -0.98758274  0.07946315 -0.17199232 -0.19939657
-## [16]  0.16472811
-##  [1]  1.4903296  0.8809405  0.1759845 -0.5655213  0.1457286  0.7656389
-##  [7]  0.5090503  0.3663223 -1.8027452 -0.1507720  0.7427838 -0.1407290
-## [13]  1.2303268  0.4318421 -0.9135202 -0.6510606
-##  [1]  0.06466694  1.63324127 -0.12953666 -0.26742867  1.00173669
-##  [6]  0.65061870  0.41818662 -0.14009611  0.49238252  1.05598027
-## [11] -0.55235687 -1.94123942  0.86880122  0.10000467 -0.43941882
-## [16] -0.75603765
-##  [1] -1.7422557 -0.5463444 -2.1947102  1.2016771  0.3473332  0.7490919
-##  [7]  0.9560989  0.2476182  0.0942439  0.7720824  0.3834482 -1.0109472
-## [13] -0.2040869  0.2547889 -1.0169789  0.0888180
-##  [1]  1.06876233  0.81086517  0.06373738  1.66755943 -0.49338925
-##  [6] -0.07320543  1.38823193  1.45227863  0.59236036 -0.58559162
-## [11] -0.27949354 -0.30149370  2.36484144 -0.54134386 -0.86756969
-## [16]  1.33858747
-##  [1] -0.00187001 -0.55568538 -0.99610080  1.72784659  0.05502652
-##  [6] -0.33081174  0.25796894  1.00000955  0.11414184  1.63564941
-## [11]  0.70643683 -0.56096678  1.14167762 -0.09289810 -0.06743940
-## [16] -0.67861355
-##  [1] -0.67715967 -1.69349575  0.30382420  1.52126875  0.52217950
-##  [6]  0.46763744 -0.11964099  0.35041537  0.53041949  0.50046232
-## [11]  1.33281160 -1.11929100  2.04234456  0.81692747 -0.96672225
-## [16]  0.04917855
-##  [1]  1.298443420  0.827175177  0.668623641 -0.007582964  0.137749387
-##  [6] -1.208501386 -0.230904369  0.324687007  0.064489634  0.659187294
-## [11] -0.054669213 -0.336844682 -1.127411201 -0.537984204  1.260017569
-## [16]  0.188788949
-##  [1] -1.6534706  0.7547948  1.5782940  0.2718084 -1.1491107 -0.0855659
-##  [7] -0.9590750  1.4911942  1.8661906 -0.5464456 -1.7640418 -1.0713838
-## [13]  0.2298441  1.0284024  0.9106712  0.6632802
-##  [1]  0.78252442  0.65076205 -1.52821200  0.01493103  1.19286734
-##  [6]  1.76112571 -0.30045810 -0.63845535 -1.73530526  1.60211864
-## [11]  1.65519109 -0.56811726 -0.29404688  1.69879580  0.71160065
-## [16]  1.58981886
-##  [1]  1.03244700  0.41652054 -0.11148977  0.07397958  0.65159507
-##  [6]  0.33062436  0.08272582 -1.65712107 -3.28440112  0.48075125
-## [11] -1.07788982  0.83927262  1.42513216 -3.09908994  0.55946365
-## [16]  0.68637454
-##  [1] -0.35627905 -0.61998336 -1.66788721 -0.50768166  1.01260140
-##  [6]  1.46236319  0.01026259  1.50641234  0.52185060 -0.51596638
-## [11]  1.92549261  0.66663360  1.40124385  0.15986504 -1.03286094
-## [16] -0.72861591
-##  [1]  0.3267208 -0.8572655 -0.2227745  0.3381801 -1.8095795  0.9173742
-##  [7]  2.4453909  0.9631062 -0.7604507  1.1087977 -0.8251043  0.9018535
-## [13]  0.7032885  0.9434812  1.2558652  0.3437966
-##  [1] -1.6063631  0.6190595  0.4328564 -0.9252788  2.0502140 -0.5830851
-##  [7]  1.0150514 -1.1490475 -0.6375838 -2.3441523  0.5580132  1.7991886
-## [13]  0.1259076  1.2699128  1.1202740 -0.9330312
-##  [1]  1.0610155  1.0304131 -0.4212878  0.8855348  0.9313333  0.9831432
-##  [7]  0.3791134 -0.5005799  1.2897054 -0.8858256  2.2115244 -0.5727546
-## [13]  1.2246651  0.1696573  0.5670294 -0.1406598
-##  [1] -0.5718241  0.2876528 -0.7599872 -1.3426841 -1.4715546  0.2878218
-##  [7]  1.3433642 -0.1256095  1.3973283  1.0172665  0.6500409 -0.7348384
-## [13]  0.6617577 -0.7528288  1.0778910  0.9264117
-##  [1] -0.31262493 -0.99195330  0.78965061 -0.87232147 -1.42011913
-##  [6]  0.24568271  1.55472827 -0.91171218 -0.02790880 -0.04541801
-## [11] -0.74139419  0.99752304  0.97987161  0.95292547  0.57179762
-## [16]  0.19768017
-##  [1] -1.6842057  1.2720440  0.4180212  1.5457446  0.1939920 -1.5472676
-##  [7]  1.1827240  0.8265619 -0.2319350 -1.3576666  2.6136101 -0.2607527
-## [13] -2.3777760  0.3662957  0.4050278 -0.4598094
-##  [1] -0.85276625 -0.35827999  0.53089747  1.11690665  1.17642620
-##  [6]  0.30390853 -1.32593018  0.47064455  0.08246726 -0.35423450
-## [11] -0.13982965  0.80719698  0.39038268  2.11009152 -1.75288717
-## [16] -0.10843135
-##  [1] -1.13235048  1.49940993 -0.45705973  1.17642667  0.85525618
-##  [6] -0.75936937  0.13586177  0.55534466  0.05689966  0.78617742
-## [11]  0.76277994  2.13964263 -2.16606066 -0.63659314 -0.87816197
-## [16]  0.06439538
-##  [1]  1.3351701  2.4924504  0.1728600  0.8903435  0.8725524  0.5655810
-##  [7]  0.9924199 -0.5826830  0.8207116  0.1220051 -0.2526791 -1.0481275
-## [13] -1.6940530 -0.3888586 -0.4922859  1.6256465
-\end{verbatim}
 
 \hypertarget{exercise-10-if-statement}{%
 \section{Exercise 10: If statement}\label{exercise-10-if-statement}}
@@ -5636,6 +5539,1776 @@ correction
 ## [1] "Shh"        "mouse gene"
 ## [1] "Cdkn2a"     "mouse gene"
 \end{verbatim}
+
+\hypertarget{basic-plots-in-r}{%
+\chapter{Basic plots in R}\label{basic-plots-in-r}}
+
+R-base package graphics offers functions for producing many plots, for example:
+
+\begin{itemize}
+\tightlist
+\item
+  scatter plots - plot()
+\item
+  bar plots - barplot()
+\item
+  pie charts - pie()
+\item
+  box plots - boxplot()
+\item
+  histograms - hist()
+\end{itemize}
+
+\hypertarget{scatter-plots}{%
+\section{Scatter plots}\label{scatter-plots}}
+
+\emph{A scatter plot has points that show the \textbf{relationship} between two sets of data.}
+
+\begin{itemize}
+\tightlist
+\item
+  Simple scatter plot
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Create 2 vectors}
+\NormalTok{x <-}\StringTok{ }\DecValTok{1}\OperatorTok{:}\DecValTok{10}
+\NormalTok{y <-}\StringTok{ }\NormalTok{x}\OperatorTok{^}\DecValTok{2}
+
+\CommentTok{# Plot x against y}
+\KeywordTok{plot}\NormalTok{(x, y)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-253-1.pdf}
+
+\emph{Note that if one vector only is given as an input, it will be plotted against the indices of each element}
+
+\begin{itemize}
+\tightlist
+\item
+  Add arguments:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    col: color
+  \item
+    pch: type of point
+  \item
+    type: ``l'' for line, ``p'' for point, ``b'' for both point and line
+  \item
+    main: title of the plot
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(x, y, }
+    \DataTypeTok{col=}\StringTok{"red"}\NormalTok{, }
+    \DataTypeTok{pch=}\DecValTok{2}\NormalTok{, }
+    \DataTypeTok{type=}\StringTok{"b"}\NormalTok{, }
+    \DataTypeTok{main=}\StringTok{"a pretty scatter plot"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-254-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  You can play a bit:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(x, y, }
+    \DataTypeTok{col=}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{, }
+    \DataTypeTok{pch=}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{, }
+    \DataTypeTok{cex=}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{, }
+    \DataTypeTok{type=}\StringTok{"b"}\NormalTok{, }
+    \DataTypeTok{main=}\StringTok{"an even prettier scatter plot"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-255-1.pdf}
+
+Different type of points that you can use:
+
+About colors
+
+\begin{itemize}
+\tightlist
+\item
+  Color codes 1 to 8 are taken from the \textbf{palette()} function and respectively code for: ``black'', ``red'', ``green3'', ``blue'', ``cyan'', ``magenta'', ``yellow'', ``gray''.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# see the 8-color palette:}
+\KeywordTok{palette}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "black"   "red"     "green3"  "blue"    "cyan"    "magenta" "yellow" 
+## [8] "gray"
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  There is a larger set of build-in colors that you can use:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# see all 657 possible build-in colors:}
+\KeywordTok{colors}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   [1] "white"                "aliceblue"            "antiquewhite"        
+##   [4] "antiquewhite1"        "antiquewhite2"        "antiquewhite3"       
+##   [7] "antiquewhite4"        "aquamarine"           "aquamarine1"         
+##  [10] "aquamarine2"          "aquamarine3"          "aquamarine4"         
+##  [13] "azure"                "azure1"               "azure2"              
+##  [16] "azure3"               "azure4"               "beige"               
+##  [19] "bisque"               "bisque1"              "bisque2"             
+##  [22] "bisque3"              "bisque4"              "black"               
+##  [25] "blanchedalmond"       "blue"                 "blue1"               
+##  [28] "blue2"                "blue3"                "blue4"               
+##  [31] "blueviolet"           "brown"                "brown1"              
+##  [34] "brown2"               "brown3"               "brown4"              
+##  [37] "burlywood"            "burlywood1"           "burlywood2"          
+##  [40] "burlywood3"           "burlywood4"           "cadetblue"           
+##  [43] "cadetblue1"           "cadetblue2"           "cadetblue3"          
+##  [46] "cadetblue4"           "chartreuse"           "chartreuse1"         
+##  [49] "chartreuse2"          "chartreuse3"          "chartreuse4"         
+##  [52] "chocolate"            "chocolate1"           "chocolate2"          
+##  [55] "chocolate3"           "chocolate4"           "coral"               
+##  [58] "coral1"               "coral2"               "coral3"              
+##  [61] "coral4"               "cornflowerblue"       "cornsilk"            
+##  [64] "cornsilk1"            "cornsilk2"            "cornsilk3"           
+##  [67] "cornsilk4"            "cyan"                 "cyan1"               
+##  [70] "cyan2"                "cyan3"                "cyan4"               
+##  [73] "darkblue"             "darkcyan"             "darkgoldenrod"       
+##  [76] "darkgoldenrod1"       "darkgoldenrod2"       "darkgoldenrod3"      
+##  [79] "darkgoldenrod4"       "darkgray"             "darkgreen"           
+##  [82] "darkgrey"             "darkkhaki"            "darkmagenta"         
+##  [85] "darkolivegreen"       "darkolivegreen1"      "darkolivegreen2"     
+##  [88] "darkolivegreen3"      "darkolivegreen4"      "darkorange"          
+##  [91] "darkorange1"          "darkorange2"          "darkorange3"         
+##  [94] "darkorange4"          "darkorchid"           "darkorchid1"         
+##  [97] "darkorchid2"          "darkorchid3"          "darkorchid4"         
+## [100] "darkred"              "darksalmon"           "darkseagreen"        
+## [103] "darkseagreen1"        "darkseagreen2"        "darkseagreen3"       
+## [106] "darkseagreen4"        "darkslateblue"        "darkslategray"       
+## [109] "darkslategray1"       "darkslategray2"       "darkslategray3"      
+## [112] "darkslategray4"       "darkslategrey"        "darkturquoise"       
+## [115] "darkviolet"           "deeppink"             "deeppink1"           
+## [118] "deeppink2"            "deeppink3"            "deeppink4"           
+## [121] "deepskyblue"          "deepskyblue1"         "deepskyblue2"        
+## [124] "deepskyblue3"         "deepskyblue4"         "dimgray"             
+## [127] "dimgrey"              "dodgerblue"           "dodgerblue1"         
+## [130] "dodgerblue2"          "dodgerblue3"          "dodgerblue4"         
+## [133] "firebrick"            "firebrick1"           "firebrick2"          
+## [136] "firebrick3"           "firebrick4"           "floralwhite"         
+## [139] "forestgreen"          "gainsboro"            "ghostwhite"          
+## [142] "gold"                 "gold1"                "gold2"               
+## [145] "gold3"                "gold4"                "goldenrod"           
+## [148] "goldenrod1"           "goldenrod2"           "goldenrod3"          
+## [151] "goldenrod4"           "gray"                 "gray0"               
+## [154] "gray1"                "gray2"                "gray3"               
+## [157] "gray4"                "gray5"                "gray6"               
+## [160] "gray7"                "gray8"                "gray9"               
+## [163] "gray10"               "gray11"               "gray12"              
+## [166] "gray13"               "gray14"               "gray15"              
+## [169] "gray16"               "gray17"               "gray18"              
+## [172] "gray19"               "gray20"               "gray21"              
+## [175] "gray22"               "gray23"               "gray24"              
+## [178] "gray25"               "gray26"               "gray27"              
+## [181] "gray28"               "gray29"               "gray30"              
+## [184] "gray31"               "gray32"               "gray33"              
+## [187] "gray34"               "gray35"               "gray36"              
+## [190] "gray37"               "gray38"               "gray39"              
+## [193] "gray40"               "gray41"               "gray42"              
+## [196] "gray43"               "gray44"               "gray45"              
+## [199] "gray46"               "gray47"               "gray48"              
+## [202] "gray49"               "gray50"               "gray51"              
+## [205] "gray52"               "gray53"               "gray54"              
+## [208] "gray55"               "gray56"               "gray57"              
+## [211] "gray58"               "gray59"               "gray60"              
+## [214] "gray61"               "gray62"               "gray63"              
+## [217] "gray64"               "gray65"               "gray66"              
+## [220] "gray67"               "gray68"               "gray69"              
+## [223] "gray70"               "gray71"               "gray72"              
+## [226] "gray73"               "gray74"               "gray75"              
+## [229] "gray76"               "gray77"               "gray78"              
+## [232] "gray79"               "gray80"               "gray81"              
+## [235] "gray82"               "gray83"               "gray84"              
+## [238] "gray85"               "gray86"               "gray87"              
+## [241] "gray88"               "gray89"               "gray90"              
+## [244] "gray91"               "gray92"               "gray93"              
+## [247] "gray94"               "gray95"               "gray96"              
+## [250] "gray97"               "gray98"               "gray99"              
+## [253] "gray100"              "green"                "green1"              
+## [256] "green2"               "green3"               "green4"              
+## [259] "greenyellow"          "grey"                 "grey0"               
+## [262] "grey1"                "grey2"                "grey3"               
+## [265] "grey4"                "grey5"                "grey6"               
+## [268] "grey7"                "grey8"                "grey9"               
+## [271] "grey10"               "grey11"               "grey12"              
+## [274] "grey13"               "grey14"               "grey15"              
+## [277] "grey16"               "grey17"               "grey18"              
+## [280] "grey19"               "grey20"               "grey21"              
+## [283] "grey22"               "grey23"               "grey24"              
+## [286] "grey25"               "grey26"               "grey27"              
+## [289] "grey28"               "grey29"               "grey30"              
+## [292] "grey31"               "grey32"               "grey33"              
+## [295] "grey34"               "grey35"               "grey36"              
+## [298] "grey37"               "grey38"               "grey39"              
+## [301] "grey40"               "grey41"               "grey42"              
+## [304] "grey43"               "grey44"               "grey45"              
+## [307] "grey46"               "grey47"               "grey48"              
+## [310] "grey49"               "grey50"               "grey51"              
+## [313] "grey52"               "grey53"               "grey54"              
+## [316] "grey55"               "grey56"               "grey57"              
+## [319] "grey58"               "grey59"               "grey60"              
+## [322] "grey61"               "grey62"               "grey63"              
+## [325] "grey64"               "grey65"               "grey66"              
+## [328] "grey67"               "grey68"               "grey69"              
+## [331] "grey70"               "grey71"               "grey72"              
+## [334] "grey73"               "grey74"               "grey75"              
+## [337] "grey76"               "grey77"               "grey78"              
+## [340] "grey79"               "grey80"               "grey81"              
+## [343] "grey82"               "grey83"               "grey84"              
+## [346] "grey85"               "grey86"               "grey87"              
+## [349] "grey88"               "grey89"               "grey90"              
+## [352] "grey91"               "grey92"               "grey93"              
+## [355] "grey94"               "grey95"               "grey96"              
+## [358] "grey97"               "grey98"               "grey99"              
+## [361] "grey100"              "honeydew"             "honeydew1"           
+## [364] "honeydew2"            "honeydew3"            "honeydew4"           
+## [367] "hotpink"              "hotpink1"             "hotpink2"            
+## [370] "hotpink3"             "hotpink4"             "indianred"           
+## [373] "indianred1"           "indianred2"           "indianred3"          
+## [376] "indianred4"           "ivory"                "ivory1"              
+## [379] "ivory2"               "ivory3"               "ivory4"              
+## [382] "khaki"                "khaki1"               "khaki2"              
+## [385] "khaki3"               "khaki4"               "lavender"            
+## [388] "lavenderblush"        "lavenderblush1"       "lavenderblush2"      
+## [391] "lavenderblush3"       "lavenderblush4"       "lawngreen"           
+## [394] "lemonchiffon"         "lemonchiffon1"        "lemonchiffon2"       
+## [397] "lemonchiffon3"        "lemonchiffon4"        "lightblue"           
+## [400] "lightblue1"           "lightblue2"           "lightblue3"          
+## [403] "lightblue4"           "lightcoral"           "lightcyan"           
+## [406] "lightcyan1"           "lightcyan2"           "lightcyan3"          
+## [409] "lightcyan4"           "lightgoldenrod"       "lightgoldenrod1"     
+## [412] "lightgoldenrod2"      "lightgoldenrod3"      "lightgoldenrod4"     
+## [415] "lightgoldenrodyellow" "lightgray"            "lightgreen"          
+## [418] "lightgrey"            "lightpink"            "lightpink1"          
+## [421] "lightpink2"           "lightpink3"           "lightpink4"          
+## [424] "lightsalmon"          "lightsalmon1"         "lightsalmon2"        
+## [427] "lightsalmon3"         "lightsalmon4"         "lightseagreen"       
+## [430] "lightskyblue"         "lightskyblue1"        "lightskyblue2"       
+## [433] "lightskyblue3"        "lightskyblue4"        "lightslateblue"      
+## [436] "lightslategray"       "lightslategrey"       "lightsteelblue"      
+## [439] "lightsteelblue1"      "lightsteelblue2"      "lightsteelblue3"     
+## [442] "lightsteelblue4"      "lightyellow"          "lightyellow1"        
+## [445] "lightyellow2"         "lightyellow3"         "lightyellow4"        
+## [448] "limegreen"            "linen"                "magenta"             
+## [451] "magenta1"             "magenta2"             "magenta3"            
+## [454] "magenta4"             "maroon"               "maroon1"             
+## [457] "maroon2"              "maroon3"              "maroon4"             
+## [460] "mediumaquamarine"     "mediumblue"           "mediumorchid"        
+## [463] "mediumorchid1"        "mediumorchid2"        "mediumorchid3"       
+## [466] "mediumorchid4"        "mediumpurple"         "mediumpurple1"       
+## [469] "mediumpurple2"        "mediumpurple3"        "mediumpurple4"       
+## [472] "mediumseagreen"       "mediumslateblue"      "mediumspringgreen"   
+## [475] "mediumturquoise"      "mediumvioletred"      "midnightblue"        
+## [478] "mintcream"            "mistyrose"            "mistyrose1"          
+## [481] "mistyrose2"           "mistyrose3"           "mistyrose4"          
+## [484] "moccasin"             "navajowhite"          "navajowhite1"        
+## [487] "navajowhite2"         "navajowhite3"         "navajowhite4"        
+## [490] "navy"                 "navyblue"             "oldlace"             
+## [493] "olivedrab"            "olivedrab1"           "olivedrab2"          
+## [496] "olivedrab3"           "olivedrab4"           "orange"              
+## [499] "orange1"              "orange2"              "orange3"             
+## [502] "orange4"              "orangered"            "orangered1"          
+## [505] "orangered2"           "orangered3"           "orangered4"          
+## [508] "orchid"               "orchid1"              "orchid2"             
+## [511] "orchid3"              "orchid4"              "palegoldenrod"       
+## [514] "palegreen"            "palegreen1"           "palegreen2"          
+## [517] "palegreen3"           "palegreen4"           "paleturquoise"       
+## [520] "paleturquoise1"       "paleturquoise2"       "paleturquoise3"      
+## [523] "paleturquoise4"       "palevioletred"        "palevioletred1"      
+## [526] "palevioletred2"       "palevioletred3"       "palevioletred4"      
+## [529] "papayawhip"           "peachpuff"            "peachpuff1"          
+## [532] "peachpuff2"           "peachpuff3"           "peachpuff4"          
+## [535] "peru"                 "pink"                 "pink1"               
+## [538] "pink2"                "pink3"                "pink4"               
+## [541] "plum"                 "plum1"                "plum2"               
+## [544] "plum3"                "plum4"                "powderblue"          
+## [547] "purple"               "purple1"              "purple2"             
+## [550] "purple3"              "purple4"              "red"                 
+## [553] "red1"                 "red2"                 "red3"                
+## [556] "red4"                 "rosybrown"            "rosybrown1"          
+## [559] "rosybrown2"           "rosybrown3"           "rosybrown4"          
+## [562] "royalblue"            "royalblue1"           "royalblue2"          
+## [565] "royalblue3"           "royalblue4"           "saddlebrown"         
+## [568] "salmon"               "salmon1"              "salmon2"             
+## [571] "salmon3"              "salmon4"              "sandybrown"          
+## [574] "seagreen"             "seagreen1"            "seagreen2"           
+## [577] "seagreen3"            "seagreen4"            "seashell"            
+## [580] "seashell1"            "seashell2"            "seashell3"           
+## [583] "seashell4"            "sienna"               "sienna1"             
+## [586] "sienna2"              "sienna3"              "sienna4"             
+## [589] "skyblue"              "skyblue1"             "skyblue2"            
+## [592] "skyblue3"             "skyblue4"             "slateblue"           
+## [595] "slateblue1"           "slateblue2"           "slateblue3"          
+## [598] "slateblue4"           "slategray"            "slategray1"          
+## [601] "slategray2"           "slategray3"           "slategray4"          
+## [604] "slategrey"            "snow"                 "snow1"               
+## [607] "snow2"                "snow3"                "snow4"               
+## [610] "springgreen"          "springgreen1"         "springgreen2"        
+## [613] "springgreen3"         "springgreen4"         "steelblue"           
+## [616] "steelblue1"           "steelblue2"           "steelblue3"          
+## [619] "steelblue4"           "tan"                  "tan1"                
+## [622] "tan2"                 "tan3"                 "tan4"                
+## [625] "thistle"              "thistle1"             "thistle2"            
+## [628] "thistle3"             "thistle4"             "tomato"              
+## [631] "tomato1"              "tomato2"              "tomato3"             
+## [634] "tomato4"              "turquoise"            "turquoise1"          
+## [637] "turquoise2"           "turquoise3"           "turquoise4"          
+## [640] "violet"               "violetred"            "violetred1"          
+## [643] "violetred2"           "violetred3"           "violetred4"          
+## [646] "wheat"                "wheat1"               "wheat2"              
+## [649] "wheat3"               "wheat4"               "whitesmoke"          
+## [652] "yellow"               "yellow1"              "yellow2"             
+## [655] "yellow3"              "yellow4"              "yellowgreen"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# looking for blue only? You can pick from 66 blueish options:}
+\KeywordTok{grep}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\KeywordTok{colors}\NormalTok{(), }\DataTypeTok{value=}\OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] "aliceblue"       "blue"            "blue1"          
+##  [4] "blue2"           "blue3"           "blue4"          
+##  [7] "blueviolet"      "cadetblue"       "cadetblue1"     
+## [10] "cadetblue2"      "cadetblue3"      "cadetblue4"     
+## [13] "cornflowerblue"  "darkblue"        "darkslateblue"  
+## [16] "deepskyblue"     "deepskyblue1"    "deepskyblue2"   
+## [19] "deepskyblue3"    "deepskyblue4"    "dodgerblue"     
+## [22] "dodgerblue1"     "dodgerblue2"     "dodgerblue3"    
+## [25] "dodgerblue4"     "lightblue"       "lightblue1"     
+## [28] "lightblue2"      "lightblue3"      "lightblue4"     
+## [31] "lightskyblue"    "lightskyblue1"   "lightskyblue2"  
+## [34] "lightskyblue3"   "lightskyblue4"   "lightslateblue" 
+## [37] "lightsteelblue"  "lightsteelblue1" "lightsteelblue2"
+## [40] "lightsteelblue3" "lightsteelblue4" "mediumblue"     
+## [43] "mediumslateblue" "midnightblue"    "navyblue"       
+## [46] "powderblue"      "royalblue"       "royalblue1"     
+## [49] "royalblue2"      "royalblue3"      "royalblue4"     
+## [52] "skyblue"         "skyblue1"        "skyblue2"       
+## [55] "skyblue3"        "skyblue4"        "slateblue"      
+## [58] "slateblue1"      "slateblue2"      "slateblue3"     
+## [61] "slateblue4"      "steelblue"       "steelblue1"     
+## [64] "steelblue2"      "steelblue3"      "steelblue4"
+\end{verbatim}
+
+You can also find them \href{http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf}{here}.
+
+\hypertarget{bar-plots}{%
+\section{Bar plots}\label{bar-plots}}
+
+\emph{A bar chart or bar plot displays rectangular bars with \textbf{lengths proportional to the values that they represent.}}
+
+\begin{itemize}
+\tightlist
+\item
+  A simple bar plot :
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Create a vector}
+\NormalTok{x <-}\StringTok{ }\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"PhDstudent"}\NormalTok{, }\StringTok{"Postdoc"}\NormalTok{, }\StringTok{"Technician"}\NormalTok{, }\StringTok{"PI"}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{8}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+
+\CommentTok{# Count number of occurences of each character string}
+\NormalTok{mytable <-}\StringTok{ }\KeywordTok{table}\NormalTok{(x)}
+
+\CommentTok{# Bar plot using that table}
+\KeywordTok{barplot}\NormalTok{(mytable)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-258-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Customize a bit :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    col : color
+  \item
+    main : title of the plot
+  \item
+    las : orientation of x-axis labels: ``2'': perpendicular to axis
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{barplot}\NormalTok{(mytable,}
+    \DataTypeTok{col=}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{,}
+    \DataTypeTok{main=}\StringTok{"bar plot"}\NormalTok{,}
+    \DataTypeTok{las=}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-259-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Customize the ordering of the bars :
+\end{itemize}
+
+By default, the bars are organized in alphabetical order. You can change it with the factors.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Create an ordered factor out of x}
+\NormalTok{xfact <-}\StringTok{ }\KeywordTok{factor}\NormalTok{(x, }
+    \DataTypeTok{levels=}\KeywordTok{c}\NormalTok{(}\StringTok{"PhDstudent"}\NormalTok{, }\StringTok{"Postdoc"}\NormalTok{, }\StringTok{"Technician"}\NormalTok{, }\StringTok{"PI"}\NormalTok{), }
+    \DataTypeTok{ordered=}\OtherTok{TRUE}\NormalTok{)}
+
+\CommentTok{# Produce the table}
+\NormalTok{xfacttable <-}\StringTok{ }\KeywordTok{table}\NormalTok{(xfact)}
+
+\CommentTok{# Plot the same way}
+\KeywordTok{barplot}\NormalTok{(xfacttable,}
+    \DataTypeTok{col=}\DecValTok{1}\OperatorTok{:}\DecValTok{4}\NormalTok{,}
+        \DataTypeTok{main=}\StringTok{"reorganized bar plot"}\NormalTok{,}
+        \DataTypeTok{las=}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-260-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Let's make a stacked barplot :
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Create a matrix of number of type of employees per research program :}
+\NormalTok{barmat <-}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{8}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{13}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{11}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{5}\NormalTok{),}
+    \DataTypeTok{nrow=}\DecValTok{4}\NormalTok{,}
+    \DataTypeTok{dimnames=}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"Technician"}\NormalTok{, }\StringTok{"PhDstudent"}\NormalTok{, }\StringTok{"PostDoc"}\NormalTok{, }\StringTok{"PI"}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\StringTok{"BG"}\NormalTok{, }\StringTok{"CDB"}\NormalTok{, }\StringTok{"GRSCC"}\NormalTok{, }\StringTok{"SB"}\NormalTok{)))}
+
+\CommentTok{# Plot barplot}
+\KeywordTok{barplot}\NormalTok{(barmat, }\DataTypeTok{col=}\KeywordTok{sample}\NormalTok{(}\KeywordTok{colors}\NormalTok{(), }\DecValTok{4}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-261-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Add some parameters:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# set a random color vector}
+\NormalTok{mycolors <-}\StringTok{ }\KeywordTok{sample}\NormalTok{(}\KeywordTok{colors}\NormalTok{(), }\DecValTok{4}\NormalTok{)}
+
+\CommentTok{# plot barplot}
+\CommentTok{# ylim sets the lower and upper limit of the y-axis: here it allows us to fit the legend !}
+\KeywordTok{barplot}\NormalTok{(barmat, }
+    \DataTypeTok{col=}\NormalTok{mycolors, }
+    \DataTypeTok{ylim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{50}\NormalTok{),}
+    \DataTypeTok{main=}\StringTok{"stacked barplot"}\NormalTok{)}
+
+\CommentTok{# add a legend}
+\CommentTok{# first argument is the legend position}
+\KeywordTok{legend}\NormalTok{(}\StringTok{"topleft"}\NormalTok{, }
+    \DataTypeTok{legend=}\KeywordTok{c}\NormalTok{(}\StringTok{"Technician"}\NormalTok{, }\StringTok{"PhDstudent"}\NormalTok{, }\StringTok{"PostDoc"}\NormalTok{, }\StringTok{"PI"}\NormalTok{),}
+    \DataTypeTok{fill=}\NormalTok{mycolors)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-262-1.pdf}
+
+\hypertarget{pie-charts}{%
+\section{Pie charts}\label{pie-charts}}
+
+\emph{A pie chart is a circular charts which is divided into slices, illustrating proportions.}
+
+\begin{itemize}
+\tightlist
+\item
+  Using our previous vector, build a simple pie chart:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Create a vector}
+\NormalTok{x <-}\StringTok{ }\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"PhDstudent"}\NormalTok{, }\StringTok{"Postdoc"}\NormalTok{, }\StringTok{"Technician"}\NormalTok{, }\StringTok{"PI"}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{8}\NormalTok{,}\DecValTok{10}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+
+\CommentTok{# Count number of occurences of each string}
+\NormalTok{mytable <-}\StringTok{ }\KeywordTok{table}\NormalTok{(x)}
+
+\KeywordTok{pie}\NormalTok{(mytable,}
+    \DataTypeTok{main=}\StringTok{"pie chart"}\NormalTok{,}
+    \DataTypeTok{col=}\KeywordTok{c}\NormalTok{(}\StringTok{"lightblue"}\NormalTok{, }\StringTok{"lightgreen"}\NormalTok{, }\StringTok{"salmon"}\NormalTok{, }\StringTok{"maroon"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-263-1.pdf}
+
+\hypertarget{box-plots}{%
+\section{Box plots}\label{box-plots}}
+
+\emph{A boxplot is a convenient way to describe the \textbf{distribution} of the data.}
+
+\begin{itemize}
+\tightlist
+\item
+  A simple boxplot:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Create a matrix of 1000 random values from the normal distribution (4 columns, 250 rows)}
+\NormalTok{x <-}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\KeywordTok{rnorm}\NormalTok{(}\DecValTok{1000}\NormalTok{), }\DataTypeTok{ncol=}\DecValTok{4}\NormalTok{)}
+
+\CommentTok{# Basic boxplot}
+\KeywordTok{boxplot}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-264-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Add some arguments :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    xlab: x-axis label
+  \item
+    ylab: y-axis label
+  \item
+    at: position of each box along the x-axis: here we skip position 3 to allow more space between boxes 1/2 and 3/4
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{boxplot}\NormalTok{(x, }
+    \DataTypeTok{xlab=}\StringTok{"sample"}\NormalTok{,}
+    \DataTypeTok{ylab=}\StringTok{"expression"}\NormalTok{,}
+    \DataTypeTok{at=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-265-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Add an horizontal line at y=0 with \textbf{abline()}; arguments of abline :
+
+  \begin{itemize}
+  \tightlist
+  \item
+    h : y-axis starting point of horizontal line (v for a vertical line)
+  \item
+    col : color
+  \item
+    lwd : line thickness
+  \item
+    lty : line type
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# First plot the box plot as before:}
+\KeywordTok{boxplot}\NormalTok{(x, }
+    \DataTypeTok{xlab=}\StringTok{"sample"}\NormalTok{,}
+    \DataTypeTok{ylab=}\StringTok{"expression"}\NormalTok{,}
+    \DataTypeTok{at=}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{),}
+     \DataTypeTok{main=}\StringTok{"my boxplot"}\NormalTok{)}
+    
+\CommentTok{# Then run the abline function}
+\KeywordTok{abline}\NormalTok{(}\DataTypeTok{h=}\DecValTok{0}\NormalTok{, }\DataTypeTok{col=}\StringTok{"red"}\NormalTok{, }\DataTypeTok{lwd=}\DecValTok{3}\NormalTok{, }\DataTypeTok{lty=}\StringTok{"dotdash"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-266-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Line types in R:
+\end{itemize}
+
+\hypertarget{histograms}{%
+\section{Histograms}\label{histograms}}
+
+\emph{A histogram graphically summarizes the \textbf{distribution} of the data.}
+
+\begin{itemize}
+\tightlist
+\item
+  A simple histogram
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Vector of 200 random values from the normal distribution}
+\NormalTok{x <-}\StringTok{ }\KeywordTok{rnorm}\NormalTok{(}\DecValTok{200}\NormalTok{)}
+
+\CommentTok{# Plot histogram}
+\KeywordTok{hist}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-267-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Add parameters:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    border: color of bar borders
+  \item
+    breaks: number of bars the data is divided into
+  \item
+    cex.main: size of title
+  \item
+    cex.lab: size of axis labels
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{hist}\NormalTok{(x,}
+    \DataTypeTok{border=}\StringTok{"blue"}\NormalTok{,}
+    \DataTypeTok{breaks=}\DecValTok{50}\NormalTok{,}
+    \DataTypeTok{main=}\StringTok{"Histogram"}\NormalTok{,}
+    \DataTypeTok{xlab=}\StringTok{""}\NormalTok{,}
+    \DataTypeTok{cex.main=}\FloatTok{2.5}\NormalTok{,}
+    \DataTypeTok{cex.lab=}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-268-1.pdf}
+
+\hypertarget{how-to-save-plots}{%
+\chapter{How to save plots}\label{how-to-save-plots}}
+
+\hypertarget{with-r-studio}{%
+\section{With R Studio}\label{with-r-studio}}
+
+\hypertarget{with-the-console}{%
+\section{With the console}\label{with-the-console}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Open the file that will contain your plot (the name is up to you)}
+\KeywordTok{pdf}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myplot.pdf"}\NormalTok{)}
+
+\CommentTok{# execute the plot}
+\KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+
+\CommentTok{# Close the file that will contain the plot}
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+Formats
+
+R supports a variety of file formats for figures: pdf, png, jpeg, tiff, bmp, svg, ps.
+They all come with their own function, for example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# TIFF}
+\KeywordTok{tiff}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myfile.tiff"}\NormalTok{)}
+
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# JPEG}
+\KeywordTok{jpeg}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myfile.jpeg"}\NormalTok{)}
+
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# etc.}
+\end{Highlighting}
+\end{Shaded}
+
+The size of the output file can be changed:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Default: 7 inches (both width and height) for svg, pdf, ps.}
+\KeywordTok{svg}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myfile.svg"}\NormalTok{, }\DataTypeTok{width=}\DecValTok{8}\NormalTok{, }\DataTypeTok{height=}\DecValTok{12}\NormalTok{)}
+
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Default: 480 pixels (both width and height) for jpeg, tiff, png, bmp.}
+\KeywordTok{png}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myfile.png"}\NormalTok{, }\DataTypeTok{width=}\DecValTok{500}\NormalTok{, }\DataTypeTok{height=}\DecValTok{600}\NormalTok{)}
+
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\emph{Note that pdf is the only format that supports saving several pages}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{pdf}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myfile_pages.pdf"}\NormalTok{)}
+
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{2}\OperatorTok{:}\DecValTok{20}\NormalTok{)}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+Plot several figures in one page
+
+You can output more than one plot per page using the \textbf{par()} function (sets graphical parameters) and the \textbf{mfrow} argument.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{jpeg}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myfile_multi.jpeg"}\NormalTok{)}
+
+\CommentTok{# organize the plot in 1 row and 2 columns:}
+    \CommentTok{# nr: number of rows}
+    \CommentTok{# nc: number of columns}
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DataTypeTok{nr=}\DecValTok{1}\NormalTok{, }\DataTypeTok{nc=}\DecValTok{2}\NormalTok{))}
+
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+    \KeywordTok{plot}\NormalTok{(}\DecValTok{2}\OperatorTok{:}\DecValTok{20}\NormalTok{)}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{jpeg}\NormalTok{(}\DataTypeTok{file=}\StringTok{"myfile_multi4.jpeg"}\NormalTok{)}
+
+\CommentTok{# organize the plot in 2 rows and 2 columns}
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow=}\KeywordTok{c}\NormalTok{(}\DataTypeTok{nr=}\DecValTok{2}\NormalTok{, }\DataTypeTok{nc=}\DecValTok{2}\NormalTok{))}
+
+\CommentTok{# top-left}
+\KeywordTok{plot}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+\CommentTok{# top-right}
+\KeywordTok{barplot}\NormalTok{(}\KeywordTok{table}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{,}\StringTok{"B"}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{))))}
+\CommentTok{# bottom-left}
+\KeywordTok{pie}\NormalTok{(}\KeywordTok{table}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{,}\StringTok{"B"}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{))))}
+\CommentTok{# bottom-right}
+\KeywordTok{hist}\NormalTok{(}\KeywordTok{rnorm}\NormalTok{(}\DecValTok{2000}\NormalTok{))}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\hypertarget{exercise-11-base-plots}{%
+\section{Exercise 11: Base plots}\label{exercise-11-base-plots}}
+
+Create the script ``exercise11.R'' and save it to the ``Rcourse/Module3'' directory: you will save all the commands of exercise 11 in that script.
+Remember you can comment the code using \#.
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{getwd}\NormalTok{()}
+\KeywordTok{setwd}\NormalTok{(}\StringTok{"~/Rcourse/Module3"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{exercise-11a--scatter-plot}{%
+\subsection{Exercise 11a- scatter plot}\label{exercise-11a--scatter-plot}}
+
+\textbf{1- Create the following data frame}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{genes <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{sample1=}\KeywordTok{rnorm}\NormalTok{(}\DecValTok{300}\NormalTok{),}
+                    \DataTypeTok{sample2=}\KeywordTok{rnorm}\NormalTok{(}\DecValTok{300}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{2- Create a scatter plot showing sample1 (x-axis) vs sample2 (y-axis) of genes.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, genes}\OperatorTok{$}\NormalTok{sample2)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-277-1.pdf}
+
+\textbf{3- Change the point type and color.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+\NormalTok{     genes}\OperatorTok{$}\NormalTok{sample2, }
+     \DataTypeTok{col=}\StringTok{"lightblue"}\NormalTok{, }
+     \DataTypeTok{pch=}\DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-278-1.pdf}
+
+\textbf{4- Change x-axis and y-axis labels to ``Sample 1'' and ``Sample 2'', respectively.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+\NormalTok{     genes}\OperatorTok{$}\NormalTok{sample2, }
+     \DataTypeTok{col=}\StringTok{"lightblue"}\NormalTok{, }
+     \DataTypeTok{pch=}\DecValTok{3}\NormalTok{,}
+     \DataTypeTok{xlab=}\StringTok{"Sample 1"}\NormalTok{, }
+     \DataTypeTok{ylab=}\StringTok{"Sample 2"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-279-1.pdf}
+
+\textbf{5- Add a title to the plot.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+\NormalTok{     genes}\OperatorTok{$}\NormalTok{sample2, }
+     \DataTypeTok{col=}\StringTok{"lightblue"}\NormalTok{, }
+     \DataTypeTok{pch=}\DecValTok{3}\NormalTok{,}
+     \DataTypeTok{xlab=}\StringTok{"Sample 1"}\NormalTok{, }
+     \DataTypeTok{ylab=}\StringTok{"Sample 2"}\NormalTok{,}
+     \DataTypeTok{main=}\StringTok{"scatter plot"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-280-1.pdf}
+
+\textbf{6- Add a vertical red line that starts at the median expression value of sample 1. Do it in two steps:}
+a. calculate the median expression of genes in sample 1.
+b. plot a vertical line using abline().
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# median expression of sample1}
+\NormalTok{med1 <-}\StringTok{ }\KeywordTok{median}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1)}
+
+\CommentTok{# plot}
+\KeywordTok{plot}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+\NormalTok{     genes}\OperatorTok{$}\NormalTok{sample2, }
+     \DataTypeTok{col=}\StringTok{"lightblue"}\NormalTok{, }
+     \DataTypeTok{pch=}\DecValTok{3}\NormalTok{,}
+     \DataTypeTok{xlab=}\StringTok{"Sample 1"}\NormalTok{, }
+     \DataTypeTok{ylab=}\StringTok{"Sample 2"}\NormalTok{,}
+     \DataTypeTok{main=}\StringTok{"scatter plot"}\NormalTok{)}
+
+\CommentTok{# vertical line}
+\KeywordTok{abline}\NormalTok{(}\DataTypeTok{v=}\NormalTok{med1, }\DataTypeTok{col=}\StringTok{"red"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-281-1.pdf}
+
+\hypertarget{exercise-11b--bar-plot-pie-chart}{%
+\subsection{Exercise 11b- bar plot + pie chart}\label{exercise-11b--bar-plot-pie-chart}}
+
+\textbf{1- Create the following vector}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{genes_significance <-}\StringTok{ }\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"enriched"}\NormalTok{, }\StringTok{"depleted"}\NormalTok{, }\StringTok{"none"}\NormalTok{), }\KeywordTok{c}\NormalTok{(}\DecValTok{20}\NormalTok{, }\DecValTok{32}\NormalTok{, }\DecValTok{248}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{2- The vector describes whether a gene is up- (enriched) or down- (depleted) regulated, or not regulated (none).}
+Produce a barplot that displays this information: how many genes are enriched, depleted, or not regulated.
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{barplot}\NormalTok{(}\KeywordTok{table}\NormalTok{(genes_significance))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-283-1.pdf}
+
+\textbf{3- Color the bars of the boxplot, each in a different color (3 colors of your choice)}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{barplot}\NormalTok{(}\KeywordTok{table}\NormalTok{(genes_significance), }
+  \DataTypeTok{col=}\KeywordTok{c}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\StringTok{"red"}\NormalTok{, }\StringTok{"grey"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-284-1.pdf}
+
+\textbf{4- Use the argument ``names.arg'' in barplot() to rename the bars:}
+Change depleted to ``Down'', enriched to ``Up'', none to ``Not significant''
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{barplot}\NormalTok{(}\KeywordTok{table}\NormalTok{(genes_significance), }
+  \DataTypeTok{col=}\KeywordTok{c}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\StringTok{"red"}\NormalTok{, }\StringTok{"grey"}\NormalTok{), }
+  \DataTypeTok{names.arg=}\KeywordTok{c}\NormalTok{(}\StringTok{"Down"}\NormalTok{, }\StringTok{"Up"}\NormalTok{, }\StringTok{"Not significant"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-285-1.pdf}
+
+\textbf{5- The ``las'' argument allow to rotate the x-axis labels for a better visibility.}
+Try value 2 for las: what happens?
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{barplot}\NormalTok{(}\KeywordTok{table}\NormalTok{(genes_significance), }
+  \DataTypeTok{col=}\KeywordTok{c}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\StringTok{"red"}\NormalTok{, }\StringTok{"grey"}\NormalTok{), }
+  \DataTypeTok{names.arg=}\KeywordTok{c}\NormalTok{(}\StringTok{"Down"}\NormalTok{, }\StringTok{"Up"}\NormalTok{, }\StringTok{"Not significant"}\NormalTok{), }
+  \DataTypeTok{las=}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-286-1.pdf}
+
+\textbf{6- Create a pie chart of the same information (Enriched, Depleted, None)}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{pie}\NormalTok{(}\KeywordTok{table}\NormalTok{(genes_significance))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-287-1.pdf}
+
+Change the color of the slices, modify the labels, and add a title.
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{pie}\NormalTok{(}\KeywordTok{table}\NormalTok{(genes_significance), }
+    \DataTypeTok{col=}\KeywordTok{c}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\StringTok{"red"}\NormalTok{, }\StringTok{"grey"}\NormalTok{), }
+    \DataTypeTok{main=}\StringTok{"pie chart"}\NormalTok{, }
+    \DataTypeTok{labels=}\KeywordTok{c}\NormalTok{(}\StringTok{"Down"}\NormalTok{, }\StringTok{"Up"}\NormalTok{, }\StringTok{"Not significant"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-288-1.pdf}
+
+\hypertarget{exercise-11c--histogram}{%
+\subsection{Exercise 11c- histogram}\label{exercise-11c--histogram}}
+
+\textbf{1- Use genes object from exercise 11a to create a histogram of the gene expression distribution of sample 1.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{hist}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-289-1.pdf}
+
+\textbf{2- Repeat the histogram but change argument breaks to 50.}
+What is the difference ?
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{hist}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+  \DataTypeTok{breaks=}\DecValTok{50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-290-1.pdf}
+
+\textbf{3- Color this histogram in light blue.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{hist}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+  \DataTypeTok{breaks=}\DecValTok{50}\NormalTok{, }
+  \DataTypeTok{col=}\StringTok{"lightblue"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-291-1.pdf}
+
+\textbf{4- Zoom in the histogram: show only the distribution of expression values from 0 to 2 (x-axis) using the xlim argument.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{hist}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+  \DataTypeTok{breaks=}\DecValTok{50}\NormalTok{, }
+  \DataTypeTok{col=}\StringTok{"lightblue"}\NormalTok{,}
+  \DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{2}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-292-1.pdf}
+
+\textbf{5- Save the histogram in a pdf file.}
+
+correction
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{pdf}\NormalTok{(}\StringTok{"myhistogram.pdf"}\NormalTok{)}
+
+\KeywordTok{hist}\NormalTok{(genes}\OperatorTok{$}\NormalTok{sample1, }
+    \DataTypeTok{breaks=}\DecValTok{50}\NormalTok{, }
+    \DataTypeTok{col=}\StringTok{"lightblue"}\NormalTok{, }
+    \DataTypeTok{xlim=}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{2}\NormalTok{))}
+
+\KeywordTok{dev.off}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\hypertarget{plots-from-other-packages}{%
+\chapter{Plots from other packages}\label{plots-from-other-packages}}
+
+We will see two additional types of plots:
+
+\begin{itemize}
+\tightlist
+\item
+  Heat map (package gplots)
+\item
+  Venn diagram (from package VennDiagram)
+\end{itemize}
+
+\hypertarget{heatmap.2-function-from-gplots-package}{%
+\section{heatmap.2 function from gplots package}\label{heatmap.2-function-from-gplots-package}}
+
+A heatmap is a graphical representation of data where the values are represented with \textbf{colors}.
+The \textbf{heatmap.2} function from the \textbf{gplots} package allows to produce highly customizable heatmaps.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install gplots package}
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"gplots"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# load package}
+\KeywordTok{library}\NormalTok{(}\StringTok{"gplots"}\NormalTok{)}
+
+\CommentTok{# make matrix}
+\NormalTok{mat <-}\StringTok{ }\KeywordTok{matrix}\NormalTok{(}\KeywordTok{rnorm}\NormalTok{(}\DecValTok{1200}\NormalTok{), }\DataTypeTok{ncol=}\DecValTok{6}\NormalTok{)}
+
+\CommentTok{# heatmap with the defaults parameters}
+\KeywordTok{heatmap.2}\NormalTok{(}\DataTypeTok{x=}\NormalTok{mat)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-295-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Useful arguments include:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Rowv, Colv : process clustering of columns or rows (default TRUE to both)
+  \item
+    dendrogram : show dendrogram for row, col, both or none
+  \item
+    scale : scale data per row, column, or none
+  \item
+    col : dendrogram color palette
+  \item
+    trace : control the cyan density lines
+  \item
+    RowSideColors, ColSideColors : block of colors that represent the columns or the rows
+  \item
+    labRow,labCol : remove or keep row or col labels
+  \item
+    main : title
+  \item
+    xlab, ylab: x-axis or y-axis label
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{heatmap.2}\NormalTok{(}\DataTypeTok{x=}\NormalTok{mat, }
+    \DataTypeTok{Colv=}\OtherTok{FALSE}\NormalTok{, }
+    \DataTypeTok{dendrogram=}\StringTok{"row"}\NormalTok{,}
+    \DataTypeTok{scale=}\StringTok{"row"}\NormalTok{,}
+    \DataTypeTok{col=}\StringTok{"bluered"}\NormalTok{,}
+    \DataTypeTok{trace=}\StringTok{"none"}\NormalTok{,}
+    \DataTypeTok{ColSideColors=}\KeywordTok{rep}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"green"}\NormalTok{,}\StringTok{"orange"}\NormalTok{), }\DataTypeTok{each=}\DecValTok{3}\NormalTok{),}
+    \DataTypeTok{labRow=}\OtherTok{FALSE}\NormalTok{,}
+    \DataTypeTok{main=}\StringTok{"my heatmap"}\NormalTok{,}
+    \DataTypeTok{ylab=}\StringTok{"Genes"}\NormalTok{,}
+    \DataTypeTok{xlab=}\StringTok{"Samples"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{r-intro-crg_files/figure-latex/unnamed-chunk-296-1.pdf}
+
+\hypertarget{venn.diagram-function-from-venndiagram-package}{%
+\section{venn.diagram function from VennDiagram package}\label{venn.diagram-function-from-venndiagram-package}}
+
+\emph{A Venn diagram shows all possible logical relations between data sets.}
+The \textbf{venn.diagram} function from the \textbf{VennDiagram} package allows to create up to a 5-way Venn Diagram (i.e.~5 circles representing 5 data sets).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# load package}
+\KeywordTok{library}\NormalTok{(VennDiagram)}
+
+\CommentTok{# Prepare character vectors}
+\NormalTok{v1 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"DKK1"}\NormalTok{, }\StringTok{"NPC1"}\NormalTok{, }\StringTok{"NAPG"}\NormalTok{, }\StringTok{"ERG"}\NormalTok{, }\StringTok{"VHL"}\NormalTok{, }\StringTok{"BTD"}\NormalTok{, }\StringTok{"MALL"}\NormalTok{, }\StringTok{"HAUS1"}\NormalTok{)}
+\NormalTok{v2 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"SMAD4"}\NormalTok{, }\StringTok{"DKK1"}\NormalTok{, }\StringTok{"ASXL3"}\NormalTok{, }\StringTok{"ERG"}\NormalTok{, }\StringTok{"CKLF"}\NormalTok{, }\StringTok{"TIAM1"}\NormalTok{, }\StringTok{"VHL"}\NormalTok{, }\StringTok{"BTD"}\NormalTok{, }\StringTok{"EMP1"}\NormalTok{, }\StringTok{"MALL"}\NormalTok{, }\StringTok{"PAX3"}\NormalTok{)}
+\NormalTok{v3 <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"PAX3"}\NormalTok{, }\StringTok{"SMAD4"}\NormalTok{, }\StringTok{"DKK1"}\NormalTok{, }\StringTok{"MALL"}\NormalTok{, }\StringTok{"ERG"}\NormalTok{, }\StringTok{"CDKN2A"}\NormalTok{, }\StringTok{"DENR"}\NormalTok{, }\StringTok{"NPC1"}\NormalTok{, }\StringTok{"NAPG"}\NormalTok{)}
+
+\CommentTok{# Create a list of vectors}
+\NormalTok{vlist <-}\StringTok{ }\KeywordTok{list}\NormalTok{(v1, v2, v3)}
+\KeywordTok{names}\NormalTok{(vlist) <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"list1"}\NormalTok{, }\StringTok{"list2"}\NormalTok{, }\StringTok{"list3"}\NormalTok{)}
+
+\CommentTok{# 2-way Venn}
+\KeywordTok{venn.diagram}\NormalTok{(vlist[}\DecValTok{1}\OperatorTok{:}\DecValTok{2}\NormalTok{], }
+    \DataTypeTok{filename=}\StringTok{"Venn_2way.png"}\NormalTok{,}
+    \DataTypeTok{imagetype=}\StringTok{"png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 3-way Venn}
+\KeywordTok{venn.diagram}\NormalTok{(vlist, }
+        \DataTypeTok{filename=}\StringTok{"Venn_3way.png"}\NormalTok{,}
+        \DataTypeTok{imagetype=}\StringTok{"png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  More arguments:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    main : title
+  \item
+    sub : sub-title
+  \item
+    main.col : color of title font
+  \item
+    fill : color of circles
+  \item
+    col : color of circle lines
+  \item
+    cat.col : color of category labels
+  \end{itemize}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{venn.diagram}\NormalTok{(vlist,     }
+        \DataTypeTok{filename=}\StringTok{"Venn_3way_more.png"}\NormalTok{,}
+        \DataTypeTok{imagetype=}\StringTok{"png"}\NormalTok{,}
+    \DataTypeTok{main=}\StringTok{"Venn diagram"}\NormalTok{,}
+    \DataTypeTok{sub=}\StringTok{"3-way"}\NormalTok{,}
+    \DataTypeTok{main.col=}\StringTok{"red"}\NormalTok{,}
+    \DataTypeTok{fill=}\KeywordTok{c}\NormalTok{(}\StringTok{"lightgreen"}\NormalTok{, }\StringTok{"lightblue"}\NormalTok{, }\StringTok{"lightsalmon"}\NormalTok{),}
+    \DataTypeTok{col=}\KeywordTok{c}\NormalTok{(}\StringTok{"lightgreen"}\NormalTok{, }\StringTok{"lightblue"}\NormalTok{, }\StringTok{"lightsalmon"}\NormalTok{),}
+    \DataTypeTok{cat.col=}\KeywordTok{c}\NormalTok{(}\StringTok{"green"}\NormalTok{, }\StringTok{"blue"}\NormalTok{, }\StringTok{"salmon"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1
+\end{verbatim}
+
+\hypertarget{ggplot2-package}{%
+\chapter{ggplot2 package}\label{ggplot2-package}}
+
+\begin{itemize}
+\item
+  Graphing package inspired by the \textbf{G}rammar of \textbf{G}raphics work of Leland Wilkinson.
+\item
+  A tool that enables to concisely describe the components of a graphic.
+\item
+  Why ggplot2 ?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Flexible
+  \item
+    Customizable
+  \item
+    Pretty !
+  \item
+    Well documented
+  \end{itemize}
+\item
+  We will see:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \protect\hyperlink{gg_scatter}{Scatter plots}
+  \item
+    \protect\hyperlink{gg_box}{Box plots}
+  \item
+    \protect\hyperlink{gg_dot}{Dot plots}
+  \item
+    \protect\hyperlink{gg_bar}{Bar plots}
+  \item
+    \protect\hyperlink{gg_histo}{Histograms}
+  \item
+    \protect\hyperlink{gg_save}{How to save plots}
+  \item
+    \protect\hyperlink{gg_volc}{Volcano plots}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{getting-started}{%
+\section{Getting started}\label{getting-started}}
+
+\begin{itemize}
+\tightlist
+\item
+  All ggplots start with a \textbf{base layer} created with the \textbf{ggplot()} function:
+\end{itemize}
+
+\emph{The base layer is setting the grounds but NOT plotting anything}
+
+\begin{itemize}
+\tightlist
+\item
+  Add a layer (with the \textbf{+} sign) that describes what kind of plot you want.
+\end{itemize}
+
+\#\# Scatter plot
+
+\begin{itemize}
+\tightlist
+\item
+  Example of a simple scatter plot:
+\end{itemize}
+
+\includegraphics{Figs/unnamed-chunk-302-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Add \textbf{layers} to that object to customize the plot:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{ggtitle} to add a title
+  \item
+    \textbf{geom\_vline} to add a vertical line
+  \item
+    etc.
+    \includegraphics{Figs/unnamed-chunk-303-1.pdf}
+  \end{itemize}
+\end{itemize}
+
+Bookmark that \href{https://ggplot2.tidyverse.org/reference/}{ggplot2 reference} and that good \href{https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf}{cheatsheet} for some of the ggplot2 options.
+
+\begin{itemize}
+\tightlist
+\item
+  You can save the plot in an object \textbf{at any time} and add layers to that object:
+\end{itemize}
+
+\includegraphics{Figs/unnamed-chunk-304-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  What is inside the \textbf{aes} (aesthetics)function ?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Anything that varies according to your data !
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Columns with values to be plotted.
+    \item
+      Columns with which you want to, for example, color the points.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+Color all points in red (not depending on the data):
+
+\includegraphics{Figs/unnamed-chunk-305-1.pdf}
+
+Color the points according to another column in the data frame:
+
+\#\# Box plots
+
+\begin{itemize}
+\tightlist
+\item
+  Simple boxplot showing the data distribution of sample 1:
+\end{itemize}
+
+\includegraphics{Figs/unnamed-chunk-307-1.pdf}
+
+\begin{itemize}
+\item
+  Split the data into 2 boxes:
+  \includegraphics{Figs/unnamed-chunk-308-1.pdf}
+\item
+  What if you want to plot both sample1 and sample2 ?
+  \emph{You need to convert into a \textbf{long} format}
+\end{itemize}
+
+Plotting both sample1 and sample2:
+
+\includegraphics{Figs/unnamed-chunk-310-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  What if now you also want to see the distribution of ``yes'' and ``no'' in both sample1 and sample2 ?
+  \emph{Integrate a parameter to the \textbf{aes()}}
+\end{itemize}
+
+\includegraphics{Figs/unnamed-chunk-311-1.pdf}
+
+\includegraphics{Figs/unnamed-chunk-312-1.pdf}
+
+Do you want to change the default colors?
+* Integrate either layer:
+* \textbf{scale\_color\_manual()}
+* \textbf{scale\_fill\_manual}
+
+\#\# Dot plots
+
+Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.
+
+\begin{itemize}
+\tightlist
+\item
+  Add more layers:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{xlab()} to change the x axis label
+  \item
+    \textbf{ylab()} to change the y axis label
+  \item
+    \textbf{theme} to manage the legend
+  \end{itemize}
+\end{itemize}
+
+\includegraphics{Figs/unnamed-chunk-315-1.pdf}
+
+\#\# Bar plots
+
+\includegraphics{Figs/unnamed-chunk-316-1.pdf}
+
+\begin{itemize}
+\tightlist
+\item
+  Customize:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{scale\_x\_discrete} is used to handle x-axis title and labels
+  \item
+    \textbf{coord\_flip} swaps the x and y axis
+  \end{itemize}
+\end{itemize}
+
+\includegraphics{Figs/unnamed-chunk-317-1.pdf} \includegraphics{Figs/unnamed-chunk-317-2.pdf} \includegraphics{Figs/unnamed-chunk-317-3.pdf} \includegraphics{Figs/unnamed-chunk-317-4.pdf}
+
+\#\# Histograms
+
+Simple histogram on one sample (using the df2 data frame):
+
+\includegraphics{Figs/unnamed-chunk-318-1.pdf}
+
+Histogram on more samples (using df\_long):
+
+\includegraphics{Figs/unnamed-chunk-319-1.pdf}
+
+Split the data per sample (``variable'' column that represents here the samples):
+
+\includegraphics{Figs/unnamed-chunk-320-1.pdf}
+
+By default, the histograms are \textbf{stacked}: change to position \textbf{dodge} (side by side):
+
+\hypertarget{about-themes}{%
+\section{About themes}\label{about-themes}}
+
+You can change the default global \textbf{theme} (background color, grid lines etc. all non-data display):
+
+\includegraphics{Figs/unnamed-chunk-322-1.pdf} \includegraphics{Figs/unnamed-chunk-322-2.pdf} \includegraphics{Figs/unnamed-chunk-322-3.pdf} \includegraphics{Figs/unnamed-chunk-322-4.pdf} \includegraphics{Figs/unnamed-chunk-322-5.pdf} \includegraphics{Figs/unnamed-chunk-322-6.pdf}
+
+\#\# Saving plots in files
+
+\begin{itemize}
+\tightlist
+\item
+  The same as for regular plots applies:
+\end{itemize}
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\begin{itemize}
+\item
+  You can also use the ggplot2 \textbf{ggsave} function:
+\item
+  You can also organize several plots on one page
+
+  \begin{itemize}
+  \tightlist
+  \item
+    One way is to use the \textbf{gridExtra} package:
+  \item
+    ncol, nrow: arrange plots in such number of columns and rows
+  \end{itemize}
+\end{itemize}
+
+\includegraphics{Figs/unnamed-chunk-326-1.pdf}
+
+\includegraphics{Figs/unnamed-chunk-327-1.pdf}
+
+\textbf{WARNING !!}: ggsave and grid.arrange are not directly compatible. To save a file organized by grid.arrange, use the regular functions (pdf, png etc.)
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\hypertarget{more-about-the-theme-function}{%
+\section{More about the theme() function}\label{more-about-the-theme-function}}
+
+The \textbf{theme()} allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
+More details \href{https://ggplot2.tidyverse.org/reference/theme.html}{here}
+
+\#\# Volcano plots
+
+A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
+
+\includegraphics{Figs/unnamed-chunk-331-1.pdf}
+
+Doesn't look quite like a Volcano plot\ldots{}
+Convert the p-value into a -log10(p-value)
+
+\includegraphics{Figs/unnamed-chunk-337-1.pdf}
+
+\includegraphics{Figs/unnamed-chunk-338-1.pdf}
+
+\hypertarget{exercise-12-ggplot2}{%
+\section{Exercise 12: ggplot2}\label{exercise-12-ggplot2}}
+
+Create the script ``exercise12.R'' and save it to the ``Rcourse/Module3'' directory: you will save all the commands of exercise 12 in that script.
+Remember you can comment the code using \#.
+
+correction
+
+\hypertarget{exercise-12a--scatter-plot}{%
+\subsection{Exercise 12a- Scatter plot}\label{exercise-12a--scatter-plot}}
+
+\textbf{1- Load ggplot2 package}
+
+correction
+
+\textbf{2- Download the data we will use for plotting:}
+
+\textbf{3- Read file into object ``project1''}
+
+About this file:
+* It is comma separated (csv format)
+* The first row is the header
+* Take the row names from the first column
+
+correction
+
+\textbf{4- Using ggplot, create a simple scatter plot representing gene expression of ``sampleB'' on the x-axis and ``sampleH'' on the y-axis.}
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-343-1.pdf}
+
+\textbf{5- Create an extra column to the data frame ``project1'' (you can call this column ``expr\_limits''): if the expression of a gene is \textgreater{} 13 in both sampleB and sampleH, set to ``high''; if the expression of a gene is \textless{} 6 in both sampleB and sampleH, set to ``low''; if different, set to ``normal''.}
+
+correction
+
+\textbf{6- Color the points of your scatter plot according to the newly created column ``expr\_limits''. Save that plot in the object ``p''}
+
+correction
+
+\textbf{7- Add a layer to ``p'' in order to change the points colors to blue (for low), grey (for normal) and red (for high). Save this plot in the object ``p2''.}
+
+correction
+
+\textbf{8- Save p2 in a jpeg file.}
+a. Try with RStudio Plots window (Export)
+b. Try in the console:
+
+correction
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\hypertarget{exercise-12b--box-plot}{%
+\subsection{Exercise 12b- Box plot}\label{exercise-12b--box-plot}}
+
+\textbf{1- Convert ``project1'' from a wide format to a long format: save in the object ``project\_long''}
+\emph{Note: remember melt function from reshape2 package.}
+
+correction
+
+\textbf{2- Produce a boxplot of the expression of all samples (each sample should be represented by a box)}
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-349-1.pdf}
+
+\textbf{3- Modify the previous boxplot so as to obtain 3 ``sub-boxplots''" per sample, each representing the expression of either ``low'', ``normal'' or ``high'' genes.}
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-350-1.pdf}
+
+\textbf{4- Rotate the x-axis labels (90 degrees angle).}
+This is new ! Google it !!
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-351-1.pdf}
+
+\textbf{5- Finally, add a title to the plot.}
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-352-1.pdf}
+
+\hypertarget{exercise-12c--bar-plot}{%
+\subsection{Exercise 12c- Bar plot}\label{exercise-12c--bar-plot}}
+
+\textbf{1- Produce a bar plot of how many low/normal/high genes are in the column ``expr\_limits'' of ``project1''.}
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-353-1.pdf}
+
+\textbf{2- Add an horizontal line at counts 250 (y-axis). Save the plot in the object ``bar''}
+
+correction
+
+\textbf{3- Swap the x and y axis. Save in bar2.}
+
+correction
+
+\textbf{4- Save ``bar'' and ``bar2'' plots in a ``png'' file, using the }png()** function: use grid.arrange (from the gridExtra package) to organize both plots in one page !**
+
+correction
+
+\begin{verbatim}
+## pdf 
+##   2
+\end{verbatim}
+
+\hypertarget{exercise-12d--histogram}{%
+\subsection{Exercise 12d- Histogram}\label{exercise-12d--histogram}}
+
+\textbf{1- Create a simple histogram using project\_long (column ``value'').}
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-357-1.pdf}
+
+\textbf{2- Notice that you get the following warning message" \emph{stat\_bin() using \texttt{bins\ =\ 30}. Pick better value with \texttt{binwidth}.}}
+Set ``bins''" parameter of geom\_histogram() to 50.
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-358-1.pdf}
+
+\textbf{3- This histogram plots expression values for }All samples\textbf{.}
+Change the plot so as to obtain one histograms per sample.
+
+correction
+
+\includegraphics{Figs/unnamed-chunk-359-1.pdf}
+
+\textbf{4- By default, geom\_histogram produces a stacked histogram.}
+Change the ``position'' argument to ``dodge''.
+
+correction
+
+\textbf{5- A bit messy ?? Run the following:}
+
+\textbf{facet\_grid()} is another easy way to split the views!
+
+\textbf{6- Change the default colors with scale\_fill\_manual().}
+You can try the rainbow() function for coloring.
+
+correction
+
+\textbf{7- Zoom in the plots: set the x-axis limits from from 6 to 13.}
+Add the \textbf{xlim()} layer.
+
+correction
+
+\textbf{8- Change the default theme to theme\_minimal()}
+
+correction
+
+\textbf{9- Save that last plot to a file (format of your choice) with ggsave()}
+
+correction
 
 \bibliography{book.bib,packages.bib}
 

@@ -1,4 +1,9 @@
-#ggplot2 package
+# ggplot2 package
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=5, fig.height=4,
+                      echo=FALSE, warning=FALSE, message=FALSE)
+```
 
 * Graphing package inspired by the **G**rammar of **G**raphics work of Leland Wilkinson.
 
@@ -19,11 +24,11 @@
 	* [How to save plots](#gg_save)
 	* [Volcano plots](#gg_volc)
 
-##Getting started
+## Getting started
 
 * All ggplots start with a **base layer** created with the **ggplot()** function:
 
-```{r}
+```{r, eval=F}
 ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
 ```
 
@@ -31,10 +36,9 @@ ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
 
 * Add a layer (with the **+** sign) that describes what kind of plot you want.
 
-<a name="gg_scatter"></a>
-##Scatter plot
+## Scatter plot
 
-```{r}
+```{r, eval=F}
 # Example of a scatter plot: add the geom_point() layer
 ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
 ```
@@ -70,8 +74,8 @@ Bookmark that [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and 
 
 ```{r}
 # Save in an object
-p <- ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) 
-	+ geom_point()
+p <- ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) +
+	geom_point()
 # Add layers to that object
 p + ggtitle(label="my first ggplot")
 ```
@@ -107,7 +111,7 @@ pscat <- ggplot(data=df2, mapping=aes(x=sample1, y=sample2, color=grouping)) +
 <img src="images/plots/scatter3_gg.png" width="450"/>
 
 <a name="gg_box"></a>
-##Box plots
+## Box plots
 
 * Simple boxplot showing the data distribution of sample 1:
 
@@ -129,9 +133,13 @@ ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
 
 Plotting both sample1 and sample2:
 
-```{r}
-# install and load package reshape2
+```{r, eval=FALSE}
+# install package reshape2
 install.packages("reshape2")
+```
+
+```{r}
+# load package
 library("reshape2")
 
 # convert to long format
@@ -177,7 +185,7 @@ pbox <- ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) +
 <img src="images/plots/boxplot5_gg.png" width="450"/>
 
 <a name="gg_dot"></a>
-##Dot plots
+## Dot plots
 
 Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.
 
@@ -222,7 +230,7 @@ pdot +  xlab(label="Experimental group") +
 <img src="images/plots/dotplot2_gg.png" width="450"/>
 
 <a name="gg_bar"></a>
-##Bar plots
+## Bar plots
 
 ```{r}
 # A simple bar plot
@@ -259,7 +267,7 @@ p4
 <img src="images/plots/barplot2_gg.png" width="600"/>
 
 <a name="gg_histo"></a>
-##Histograms
+## Histograms
 
 Simple histogram on one sample (using the df2 data frame):
 
@@ -295,7 +303,7 @@ phist <- ggplot(data=df_long, mapping=aes(x=value, fill=variable)) +
 
 <img src="images/plots/histogram3_gg.png" width="450"/>
 
-##About themes
+## About themes
 
 You can change the default global **theme** (background color, grid lines etc. all non-data display):
 
@@ -315,7 +323,7 @@ p + theme_light()
 <img src="images/plots/themes_gg.png" width="600"/>
 
 <a name="gg_save"></a>
-##Saving plots in files
+## Saving plots in files
 
 * The same as for regular plots applies:
 
@@ -348,7 +356,13 @@ ggsave(filename="myplot.pdf",
 * You can also organize several plots on one page
 	* One way is to use the **gridExtra** package:
 	* ncol, nrow: arrange plots in such number of columns and rows
+```{r, eval=F}
+install.packages("gridExtra")
+```
+
 ```{r}
+# load package
+library(gridExtra)
 # 2 rows and 2 columns
 grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
 ```
@@ -370,15 +384,14 @@ grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
 dev.off()
 ```
 
-Got to [Exercise 12](https://sbcrg.github.io/CRG_RIntroduction/exercise12) !
 
-##More about the theme() function
+## More about the theme() function
 
 The **theme()** allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
 <br>
 More details [here](https://ggplot2.tidyverse.org/reference/theme.html)
 
-```{r}
+```{r, eval=F}
 # Let's the project_long object from exercise 12, and plot boxplots
 boxp <- ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 
   geom_boxplot()
@@ -412,7 +425,7 @@ boxp + theme(legend.title=element_blank(),
 <img src="images/plots/theme_function_gg.png" width="450"/>
 
 <a name="gg_volc"></a>
-##Volcano plots
+## Volcano plots
 
 A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
 <br>
@@ -525,7 +538,4 @@ ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label
 ```
 
 <img src="images/plots/volcano8_gg.png" width="450"/>
-
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

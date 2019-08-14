@@ -9,14 +9,14 @@ Create the script "exercise11.R" and save it to the "Rcourse/Module3" directory:
 correction
 </summary>
 
-```{r}	
+```{r, eval=F}	
 getwd()
 setwd("~/Rcourse/Module3")
 ```
 
 </details>
 
-### 11a- scatter plot
+### Exercise 11a- scatter plot
 
 **1- Create the following data frame**
 
@@ -119,7 +119,7 @@ abline(v=med1, col="red")
 
 </details>
 
-### 11b- bar plot + pie chart
+### Exercise 11b- bar plot + pie chart
 
 **1- Create the following vector**
 
@@ -218,7 +218,7 @@ pie(table(genes_significance),
 
 </details>
 
-## 11c- histogram
+### Exercise 11c- histogram
 
 **1- Use genes object from exercise 11a to create a histogram of the gene expression distribution of sample 1.**
 
@@ -298,7 +298,3 @@ dev.off()
 ```
 
 </details>
-
-> Go to [Extra plots](https://sbcrg.github.io/CRG_RIntroduction/extraplot): Heatmaps and Venn diagrams !
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)

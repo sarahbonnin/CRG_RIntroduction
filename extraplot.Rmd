@@ -1,14 +1,23 @@
-#Plots from other packages
+# Plots from other packages
 
-##heatmap.2 function from gplots package
+We will see two additional types of plots:
+
+* Heat map (package gplots)
+* Venn diagram (from package VennDiagram)
+
+## heatmap.2 function from gplots package
 
 A heatmap is a graphical representation of data where the values are represented with **colors**.
 <br>
 The **heatmap.2** function from the **gplots** package allows to produce highly customizable heatmaps.
 
-```{r}
-# install and load gplots package
+```{r, eval=F}
+# install gplots package
 install.packages("gplots")
+```
+
+```{r, eval=T}
+# load package
 library("gplots")
 
 # make matrix
@@ -47,7 +56,7 @@ heatmap.2(x=mat,
 <img src="images/plots/heatmap2.png" width="500"/>
 
 
-##venn.diagram function from VennDiagram package
+## venn.diagram function from VennDiagram package
 
 *A Venn diagram shows all possible logical relations between data sets.*
 <br>
@@ -105,10 +114,4 @@ venn.diagram(vlist,
 ```
 
 <img src="images/plots/Venn_3way_more.png" width="500"/>
-
-
-
-Go to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

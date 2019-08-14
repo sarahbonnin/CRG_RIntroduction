@@ -9,14 +9,14 @@ Create the script "exercise12.R" and save it to the "Rcourse/Module3" directory:
 correction
 </summary>
 
-```{r}	
+```{r, eval=F}	
 getwd()
 setwd("~/Rcourse/Module3")
 ```
 
 </details>
 
-### 12a- Scatter plot
+### Exercise 12a- Scatter plot
 
 **1- Load ggplot2 package**
 
@@ -135,7 +135,7 @@ dev.off()
 
 </details>
 
-### 12b- Box plot
+### Exercise 12b- Box plot
 
 **1- Convert "project1" from a wide format to a long format: save in the object "project_long"**
 *Note: remember melt function from reshape2 package.*
@@ -214,7 +214,7 @@ ggplot(data=project_long, mapping=aes(x=variable, y=value, color=expr_limits)) +
 </details>
 
 
-### 12c- Bar plot
+### Exercise 12c- Bar plot
 
 **1- Produce a bar plot of how many low/normal/high genes are in the column "expr_limits" of "project1".**
 
@@ -274,7 +274,7 @@ dev.off()
 </details>
 
 
-### 12cd- Histogram
+### Exercise 12d- Histogram
 
 **1- Create a simple histogram using project_long (column "value").**
 
@@ -402,7 +402,3 @@ ggsave(filename="myhistograms.png", plot=hist5, device="png", width=20)
 ```
 
 </details>
-
-Go back to [ggplot2](https://sbcrg.github.io/CRG_RIntroduction/ggplot2)
-
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
