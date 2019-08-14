@@ -2,11 +2,15 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
+      collapse: subsection
       before: |
         <li><a href="./">Introduction to R</a></li>
       after: |
         <li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
+    search: yes
+    fontsettings:
+      theme: red
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

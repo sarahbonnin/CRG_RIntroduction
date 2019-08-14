@@ -10,7 +10,7 @@ biblio-style: apalike
 link-citations: yes
 ---
 
-# Before we start
+# Welcome
 
 <h2>Dates, time & location</h2>
 
