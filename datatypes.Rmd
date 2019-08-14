@@ -5,7 +5,7 @@ Each object has a data type:
 * Character (text)
 * Logical (TRUE / FALSE)
 
-<h3>Checking data types</h3>
+##Checking data types
 
 Number:
 ```{r}

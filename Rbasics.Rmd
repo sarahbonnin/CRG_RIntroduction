@@ -42,7 +42,7 @@ What is the percentage of miRNA?
 Everything that stores any kind of data in R is an **object**:
 <img src="images/objects_box.png" alt="rstudio logo" width="300"/>
 
-<h2>R syntax</h2>
+#R syntax
 <img src="images/rsyntax1.png" alt="rstudio logo" width="350"/>
 
 ## Assignment operators

@@ -9,7 +9,7 @@ Create the script "exercise4.R" and save it to the "Rcourse/Module1" directory: 
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 getwd()
 setwd("Rcourse/Module1")
 setwd("~/Rcourse/Module1")
@@ -279,7 +279,4 @@ apply(mat4, 2, min)
 
 </details>
 
-> Go to [Exercise 5](https://sbcrg.github.io/CRG_RIntroduction/exercise5): Data frame manipulation
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

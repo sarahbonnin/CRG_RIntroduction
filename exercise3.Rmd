@@ -12,7 +12,7 @@ then go to Rcourse/Module1 with setwd()**
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 getwd()
 setwd("Rcourse/Module1")
 setwd("~/Rcourse/Module1")
@@ -199,8 +199,4 @@ gsub(pattern="Introduction to R", replacement="", x=tt)
 ```
 
 </details>
-
-> Go to [Factors](https://sbcrg.github.io/CRG_RIntroduction/factor)
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

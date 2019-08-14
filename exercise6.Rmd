@@ -9,7 +9,7 @@ Create the script "exercise6.R" and save it to the "Rcourse/Module2" directory: 
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 getwd()
 setwd("Rcourse/Module2")
 setwd("~/Rcourse/Module2")
@@ -21,7 +21,7 @@ setwd("~/Rcourse/Module2")
 
 ```{r}
 # system invokes the OS command specified by the "command" argument.
-system(command="svn export https://github.com/sbcrg/CRG_RIntroduction/trunk/i_o_files")
+system(command="svn export https://github.com/sarahbonnin/CRG_RIntroduction/trunk/i_o_files")
 ```
 
 All files that will be used for exercise 6 are found in the **i_o_files** folder ! 

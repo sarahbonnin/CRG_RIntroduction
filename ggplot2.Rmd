@@ -1,0 +1,531 @@
+#ggplot2 package
+
+* Graphing package inspired by the **G**rammar of **G**raphics work of Leland Wilkinson.
+
+* A tool that enables to concisely describe the components of a graphic.
+
+* Why ggplot2 ?
+	+ Flexible
+	+ Customizable
+	+ Pretty !
+	+ Well documented
+
+* We will see:
+	* [Scatter plots](#gg_scatter)
+	* [Box plots](#gg_box)
+	* [Dot plots](#gg_dot)
+	* [Bar plots](#gg_bar)
+	* [Histograms](#gg_histo)
+	* [How to save plots](#gg_save)
+	* [Volcano plots](#gg_volc)
+
+##Getting started
+
+* All ggplots start with a **base layer** created with the **ggplot()** function:
+
+```{r}
+ggplot(data=dataframe, mapping=aes(x=column1, y=column2))
+```
+
+*The base layer is setting the grounds but NOT plotting anything*
+
+* Add a layer (with the **+** sign) that describes what kind of plot you want.
+
+<a name="gg_scatter"></a>
+##Scatter plot
+
+```{r}
+# Example of a scatter plot: add the geom_point() layer
+ggplot(data=dataframe, mapping=aes(x=column1, y=column2)) + geom_point()
+```
+
+* Example of a simple scatter plot:
+
+```{r}
+# Create a data frame
+df1 <- data.frame(sample1=rnorm(200), sample2=rnorm(200))
+
+# Plot !
+ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
+	geom_point()
+```
+
+<img src="images/plots/scatter1_gg.png" width="400"/>
+
+
+* Add **layers** to that object to customize the plot:
+	* **ggtitle** to add a title
+	* **geom_vline** to add a vertical line
+	* etc.
+```{r}
+ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) + 
+  geom_point() +
+	ggtitle(label="my first ggplot") +
+	geom_vline(xintercept=0)
+```
+
+Bookmark that [ggplot2 reference](https://ggplot2.tidyverse.org/reference/) and that good [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf) for some of the ggplot2 options.
+
+* You can save the plot in an object **at any time** and add layers to that object:
+
+```{r}
+# Save in an object
+p <- ggplot(data= df1 , mapping=aes(x=sample1, y=sample2)) 
+	+ geom_point()
+# Add layers to that object
+p + ggtitle(label="my first ggplot")
+```
+
+<img src="images/plots/scatter2_gg.png" width="450"/>
+
+* What is inside the **aes** (aesthetics)function ?
+	* Anything that varies according to your data !
+		* Columns with values to be plotted.
+		* Columns with which you want to, for example, color the points.
+
+Color all points in red (not depending on the data):
+
+```{r}
+ggplot(data=df1 , mapping=aes(x=sample1, y=sample2)) +
+	geom_point(color="red") 
+```
+
+<img src="images/plots/scatter2b_gg.png" width="450"/>
+
+
+Color the points according to another column in the data frame:
+
+```{r}
+# Build a data frame from df1: add a column with "yes" and "no"
+df2 <- data.frame(df1, grouping=rep(c("yes", "no"), c(80, 120)))
+
+# Plot and add the color parameter in the aes():
+pscat <- ggplot(data=df2, mapping=aes(x=sample1, y=sample2, color=grouping)) + 
+  geom_point()
+```
+
+<img src="images/plots/scatter3_gg.png" width="450"/>
+
+<a name="gg_box"></a>
+##Box plots
+
+* Simple boxplot showing the data distribution of sample 1:
+
+```{r}
+ggplot(data=df2, mapping=aes(x="", y=sample1)) + geom_boxplot()
+```
+<img src="images/plots/boxplot0_gg.png" width="450"/>
+
+* Split the data into 2 boxes:
+```{r}
+ggplot(data=df2, mapping=aes(x=grouping, y=sample1)) + geom_boxplot()
+```
+<img src="images/plots/boxplot1_gg.png" width="450"/>
+
+* What if you want to plot both sample1 and sample2 ?<br>
+*You need to convert into a **long** format*
+
+<img src="images/plots/wide2long.png" width="700"/>
+
+Plotting both sample1 and sample2:
+
+```{r}
+# install and load package reshape2
+install.packages("reshape2")
+library("reshape2")
+
+# convert to long format
+df_long <- melt(data=df2)
+	# all numeric values are organized into only one column: value
+# plot:
+ggplot(data=df_long, mapping=aes(x=variable, y=value)) + 
+  geom_boxplot()
+```
+
+<img src="images/plots/boxplot2_gg.png" width="450"/>
+
+* What if now you also want to see the distribution of "yes" and "no" in both sample1 and sample2 ?<br>
+*Integrate a parameter to the **aes()***
+
+```{r}
+# Either color (color of the box border)
+ggplot(data=df_long, mapping=aes(x=variable, y=value, color=grouping)) + 
+  geom_boxplot()
+```
+
+<img src="images/plots/boxplot3_gg.png" width="450"/>
+
+```{r}
+# Or fill (color inside the box)
+ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
+  geom_boxplot()
+```
+
+<img src="images/plots/boxplot4_gg.png" width="450"/>
+
+Do you want to change the default colors?<br>
+* Integrate either layer:
+  * **scale_color_manual()**
+  * **scale_fill_manual**
+
+```{r}
+pbox <- ggplot(data=df_long, mapping=aes(x=variable, y=value, fill=grouping)) + 
+	geom_boxplot() +
+	scale_fill_manual(values=c("slateblue2", "chocolate"))
+```
+
+<img src="images/plots/boxplot5_gg.png" width="450"/>
+
+<a name="gg_dot"></a>
+##Dot plots
+
+Example of the expression of a gene in 6 samples: 2 experimental groups in triplicates.
+
+```{r}
+# create a named vector with the expression of a gene
+mygene <- c(8.1, 8.2, 8.6, 8.7, 9.4, 8.5)
+
+# the names of each element of the vector are sample names
+names(mygene) <- c("KO1", "KO2", "KO3", "WT1", "WT2", "WT3")
+
+# transform to long format
+mygenelong <- melt(data=mygene)
+
+# add new columns containing sample names and experimental groups
+mygenelong$sample_name <- rownames(mygenelong)
+mygenelong$group <- gsub("[1-3]{1}", "", mygenelong$sample_name)
+
+# dot plot
+  # add labels with "label" in the aes() and layer geom_text()
+  # nudge_x adjust the labels horizontally
+pdot <- ggplot(data=mygenelong, mapping=aes(x=group, y=value, col=group, label=sample_name)) + 
+  geom_point() +
+  geom_text(nudge_x=0.2)
+```
+
+<img src="images/plots/dotplot1_gg.png" width="450"/>
+
+* Add more layers:
+  * **xlab()** to change the x axis label
+  * **ylab()** to change the y axis label
+  * **theme** to manage the legend
+  
+```{r}
+pdot +  xlab(label="Experimental group") +
+  ylab(label="Normalized expression (log2)") +
+  ggtitle(label="Expression of gene 1") +
+  theme_bw() +
+  theme(legend.position="none")
+  
+```
+
+<img src="images/plots/dotplot2_gg.png" width="450"/>
+
+<a name="gg_bar"></a>
+##Bar plots
+
+```{r}
+# A simple bar plot
+ggplot(data=df2, mapping=aes(x=grouping)) + geom_bar()
+```
+
+<img src="images/plots/barplot1_gg.png" width="450"/>
+
+* Customize:
+  * **scale_x_discrete** is used to handle x-axis title and labels
+  * **coord_flip** swaps the x and y axis
+  
+```{r}
+# Save the plot in the object "p"
+pbar <- ggplot(data=df2, mapping=aes(x=grouping, fill=grouping)) + 
+  geom_bar()
+
+# Change x axis label with scale_x_discrete and change order of the bars:
+p2 <- pbar + scale_x_discrete(name="counts of yes / no", limits=c("yes", "no"))
+
+# Swapping x and y axis with coord_flip():
+p3 <- p2 + coord_flip()
+
+# Change fill
+p4 <- p3 + scale_fill_manual(values=c("yellow", "cyan"))
+
+# Show intermediary and final plots
+pbar
+p2
+p3
+p4
+```
+
+<img src="images/plots/barplot2_gg.png" width="600"/>
+
+<a name="gg_histo"></a>
+##Histograms
+
+Simple histogram on one sample (using the df2 data frame):
+
+```{r}
+ggplot(data=df1, mapping=aes(x=sample1)) + geom_histogram()
+
+```
+<img src="images/plots/histogram0_gg.png" width="450"/>
+
+Histogram on more samples (using df_long):
+
+```{r}
+ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
+
+```
+
+<img src="images/plots/histogram1_gg.png" width="450"/>
+
+Split the data per sample ("variable" column that represents here the samples):
+
+```{r}
+ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + geom_histogram()
+```
+
+<img src="images/plots/histogram2_gg.png" width="450"/>
+
+By default, the histograms are **stacked**: change to position **dodge** (side by side):
+
+```{r}
+phist <- ggplot(data=df_long, mapping=aes(x=value, fill=variable)) + 
+	geom_histogram(position='dodge')
+```
+
+<img src="images/plots/histogram3_gg.png" width="450"/>
+
+##About themes
+
+You can change the default global **theme** (background color, grid lines etc. all non-data display):
+
+```{r}
+# go back to a previous plot
+p <- ggplot(data=df_long, mapping=aes(x=value)) + geom_histogram()
+
+# Try different themes
+p + theme_bw()
+p + theme_minimal()
+p + theme_void()
+p + theme_grey()
+p + theme_dark()
+p + theme_light() 
+```
+
+<img src="images/plots/themes_gg.png" width="600"/>
+
+<a name="gg_save"></a>
+##Saving plots in files
+
+* The same as for regular plots applies:
+
+```{r}
+png("myggplot.png")
+p
+dev.off()
+```
+
+* You can also use the ggplot2 **ggsave** function:
+
+```{r}
+# By default, save the last plot that was produced
+ggsave(filename="lastplot.png")
+
+# You can pick which plot you want to save:
+ggsave(filename="myplot.png", plot=p)
+
+# Many different formats are available: 
+  # "eps", "ps", "tex", "pdf", "jpeg", "tiff", "png", "bmp", "svg", "wmf"
+ggsave(filename="myplot.ps", plot=p, device="ps")
+
+# Change the height and width (and their unit):
+ggsave(filename="myplot.pdf", 
+  width = 20, 
+  height = 20, 
+  units = "cm")
+```
+
+* You can also organize several plots on one page
+	* One way is to use the **gridExtra** package:
+	* ncol, nrow: arrange plots in such number of columns and rows
+```{r}
+# 2 rows and 2 columns
+grid.arrange(pscat, pbox, pbar, phist, nrow=2, ncol=2)
+```
+
+<img src="images/plots/gridarrange1.png" width="600"/>
+
+```{r}
+# 1 row and 4 columns
+grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
+```
+
+<img src="images/plots/gridarrange2.png" width="950"/>
+
+**WARNING !!**: ggsave and grid.arrange are not directly compatible. To save a file organized by grid.arrange, use the regular functions (pdf, png etc.)
+
+```{r}
+jpeg("grid_arrange_plots.jpg")
+grid.arrange(pscat, pbox, pbar, phist, nrow=1, ncol=4)
+dev.off()
+```
+
+Got to [Exercise 12](https://sbcrg.github.io/CRG_RIntroduction/exercise12) !
+
+##More about the theme() function
+
+The **theme()** allows a precise control of graphical parameters such as axis text, ticks and labels, or legend texts and labels, etc.
+<br>
+More details [here](https://ggplot2.tidyverse.org/reference/theme.html)
+
+```{r}
+# Let's the project_long object from exercise 12, and plot boxplots
+boxp <- ggplot(data=project_long, aes(x=variable, y=value, color=expr_limits)) + 
+  geom_boxplot()
+  
+# Remove the legend title:
+boxp + theme(legend.title=element_blank())
+
+# Change font of legend text
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"))
+
+# Put legend on the top of the plot
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top")
+  
+# Rotate x-axis labels
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top",
+  axis.text.x = element_text(angle = 90))
+
+# Add a color to the plot's background
+boxp + theme(legend.title=element_blank(), 
+  legend.text = element_text(colour="red", size = 8, face = "bold"),
+  legend.position="top",
+  axis.text.x = element_text(angle = 90),
+  plot.background = element_rect(fill = "yellow"))
+```
+
+<img src="images/plots/theme_function_gg.png" width="450"/>
+
+<a name="gg_volc"></a>
+##Volcano plots
+
+A volcano plot is a type of scatter plot represents differential expression of features (genes for example): on the x-axis we typically find the fold change and on the y-axis the p-value.
+<br>
+
+```{r}
+# Download the data we will use for plotting
+download.file("https://raw.githubusercontent.com/sbcrg/CRG_RIntroduction/master/de_df_for_volcano.rds", "de_df_for_volcano.rds", method="curl")
+
+# The RDS format is used to save a single R object to a file, and to restore it.
+# Extract that object in the current session:
+tmp <- readRDS("de_df_for_volcano.rds")
+
+# remove rows that contain NA values
+de <- tmp[complete.cases(tmp), ]
+``` 
+
+```{r}
+# The basic scatter plot: x is "log2FoldChange", y is "pvalue"
+ggplot(data=de, aes(x=log2FoldChange, y=pvalue)) + geom_point()
+```
+
+<img src="images/plots/volcano1_gg.png" width="450"/>
+
+Doesn't look quite like a Volcano plot...<br>
+Convert the p-value into a -log10(p-value)
+
+```{r}
+# Convert directly in the aes()
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point()
+```
+
+<img src="images/plots/volcano2_gg.png" width="450"/>
+
+```{r}
+# Add more simple "theme"
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue))) + geom_point() + theme_minimal()
+```
+
+<img src="images/plots/volcano3_gg.png" width="450"/>
+
+```{r}
+# Add vertical lines for log2FoldChange thresholds, and one horizontal line for the p-value threshold 
+p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
+	geom_hline(yintercept=-log10(0.05), col="red")
+```
+
+<img src="images/plots/volcano4_gg.png" width="450"/>
+
+```{r}
+# The significantly differentially expressed genes are the ones found in the upper-left and upper-right corners.
+# Add a column to the data frame to specify if they are UP- or DOWN- regulated (log2FoldChange respectively positive or negative)
+
+# add a column of NAs
+de$diffexpressed <- "NO"
+# if log2Foldchange > 0.6 and pvalue < 0.05, set as "UP" 
+de$diffexpressed[de$log2FoldChange > 0.6 & de$pvalue < 0.05] <- "UP"
+# if log2Foldchange < -0.6 and pvalue < 0.05, set as "DOWN"
+de$diffexpressed[de$log2FoldChange < -0.6 & de$pvalue < 0.05] <- "DOWN"
+
+# Re-plot but this time color the points with "diffexpressed"
+p <- ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed)) + geom_point() + theme_minimal()
+
+# Add lines as before...
+p2 <- p + geom_vline(xintercept=c(-0.6, 0.6), col="red") +
+        geom_hline(yintercept=-log10(0.05), col="red")
+```
+
+<img src="images/plots/volcano5_gg.png" width="450"/>
+
+```{r}
+## Change point color 
+
+# 1. by default, it is assigned to the categories in an alphabetical order):
+p3 <- p2 + scale_color_manual(values=c("blue", "black", "red"))
+
+# 2. to automate a bit: ceate a named vector: the values are the colors to be used, the names are the categories they will be assigned to:
+mycolors <- c("blue", "red", "black")
+names(mycolors) <- c("DOWN", "UP", "NO")
+p3 <- p2 + scale_colour_manual(values = mycolors)
+```
+
+<img src="images/plots/volcano6_gg.png" width="450"/>
+
+```{r}
+# Now write down the name of genes beside the points...
+# Create a new column "delabel" to de, that will contain the name of genes differentially expressed (NA in case they are not)
+de$delabel <- NA
+de$delabel[de$diffexpressed != "NO"] <- de$gene_symbol[de$diffexpressed != "NO"]
+
+ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label=delabel)) + 
+	geom_point() + 
+	theme_minimal() +
+	geom_text()
+```
+
+<img src="images/plots/volcano7_gg.png" width="450"/>
+
+```{r}
+# Finally, we can organize the labels nicely using the "ggrepel" package and the geom_text_repel() function
+# load library
+library(ggrepel)
+# plot adding up all layers we have seen so far
+ggplot(data=de, aes(x=log2FoldChange, y=-log10(pvalue), col=diffexpressed, label=delabel)) +
+        geom_point() + 
+        theme_minimal() +
+        geom_text_repel() +
+        scale_color_manual(values=c("blue", "black", "red")) +
+        geom_vline(xintercept=c(-0.6, 0.6), col="red") +
+        geom_hline(yintercept=-log10(0.05), col="red")
+```
+
+<img src="images/plots/volcano8_gg.png" width="450"/>
+
+
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+

@@ -1,0 +1,17 @@
+#Lists
+
+A list is a 1-dimensional structure that can contain **any other element**.
+<br><br>
+
+
+##Create a list 
+
+With the **list** function:
+
+```{r}
+```
+> Go to [Basic plotting](https://sbcrg.github.io/CRG_RIntroduction/baseplot)
+<br>
+
+> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+

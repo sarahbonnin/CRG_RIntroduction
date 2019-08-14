@@ -12,7 +12,7 @@ then go to Rcourse/Module1 with setwd()**
 correction
 </summary>
 
-```{r}
+```{r, eval=F}
 getwd()
 setwd("Rcourse/Module1")
 setwd("~/Rcourse/Module1")
@@ -312,9 +312,5 @@ myvector <- c(myvector, newvector)
 
 </details>
 
-<br>
 
-Go to [Exercise 3](https://sbcrg.github.io/CRG_RIntroduction/exercise3): Character vector manipulation !
-<br>
-> [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
 

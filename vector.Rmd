@@ -1,0 +1,252 @@
+#Vectors
+
+A vector is a sequence of data elements from the **same type**.
+
+| 329 | 45 | 12 | 28 |
+
+
+##Creating a vector
+
+* Values are assigned to a vector using the **c** command (**c**ombining elements).
+
+```{r}
+a <- c(329, 45, 12, 28)
+```
+
+You can create an empty vector with:
+
+```{r}
+vecempty <- vector()
+```
+
+* Create a sequence of consecutive numbers:
+
+```{r}
+a <- 1:6
+# same as:
+a <- c(1, 2, 3, 4, 5, 6)
+# both ends (1 and 6) are included
+```
+
+* Character vectors:  Each element is entered between (single or double) quotes.
+
+| mRNA | miRNA | snoRNA | lncRNA |
+
+```{r}
+b <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
+```
+
+##Vector manipulation
+
+* A vector can be **named**: each element of the vector can be assigned a name (number or character)
+
+```{r}
+names(a) <- c("mRNA", "miRNA", "snoRNA", "lncRNA")
+# use an object which already contains a vector
+names(a) <- b
+```
+
+* Get the length (number of elements) of a vector
+
+```{r}
+length(a)
+```
+
+* Extracting elements from vector **a**
+	+ extract elements using their position (index) in the vector:
+	<img src="images/vector_indices.png" width="500">
+
+	```{r}
+	a <- 1:6
+	a[1]
+	a[c(1,3)]
+	a[2:4]
+	```
+	+ extract elements using their names:
+	<img src="images/vector_indices_names.png" width="500">
+
+	```{r}
+	a["mRNA"]
+	a[c("miRNA", "lncRNA")]            
+	```
+
+* Reassigning a vector's element
+
+```{r}
+a[2] <- 31
+a["miRNA"] <- 31
+```
+
+* Removing a vector's element
+
+```{r}
+a <- a[-3]
+```
+
+* __Show__ versus __change__
+
+x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">unchanged</span> !
+
+x <- x[-2] <img src="images/red_triangle.jpg" width="40"> x <span style="color:red">reassigned</span> !
+
+##Combining vectors
+
+* From 2 vectors **a** and **b** you can create a vector **d**
+
+```{r}
+a <- 2:5
+b <- 4:6
+d <- c(a, b)
+```
+
+ > The elements of **b** are added after the elements of **a**
+
+* Likewise, you can add elements at the end of a vector
+
+```{r}
+d <- c(d, 19)
+```
+
+
+##Numeric vector manipulation
+
+<h4>Logical operators</h4>
+
+| Operator  | Description   |
+|:--------: |:-------------:|
+|     <     | less than    |
+|     <=    | less than or equal to   |
+|     >     | greater than  |
+|     >=    | greater than or equal to|
+|     ==    | exactly equal to   |
+|     !=    | not equal to |
+|    !x     | not x |
+|   x \| y | x OR y |
+|   x & y | x AND y |
+
+* Which elements of **a** are equal to 2?
+```{r}
+a <- 1:5
+a == 2
+```
+<img src="images/vector_equal.png" width="450">
+
+* Which elements of **a** are superior to 2?
+```{r}
+a <- 1:5
+a > 2
+```
+<img src="images/vector_super.png" width="450">
+
+* Extract elements of a vector that comply with a condition:
+```{r}
+a <- 1:5
+a >= 2
+a[a >= 2]
+```
+<img src="images/vector_subvector.png" width="500">
+
+<h4>Operations on vectors</h4>
+
+* Adding 2 to a vector adds 2 to **each element** of the vector:
+
+```{r}
+a <- 1:5
+a + 2
+```
+
+<img src="images/vector_addition.png" width="350">
+
+> Same goes for subtractions, multiplications and divisions...
+
+* Multiplying a vector by another vector of equal length
+
+```{r}
+a <- c(2, 4, 6)
+b <- c(2, 3, 0)
+a * b
+```
+
+<img src="images/vector_multiply.png" width="220">
+
+* Multiplying a vector by another **shorter** vector
+
+```{r}
+a <- c(2, 4, 6, 3, 1)
+b <- c(2, 3, 0)
+a * b
+```
+
+<img src="images/vector_multi_recycle.png" width="300">
+
+
+ > Vector **a** is "recycled" !
+
+* Summary statistics
+
+| Function  | Description   |
+|:--------: |:-------------:|
+|     mean(x)  | mean / average |
+|    median(x) | median |
+|     min(x)   | minimum |
+|     max(x)   | maximum |
+|     var(x)   | variance |
+| summary(x) | mean, median, min, max, quartiles |
+
+```{r}
+a <- c(1, 3, 12, 45, 3, 2)
+summary(a)
+```
+
+##Comparing vectors
+
+* The **%in%** operator
+
+Which elements of **a** are also found in **b* ?
+
+```{r}
+a <- 2:6
+b <- 4:10
+a %in% b
+```
+
+<img src="images/vector_in.png" width="350">
+
+Retrieve actual elements of **a** that are found in **b**:
+
+```{r}
+a <- 2:6
+b <- 4:10
+a[a %in% b]
+```
+
+##Character vector manipulation
+
+Character vectors are manipulated similarly to numeric ones.
+
+* The **%in%** operator:
+
+```{r}
+k <- c("mRNA", "miRNA", "snoRNA", "RNA", "lincRNA")
+p <- c("mRNA","lincRNA", "tRNA", "miRNA")
+k %in% p
+k[k %in% p]
+```
+
+* Select elements from vector **m** that are not *exon*
+
+```{r}
+m <- c("exon", "intron", "exon")
+m != "exon"
+m[m != "exon"]
+```
+
+<br>
+
+<br>
+Go to [Exercise 2](https://sbcrg.github.io/CRG_RIntroduction/exercise2): Numeric vector manipulation !
+<br>
+
+
+ > [back to home page](https://sbcrg.github.io/CRG_RIntroduction)
+
