@@ -1,4 +1,6 @@
-## Exercise 2a. Numeric vector manipulation
+## Exercise 2. Numeric vector manipulation
+
+### Exercise 2a.
 
 Create the script "exercise2.R" and save it to the "Rcourse/Module1" directory: you will save all the commands of exercise 2 in that script.
 <br>Remember you can comment the code using #.
@@ -228,13 +230,8 @@ any( y2 == 3 )
 
 </details>
 
-<br>
-**If you have time**, continue with Exercise 2b below.<br>
-If not:<br>
-Go to [Exercise 3](https://sbcrg.github.io/CRG_RIntroduction/exercise3): Character vector manipulation !
-<br>
 
-## Exercise 2b.
+### Exercise 2b.
 
 **1- Create the vector myvector as:**
 
