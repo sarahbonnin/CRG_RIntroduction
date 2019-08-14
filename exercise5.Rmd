@@ -17,6 +17,8 @@ setwd("~/Rcourse/Module1")
 
 </details>
 
+### Exercise 5a
+
 **1- Create the following data frame:**
 
 |43|181|M|
@@ -154,7 +156,7 @@ df3 <- df[df$Sex=="M" & df$Height > 170,]
 
 </details>
 
-## Exercise 5b
+### Exercise 5b
 
 **1. Create two data frames mydf1 and mydf2 as:**
 
@@ -223,7 +225,7 @@ mydf3[order(mydf3$age, decreasing = TRUE), ]
 
 </details>
 
-## Exercise 5c
+### Exercise 5c
 
 **1- Using the download.file function, download [this file](https://public-docs.crg.es/biocore/sbonnin/Rcourse/genes_dataframe.RData) to your current directory.** (Right click on "this file" -> Copy link location to get the full path).
 
