@@ -24,7 +24,7 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2019-08-14" />
+<meta name="date" content="2019-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -248,14 +248,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="19" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>19</b> ggplot2 package</a><ul>
 <li class="chapter" data-level="19.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
 <li class="chapter" data-level="19.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
-<li class="chapter" data-level="19.3" data-path="about-themes.html"><a href="about-themes.html"><i class="fa fa-check"></i><b>19.3</b> About themes</a></li>
-<li class="chapter" data-level="19.4" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>19.4</b> More about the theme() function</a></li>
-<li class="chapter" data-level="19.5" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.5</b> Exercise 12: ggplot2</a><ul>
-<li class="chapter" data-level="19.5.1" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.5.1</b> Exercise 12a- Scatter plot</a></li>
-<li class="chapter" data-level="19.5.2" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.5.2</b> Exercise 12b- Box plot</a></li>
-<li class="chapter" data-level="19.5.3" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.5.3</b> Exercise 12c- Bar plot</a></li>
-<li class="chapter" data-level="19.5.4" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.5.4</b> Exercise 12d- Histogram</a></li>
+<li class="chapter" data-level="19.3" data-path="box-plots-1.html"><a href="box-plots-1.html"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
+<li class="chapter" data-level="19.4" data-path="dot-plots.html"><a href="dot-plots.html"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
+<li class="chapter" data-level="19.5" data-path="bar-plots-1.html"><a href="bar-plots-1.html"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a></li>
+<li class="chapter" data-level="19.6" data-path="histograms-1.html"><a href="histograms-1.html"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
+<li class="chapter" data-level="19.7" data-path="about-themes.html"><a href="about-themes.html"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
+<li class="chapter" data-level="19.8" data-path="saving-plots-in-files.html"><a href="saving-plots-in-files.html"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
+<li class="chapter" data-level="19.9" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a><ul>
+<li class="chapter" data-level="19.9.1" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
+<li class="chapter" data-level="19.9.2" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
+<li class="chapter" data-level="19.9.3" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
+<li class="chapter" data-level="19.9.4" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
 </ul></li>
+<li class="chapter" data-level="19.10" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
+<li class="chapter" data-level="19.11" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
@@ -344,46 +350,46 @@ correction
 <a class="sourceLine" id="cb428-6" data-line-number="6">    <span class="co"># print median value in row</span></a>
 <a class="sourceLine" id="cb428-7" data-line-number="7">    <span class="kw">print</span>(<span class="kw">median</span>(rowj))</a>
 <a class="sourceLine" id="cb428-8" data-line-number="8">}       </a></code></pre></div>
-<pre><code>## [1] 0.3803721 1.3025992
-## [1] 0.8414857
-## [1]  0.2272104 -0.1520725
-## [1] 0.03756898
-## [1]  2.1752263 -0.2577366
-## [1] 0.9587449
-## [1]  0.4424935 -1.6885256
-## [1] -0.6230161
-## [1] 0.6291327 2.2074861
-## [1] 1.418309
-## [1] -0.1248425 -0.1159895
-## [1] -0.120416
-## [1]  0.01979136 -0.15399599
-## [1] -0.06710231
-## [1] -0.78299773 -0.05886482
-## [1] -0.4209313
-## [1]  1.223328 -1.169345
-## [1] 0.02699142
-## [1] -1.8516280 -0.1697493
-## [1] -1.010689
-## [1] -0.7829858  0.7498701
-## [1] -0.01655787
-## [1] -1.939183  1.405451
-## [1] -0.2668661
-## [1]  0.9078694 -1.2089772
-## [1] -0.1505539
-## [1] 1.649424 1.676818
-## [1] 1.663121
-## [1] -0.1374289 -0.5652369
-## [1] -0.3513329
-## [1] -1.181719 -1.065412
-## [1] -1.123565
-## [1] -0.1556569 -1.4073464
-## [1] -0.7815017
-## [1]  1.881042 -2.406706
-## [1] -0.2628319
-## [1] -0.7801985 -1.3016624
-## [1] -1.04093
-## [1]  0.3451392 -0.2640391
-## [1] 0.04055007</code></pre>
+<pre><code>## [1] -2.083649 -2.029869
+## [1] -2.056759
+## [1]  0.8284330 -0.1852374
+## [1] 0.3215978
+## [1] -2.3970549  0.4397722
+## [1] -0.9786414
+## [1] 1.924480 1.494671
+## [1] 1.709575
+## [1]  0.1655120 -0.2635269
+## [1] -0.04900745
+## [1] -0.1813255 -0.5198884
+## [1] -0.3506069
+## [1] -0.7328264 -0.4906503
+## [1] -0.6117384
+## [1] 0.4641725 0.7264771
+## [1] 0.5953248
+## [1] -1.458199 -1.144542
+## [1] -1.30137
+## [1] -0.533396 -1.634927
+## [1] -1.084161
+## [1]  0.08773423 -1.15301282
+## [1] -0.5326393
+## [1] -1.5599091  0.7330937
+## [1] -0.4134077
+## [1]  0.3846896 -0.3548139
+## [1] 0.01493785
+## [1] -0.2049327  1.7913928
+## [1] 0.7932301
+## [1] 0.1195924 0.1273686
+## [1] 0.1234805
+## [1] -0.3387612 -1.2869983
+## [1] -0.8128798
+## [1] -0.4824993 -0.2298743
+## [1] -0.3561868
+## [1] -0.3183496  1.7968941
+## [1] 0.7392722
+## [1] -0.3344946 -0.1640577
+## [1] -0.2492761
+## [1] 0.4973927 1.0668003
+## [1] 0.7820965</code></pre>
 </details>
 
 </div>

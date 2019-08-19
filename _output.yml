@@ -1,4 +1,7 @@
+bookdown::html_book:
+  theme: spacelab
 bookdown::gitbook:
+  highlight: pygments
   split_by: section
   css: style.css
   config:
