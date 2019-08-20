@@ -1,5 +1,3 @@
-bookdown::html_book:
-  theme: spacelab
 bookdown::gitbook:
   highlight: pygments
   split_by: section
@@ -13,8 +11,8 @@ bookdown::gitbook:
         <li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
     search: yes
-    fontsettings:
-      theme: red
+bookdown::html_book:
+  theme: spacelab
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
