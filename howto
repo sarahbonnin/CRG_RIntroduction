@@ -1,0 +1,6 @@
+library(bookdown)
+
+# by default, renders the first output specified in _output.yml
+render_book("index.Rmd", output_format="gitbook")
+
+# then open docs/index.html with firefox/chrome
