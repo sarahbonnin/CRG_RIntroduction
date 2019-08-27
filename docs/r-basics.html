@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Part5 R basics | Introduction to R</title>
   <meta name="description" content="Part5 R basics | Introduction to R" />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Part5 R basics | Introduction to R" />
   <meta property="og:type" content="book" />
@@ -24,15 +24,15 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2019-08-21" />
+<meta name="date" content="2019-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="navigate-the-tree-of-directory-with-the-r-terminal.html">
-<link rel="next" href="arithmetic-operators.html">
+<link rel="prev" href="paths-and-directories.html"/>
+<link rel="next" href="functions.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -112,7 +112,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -125,147 +124,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Introduction to R</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
-<li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
-<li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+<li class="chapter" data-level="3.1" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#rstudio-access"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
+<li class="chapter" data-level="3.2" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#rstudio-interface"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#setting-up-the-folder-structure-for-the-course"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
-<li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.1" data-path="paths-and-directories.html"><a href="paths-and-directories.html#tree-of-directories"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
+<li class="chapter" data-level="4.2" data-path="paths-and-directories.html"><a href="paths-and-directories.html#navigate-the-tree-of-directory-with-the-r-terminal"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
-<li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
-<li class="chapter" data-level="5.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
-<li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
-<li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
-<li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="5.1" data-path="r-basics.html"><a href="r-basics.html#arithmetic-operators"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="5.2" data-path="r-basics.html"><a href="r-basics.html#simple-calculations"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
+<li class="chapter" data-level="5.3" data-path="r-basics.html"><a href="r-basics.html#objects-in-r"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
+<li class="chapter" data-level="5.4" data-path="r-basics.html"><a href="r-basics.html#assignment-operators"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
+<li class="chapter" data-level="5.5" data-path="r-basics.html"><a href="r-basics.html#assigning-data-to-an-object"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
-<li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
-<li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
-<li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.1" data-path="r-scripts.html"><a href="r-scripts.html#create-and-save-a-script"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
+<li class="chapter" data-level="7.2" data-path="r-scripts.html"><a href="r-scripts.html#r-syntax"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="r-scripts.html"><a href="r-scripts.html#rstudio-tips-in-the-console"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
+<li class="chapter" data-level="7.4" data-path="r-scripts.html"><a href="r-scripts.html#exercice-1.-getting-started."><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a></li>
 <li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a><ul>
-<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="vectors.html"><a href="vectors.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
-<li class="chapter" data-level="9.1.2" data-path="vectors.html"><a href="vectors.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
-<li class="chapter" data-level="9.1.3" data-path="vectors.html"><a href="vectors.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
-<li class="chapter" data-level="9.1.4" data-path="vectors.html"><a href="vectors.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
-<li class="chapter" data-level="9.1.5" data-path="vectors.html"><a href="vectors.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
+<li class="chapter" data-level="9.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="data-structures.html"><a href="data-structures.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
+<li class="chapter" data-level="9.1.2" data-path="data-structures.html"><a href="data-structures.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
+<li class="chapter" data-level="9.1.3" data-path="data-structures.html"><a href="data-structures.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
+<li class="chapter" data-level="9.1.4" data-path="data-structures.html"><a href="data-structures.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
+<li class="chapter" data-level="9.1.5" data-path="data-structures.html"><a href="data-structures.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
-<li class="chapter" data-level="9.2.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
+<li class="chapter" data-level="9.2" data-path="data-structures.html"><a href="data-structures.html#exercise-2.-numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="data-structures.html"><a href="data-structures.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
+<li class="chapter" data-level="9.2.2" data-path="data-structures.html"><a href="data-structures.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
-<li class="chapter" data-level="9.3.2" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
+<li class="chapter" data-level="9.3" data-path="data-structures.html"><a href="data-structures.html#exercise-3.-character-vector-manipulation"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="data-structures.html"><a href="data-structures.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
+<li class="chapter" data-level="9.3.2" data-path="data-structures.html"><a href="data-structures.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
-<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
-<li class="chapter" data-level="9.5.1" data-path="matrices.html"><a href="matrices.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
-<li class="chapter" data-level="9.5.2" data-path="matrices.html"><a href="matrices.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
-<li class="chapter" data-level="9.5.3" data-path="matrices.html"><a href="matrices.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
+<li class="chapter" data-level="9.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
+<li class="chapter" data-level="9.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="data-structures.html"><a href="data-structures.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
+<li class="chapter" data-level="9.5.2" data-path="data-structures.html"><a href="data-structures.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
+<li class="chapter" data-level="9.5.3" data-path="data-structures.html"><a href="data-structures.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
-<li class="chapter" data-level="9.6.1" data-path="data-frames.html"><a href="data-frames.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
-<li class="chapter" data-level="9.6.2" data-path="data-frames.html"><a href="data-frames.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
+<li class="chapter" data-level="9.6" data-path="data-structures.html"><a href="data-structures.html#data-frames"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="data-structures.html"><a href="data-structures.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
+<li class="chapter" data-level="9.6.2" data-path="data-structures.html"><a href="data-structures.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
 </ul></li>
-<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
-<li class="chapter" data-level="9.7.1" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
-<li class="chapter" data-level="9.7.2" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
+<li class="chapter" data-level="9.7" data-path="data-structures.html"><a href="data-structures.html#two-dimensional-structures-manipulation"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="data-structures.html"><a href="data-structures.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
+<li class="chapter" data-level="9.7.2" data-path="data-structures.html"><a href="data-structures.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.8" data-path="exercise-4-matrix-manipulation.html"><a href="exercise-4-matrix-manipulation.html"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
-<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
-<li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
+<li class="chapter" data-level="9.8" data-path="data-structures.html"><a href="data-structures.html#exercise-4.-matrix-manipulation"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
+<li class="chapter" data-level="9.9" data-path="data-structures.html"><a href="data-structures.html#exercise-5.-data-frame-manipulation"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
+<li class="chapter" data-level="9.9.1" data-path="data-structures.html"><a href="data-structures.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="data-structures.html"><a href="data-structures.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="data-structures.html"><a href="data-structures.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
 <li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a><ul>
-<li class="chapter" data-level="11.1" data-path="on-vectors.html"><a href="on-vectors.html"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
-<li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
-<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
-<li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
-<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
-<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+<li class="chapter" data-level="11.1" data-path="input-output.html"><a href="input-output.html#on-vectors"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
+<li class="chapter" data-level="11.2" data-path="input-output.html"><a href="input-output.html#on-data-frames-or-matrices"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
+<li class="chapter" data-level="11.3" data-path="input-output.html"><a href="input-output.html#exercise-6."><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="input-output.html"><a href="input-output.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="11.3.2" data-path="input-output.html"><a href="input-output.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
+<li class="chapter" data-level="11.3.3" data-path="input-output.html"><a href="input-output.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
-<li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
-<li class="chapter" data-level="12.2" data-path="r-contrib.html"><a href="r-contrib.html"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
-<li class="chapter" data-level="12.3" data-path="install-a-package.html"><a href="install-a-package.html"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
-<li class="chapter" data-level="12.4" data-path="load-a-package.html"><a href="load-a-package.html"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
-<li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
-<li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
-<li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.1" data-path="library-and-packages.html"><a href="library-and-packages.html#r-base"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
+<li class="chapter" data-level="12.2" data-path="library-and-packages.html"><a href="library-and-packages.html#r-contrib"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
+<li class="chapter" data-level="12.3" data-path="library-and-packages.html"><a href="library-and-packages.html#install-a-package"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
+<li class="chapter" data-level="12.4" data-path="library-and-packages.html"><a href="library-and-packages.html#load-a-package"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
+<li class="chapter" data-level="12.5" data-path="library-and-packages.html"><a href="library-and-packages.html#check-what-packages-are-currently-loaded"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
+<li class="chapter" data-level="12.6" data-path="library-and-packages.html"><a href="library-and-packages.html#list-functions-from-a-package"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
+<li class="chapter" data-level="12.7" data-path="library-and-packages.html"><a href="library-and-packages.html#rstudio-server-at-crg"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
+<li class="chapter" data-level="12.8" data-path="library-and-packages.html"><a href="library-and-packages.html#exercise-7-library-and-packages"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
-<li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
-<li class="chapter" data-level="13.2" data-path="regular-expressions-to-find-more-flexible-patterns.html"><a href="regular-expressions-to-find-more-flexible-patterns.html"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
-<li class="chapter" data-level="13.3" data-path="substitute-or-remove-matching-patterns-with-gsub.html"><a href="substitute-or-remove-matching-patterns-with-gsub.html"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
-<li class="chapter" data-level="13.4" data-path="predefined-variables-to-use-in-regular-expressions.html"><a href="predefined-variables-to-use-in-regular-expressions.html"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
-<li class="chapter" data-level="13.5" data-path="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
-<li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
+<li class="chapter" data-level="13.1" data-path="regular-expressions.html"><a href="regular-expressions.html#find-simple-matches-with-grep"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
+<li class="chapter" data-level="13.2" data-path="regular-expressions.html"><a href="regular-expressions.html#regular-expressions-to-find-more-flexible-patterns"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
+<li class="chapter" data-level="13.3" data-path="regular-expressions.html"><a href="regular-expressions.html#substitute-or-remove-matching-patterns-with-gsub"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
+<li class="chapter" data-level="13.4" data-path="regular-expressions.html"><a href="regular-expressions.html#predefined-variables-to-use-in-regular-expressions"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
+<li class="chapter" data-level="13.5" data-path="regular-expressions.html"><a href="regular-expressions.html#use-grep-and-regular-expressions-to-retrieve-columns-by-their-names"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
+<li class="chapter" data-level="13.6" data-path="regular-expressions.html"><a href="regular-expressions.html#exercise-8-regular-expressions"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>14</b> Repetitive execution</a><ul>
-<li class="chapter" data-level="14.1" data-path="exercise-9-for-loop.html"><a href="exercise-9-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: For loop</a></li>
+<li class="chapter" data-level="14.1" data-path="repetitive-execution.html"><a href="repetitive-execution.html#exercise-9-for-loop"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: For loop</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>15</b> Conditional statement</a><ul>
-<li class="chapter" data-level="15.1" data-path="exercise-10-if-statement.html"><a href="exercise-10-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: If statement</a></li>
+<li class="chapter" data-level="15.1" data-path="conditional-statement.html"><a href="conditional-statement.html#exercise-10-if-statement"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: If statement</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> Basic plots in R</a><ul>
-<li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
-<li class="chapter" data-level="16.2" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
-<li class="chapter" data-level="16.3" data-path="pie-charts.html"><a href="pie-charts.html"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
-<li class="chapter" data-level="16.4" data-path="box-plots.html"><a href="box-plots.html"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
-<li class="chapter" data-level="16.5" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
+<li class="chapter" data-level="16.1" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#scatter-plots"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
+<li class="chapter" data-level="16.2" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#bar-plots"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
+<li class="chapter" data-level="16.3" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#pie-charts"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
+<li class="chapter" data-level="16.4" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#box-plots"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
+<li class="chapter" data-level="16.5" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#histograms"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html"><i class="fa fa-check"></i><b>17</b> How to save plots</a><ul>
-<li class="chapter" data-level="17.1" data-path="with-r-studio.html"><a href="with-r-studio.html"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
-<li class="chapter" data-level="17.2" data-path="with-the-console.html"><a href="with-the-console.html"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
-<li class="chapter" data-level="17.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a><ul>
-<li class="chapter" data-level="17.3.1" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
-<li class="chapter" data-level="17.3.2" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
-<li class="chapter" data-level="17.3.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
+<li class="chapter" data-level="17.1" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#with-r-studio"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
+<li class="chapter" data-level="17.2" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#with-the-console"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
+<li class="chapter" data-level="17.3" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11-base-plots"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a><ul>
+<li class="chapter" data-level="17.3.1" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
+<li class="chapter" data-level="17.3.2" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
+<li class="chapter" data-level="17.3.3" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html"><i class="fa fa-check"></i><b>18</b> Plots from other packages</a><ul>
-<li class="chapter" data-level="18.1" data-path="heatmap-2-function-from-gplots-package.html"><a href="heatmap-2-function-from-gplots-package.html"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
-<li class="chapter" data-level="18.2" data-path="venn-diagram-function-from-venndiagram-package.html"><a href="venn-diagram-function-from-venndiagram-package.html"><i class="fa fa-check"></i><b>18.2</b> venn.diagram function from VennDiagram package</a></li>
+<li class="chapter" data-level="18.1" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html#heatmap.2-function-from-gplots-package"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
+<li class="chapter" data-level="18.2" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html#venn.diagram-function-from-venndiagram-package"><i class="fa fa-check"></i><b>18.2</b> venn.diagram function from VennDiagram package</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>19</b> ggplot2 package</a><ul>
-<li class="chapter" data-level="19.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
-<li class="chapter" data-level="19.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
-<li class="chapter" data-level="19.3" data-path="box-plots-1.html"><a href="box-plots-1.html"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
-<li class="chapter" data-level="19.4" data-path="dot-plots.html"><a href="dot-plots.html"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
-<li class="chapter" data-level="19.5" data-path="bar-plots-1.html"><a href="bar-plots-1.html"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a></li>
-<li class="chapter" data-level="19.6" data-path="histograms-1.html"><a href="histograms-1.html"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
-<li class="chapter" data-level="19.7" data-path="about-themes.html"><a href="about-themes.html"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
-<li class="chapter" data-level="19.8" data-path="saving-plots-in-files.html"><a href="saving-plots-in-files.html"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
-<li class="chapter" data-level="19.9" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a><ul>
-<li class="chapter" data-level="19.9.1" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
-<li class="chapter" data-level="19.9.2" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
-<li class="chapter" data-level="19.9.3" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
-<li class="chapter" data-level="19.9.4" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
+<li class="chapter" data-level="19.1" data-path="ggplot2-package.html"><a href="ggplot2-package.html#getting-started"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
+<li class="chapter" data-level="19.2" data-path="ggplot2-package.html"><a href="ggplot2-package.html#scatter-plot"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
+<li class="chapter" data-level="19.3" data-path="ggplot2-package.html"><a href="ggplot2-package.html#box-plots-1"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
+<li class="chapter" data-level="19.4" data-path="ggplot2-package.html"><a href="ggplot2-package.html#dot-plots"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
+<li class="chapter" data-level="19.5" data-path="ggplot2-package.html"><a href="ggplot2-package.html#bar-plots-1"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a></li>
+<li class="chapter" data-level="19.6" data-path="ggplot2-package.html"><a href="ggplot2-package.html#histograms-1"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
+<li class="chapter" data-level="19.7" data-path="ggplot2-package.html"><a href="ggplot2-package.html#about-themes"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
+<li class="chapter" data-level="19.8" data-path="ggplot2-package.html"><a href="ggplot2-package.html#saving-plots-in-files"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
+<li class="chapter" data-level="19.9" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12-ggplot2"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a><ul>
+<li class="chapter" data-level="19.9.1" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
+<li class="chapter" data-level="19.9.2" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
+<li class="chapter" data-level="19.9.3" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
+<li class="chapter" data-level="19.9.4" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
 </ul></li>
-<li class="chapter" data-level="19.10" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
-<li class="chapter" data-level="19.11" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
+<li class="chapter" data-level="19.10" data-path="ggplot2-package.html"><a href="ggplot2-package.html#more-about-the-theme-function"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
+<li class="chapter" data-level="19.11" data-path="ggplot2-package.html"><a href="ggplot2-package.html#volcano-plots"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -284,15 +277,122 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="r-basics" class="section level1">
-<h1><span class="header-section-number">Part5</span> R basics</h1> 
+<h1><span class="header-section-number">Part5</span> R basics</h1>
+<div id="arithmetic-operators" class="section level2">
+<h2><span class="header-section-number">5.1</span> Arithmetic operators</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Operator</th>
+<th align="center">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">+</td>
+<td align="center">addition</td>
+</tr>
+<tr class="even">
+<td align="center">-</td>
+<td align="center">subtraction</td>
+</tr>
+<tr class="odd">
+<td align="center">/</td>
+<td align="center">division</td>
+</tr>
+<tr class="even">
+<td align="center">*</td>
+<td align="center">multiplication</td>
+</tr>
+<tr class="odd">
+<td align="center">^ or **</td>
+<td align="center">exponential</td>
+</tr>
+</tbody>
+</table>
+<p>In the R terminal:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="dv">10</span> <span class="op">-</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Type <strong>Enter</strong> for R to interpret the command.</p>
+</div>
+<div id="simple-calculations" class="section level2">
+<h2><span class="header-section-number">5.2</span> Simple calculations</h2>
+<p>Given the following table:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">type of RNA</th>
+<th align="center">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">mRNA</td>
+<td align="center">329</td>
+</tr>
+<tr class="even">
+<td align="center">miRNA</td>
+<td align="center">45</td>
+</tr>
+<tr class="odd">
+<td align="center">snoRNA</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">lncRNA</td>
+<td align="center">28</td>
+</tr>
+</tbody>
+</table>
+<p>Calculate the total number of RNAs reported in the table:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="dv">329</span> <span class="op">+</span><span class="st"> </span><span class="dv">45</span> <span class="op">+</span><span class="st"> </span><span class="dv">12</span> <span class="op">+</span><span class="st"> </span><span class="dv">28</span></a></code></pre></div>
+<pre><code>## [1] 414</code></pre>
+<p>What is the percentage of miRNA?</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">( <span class="dv">45</span> <span class="op">/</span><span class="st"> </span><span class="dv">414</span> ) <span class="op">*</span><span class="st"> </span><span class="dv">100</span></a></code></pre></div>
+<pre><code>## [1] 10.86957</code></pre>
+</div>
+<div id="objects-in-r" class="section level2">
+<h2><span class="header-section-number">5.3</span> Objects in R</h2>
+<p>Everything that stores any kind of data in R is an <strong>object</strong>:
+<img src="images/objects_box.png" alt="rstudio logo" width="300"/></p>
+<p>#R syntax
+<img src="images/rsyntax1.png" alt="rstudio logo" width="350"/></p>
+</div>
+<div id="assignment-operators" class="section level2">
+<h2><span class="header-section-number">5.4</span> Assignment operators</h2>
+<ul>
+<li><strong>&lt;-</strong> or <strong>=</strong></li>
+<li>Essentially the same but, to avoid confusions:
+<ul>
+<li>Use <strong>&lt;-</strong> for assignments</li>
+<li>Keep <strong>=</strong> for functions arguments</li>
+</ul></li>
+</ul>
+</div>
+<div id="assigning-data-to-an-object" class="section level2">
+<h2><span class="header-section-number">5.5</span> Assigning data to an object</h2>
+<ul>
+<li><p>Assigning a value to the object <strong>B</strong>:
+B &lt;- 10</p></li>
+<li><p>Reassigning: modifying the content of an object:</p></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">B <span class="op">+</span><span class="st"> </span><span class="dv">10</span></a></code></pre></div>
+<p><span style="color:red"><strong>B unchanged !!</strong></span><br></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">B &lt;-<span class="st"> </span>B <span class="op">+</span><span class="st"> </span><span class="dv">10</span></a></code></pre></div>
+<p><span style="color:red"><strong>B changed !!</strong></span><br></p>
+<ul>
+<li>You can see the objects you created in the upper right panel in RStudio: the environment.</li>
+</ul>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="navigate-the-tree-of-directory-with-the-r-terminal.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="arithmetic-operators.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="paths-and-directories.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -331,9 +431,8 @@ gitbook.start({
 },
 "download": ["r-intro-crg.pdf", "r-intro-crg.epub"],
 "toc": {
-"collapse": "section"
-},
-"search": true
+"collapse": "subsection"
+}
 });
 });
 </script>
@@ -345,8 +444,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

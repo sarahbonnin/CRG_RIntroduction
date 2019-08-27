@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Part11 Input / Output | Introduction to R</title>
   <meta name="description" content="Part11 Input / Output | Introduction to R" />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Part11 Input / Output | Introduction to R" />
   <meta property="og:type" content="book" />
@@ -24,15 +24,15 @@
 <meta name="author" content="Sarah Bonnin" />
 
 
-<meta name="date" content="2019-08-21" />
+<meta name="date" content="2019-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="missing-values.html">
-<link rel="next" href="on-vectors.html">
+<link rel="prev" href="missing-values.html"/>
+<link rel="next" href="library-and-packages.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -112,7 +112,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -125,147 +124,141 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Introduction to R</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
 <li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
-<li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
-<li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
-<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+<li class="chapter" data-level="3.1" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#rstudio-access"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
+<li class="chapter" data-level="3.2" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#rstudio-interface"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
+<li class="chapter" data-level="3.3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html#setting-up-the-folder-structure-for-the-course"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
-<li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
-<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+<li class="chapter" data-level="4.1" data-path="paths-and-directories.html"><a href="paths-and-directories.html#tree-of-directories"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
+<li class="chapter" data-level="4.2" data-path="paths-and-directories.html"><a href="paths-and-directories.html#navigate-the-tree-of-directory-with-the-r-terminal"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
-<li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
-<li class="chapter" data-level="5.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
-<li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
-<li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
-<li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+<li class="chapter" data-level="5.1" data-path="r-basics.html"><a href="r-basics.html#arithmetic-operators"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="5.2" data-path="r-basics.html"><a href="r-basics.html#simple-calculations"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
+<li class="chapter" data-level="5.3" data-path="r-basics.html"><a href="r-basics.html#objects-in-r"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
+<li class="chapter" data-level="5.4" data-path="r-basics.html"><a href="r-basics.html#assignment-operators"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
+<li class="chapter" data-level="5.5" data-path="r-basics.html"><a href="r-basics.html#assigning-data-to-an-object"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
 <li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
-<li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
-<li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
-<li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
-<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+<li class="chapter" data-level="7.1" data-path="r-scripts.html"><a href="r-scripts.html#create-and-save-a-script"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
+<li class="chapter" data-level="7.2" data-path="r-scripts.html"><a href="r-scripts.html#r-syntax"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="r-scripts.html"><a href="r-scripts.html#rstudio-tips-in-the-console"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
+<li class="chapter" data-level="7.4" data-path="r-scripts.html"><a href="r-scripts.html#exercice-1.-getting-started."><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a></li>
 <li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a><ul>
-<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="vectors.html"><a href="vectors.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
-<li class="chapter" data-level="9.1.2" data-path="vectors.html"><a href="vectors.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
-<li class="chapter" data-level="9.1.3" data-path="vectors.html"><a href="vectors.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
-<li class="chapter" data-level="9.1.4" data-path="vectors.html"><a href="vectors.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
-<li class="chapter" data-level="9.1.5" data-path="vectors.html"><a href="vectors.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
+<li class="chapter" data-level="9.1" data-path="data-structures.html"><a href="data-structures.html#vectors"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="data-structures.html"><a href="data-structures.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
+<li class="chapter" data-level="9.1.2" data-path="data-structures.html"><a href="data-structures.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
+<li class="chapter" data-level="9.1.3" data-path="data-structures.html"><a href="data-structures.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
+<li class="chapter" data-level="9.1.4" data-path="data-structures.html"><a href="data-structures.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
+<li class="chapter" data-level="9.1.5" data-path="data-structures.html"><a href="data-structures.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
-<li class="chapter" data-level="9.2.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
+<li class="chapter" data-level="9.2" data-path="data-structures.html"><a href="data-structures.html#exercise-2.-numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="data-structures.html"><a href="data-structures.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
+<li class="chapter" data-level="9.2.2" data-path="data-structures.html"><a href="data-structures.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
-<li class="chapter" data-level="9.3.2" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
+<li class="chapter" data-level="9.3" data-path="data-structures.html"><a href="data-structures.html#exercise-3.-character-vector-manipulation"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="data-structures.html"><a href="data-structures.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
+<li class="chapter" data-level="9.3.2" data-path="data-structures.html"><a href="data-structures.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
-<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
-<li class="chapter" data-level="9.5.1" data-path="matrices.html"><a href="matrices.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
-<li class="chapter" data-level="9.5.2" data-path="matrices.html"><a href="matrices.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
-<li class="chapter" data-level="9.5.3" data-path="matrices.html"><a href="matrices.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
+<li class="chapter" data-level="9.4" data-path="data-structures.html"><a href="data-structures.html#factors"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
+<li class="chapter" data-level="9.5" data-path="data-structures.html"><a href="data-structures.html#matrices"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="data-structures.html"><a href="data-structures.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
+<li class="chapter" data-level="9.5.2" data-path="data-structures.html"><a href="data-structures.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
+<li class="chapter" data-level="9.5.3" data-path="data-structures.html"><a href="data-structures.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
-<li class="chapter" data-level="9.6.1" data-path="data-frames.html"><a href="data-frames.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
-<li class="chapter" data-level="9.6.2" data-path="data-frames.html"><a href="data-frames.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
+<li class="chapter" data-level="9.6" data-path="data-structures.html"><a href="data-structures.html#data-frames"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="data-structures.html"><a href="data-structures.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
+<li class="chapter" data-level="9.6.2" data-path="data-structures.html"><a href="data-structures.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
 </ul></li>
-<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
-<li class="chapter" data-level="9.7.1" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
-<li class="chapter" data-level="9.7.2" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
+<li class="chapter" data-level="9.7" data-path="data-structures.html"><a href="data-structures.html#two-dimensional-structures-manipulation"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="data-structures.html"><a href="data-structures.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
+<li class="chapter" data-level="9.7.2" data-path="data-structures.html"><a href="data-structures.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.8" data-path="exercise-4-matrix-manipulation.html"><a href="exercise-4-matrix-manipulation.html"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
-<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
-<li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
-<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
-<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
+<li class="chapter" data-level="9.8" data-path="data-structures.html"><a href="data-structures.html#exercise-4.-matrix-manipulation"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
+<li class="chapter" data-level="9.9" data-path="data-structures.html"><a href="data-structures.html#exercise-5.-data-frame-manipulation"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
+<li class="chapter" data-level="9.9.1" data-path="data-structures.html"><a href="data-structures.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="data-structures.html"><a href="data-structures.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="data-structures.html"><a href="data-structures.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
 <li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a><ul>
-<li class="chapter" data-level="11.1" data-path="on-vectors.html"><a href="on-vectors.html"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
-<li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
-<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
-<li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
-<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
-<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+<li class="chapter" data-level="11.1" data-path="input-output.html"><a href="input-output.html#on-vectors"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
+<li class="chapter" data-level="11.2" data-path="input-output.html"><a href="input-output.html#on-data-frames-or-matrices"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
+<li class="chapter" data-level="11.3" data-path="input-output.html"><a href="input-output.html#exercise-6."><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="input-output.html"><a href="input-output.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="11.3.2" data-path="input-output.html"><a href="input-output.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
+<li class="chapter" data-level="11.3.3" data-path="input-output.html"><a href="input-output.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
-<li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
-<li class="chapter" data-level="12.2" data-path="r-contrib.html"><a href="r-contrib.html"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
-<li class="chapter" data-level="12.3" data-path="install-a-package.html"><a href="install-a-package.html"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
-<li class="chapter" data-level="12.4" data-path="load-a-package.html"><a href="load-a-package.html"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
-<li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
-<li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
-<li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
-<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+<li class="chapter" data-level="12.1" data-path="library-and-packages.html"><a href="library-and-packages.html#r-base"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
+<li class="chapter" data-level="12.2" data-path="library-and-packages.html"><a href="library-and-packages.html#r-contrib"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
+<li class="chapter" data-level="12.3" data-path="library-and-packages.html"><a href="library-and-packages.html#install-a-package"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
+<li class="chapter" data-level="12.4" data-path="library-and-packages.html"><a href="library-and-packages.html#load-a-package"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
+<li class="chapter" data-level="12.5" data-path="library-and-packages.html"><a href="library-and-packages.html#check-what-packages-are-currently-loaded"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
+<li class="chapter" data-level="12.6" data-path="library-and-packages.html"><a href="library-and-packages.html#list-functions-from-a-package"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
+<li class="chapter" data-level="12.7" data-path="library-and-packages.html"><a href="library-and-packages.html#rstudio-server-at-crg"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
+<li class="chapter" data-level="12.8" data-path="library-and-packages.html"><a href="library-and-packages.html#exercise-7-library-and-packages"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
-<li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
-<li class="chapter" data-level="13.2" data-path="regular-expressions-to-find-more-flexible-patterns.html"><a href="regular-expressions-to-find-more-flexible-patterns.html"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
-<li class="chapter" data-level="13.3" data-path="substitute-or-remove-matching-patterns-with-gsub.html"><a href="substitute-or-remove-matching-patterns-with-gsub.html"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
-<li class="chapter" data-level="13.4" data-path="predefined-variables-to-use-in-regular-expressions.html"><a href="predefined-variables-to-use-in-regular-expressions.html"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
-<li class="chapter" data-level="13.5" data-path="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
-<li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
+<li class="chapter" data-level="13.1" data-path="regular-expressions.html"><a href="regular-expressions.html#find-simple-matches-with-grep"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
+<li class="chapter" data-level="13.2" data-path="regular-expressions.html"><a href="regular-expressions.html#regular-expressions-to-find-more-flexible-patterns"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
+<li class="chapter" data-level="13.3" data-path="regular-expressions.html"><a href="regular-expressions.html#substitute-or-remove-matching-patterns-with-gsub"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
+<li class="chapter" data-level="13.4" data-path="regular-expressions.html"><a href="regular-expressions.html#predefined-variables-to-use-in-regular-expressions"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
+<li class="chapter" data-level="13.5" data-path="regular-expressions.html"><a href="regular-expressions.html#use-grep-and-regular-expressions-to-retrieve-columns-by-their-names"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
+<li class="chapter" data-level="13.6" data-path="regular-expressions.html"><a href="regular-expressions.html#exercise-8-regular-expressions"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>14</b> Repetitive execution</a><ul>
-<li class="chapter" data-level="14.1" data-path="exercise-9-for-loop.html"><a href="exercise-9-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: For loop</a></li>
+<li class="chapter" data-level="14.1" data-path="repetitive-execution.html"><a href="repetitive-execution.html#exercise-9-for-loop"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: For loop</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>15</b> Conditional statement</a><ul>
-<li class="chapter" data-level="15.1" data-path="exercise-10-if-statement.html"><a href="exercise-10-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: If statement</a></li>
+<li class="chapter" data-level="15.1" data-path="conditional-statement.html"><a href="conditional-statement.html#exercise-10-if-statement"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: If statement</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> Basic plots in R</a><ul>
-<li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
-<li class="chapter" data-level="16.2" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
-<li class="chapter" data-level="16.3" data-path="pie-charts.html"><a href="pie-charts.html"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
-<li class="chapter" data-level="16.4" data-path="box-plots.html"><a href="box-plots.html"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
-<li class="chapter" data-level="16.5" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
+<li class="chapter" data-level="16.1" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#scatter-plots"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
+<li class="chapter" data-level="16.2" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#bar-plots"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
+<li class="chapter" data-level="16.3" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#pie-charts"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
+<li class="chapter" data-level="16.4" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#box-plots"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
+<li class="chapter" data-level="16.5" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html#histograms"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html"><i class="fa fa-check"></i><b>17</b> How to save plots</a><ul>
-<li class="chapter" data-level="17.1" data-path="with-r-studio.html"><a href="with-r-studio.html"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
-<li class="chapter" data-level="17.2" data-path="with-the-console.html"><a href="with-the-console.html"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
-<li class="chapter" data-level="17.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a><ul>
-<li class="chapter" data-level="17.3.1" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
-<li class="chapter" data-level="17.3.2" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
-<li class="chapter" data-level="17.3.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
+<li class="chapter" data-level="17.1" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#with-r-studio"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
+<li class="chapter" data-level="17.2" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#with-the-console"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
+<li class="chapter" data-level="17.3" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11-base-plots"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a><ul>
+<li class="chapter" data-level="17.3.1" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
+<li class="chapter" data-level="17.3.2" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
+<li class="chapter" data-level="17.3.3" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="18" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html"><i class="fa fa-check"></i><b>18</b> Plots from other packages</a><ul>
-<li class="chapter" data-level="18.1" data-path="heatmap-2-function-from-gplots-package.html"><a href="heatmap-2-function-from-gplots-package.html"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
-<li class="chapter" data-level="18.2" data-path="venn-diagram-function-from-venndiagram-package.html"><a href="venn-diagram-function-from-venndiagram-package.html"><i class="fa fa-check"></i><b>18.2</b> venn.diagram function from VennDiagram package</a></li>
+<li class="chapter" data-level="18.1" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html#heatmap.2-function-from-gplots-package"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
+<li class="chapter" data-level="18.2" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html#venn.diagram-function-from-venndiagram-package"><i class="fa fa-check"></i><b>18.2</b> venn.diagram function from VennDiagram package</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>19</b> ggplot2 package</a><ul>
-<li class="chapter" data-level="19.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
-<li class="chapter" data-level="19.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
-<li class="chapter" data-level="19.3" data-path="box-plots-1.html"><a href="box-plots-1.html"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
-<li class="chapter" data-level="19.4" data-path="dot-plots.html"><a href="dot-plots.html"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
-<li class="chapter" data-level="19.5" data-path="bar-plots-1.html"><a href="bar-plots-1.html"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a></li>
-<li class="chapter" data-level="19.6" data-path="histograms-1.html"><a href="histograms-1.html"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
-<li class="chapter" data-level="19.7" data-path="about-themes.html"><a href="about-themes.html"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
-<li class="chapter" data-level="19.8" data-path="saving-plots-in-files.html"><a href="saving-plots-in-files.html"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
-<li class="chapter" data-level="19.9" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a><ul>
-<li class="chapter" data-level="19.9.1" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
-<li class="chapter" data-level="19.9.2" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
-<li class="chapter" data-level="19.9.3" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
-<li class="chapter" data-level="19.9.4" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
+<li class="chapter" data-level="19.1" data-path="ggplot2-package.html"><a href="ggplot2-package.html#getting-started"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
+<li class="chapter" data-level="19.2" data-path="ggplot2-package.html"><a href="ggplot2-package.html#scatter-plot"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
+<li class="chapter" data-level="19.3" data-path="ggplot2-package.html"><a href="ggplot2-package.html#box-plots-1"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
+<li class="chapter" data-level="19.4" data-path="ggplot2-package.html"><a href="ggplot2-package.html#dot-plots"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
+<li class="chapter" data-level="19.5" data-path="ggplot2-package.html"><a href="ggplot2-package.html#bar-plots-1"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a></li>
+<li class="chapter" data-level="19.6" data-path="ggplot2-package.html"><a href="ggplot2-package.html#histograms-1"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
+<li class="chapter" data-level="19.7" data-path="ggplot2-package.html"><a href="ggplot2-package.html#about-themes"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
+<li class="chapter" data-level="19.8" data-path="ggplot2-package.html"><a href="ggplot2-package.html#saving-plots-in-files"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
+<li class="chapter" data-level="19.9" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12-ggplot2"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a><ul>
+<li class="chapter" data-level="19.9.1" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
+<li class="chapter" data-level="19.9.2" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
+<li class="chapter" data-level="19.9.3" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
+<li class="chapter" data-level="19.9.4" data-path="ggplot2-package.html"><a href="ggplot2-package.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
 </ul></li>
-<li class="chapter" data-level="19.10" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
-<li class="chapter" data-level="19.11" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
+<li class="chapter" data-level="19.10" data-path="ggplot2-package.html"><a href="ggplot2-package.html#more-about-the-theme-function"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
+<li class="chapter" data-level="19.11" data-path="ggplot2-package.html"><a href="ggplot2-package.html#volcano-plots"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
 </ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -288,7 +281,428 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We will learn how to:
 * Read in a file
 * Write out a file
-* Save a graph in a file (Module 3)</p> 
+* Save a graph in a file (Module 3)</p>
+<div id="on-vectors" class="section level2">
+<h2><span class="header-section-number">11.1</span> On vectors</h2>
+<ul>
+<li>Read a file as a vector with the <strong>scan</strong> function</li>
+</ul>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb316-1" data-line-number="1"><span class="co"># Read in file</span></a>
+<a class="sourceLine" id="cb316-2" data-line-number="2"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb316-3" data-line-number="3"><span class="co"># Save in  object</span></a>
+<a class="sourceLine" id="cb316-4" data-line-number="4">k &lt;-<span class="st"> </span><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a></code></pre></div>
+<p>By default, scans “double” (numeric) elements: it fails if the input contains characters.<br>
+If non-numeric, you need to specify the type of data contained in the file:</p>
+<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1"><span class="co"># specify the type of data to scan</span></a>
+<a class="sourceLine" id="cb317-2" data-line-number="2"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb317-3" data-line-number="3">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a>
+<a class="sourceLine" id="cb317-4" data-line-number="4"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb317-5" data-line-number="5">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a></code></pre></div>
+<p>Regarding paths of files:<br>
+If the file is not in the current directory, you can provide a full or relative path. For example, if located in the home directory, read it as:</p>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb318-1" data-line-number="1"><span class="kw">scan</span>(<span class="dt">file=</span><span class="st">&quot;~/file.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb318-2" data-line-number="2">    <span class="dt">what=</span><span class="st">&quot;character&quot;</span>)</a></code></pre></div>
+<ul>
+<li>Write the content of a vector in a file:</li>
+</ul>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1"><span class="co"># create a vector</span></a>
+<a class="sourceLine" id="cb319-2" data-line-number="2">mygenes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;SMAD4&quot;</span>, <span class="st">&quot;DKK1&quot;</span>, <span class="st">&quot;ASXL3&quot;</span>, <span class="st">&quot;ERG&quot;</span>, <span class="st">&quot;CKLF&quot;</span>, <span class="st">&quot;TIAM1&quot;</span>, <span class="st">&quot;VHL&quot;</span>, <span class="st">&quot;BTD&quot;</span>, <span class="st">&quot;EMP1&quot;</span>, <span class="st">&quot;MALL&quot;</span>, <span class="st">&quot;PAX3&quot;</span>)</a>
+<a class="sourceLine" id="cb319-3" data-line-number="3"><span class="co"># write in a file</span></a>
+<a class="sourceLine" id="cb319-4" data-line-number="4"><span class="kw">write</span>(<span class="dt">x=</span>mygenes, </a>
+<a class="sourceLine" id="cb319-5" data-line-number="5">    <span class="dt">file=</span><span class="st">&quot;gene_list.txt&quot;</span>)</a></code></pre></div>
+<p>Regarding paths of files:<br>
+When you write a file, you can also specify a full or relative path:</p>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb320-1" data-line-number="1"><span class="co"># Write to home directory</span></a>
+<a class="sourceLine" id="cb320-2" data-line-number="2"><span class="kw">write</span>(<span class="dt">x=</span>mygenes,</a>
+<a class="sourceLine" id="cb320-3" data-line-number="3">        <span class="dt">file=</span><span class="st">&quot;~/gene_list.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb320-4" data-line-number="4"><span class="co"># Write to one directory up</span></a>
+<a class="sourceLine" id="cb320-5" data-line-number="5"><span class="kw">write</span>(<span class="dt">x=</span>mygenes,</a>
+<a class="sourceLine" id="cb320-6" data-line-number="6">        <span class="dt">file=</span><span class="st">&quot;../gene_list.txt&quot;</span>)</a></code></pre></div>
+</div>
+<div id="on-data-frames-or-matrices" class="section level2">
+<h2><span class="header-section-number">11.2</span> On data frames or matrices</h2>
+<ul>
+<li>Read in a file into a data frame with the <strong>read.table</strong> function:</li>
+</ul>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb321-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a></code></pre></div>
+<p>You can convert it as a matrix, if needed, with:</p>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb322-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">as.matrix</span>(<span class="kw">read.table</span>(<span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>))</a></code></pre></div>
+<p>Useful arguments:</p>
+<p><a href="https://sbcrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/readtable.png" width="550/"></a></p>
+<ul>
+<li>Write a data frame or matrix to a file:</li>
+</ul>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb323-1" data-line-number="1"><span class="kw">write.table</span>(<span class="dt">x=</span>a,</a>
+<a class="sourceLine" id="cb323-2" data-line-number="2">    <span class="dt">file=</span><span class="st">&quot;file.txt&quot;</span>)</a></code></pre></div>
+<p>Useful arguments:</p>
+<p><a href="https://sbcrg.github.io/CRG_RIntroduction/images/readtable.png"><img src="images/writetable.png" width="550/"></a></p>
+<ul>
+<li>Note that &quot; stands for tab-delimitation</li>
+</ul>
+
+</div>
+<div id="exercise-6." class="section level2">
+<h2><span class="header-section-number">11.3</span> Exercise 6.</h2>
+<p>Create the script “exercise6.R” and save it to the “Rcourse/Module2” directory: you will save all the commands of exercise 6 in that script.
+<br>Remember you can comment the code using #.</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb324-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb324-2" data-line-number="2"><span class="kw">setwd</span>(<span class="st">&quot;Rcourse/Module2&quot;</span>)</a>
+<a class="sourceLine" id="cb324-3" data-line-number="3"><span class="kw">setwd</span>(<span class="st">&quot;~/Rcourse/Module2&quot;</span>)</a></code></pre></div>
+</details>
+<div id="exercise-6a.-input-output" class="section level3">
+<h3><span class="header-section-number">11.3.1</span> Exercise 6a. Input / output</h3>
+<p><strong>1- Download folder “i_o_files” in your current directory with:</strong></p>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb325-1" data-line-number="1"><span class="co"># system invokes the OS command specified by the &quot;command&quot; argument.</span></a>
+<a class="sourceLine" id="cb325-2" data-line-number="2"><span class="kw">system</span>(<span class="dt">command=</span><span class="st">&quot;svn export https://github.com/sarahbonnin/CRG_RIntroduction/trunk/i_o_files&quot;</span>)</a></code></pre></div>
+<p>All files that will be used for exercise 6 are found in the <strong>i_o_files</strong> folder !</p>
+<p><strong>2- Read in the content of ex6a_input.txt using the scan command; save in object z</strong></p>
+<p>How many elements are in z?</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb326-1" data-line-number="1"><span class="co"># scan content of the file</span></a>
+<a class="sourceLine" id="cb326-2" data-line-number="2">z &lt;-<span class="st"> </span><span class="kw">scan</span>(<span class="st">&quot;i_o_files/ex6a_input.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb326-3" data-line-number="3"><span class="co"># number of elements (length of vector)</span></a>
+<a class="sourceLine" id="cb326-4" data-line-number="4"><span class="kw">length</span>(z)</a></code></pre></div>
+</details>
+<p><strong>3- Sort z: save sorted vector in object “zsorted”.</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb327-1" data-line-number="1">zsorted &lt;-<span class="st"> </span><span class="kw">sort</span>(z)</a></code></pre></div>
+</details>
+<p><strong>4- Write zsorted content into file ex6a_output.txt.</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb328-1" data-line-number="1"><span class="kw">write</span>(zsorted, <span class="st">&quot;ex6a_output.txt&quot;</span>)</a></code></pre></div>
+</details>
+<p><strong>5- Check the file you produced in the RStudio file browser (click on the file in bottom-right panel “Files” tab). Save the content of zsorted again but this time setting the argument “ncolumns” to 1: how is the file different?</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb329-1" data-line-number="1"><span class="kw">write</span>(zsorted, <span class="st">&quot;ex6a_output.txt&quot;</span>, <span class="dt">ncolumns=</span><span class="dv">1</span>)</a></code></pre></div>
+</details>
+</div>
+<div id="exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table" class="section level3">
+<h3><span class="header-section-number">11.3.2</span> Exercise 6b - I/O on data frame: play with the arguments of read.table</h3>
+<p><strong>1- field separator</strong></p>
+<ul>
+<li>Read ex6b_IO_commas_noheader.txt in object fs.
+What are the dimensions of fs?</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb330-1" data-line-number="1"><span class="co"># read in file with default parameters</span></a>
+<a class="sourceLine" id="cb330-2" data-line-number="2">fs &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_commas_noheader.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb330-3" data-line-number="3"><span class="kw">dim</span>(fs)</a></code></pre></div>
+</details>
+<ul>
+<li>Fields/columns are separated by commas: change the default value of the “sep” argument and read in the file again.
+What are now the dimensions of fs?</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1"><span class="co"># change field separator to &quot;,&quot;</span></a>
+<a class="sourceLine" id="cb331-2" data-line-number="2">fs &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_commas_noheader.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb331-3" data-line-number="3">    <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb331-4" data-line-number="4"><span class="kw">dim</span>(fs)</a></code></pre></div>
+</details>
+<p><strong>2- field separator + header</strong></p>
+<ul>
+<li>Read ex6b_IO_commas_header.txt in object fs_c.
+What are the dimensions of fs_c ?</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1">fs_c &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_commas_header.txt&quot;</span>)</a>
+<a class="sourceLine" id="cb332-2" data-line-number="2"><span class="kw">dim</span>(fs_c)</a></code></pre></div>
+</details>
+<ul>
+<li>Check head(fs_c) and change the default field separator to an appropriate one.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1">fs_c &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_commas_header.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb333-2" data-line-number="2">                   <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)</a></code></pre></div>
+</details>
+<ul>
+<li>The first row should to be the header (column names): change the default value of the header parameter and read in the file again.
+What are now the dimensions of fs_c ?</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1">fs_c &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_commas_header.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb334-2" data-line-number="2">                   <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>, </a>
+<a class="sourceLine" id="cb334-3" data-line-number="3">                   <span class="dt">header=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+</details>
+<p><strong>3- skipping lines</strong></p>
+<ul>
+<li>Read ex6b_IO_skip.txt in object sk.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1">sk &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_skip.txt&quot;</span>)</a></code></pre></div>
+</details>
+<p>Is R complaining ?<br></p>
+<p>Check “manually” the file (in the R Studio file browser).<br></p>
+<ul>
+<li>The skip argument allows you to ignore one or more line(s) before reading in a file. Introduce this argument with the appropriate number of lines to skip, and read the file again.<br></li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1">sk &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_skip.txt&quot;</span>,</a>
+<a class="sourceLine" id="cb336-2" data-line-number="2">                 <span class="dt">skip=</span><span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb336-3" data-line-number="3"><span class="kw">dim</span>(sk)</a></code></pre></div>
+</details>
+<ul>
+<li><p>Is R still complaining?
+What are now the dimensions of sk ?</p></li>
+<li><p>Change the default field separator.
+What are now the dimensions of sk ?</p></li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb337-1" data-line-number="1">sk &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_skip.txt&quot;</span>,</a>
+<a class="sourceLine" id="cb337-2" data-line-number="2">                 <span class="dt">skip=</span><span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb337-3" data-line-number="3">                 <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>,</a>
+<a class="sourceLine" id="cb337-4" data-line-number="4">                 <span class="dt">header=</span>T)</a></code></pre></div>
+</details>
+<p><strong>4- Comment lines</strong></p>
+<ul>
+<li>Read ex6b_IO_comment.txt in object cl.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb338-1" data-line-number="1">cl &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_comment.txt&quot;</span>)</a></code></pre></div>
+</details>
+<p>Is R complaining again ? Check manually the file and try to find out what is wrong…<br></p>
+<p>What os the comment.char argument used for ? Adjust the comment.char argument and read the file again.</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb339-1" data-line-number="1">cl &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_comment.txt&quot;</span>,</a>
+<a class="sourceLine" id="cb339-2" data-line-number="2">                 <span class="dt">comment.char =</span> <span class="st">&quot;*&quot;</span>)</a></code></pre></div>
+</details>
+<ul>
+<li>Adjust also the header and sep arguments to read in the file correctly.
+What are now the dimensions of cl?</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb340-1" data-line-number="1">cl &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_comment.txt&quot;</span>,</a>
+<a class="sourceLine" id="cb340-2" data-line-number="2">                 <span class="dt">comment.char =</span> <span class="st">&quot;*&quot;</span>,</a>
+<a class="sourceLine" id="cb340-3" data-line-number="3">                 <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>,</a>
+<a class="sourceLine" id="cb340-4" data-line-number="4">                 <span class="dt">header=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb340-5" data-line-number="5"><span class="kw">dim</span>(cl)</a></code></pre></div>
+</details>
+<p><strong>4- final</strong></p>
+<ul>
+<li>Read ex6b_IO_final.txt in object fin.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb341-1" data-line-number="1">fin &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_final.txt&quot;</span>)</a></code></pre></div>
+</details>
+<ul>
+<li>Adjust the appropriate parameters according to what you have learnt, in order to obtain the data frame “fin” of dimensions 167 x 4.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb342-1" data-line-number="1">fin &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6b_IO_final.txt&quot;</span>,</a>
+<a class="sourceLine" id="cb342-2" data-line-number="2">                  <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>,</a>
+<a class="sourceLine" id="cb342-3" data-line-number="3">                  <span class="dt">header=</span><span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb342-4" data-line-number="4">                  <span class="dt">skip=</span><span class="dv">3</span>,</a>
+<a class="sourceLine" id="cb342-5" data-line-number="5">                  <span class="dt">comment.char=</span><span class="st">&quot;&amp;&quot;</span></a>
+<a class="sourceLine" id="cb342-6" data-line-number="6">                  )</a></code></pre></div>
+</details>
+</div>
+<div id="exercice-6c---io-on-a-data-frame" class="section level3">
+<h3><span class="header-section-number">11.3.3</span> Exercice 6c - I/O on a data frame</h3>
+<p><strong>1- Read in file ex6c_input.txt in ex6 object</strong></p>
+<p>Warning: the file has a header !
+<br>
+Check the structure of ex6 (remember the <strong>str</strong> command).</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb343-1" data-line-number="1">ex6 &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6c_input.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb343-2" data-line-number="2">                  <span class="dt">header=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb343-3" data-line-number="3"><span class="kw">str</span>(ex6)</a></code></pre></div>
+</details>
+<p><strong>2- Now read in the same file but, this time, set the argument as.is to TRUE.</strong></p>
+<p>Check again the structure: what has changed ?</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb344-1" data-line-number="1">ex6 &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;i_o_files/ex6c_input.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb344-2" data-line-number="2">                  <span class="dt">header=</span><span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb344-3" data-line-number="3">                  <span class="dt">as.is=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb344-4" data-line-number="4"><span class="kw">str</span>(ex6)</a></code></pre></div>
+</details>
+<p><strong>3- What are the column names of ex6 ?</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb345-1" data-line-number="1"><span class="kw">colnames</span>(ex6)</a></code></pre></div>
+</details>
+<p><strong>4- Change the name of the first column of ex6 from “State” to “Country”.</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb346-1" data-line-number="1"><span class="co"># extract all column names of ex6</span></a>
+<a class="sourceLine" id="cb346-2" data-line-number="2"><span class="kw">colnames</span>(ex6)</a>
+<a class="sourceLine" id="cb346-3" data-line-number="3"><span class="co"># extract the name of the first column only</span></a>
+<a class="sourceLine" id="cb346-4" data-line-number="4"><span class="kw">colnames</span>(ex6)[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb346-5" data-line-number="5"><span class="co"># reassign name of the first column only</span></a>
+<a class="sourceLine" id="cb346-6" data-line-number="6"><span class="kw">colnames</span>(ex6)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;Country&quot;</span></a></code></pre></div>
+</details>
+<p><strong>5- How many countries are in the Eurozone, according to ex6 ?</strong></p>
+<p>Remember the table function.</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb347-1" data-line-number="1"><span class="kw">table</span>(ex6<span class="op">$</span>Eurozone)</a></code></pre></div>
+</details>
+<p><strong>6- In the Eurozone column: change “TRUE” with “yes” and “FALSE” with “no”.</strong></p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb348-1" data-line-number="1"><span class="co"># select the Eurozone column</span></a>
+<a class="sourceLine" id="cb348-2" data-line-number="2">ex6<span class="op">$</span>Eurozone</a>
+<a class="sourceLine" id="cb348-3" data-line-number="3"><span class="co"># elements of the Eurozone column that are exactly TRUE</span></a>
+<a class="sourceLine" id="cb348-4" data-line-number="4">ex6<span class="op">$</span>Eurozone<span class="op">==</span><span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb348-5" data-line-number="5"><span class="co"># extract actual values that are TRUE</span></a>
+<a class="sourceLine" id="cb348-6" data-line-number="6">ex6<span class="op">$</span>Eurozone[ex6<span class="op">$</span>Eurozone<span class="op">==</span><span class="ot">TRUE</span>]</a>
+<a class="sourceLine" id="cb348-7" data-line-number="7"><span class="co"># reassign all elements that are TRUE with &quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb348-8" data-line-number="8">ex6<span class="op">$</span>Eurozone[ex6<span class="op">$</span>Eurozone<span class="op">==</span><span class="ot">TRUE</span>] &lt;-<span class="st"> &quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb348-9" data-line-number="9"><span class="co"># same with FALSE</span></a>
+<a class="sourceLine" id="cb348-10" data-line-number="10">ex6<span class="op">$</span>Eurozone[ex6<span class="op">$</span>Eurozone<span class="op">==</span><span class="ot">FALSE</span>] &lt;-<span class="st"> &quot;no&quot;</span></a></code></pre></div>
+</details>
+<p><strong>7- In the column Country: how many country names from the list contain the letter “c” (capital- or lower-case) ?</strong></p>
+<p>Remember the grep function. Check the help page.</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb349-1" data-line-number="1"><span class="co"># country names with &quot;c&quot; (lower-case)</span></a>
+<a class="sourceLine" id="cb349-2" data-line-number="2"><span class="kw">grep</span>(<span class="st">&quot;c&quot;</span>, ex6<span class="op">$</span>Country)</a>
+<a class="sourceLine" id="cb349-3" data-line-number="3"><span class="co"># country names with &quot;c&quot; or &quot;C&quot; (ignoring case)</span></a>
+<a class="sourceLine" id="cb349-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&quot;c&quot;</span>, ex6<span class="op">$</span>Country, <span class="dt">ignore.case =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb349-5" data-line-number="5"><span class="co"># show actual country names</span></a>
+<a class="sourceLine" id="cb349-6" data-line-number="6"><span class="kw">grep</span>(<span class="st">&quot;c&quot;</span>, ex6<span class="op">$</span>Country, <span class="dt">value=</span><span class="ot">TRUE</span>, <span class="dt">ignore.case =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+</details>
+<p><strong>8- According to that data frame: how many people live:</strong>
++ in the European union (whole table) ?
++ in the Eurozone ?</p>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb350-1" data-line-number="1"><span class="co"># sum the whole population column</span></a>
+<a class="sourceLine" id="cb350-2" data-line-number="2"><span class="kw">sum</span>(ex6<span class="op">$</span>Population)</a>
+<a class="sourceLine" id="cb350-3" data-line-number="3"><span class="co"># select elements of ex6 where Eurozone is &quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb350-4" data-line-number="4">ex6<span class="op">$</span>Eurozone <span class="op">==</span><span class="st"> &quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb350-5" data-line-number="5"><span class="co"># select only elements in Population for which the corresponding Eurozone elements are &quot;yes&quot;</span></a>
+<a class="sourceLine" id="cb350-6" data-line-number="6">ex6<span class="op">$</span>Population[ex6<span class="op">$</span>Eurozone <span class="op">==</span><span class="st"> &quot;yes&quot;</span>]</a>
+<a class="sourceLine" id="cb350-7" data-line-number="7"><span class="co"># sum that selection</span></a>
+<a class="sourceLine" id="cb350-8" data-line-number="8"><span class="kw">sum</span>(ex6<span class="op">$</span>Population[ex6<span class="op">$</span>Eurozone <span class="op">==</span><span class="st"> &quot;yes&quot;</span>])</a></code></pre></div>
+</details>
+<p><strong>9- Write ex6 into file ex6c_output.txt</strong></p>
+<p><em>After each of the following steps, check the output file in the RStudio file browser (lower-right panel).</em></p>
+<ul>
+<li>Try with the default arguments.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb351-1" data-line-number="1"><span class="kw">write.table</span>(ex6, <span class="dt">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>)</a></code></pre></div>
+</details>
+<ul>
+<li>Add the argument “row.names” set to FALSE.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb352-1" data-line-number="1"><span class="kw">write.table</span>(ex6, <span class="dt">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb352-2" data-line-number="2">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+</details>
+<ul>
+<li>Add the argument “quote” set to FALSE.</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb353-1" data-line-number="1"><span class="kw">write.table</span>(ex6, <span class="dt">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb353-2" data-line-number="2">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb353-3" data-line-number="3">            <span class="dt">quote =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+</details>
+<ul>
+<li>Add the argument “sep” set to “ or to”,&quot;</li>
+</ul>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb354-1" data-line-number="1"><span class="kw">write.table</span>(ex6, <span class="dt">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb354-2" data-line-number="2">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb354-3" data-line-number="3">            <span class="dt">quote =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb354-4" data-line-number="4">            <span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a></code></pre></div>
+</details>
+<details>
+<p><summary>
+correction
+</summary></p>
+<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb355-1" data-line-number="1"><span class="kw">write.table</span>(ex6, <span class="dt">file=</span><span class="st">&quot;ex6c_output.txt&quot;</span>, </a>
+<a class="sourceLine" id="cb355-2" data-line-number="2">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb355-3" data-line-number="3">            <span class="dt">quote =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb355-4" data-line-number="4">            <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)</a></code></pre></div>
+</details>
+
+</div>
+</div>
 </div>
             </section>
 
@@ -296,7 +710,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="missing-values.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="on-vectors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="library-and-packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -335,9 +749,8 @@ gitbook.start({
 },
 "download": ["r-intro-crg.pdf", "r-intro-crg.epub"],
 "toc": {
-"collapse": "section"
-},
-"search": true
+"collapse": "subsection"
+}
 });
 });
 </script>
@@ -349,8 +762,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
