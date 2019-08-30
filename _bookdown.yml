@@ -30,7 +30,8 @@ rmd_files: ["index.Rmd",
           "baseplot.Rmd", "io_plots.Rmd", "exercise11.Rmd", 
           "extraplot.Rmd", 
           "ggplot2.Rmd", "exercise12.Rmd",
-          "ggtheme.Rmd"]
+          "ggtheme.Rmd",
+          "module4.rmd"]
 output:
   bookdown::gitbook:
     theme: cosmo

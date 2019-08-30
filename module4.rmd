@@ -1,0 +1,863 @@
+# Introduction to Exploratory Data Analysis & Descriptive Statistics."
+
+
+**Objectives: To learn how to analyze data sets, applying methods of descriptive statistics and visualization in R.**
+<br/>
+
+"In statistics, **Exploratory Data Analysis (EDA)** is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task."" (Wikipedia)
+
+<br/>
+"**Descriptive statistics** aims to summarize __a sample__, rather than use the data to learn about **the population** that the sample of data is thought to represent. This generally means that **descriptive statistics**, unlike **inferential statistics**, are not developed on the basis of probability theory."" (Wikipedia)
+<br/><br/>
+
+
+## Exploratory Data Analysis
+
+We will use the package "car". For details on this package, see https://cran.r-project.org/web/packages/car/car.pdf
+
+```{r, results="hide", warning = F}
+# install.packages("car") - run this code if you do not have the "car" package installed
+library(car) 
+```
+
+<br/>
+Let's explore the dataset "Davis" from the car package. It is called "Self-Reports of Height and Weight Description". The subjects were men and women engaged in regular exercise. <br/>This data frame contains the following columns:
+<br/>- sex    - F, female; M, male 
+<br/>- weight - measured weight in kg
+<br/>- height - measured height in cm
+<br/>- repwt  - reported weight in kg
+<br/>- repht  - reported height in cm
+
+```{r, results="hide"}
+?Davis
+data <- Davis
+```
+<br/>
+
+### Data dimentionality: functions _str(), summary(), head(), tail()_
+```{r, results="hide"}
+dim(data) 
+str(data) 
+
+head(data)
+tail(data)
+
+summary(data)  # shows quantiles for each column and how many NA !!!!
+```
+<br/>
+
+### Missing (NA) values in data: functions _complete.cases(), na.omit(), all.equal()_
+How many rows do not contain missing values (i.e., not a single 'NA')?
+```{r, results="hide"}
+sum(complete.cases(data)) 
+x <- data[complete.cases(data), ] # here they are
+y <- na.omit(data)
+all.equal(x,y)
+```
+
+**Excercise using _complete_cases()_: How many rows contain missing values (i.e., at least one 'NA')?**
+```{r, results="hide", echo=FALSE}
+sum(!complete.cases(data)) 
+data[!complete.cases(data), ] # here they are
+```
+<br/>
+
+### Looking at the subset of data
+```{r, results="hide"}
+d <- data[data$weight < 60,] # rows with weight below 60 kg
+str(d)
+summary(d)
+
+x <- data[data$weight > 50 & data$repwt <= 66,] 
+x  # the result looks strange!?
+x[!complete.cases(x),]
+na.omit(x)  # we cannot do this because this removes rows that contain at least one NA in any column
+
+y <- data[data$weight > 50 & data$repwt <= 66 & !is.na(data$repwt), ] 
+y
+dim(y)
+y[!complete.cases(y), ]
+```
+<br/>
+
+### Excercises on data subsetting and missing values
+
+1. How many people shorter than 170 cm reported that they are taller?
+```{r, results="hide"}
+
+x <- data[data$height < 170 & data$repht >= 170 & !is.na(data$repht), ]
+nrow(x)
+```
+
+2. What proportion of men in the dataset did not report their height? And women?
+```{r, results="hide"}
+
+x <- data[data$sex == 'M' & is.na(data$repht), ]
+nrow(x)
+nrow(x)/nrow(data[data$sex == 'M', ])
+
+nrow(data[data$sex == 'F' & is.na(data$repht), ]) / nrow(data[data$sex == 'F', ])
+```
+
+3. Is it true that the same men who did not report height did not also report weight?
+```{r, results="hide"}
+
+all.equal(data[data$sex == 'M' & is.na(data$repht), ], data[data$sex == 'M' & is.na(data$repwt), ])
+```
+<br/>
+
+
+
+### Exploring a particular variable (column): functions _unique(), table()_
+```{r, results="hide"}
+length(data$repwt)
+summary(data$repwt)
+sum(is.na(data$repwt)) # count NA
+table(is.na(data$repwt))  # table of how many complete data (FALSE) and how many missing (TRUE) for data$repwt
+
+unique(data$repwt) # shows unique values for a specified column (NA is considered)
+length(unique(data$repwt))
+
+unique(na.omit(data$repwt)) # shows unique values for a specified column (NA is omitted)
+length(unique(na.omit(data$repwt)))
+
+table(data$repwt) # how many data with the same repwt
+data.frame(table(data$repwt)) # same as above shown as a data frame     
+
+table(data$repwt, useNA = "ifany") # by default table() doesn't show missing values
+data.frame(table(data$repwt, useNA = "ifany"))
+```
+<br/>
+
+### Exploring relationships between variables: functions _table(), cut()_, and functions for factors _levels(), nlevels()_
+```{r, results="hide"}
+table(data$sex) # table() builds a contingency table of the counts at each combination of factor levels
+table(data$sex, data$weight)  # shows relationships between variables
+table(data$sex, data$weight < 80) # gives the 2x2 contingency table
+
+m <- table(data$sex, data$weight < 80) # save it as a matrix
+colnames(m) <- c("weight >= 80","weight < 80") # add names to columns
+rownames(m) <- c("Female","Male") # add names to rows
+m # check it out
+
+table(data$weight)
+intervals_weight <- cut(data$weight, breaks = seq(30, 170, 20)) 
+table(intervals_weight)
+table(intervals_weight, data$sex) # contigency table of sex by intervals 
+
+class(intervals_weight)
+levels(intervals_weight)
+nlevels(intervals_weight)
+
+table(data$height)
+intervals_height <- cut(data$height, breaks = seq(55, 200, 20))
+table(intervals_weight, intervals_height)
+```
+<br/>
+
+### Excercises using _unique(), table()_ and _cut()_
+
+Let's assume that a person with the minimum height, or _== min(data$height)_, is a wrong entry in the dataset and exclude it from the analysis. <br/>
+
+1. How many unique values are there for the height?
+```{r, results="hide"}
+
+x <- data[!data$height == min(data$height), ]
+
+unique(x$height)
+length(unique(x$height))
+```
+
+2. How many intervals for the height will be obtained at breaks of 10 cm from minimum to maximum height. Use min() and max() in function seq() and nlevels() -- be careful to include maximum value for height in the last interval.
+
+```{r, results="hide"}
+
+min(x$height)
+max(x$height)
+intervals_height <- cut(x$height, breaks = seq(min(x$height), max(x$height)+1, 10))
+nlevels(intervals_height)
+```
+
+3. How many women are in the last two intervals? (just by looking at the table)
+
+```{r, results="hide"}
+
+table(intervals_height, x$sex)
+```
+<br/>
+
+<br/>
+
+## Descriptive Statistics 
+
+<br/>
+
+### Functions: _mean, sd, var, min, max, median, range, IQR, quantile_. 
+**All these function require special treatment for missing values, using parameter _na.rm = TRUE_.**
+
+<br/>
+
+```{r, results="hide"}
+min(data$repwt) 
+?min
+min(data$repwt, na.rm = TRUE) 
+
+max(data$repwt, na.rm = TRUE)
+range(data$repwt, na.rm = TRUE)
+range(data$repwt, na.rm = TRUE)[1] == min(data$repwt, na.rm = TRUE)
+range(data$repwt, na.rm = TRUE)[2] == max(data$repwt, na.rm = TRUE)
+
+mean(data$repwt, na.rm = TRUE) 
+median(data$repwt, na.rm = TRUE)
+quantile(data$repwt, na.rm = TRUE)  # shows quantiles for values in a specific column, ignoring 'NA'
+quantile(data$repwt, na.rm = TRUE, probs = c(0, 0.25, 0.5, 0.75, 1)) # standard quantiles (or quartiles)
+quantile(data$repwt, na.rm = TRUE, probs = c(0, 0.1, 0.9, 1)) # any other quantiles
+
+IQR(data$repwt, na.rm = TRUE) 
+IQR(data$repwt, na.rm = TRUE) == quantile(data$repwt, na.rm = TRUE)[4] - quantile(data$repwt, na.rm = TRUE)[2]
+
+# contigency table of quantiles of weight versus quantiles of repwt
+x <- data$weight
+any(is.na(x))
+y <- data$repwt
+any(is.na(y))
+table(cut(x, quantile(x)), cut(y, quantile(y, na.rm = TRUE))) 
+
+```
+
+<br/>
+
+### Functions _tapply() and round()_
+```{r, results="hide"}
+var(data$repwt, na.rm = TRUE)
+?var
+
+sd(data$repwt, na.rm = TRUE)
+sd(data$repwt, na.rm = TRUE) == sqrt(var(data$repwt, na.rm = TRUE))
+sd(data$repwt, na.rm = TRUE) ** 2 == var(data$repwt, na.rm = TRUE)
+
+# function tapply()
+?tapply
+tapply(data$weight, data$sex, mean)
+tapply(data$weight, data$sex, quantile)
+tapply(data$weight, data$sex, quantile)$F
+
+```
+
+<br/>
+
+### Excercises
+
+1. How many women have weight below (or equal) median AND height above median?
+```{r, results="hide"}
+
+d <- data[data$sex == "F", ]
+
+# strightforward solution
+nrow(d[d$weight <= median(d$weight) & d$height > median(d$height), ])
+
+# solution using table, cut and quantile
+x <- d$weight
+y <- d$height
+table(cut(x, quantile(x)), cut(y, quantile(y, na.rm = TRUE))) 
+
+z <- table(cut(x, quantile(x, probs = c(0, 0.5, 1))), cut(y, quantile(y, probs = c(0, 0.5, 1))))
+z[3]
+
+```
+
+2. How many women have weight in the lower 5% quantile AND height in the upper 5% quantile?
+```{r, results="hide", echo=F}
+
+z <- table(cut(x, quantile(x, probs = c(0, 0.05, 1))), cut(y, quantile(y, probs = c(0, 0.05, 1))))
+z[3]
+```
+
+3. What is the difference of the mean and sd values of the reported height between men and women (round reported values to one digit)?
+```{r, results="hide", echo=F}
+x <- data[!is.na(data$repht), ]  
+
+z <- tapply(x$repht, x$sex, mean)
+z[2] - z[1]
+diff <- round(z[2] - z[1], 1)
+print(paste("Mean difference of reported height for men and women is", diff, "cm", sep=" "))
+
+z <- tapply(x$repht, x$sex, sd)
+diff <- z[2] - z[1]
+diff
+print(paste("SD difference of reported height for men and women is", round(diff, 1), "cm", sep=" "))
+
+```
+
+<br/>
+
+
+### Data visualization: _boxplot()_ 
+```{r, results="hide", fig.show="hide"}
+
+boxplot(data$weight) 
+
+y <- median(data$weight)
+segments(0, y, 1, y, lwd = 3, col = "red")
+
+y <- mean(data$weight)
+segments(0, y, 1, y, lwd = 3, col = "blue")
+
+y <- mean(data$weight) - sd(data$weight)
+segments(0, y, 1, y, lwd = 3, col = "green")
+
+y <- mean(data$weight) + sd(data$weight)
+segments(0, y, 1, y, lwd = 3, col = "green")
+
+y <- quantile(data$weight)[1]
+segments(0, y, 1, y, lwd = 3, col = "orange")
+
+y <- quantile(data$weight)[2]
+segments(0, y, 1, y, lwd = 3, col = "magenta")
+
+y <- quantile(data$weight)[4]
+segments(0, y, 1, y, lwd = 3, col = "cyan")
+
+y <- quantile(data$weight)[5]
+segments(0, y, 1, y, lwd = 3, col = "orange")
+```
+
+<br/>
+
+### Outliers
+**Can be defined (by the Tuley's test) as values in the sample that differ from the Q1 (25% quantile) or Q3 (75% quantile) by more than 1.5 x IQR (where IQR = Q3 - Q1).** However, there is no formal definition of outliers; they need to be treated subjectively.
+
+```{r, results="hide", fig.show="hide"}
+quantile(data$weight)
+
+lower_limit <- quantile(data$weight)[2] - 1.5 * IQR(data$weight) # values below this limit are outliers
+lower_limit
+min(data$weight) < lower_limit # Is the minimum weight an outlier? 
+
+lower_whisker <- max(min(data$weight), lower_limit)
+lower_whisker
+
+boxplot(data$weight)
+y <- lower_whisker
+segments(0, y, 1, y, lwd = 3, col = "black")
+
+upper_limit <- quantile(data$weight)[4] + 1.5 * IQR(data$weight) # values above this limit are outliers
+upper_limit
+max(data$weight) > upper_limit # Is the maximum weight an outlier? TRUE or FALSE?
+
+upper_whisker = min(max(data$weight), upper_limit) 
+upper_whisker
+
+y <- upper_whisker
+segments(0, y, 1, y, lwd = 3, col = "black")
+
+#show outliers
+data[data$weight > upper_whisker, ]
+```
+
+<br/>
+
+
+### How statistics change if to remove outliers 
+```{r, results="hide", fig.show="hide"}
+# We can remove all "formal" outliers
+d <- data[data$weight <= upper_whisker, ] 
+
+# While it is better to remove only those that have no sense
+d <- data[data$weight != max(data$weight), ] 
+
+# Did mean change?
+mean(d$weight)
+mean(data$weight)
+
+# Did median change?
+median(data$weight)
+median(d$weight)
+
+# Did SD change?
+sd(data$weight)
+sd(d$weight)
+
+boxplot(d$weight)
+boxplot(d$weight, outline = FALSE) # boxplot has a parameter "outline" not to show outliers! 
+```
+
+<br/>
+
+## More basic plots 
+<br/>
+
+### How to plot box-plots side-by-side on one graph
+```{r, results="hide", fig.show="hide"}
+boxplot(data$weight ~ data$sex)
+boxplot(data$weight ~ data$sex, outline = FALSE) 
+colors <- c("blue", "red")
+ylab <- "weight, kg"
+boxplot(data$weight ~ data$sex, outline = FALSE, border = colors, ylab = ylab)
+```
+
+<br/>
+
+### Excercise: Make a similar boxplot using _ggplot()_
+```{r, results="hide", warning = FALSE, fig.show="hide"}
+#install.packages("ggplot2")
+library(ggplot2) 
+
+ggplot(data=data, aes(x=sex, y=weight)) + geom_boxplot()
+
+p <- ggplot(data=data, aes(x=sex, y=weight, col=sex)) + geom_boxplot(outlier.shape = NA) 
+p <- p + scale_y_continuous(limits = quantile(data$weight, c(0.1, 0.9)))
+p <- p + theme_bw()
+p <- p + ylab(label=ylab) + xlab(label="")
+p <- p + scale_color_manual(values=colors)
+p <- p + theme(legend.position="none")
+p
+```
+
+<br/>
+
+### How to plot together data from two or more vectors of different lengths
+```{r, results="hide", warning = FALSE}
+#install.packages("reshape2")
+library(reshape2) # for melt() to use below for transforming a data frame from the wide to the long format
+```
+
+<br/>
+```{r, results="hide", warning = F, message=F, fig.show="hide"}
+# let's make two vectors first
+d <- data[data$weight != max(data$weight), ]
+male <- d[d$sex =="M", ] 
+female <- d[d$sex =="F", ] 
+m <- male$weight
+f <- female$weight
+length(m)
+length(f)
+
+# make a data frame on a long format
+x <- data.frame( value = m, variable = rep("Male", length(m)) )
+y <- data.frame( value = f, variable = rep("Female", length(f)) )
+df <- rbind(x,y)
+
+boxplot(data = df, value ~ variable)
+```
+
+<br/>
+
+### How to make a box-plot more informative and customized
+```{r, results="hide", fig.show="hide"}
+# Define the plot parameters
+y_limits <- c(30, 140)
+colors <- c("blue", "red")
+ylab <- "Weight, kg"
+title <- "Distribution of weight by sex"
+
+boxplot(data = df, value ~ variable, outline = FALSE,
+        #pars = list(boxwex = .4),
+        ylab = ylab,
+        cex.lab = 1.5, #to change (multiply) the font size of the axes legends
+        cex.axis = 1.2, #to change (multiply) the font size of the axes
+        ylim = y_limits,
+        border = colors, #color the boxplot borders
+        boxwex = 0.6,
+        staplewex = 0.4,
+        frame.plot = FALSE, #this removes upper and right borders on the plot area
+        outwex = 0.5,
+        cex.main = 1.5, #to change (multiply) the size of the title
+        main = title # the title of the graph
+        )
+
+stripchart(data = df, value ~ variable,
+           col = colors,
+           method = "jitter", jitter = .2,
+           pch = c(16, 15), cex = c(1.0, 1.0), #different points and of different size can be used
+           vertical = TRUE, add = TRUE)
+
+# let's show the (yet unknown) p-value on the plot
+text <- "p-value = ..."
+
+y <- 130 # y position of the horizontal line
+offset <- 5 # length of vertical segments
+x <- 1
+
+segments(x, y, x + 1, y)
+segments(x, y - offset, x, y)
+segments(x + 1, y - offset, x + 1, y)
+text(x + 0.5, y + offset, paste(text), cex = 1) #cex defines the font size of the text
+
+```
+<br/>
+
+### Histogram
+```{r, results="hide", fig.show="hide"}
+hist(data$weight)
+hist(d$weight)
+```
+<br/>
+
+### Control for the size of bins
+```{r, results="hide", fig.show="hide"}
+bin_size <- 5
+start <- 30
+end <- 120
+bins <- seq(start, end, by = bin_size)
+hist(d$weight, breaks = bins, col = "blue")
+```
+
+<br/>
+
+### Two overlaying histograms on one graph
+
+```{r, results = "hide", fig.show="hide"}
+male <- subset(d, sex =="M") # we will use data with outliers removed
+female <- subset(d, sex =="F")
+m <- male$weight
+f <- female$weight
+
+bin_size <- 5
+start <- min(min(m), min(f)) - 3*bin_size
+end <- max(max(m), max(f)) + 3*bin_size
+bins <- seq(start, end, by = bin_size)
+
+xlim = c(start, end)
+colors <- c(rgb(1, 0, 1, 0.7), rgb(0, 0, 1, 0.5)) # the last number in rgb() is for transparency
+
+hist(female$weight, breaks = bins, col = colors[1], xlim = xlim, xlab = "Weight, kg")
+hist(male$weight, breaks = bins, add = TRUE, col = colors[2], xlim = xlim)
+legend("topright", legend = c("Females", "Males"), fill = colors, bty = "n", border = NA)
+```
+
+
+<br/>
+
+### Scatterplot
+```{r, results="hide", fig.show="hide"}
+plot(d$weight, d$repwt, pch = 20) # Just a simple plot of reported weights against measured weights
+
+plot(d$weight, d$repwt, pch = 20, col = d$sex) # it can be colored by sex, for example
+legend("topleft",legend = c("Females", "Males"), col = 1:2, pch = 20)
+```
+
+<br/>
+
+### Function _palette()_
+Colors are taken in the order from the currently setup **palette()** . 
+```{r, results="hide"}
+palette()
+```
+
+<br/>
+
+
+Palette's colors can be changed and then reset back to default, using palette("default").
+```{r, results="hide", fig.show="hide"}
+palette(c(rgb(1, 0, 1, 0.7), "blue")) # changing palette()
+
+plot(d$weight, d$repwt, col = d$sex, pch = 20, xlab = "Measured weight, kg", ylab = "Reported weight, kg", main = "Reported versus measured weights by sex") 
+legend("bottomright",legend = c("Females", "Males"), col = 1:2, pch = 20, bty = "n")
+
+palette("default") # reset back to the default
+```
+<br/>
+
+
+## Wrapping up everything you have learned in this course
+
+**The goal is to read data from the file, clean and explore data, and report in the files cleaned data and the results of descriptive statistics (_number of observations, mean and SD_) of measured variables affected by two drugs independently in women and men.**
+
+<br/>
+
+### Read data from the file
+```{r, results="hide", fig.show="hide", eval=FALSE}
+
+system(command="svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files")
+
+conn <- file("./i_o_files/example_data.txt", "r")
+DATA <- as.data.frame(read.table(conn, header = TRUE, sep = "\t"))
+data <- DATA  # we will save DATA to return to it if needed
+
+head(data)
+tail(data)
+
+str(data) 
+dim(data)
+
+```
+
+```{r, results="hide", fig.show="hide", echo=FALSE, eval=F}
+
+conn <- file("./i_o_files/example_data.txt", "r")
+DATA <- as.data.frame(read.table(conn, header = TRUE, sep = "\t"))
+data <- DATA  # we will save DATA to return to it if needed
+
+```
+
+```{r, echo=F, eval=T}
+# August 2019 - added but not shown, for a proper reading of the file by bookdown
+system(command="svn export --force https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files")
+data <- as.data.frame(read.table("./i_o_files/example_data.txt", header = TRUE, sep = "\t"))
+```
+<br/>
+
+### Remove empty columns 
+```{r, results="hide", fig.show="hide"}
+
+# one of the ways to remove unwanted columns
+x <- data
+x <- x[, grep("X.[2-9]", colnames(x), inv = T)] # be careful here because we will need columns "X" and "X.1"
+x <- x[, grep("X.1[0-9]", colnames(x), inv = T)]
+colnames(x)
+
+# more elegant (and correct) way that doesn't use grep and doesn't require knowledge of columns
+apply(is.na(data), 2, all)
+
+data <- data[, !apply(is.na(data), 2, all)]
+
+colnames(data)
+
+str(data)
+```
+<br/>
+
+### Explore, rename and clean variables
+```{r, results="hide", fig.show="hide"}
+
+# rename the colum for sex
+colnames(data)[2] <- "SEX"
+
+table(data$SEX)
+# and remove rows with SEX other than M and F
+data <- data[data$SEX %in% c("F", "M"), ]
+
+# How many rows were removed?
+
+# what is the data type of data$SEX?
+
+class(data$SEX)
+levels(data$SEX)
+
+# remove unused levels
+data$SEX <- droplevels(data$SEX)
+str(data$SEX)
+```
+<br/>
+
+Do the same for the column containing information on drugs
+```{r, results="hide", fig.show="hide"}
+
+colnames(data)
+colnames(data)[colnames(data) == "X.1"] <- "DRUG"
+
+data$DRUG
+table(data$DRUG)
+
+data <- data[data$DRUG %in% c("ART", "PRG"), ]
+table(data$DRUG)
+levels(data$DRUG)
+data$DRUG <- droplevels(data$DRUG)
+levels(data$DRUG)
+```
+<br/>
+
+
+### Correct non-numeric values, changing them to NA
+```{r, results="hide", fig.show="hide", warning=FALSE}
+
+# you can correct columns one by one
+x <- as.numeric(as.character(data$U_12))
+str(x)
+# etc....
+
+# more elegant way to correct multiple columns at once
+df <- data[, !colnames(data) %in% c("SEX", "DRUG")]
+
+apply(df, 2, as.numeric)
+
+x <- data.frame(apply(df, 2, as.numeric))
+# well, we lost columns SEX and DRUGS, let's add them
+
+df <- cbind(SEX=data$SEX, DRUG=data$DRUG, x)
+
+data <- df # here is our clean dataset
+str(data)
+
+```
+<br/>
+
+
+### Write corrected data frame in the file
+```{r, results="hide"}
+
+conn <- file("corrected_data.txt", "w")
+write.table(data, conn, row.names = F, sep = "\t", quote = F)
+close(conn)
+
+# now let's read corrected data
+conn <- file("corrected_data.txt", "r")
+DATA <- as.data.frame(read.table(conn, header = TRUE, sep = "\t"))
+close(conn)
+
+all.equal(DATA, data)
+data <- DATA  # we will save DATA to return to it if needed
+
+```
+<br/>
+
+
+### Explore and remove outliers 
+We are interested in 4 groups (by sex and drug) independently
+```{r, results="hide", fig.show="hide", warning=F}
+
+summary(data)
+
+#install.packages("ggplot2")
+library(ggplot2) 
+
+for (num in 4:ncol(data)){ # skip columns SEX, DRUG, ID
+  print(colnames(data)[num])
+  p <- ggplot(data=data, aes(x = SEX, y = data[ ,num], col = DRUG))  
+  p <- p + geom_boxplot() + ggtitle(paste(colnames(data)[num]))
+  print(p)
+}
+
+# Let's remove "obvious"" outliers by changing their values to NA
+
+# data point below -20 and above 5 in A
+data$A[data$A < -20] <- NA
+data$A[data$A > 5] <- NA
+
+# data point below -10 in I_6
+data$I_6[data$I_6 <= -10] <- NA 
+
+# data point <-4 in S_6
+data$S_6[data$S_6 < -4] <- NA
+
+# data point <-9 in I_2
+data$I_2[data$I_2 < -9] <- NA
+
+# data point above 4 in S_2
+data$S_2[data$S_2 > 4] <- NA
+
+# data point above 10 in U_2
+data$U_2[data$U_2 > 10] <- NA
+
+# data point below 10 in D1
+data$D1[data$D1 <= 10] <- NA
+
+
+```
+<br/>
+
+
+### How to change a value of a specific data point
+```{r, results="hide", warning=F}
+data[data$SEX=="M" & data$DRUG=="ART",]$E
+
+# difficult way
+df[df$SEX=="M" & df$DRUG=="ART", ]$E[df[df$SEX=="M" & df$DRUG=="ART", ]$E == 911] <- 500 # or NA
+df[df$SEX=="M" & df$DRUG=="ART",]$E
+
+# simpler way
+df <- data
+df[df$SEX=="M" & df$DRUG=="ART",]$E
+df[df$SEX=="M" & df$DRUG=="ART" & df$E == 911 & !is.na(df$E), ]$E <- 500
+df[df$SEX=="M" & df$DRUG=="ART",]$E
+```
+<br/>
+
+
+### Make a data frame with statistical data
+```{r, results="hide", warning=F}
+
+#let's make first a data frame for only one group
+d <- data[data$SEX == "F" & data$DRUG == "ART",]
+
+result <- list()
+names <- c("N", "mean", "sd")
+count <- 1
+for (i in colnames(d)){
+  print(i)
+  if (i == "SEX" | i == "DRUG" | i == "ID") next;
+  x <- d[ ,i]
+  x <- x[!is.na(x)]
+  v <- c(i, length(x), mean(x), sd(x))
+  result[[count]] <- v
+  count <- count + 1
+}
+
+res <- data.frame(matrix(unlist(result), nrow=count-1, byrow=T))
+sex <- "F"
+drug <- "ART"
+colnames(res) <- c("variable", paste(sex, drug, names,sep="_"))
+
+# make a data frame for statistics for all groups, re-using the above for-loop
+df <- data.frame()
+names <- c("N", "mean", "sd")
+for (sex in levels(data$SEX)){ 
+  for(drug in levels(data$DRUG)){
+    d <- data[data$SEX == sex & data$DRUG == drug,]
+    result <- list()
+    count <- 1
+    for (i in colnames(d)){
+      print(i)
+      if (i == "SEX" | i == "DRUG" | i == "ID") next;
+      x <- d[ ,i]
+      x <- x[!is.na(x)]
+      v <- c(i, length(x), mean(x), sd(x))
+      result[[count]] <- v
+      count <- count + 1
+    }
+    res <- data.frame(matrix(unlist(result), nrow=count-1, byrow=T), stringsAsFactors=FALSE)
+    colnames(res) <- c("variable", paste(sex, drug, names,sep="_"))
+    
+    if (dim(df)[1] == 0) {
+      df <- res
+    }else{
+      df <- cbind.data.frame(df, res)
+    }
+  }
+}
+
+# simplify data frame
+rownames(df) <- df$variable
+df <- df[, colnames(df) != "variable"]
+```
+<br/>
+
+### Format a data frame 
+```{r, results="hide"}
+# Let's round all values to two decimal digits
+x <- lapply(df, function(x) round(as.numeric(x), digits = 2))
+x
+x <- data.frame(x) # we lost rownames!
+rownames(x) <- rownames(df)
+df <- x
+```
+<br/>
+
+
+### Write a data frame in the file
+```{r, results="hide"}
+conn <- file("Results.txt", "w")
+write.table(df, conn, row.names = T, col.names = NA, sep = "\t")
+close(conn)
+
+conn <- file("Results.csv", "w")
+write.table(df, conn, row.names = T, col.names = NA, sep = ",")
+close(conn)
+
+```
+<br/>
+
+### Write a table using as a decimal separator instead of a dot a comma
+```{r, results="hide"}
+df_comma <- format(df, decimal.mark=",")
+
+conn <- file("Results_comma.txt", "w")
+write.table(df_comma, conn, row.names = T, col.names = NA, sep = "\t", quote = F)
+close(conn)
+
+```
+<br/>
+
+
+

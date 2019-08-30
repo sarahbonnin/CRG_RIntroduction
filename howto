@@ -4,3 +4,4 @@ library(bookdown)
 render_book("index.Rmd", output_format="gitbook")
 
 # then open docs/index.html with firefox/chrome
+  
