@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>20.4 Wrapping up everything you have learned in this course | Introduction to R</title>
+  <meta name="description" content="20.4 Wrapping up everything you have learned in this course | Introduction to R" />
+  <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="20.4 Wrapping up everything you have learned in this course | Introduction to R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="20.4 Wrapping up everything you have learned in this course | Introduction to R" />
+  
+  
+  
+
+<meta name="author" content="Sarah Bonnin" />
+
+
+<meta name="date" content="2019-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="more-basic-plots.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="2" data-path="what-is-r.html"><a href="what-is-r.html"><i class="fa fa-check"></i><b>2</b> What is R ?</a></li>
+<li class="chapter" data-level="3" data-path="what-is-rstudio.html"><a href="what-is-rstudio.html"><i class="fa fa-check"></i><b>3</b> What is RStudio ?</a><ul>
+<li class="chapter" data-level="3.1" data-path="rstudio-access.html"><a href="rstudio-access.html"><i class="fa fa-check"></i><b>3.1</b> RStudio access</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio-interface.html"><a href="rstudio-interface.html"><i class="fa fa-check"></i><b>3.2</b> RStudio interface</a></li>
+<li class="chapter" data-level="3.3" data-path="setting-up-the-folder-structure-for-the-course.html"><a href="setting-up-the-folder-structure-for-the-course.html"><i class="fa fa-check"></i><b>3.3</b> Setting up the folder structure for the course</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="paths-and-directories.html"><a href="paths-and-directories.html"><i class="fa fa-check"></i><b>4</b> Paths and directories</a><ul>
+<li class="chapter" data-level="4.1" data-path="tree-of-directories.html"><a href="tree-of-directories.html"><i class="fa fa-check"></i><b>4.1</b> Tree of directories</a></li>
+<li class="chapter" data-level="4.2" data-path="navigate-the-tree-of-directory-with-the-r-terminal.html"><a href="navigate-the-tree-of-directory-with-the-r-terminal.html"><i class="fa fa-check"></i><b>4.2</b> Navigate the tree of directory with the R terminal</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="r-basics.html"><a href="r-basics.html"><i class="fa fa-check"></i><b>5</b> R basics</a><ul>
+<li class="chapter" data-level="5.1" data-path="arithmetic-operators.html"><a href="arithmetic-operators.html"><i class="fa fa-check"></i><b>5.1</b> Arithmetic operators</a></li>
+<li class="chapter" data-level="5.2" data-path="simple-calculations.html"><a href="simple-calculations.html"><i class="fa fa-check"></i><b>5.2</b> Simple calculations</a></li>
+<li class="chapter" data-level="5.3" data-path="objects-in-r.html"><a href="objects-in-r.html"><i class="fa fa-check"></i><b>5.3</b> Objects in R</a></li>
+<li class="chapter" data-level="5.4" data-path="assignment-operators.html"><a href="assignment-operators.html"><i class="fa fa-check"></i><b>5.4</b> Assignment operators</a></li>
+<li class="chapter" data-level="5.5" data-path="assigning-data-to-an-object.html"><a href="assigning-data-to-an-object.html"><i class="fa fa-check"></i><b>5.5</b> Assigning data to an object</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a></li>
+<li class="chapter" data-level="7" data-path="r-scripts.html"><a href="r-scripts.html"><i class="fa fa-check"></i><b>7</b> R scripts</a><ul>
+<li class="chapter" data-level="7.1" data-path="create-and-save-a-script.html"><a href="create-and-save-a-script.html"><i class="fa fa-check"></i><b>7.1</b> Create and save a script</a></li>
+<li class="chapter" data-level="7.2" data-path="r-syntax.html"><a href="r-syntax.html"><i class="fa fa-check"></i><b>7.2</b> R syntax</a></li>
+<li class="chapter" data-level="7.3" data-path="rstudio-tips-in-the-console.html"><a href="rstudio-tips-in-the-console.html"><i class="fa fa-check"></i><b>7.3</b> RStudio tips in the console</a></li>
+<li class="chapter" data-level="7.4" data-path="exercice-1-getting-started-.html"><a href="exercice-1-getting-started-.html"><i class="fa fa-check"></i><b>7.4</b> Exercice 1. Getting started.</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="data-types.html"><a href="data-types.html"><i class="fa fa-check"></i><b>8</b> Data types</a></li>
+<li class="chapter" data-level="9" data-path="data-structures.html"><a href="data-structures.html"><i class="fa fa-check"></i><b>9</b> Data structures</a><ul>
+<li class="chapter" data-level="9.1" data-path="vectors.html"><a href="vectors.html"><i class="fa fa-check"></i><b>9.1</b> Vectors</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="vectors.html"><a href="vectors.html#creating-a-vector"><i class="fa fa-check"></i><b>9.1.1</b> Creating a vector</a></li>
+<li class="chapter" data-level="9.1.2" data-path="vectors.html"><a href="vectors.html#vector-manipulation"><i class="fa fa-check"></i><b>9.1.2</b> Vector manipulation</a></li>
+<li class="chapter" data-level="9.1.3" data-path="vectors.html"><a href="vectors.html#combining-vectors"><i class="fa fa-check"></i><b>9.1.3</b> Combining vectors</a></li>
+<li class="chapter" data-level="9.1.4" data-path="vectors.html"><a href="vectors.html#numeric-vector-manipulation"><i class="fa fa-check"></i><b>9.1.4</b> Numeric vector manipulation</a></li>
+<li class="chapter" data-level="9.1.5" data-path="vectors.html"><a href="vectors.html#character-vector-manipulation"><i class="fa fa-check"></i><b>9.1.5</b> Character vector manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html"><i class="fa fa-check"></i><b>9.2</b> Exercise 2. Numeric vector manipulation</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2a."><i class="fa fa-check"></i><b>9.2.1</b> Exercise 2a.</a></li>
+<li class="chapter" data-level="9.2.2" data-path="exercise-2-numeric-vector-manipulation.html"><a href="exercise-2-numeric-vector-manipulation.html#exercise-2b."><i class="fa fa-check"></i><b>9.2.2</b> Exercise 2b.</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html"><i class="fa fa-check"></i><b>9.3</b> Exercise 3. Character vector manipulation</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3a."><i class="fa fa-check"></i><b>9.3.1</b> Exercise 3a.</a></li>
+<li class="chapter" data-level="9.3.2" data-path="exercise-3-character-vector-manipulation.html"><a href="exercise-3-character-vector-manipulation.html#exercise-3b."><i class="fa fa-check"></i><b>9.3.2</b> Exercise 3b.</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="factors.html"><a href="factors.html"><i class="fa fa-check"></i><b>9.4</b> Factors</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>9.5</b> Matrices</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices.html"><a href="matrices.html#creating-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> Creating a matrix</a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices.html"><a href="matrices.html#two-dimensional-object"><i class="fa fa-check"></i><b>9.5.2</b> Two-dimensional object</a></li>
+<li class="chapter" data-level="9.5.3" data-path="matrices.html"><a href="matrices.html#matrix-manipulation"><i class="fa fa-check"></i><b>9.5.3</b> Matrix manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="data-frames.html"><a href="data-frames.html"><i class="fa fa-check"></i><b>9.6</b> Data frames</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="data-frames.html"><a href="data-frames.html#create-a-data-frame"><i class="fa fa-check"></i><b>9.6.1</b> Create a data frame</a></li>
+<li class="chapter" data-level="9.6.2" data-path="data-frames.html"><a href="data-frames.html#data-frame-manipulation"><i class="fa fa-check"></i><b>9.6.2</b> Data frame manipulation:</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html"><i class="fa fa-check"></i><b>9.7</b> Two-dimensional structures manipulation</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#dimensions"><i class="fa fa-check"></i><b>9.7.1</b> Dimensions</a></li>
+<li class="chapter" data-level="9.7.2" data-path="two-dimensional-structures-manipulation.html"><a href="two-dimensional-structures-manipulation.html#manipulation"><i class="fa fa-check"></i><b>9.7.2</b> Manipulation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="exercise-4-matrix-manipulation.html"><a href="exercise-4-matrix-manipulation.html"><i class="fa fa-check"></i><b>9.8</b> Exercise 4. Matrix manipulation</a></li>
+<li class="chapter" data-level="9.9" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html"><i class="fa fa-check"></i><b>9.9</b> Exercise 5. Data frame manipulation</a><ul>
+<li class="chapter" data-level="9.9.1" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5a"><i class="fa fa-check"></i><b>9.9.1</b> Exercise 5a</a></li>
+<li class="chapter" data-level="9.9.2" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5b"><i class="fa fa-check"></i><b>9.9.2</b> Exercise 5b</a></li>
+<li class="chapter" data-level="9.9.3" data-path="exercise-5-data-frame-manipulation.html"><a href="exercise-5-data-frame-manipulation.html#exercise-5c"><i class="fa fa-check"></i><b>9.9.3</b> Exercise 5c</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>10</b> Missing values</a></li>
+<li class="chapter" data-level="11" data-path="input-output.html"><a href="input-output.html"><i class="fa fa-check"></i><b>11</b> Input / Output</a><ul>
+<li class="chapter" data-level="11.1" data-path="on-vectors.html"><a href="on-vectors.html"><i class="fa fa-check"></i><b>11.1</b> On vectors</a></li>
+<li class="chapter" data-level="11.2" data-path="on-data-frames-or-matrices.html"><a href="on-data-frames-or-matrices.html"><i class="fa fa-check"></i><b>11.2</b> On data frames or matrices</a></li>
+<li class="chapter" data-level="11.3" data-path="exercise-6-.html"><a href="exercise-6-.html"><i class="fa fa-check"></i><b>11.3</b> Exercise 6.</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6a.-input-output"><i class="fa fa-check"></i><b>11.3.1</b> Exercise 6a. Input / output</a></li>
+<li class="chapter" data-level="11.3.2" data-path="exercise-6-.html"><a href="exercise-6-.html#exercise-6b---io-on-data-frame-play-with-the-arguments-of-read.table"><i class="fa fa-check"></i><b>11.3.2</b> Exercise 6b - I/O on data frame: play with the arguments of read.table</a></li>
+<li class="chapter" data-level="11.3.3" data-path="exercise-6-.html"><a href="exercise-6-.html#exercice-6c---io-on-a-data-frame"><i class="fa fa-check"></i><b>11.3.3</b> Exercice 6c - I/O on a data frame</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="library-and-packages.html"><a href="library-and-packages.html"><i class="fa fa-check"></i><b>12</b> Library and packages</a><ul>
+<li class="chapter" data-level="12.1" data-path="r-base.html"><a href="r-base.html"><i class="fa fa-check"></i><b>12.1</b> R base</a></li>
+<li class="chapter" data-level="12.2" data-path="r-contrib.html"><a href="r-contrib.html"><i class="fa fa-check"></i><b>12.2</b> R contrib</a></li>
+<li class="chapter" data-level="12.3" data-path="install-a-package.html"><a href="install-a-package.html"><i class="fa fa-check"></i><b>12.3</b> Install a package</a></li>
+<li class="chapter" data-level="12.4" data-path="load-a-package.html"><a href="load-a-package.html"><i class="fa fa-check"></i><b>12.4</b> Load a package</a></li>
+<li class="chapter" data-level="12.5" data-path="check-what-packages-are-currently-loaded.html"><a href="check-what-packages-are-currently-loaded.html"><i class="fa fa-check"></i><b>12.5</b> Check what packages are currently loaded</a></li>
+<li class="chapter" data-level="12.6" data-path="list-functions-from-a-package.html"><a href="list-functions-from-a-package.html"><i class="fa fa-check"></i><b>12.6</b> List functions from a package</a></li>
+<li class="chapter" data-level="12.7" data-path="rstudio-server-at-crg.html"><a href="rstudio-server-at-crg.html"><i class="fa fa-check"></i><b>12.7</b> RStudio server at CRG</a></li>
+<li class="chapter" data-level="12.8" data-path="exercise-7-library-and-packages.html"><a href="exercise-7-library-and-packages.html"><i class="fa fa-check"></i><b>12.8</b> Exercise 7: Library and packages</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="regular-expressions.html"><a href="regular-expressions.html"><i class="fa fa-check"></i><b>13</b> Regular expressions</a><ul>
+<li class="chapter" data-level="13.1" data-path="find-simple-matches-with-grep.html"><a href="find-simple-matches-with-grep.html"><i class="fa fa-check"></i><b>13.1</b> Find simple matches with grep</a></li>
+<li class="chapter" data-level="13.2" data-path="regular-expressions-to-find-more-flexible-patterns.html"><a href="regular-expressions-to-find-more-flexible-patterns.html"><i class="fa fa-check"></i><b>13.2</b> Regular expressions to find more flexible patterns</a></li>
+<li class="chapter" data-level="13.3" data-path="substitute-or-remove-matching-patterns-with-gsub.html"><a href="substitute-or-remove-matching-patterns-with-gsub.html"><i class="fa fa-check"></i><b>13.3</b> Substitute or remove matching patterns with gsub</a></li>
+<li class="chapter" data-level="13.4" data-path="predefined-variables-to-use-in-regular-expressions.html"><a href="predefined-variables-to-use-in-regular-expressions.html"><i class="fa fa-check"></i><b>13.4</b> Predefined variables to use in regular expressions:</a></li>
+<li class="chapter" data-level="13.5" data-path="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><a href="use-grep-and-regular-expressions-to-retrieve-columns-by-their-names.html"><i class="fa fa-check"></i><b>13.5</b> Use grep and regular expressions to retrieve columns by their names</a></li>
+<li class="chapter" data-level="13.6" data-path="exercise-8-regular-expressions.html"><a href="exercise-8-regular-expressions.html"><i class="fa fa-check"></i><b>13.6</b> Exercise 8: Regular expressions</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="repetitive-execution.html"><a href="repetitive-execution.html"><i class="fa fa-check"></i><b>14</b> Repetitive execution</a><ul>
+<li class="chapter" data-level="14.1" data-path="exercise-9-for-loop.html"><a href="exercise-9-for-loop.html"><i class="fa fa-check"></i><b>14.1</b> Exercise 9: For loop</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="conditional-statement.html"><a href="conditional-statement.html"><i class="fa fa-check"></i><b>15</b> Conditional statement</a><ul>
+<li class="chapter" data-level="15.1" data-path="exercise-10-if-statement.html"><a href="exercise-10-if-statement.html"><i class="fa fa-check"></i><b>15.1</b> Exercise 10: If statement</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="basic-plots-in-r.html"><a href="basic-plots-in-r.html"><i class="fa fa-check"></i><b>16</b> Basic plots in R</a><ul>
+<li class="chapter" data-level="16.1" data-path="scatter-plots.html"><a href="scatter-plots.html"><i class="fa fa-check"></i><b>16.1</b> Scatter plots</a></li>
+<li class="chapter" data-level="16.2" data-path="bar-plots.html"><a href="bar-plots.html"><i class="fa fa-check"></i><b>16.2</b> Bar plots</a></li>
+<li class="chapter" data-level="16.3" data-path="pie-charts.html"><a href="pie-charts.html"><i class="fa fa-check"></i><b>16.3</b> Pie charts</a></li>
+<li class="chapter" data-level="16.4" data-path="box-plots.html"><a href="box-plots.html"><i class="fa fa-check"></i><b>16.4</b> Box plots</a></li>
+<li class="chapter" data-level="16.5" data-path="histograms.html"><a href="histograms.html"><i class="fa fa-check"></i><b>16.5</b> Histograms</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="how-to-save-plots.html"><a href="how-to-save-plots.html"><i class="fa fa-check"></i><b>17</b> How to save plots</a><ul>
+<li class="chapter" data-level="17.1" data-path="with-r-studio.html"><a href="with-r-studio.html"><i class="fa fa-check"></i><b>17.1</b> With R Studio</a></li>
+<li class="chapter" data-level="17.2" data-path="with-the-console.html"><a href="with-the-console.html"><i class="fa fa-check"></i><b>17.2</b> With the console</a></li>
+<li class="chapter" data-level="17.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html"><i class="fa fa-check"></i><b>17.3</b> Exercise 11: Base plots</a><ul>
+<li class="chapter" data-level="17.3.1" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11a--scatter-plot"><i class="fa fa-check"></i><b>17.3.1</b> Exercise 11a- scatter plot</a></li>
+<li class="chapter" data-level="17.3.2" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11b--bar-plot-pie-chart"><i class="fa fa-check"></i><b>17.3.2</b> Exercise 11b- bar plot + pie chart</a></li>
+<li class="chapter" data-level="17.3.3" data-path="exercise-11-base-plots.html"><a href="exercise-11-base-plots.html#exercise-11c--histogram"><i class="fa fa-check"></i><b>17.3.3</b> Exercise 11c- histogram</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="plots-from-other-packages.html"><a href="plots-from-other-packages.html"><i class="fa fa-check"></i><b>18</b> Plots from other packages</a><ul>
+<li class="chapter" data-level="18.1" data-path="heatmap-2-function-from-gplots-package.html"><a href="heatmap-2-function-from-gplots-package.html"><i class="fa fa-check"></i><b>18.1</b> heatmap.2 function from gplots package</a></li>
+<li class="chapter" data-level="18.2" data-path="venn-diagram-function-from-venndiagram-package.html"><a href="venn-diagram-function-from-venndiagram-package.html"><i class="fa fa-check"></i><b>18.2</b> venn.diagram function from VennDiagram package</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="ggplot2-package.html"><a href="ggplot2-package.html"><i class="fa fa-check"></i><b>19</b> ggplot2 package</a><ul>
+<li class="chapter" data-level="19.1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>19.1</b> Getting started</a></li>
+<li class="chapter" data-level="19.2" data-path="scatter-plot.html"><a href="scatter-plot.html"><i class="fa fa-check"></i><b>19.2</b> Scatter plot</a></li>
+<li class="chapter" data-level="19.3" data-path="box-plots-1.html"><a href="box-plots-1.html"><i class="fa fa-check"></i><b>19.3</b> Box plots</a></li>
+<li class="chapter" data-level="19.4" data-path="dot-plots.html"><a href="dot-plots.html"><i class="fa fa-check"></i><b>19.4</b> Dot plots</a></li>
+<li class="chapter" data-level="19.5" data-path="bar-plots-1.html"><a href="bar-plots-1.html"><i class="fa fa-check"></i><b>19.5</b> Bar plots</a></li>
+<li class="chapter" data-level="19.6" data-path="histograms-1.html"><a href="histograms-1.html"><i class="fa fa-check"></i><b>19.6</b> Histograms</a></li>
+<li class="chapter" data-level="19.7" data-path="about-themes.html"><a href="about-themes.html"><i class="fa fa-check"></i><b>19.7</b> About themes</a></li>
+<li class="chapter" data-level="19.8" data-path="saving-plots-in-files.html"><a href="saving-plots-in-files.html"><i class="fa fa-check"></i><b>19.8</b> Saving plots in files</a></li>
+<li class="chapter" data-level="19.9" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html"><i class="fa fa-check"></i><b>19.9</b> Exercise 12: ggplot2</a><ul>
+<li class="chapter" data-level="19.9.1" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12a--scatter-plot"><i class="fa fa-check"></i><b>19.9.1</b> Exercise 12a- Scatter plot</a></li>
+<li class="chapter" data-level="19.9.2" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12b--box-plot"><i class="fa fa-check"></i><b>19.9.2</b> Exercise 12b- Box plot</a></li>
+<li class="chapter" data-level="19.9.3" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12c--bar-plot"><i class="fa fa-check"></i><b>19.9.3</b> Exercise 12c- Bar plot</a></li>
+<li class="chapter" data-level="19.9.4" data-path="exercise-12-ggplot2.html"><a href="exercise-12-ggplot2.html#exercise-12d--histogram"><i class="fa fa-check"></i><b>19.9.4</b> Exercise 12d- Histogram</a></li>
+</ul></li>
+<li class="chapter" data-level="19.10" data-path="more-about-the-theme-function.html"><a href="more-about-the-theme-function.html"><i class="fa fa-check"></i><b>19.10</b> More about the theme() function</a></li>
+<li class="chapter" data-level="19.11" data-path="volcano-plots.html"><a href="volcano-plots.html"><i class="fa fa-check"></i><b>19.11</b> Volcano plots</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="introduction-to-exploratory-data-analysis-descriptive-statistics-.html"><a href="introduction-to-exploratory-data-analysis-descriptive-statistics-.html"><i class="fa fa-check"></i><b>20</b> Introduction to Exploratory Data Analysis &amp; Descriptive Statistics.&quot;</a><ul>
+<li class="chapter" data-level="20.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>20.1</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="20.1.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#data-dimentionality-functions-str-summary-head-tail"><i class="fa fa-check"></i><b>20.1.1</b> Data dimentionality: functions <em>str(), summary(), head(), tail()</em></a></li>
+<li class="chapter" data-level="20.1.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#missing-na-values-in-data-functions-complete.cases-na.omit-all.equal"><i class="fa fa-check"></i><b>20.1.2</b> Missing (NA) values in data: functions <em>complete.cases(), na.omit(), all.equal()</em></a></li>
+<li class="chapter" data-level="20.1.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#looking-at-the-subset-of-data"><i class="fa fa-check"></i><b>20.1.3</b> Looking at the subset of data</a></li>
+<li class="chapter" data-level="20.1.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#excercises-on-data-subsetting-and-missing-values"><i class="fa fa-check"></i><b>20.1.4</b> Excercises on data subsetting and missing values</a></li>
+<li class="chapter" data-level="20.1.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exploring-a-particular-variable-column-functions-unique-table"><i class="fa fa-check"></i><b>20.1.5</b> Exploring a particular variable (column): functions <em>unique(), table()</em></a></li>
+<li class="chapter" data-level="20.1.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#exploring-relationships-between-variables-functions-table-cut-and-functions-for-factors-levels-nlevels"><i class="fa fa-check"></i><b>20.1.6</b> Exploring relationships between variables: functions <em>table(), cut()</em>, and functions for factors <em>levels(), nlevels()</em></a></li>
+<li class="chapter" data-level="20.1.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#excercises-using-unique-table-and-cut"><i class="fa fa-check"></i><b>20.1.7</b> Excercises using <em>unique(), table()</em> and <em>cut()</em></a></li>
+</ul></li>
+<li class="chapter" data-level="20.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>20.2</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="20.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#functions-mean-sd-var-min-max-median-range-iqr-quantile."><i class="fa fa-check"></i><b>20.2.1</b> Functions: <em>mean, sd, var, min, max, median, range, IQR, quantile</em>.</a></li>
+<li class="chapter" data-level="20.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#functions-tapply-and-round"><i class="fa fa-check"></i><b>20.2.2</b> Functions <em>tapply() and round()</em></a></li>
+<li class="chapter" data-level="20.2.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#excercises"><i class="fa fa-check"></i><b>20.2.3</b> Excercises</a></li>
+<li class="chapter" data-level="20.2.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-visualization-boxplot"><i class="fa fa-check"></i><b>20.2.4</b> Data visualization: <em>boxplot()</em></a></li>
+<li class="chapter" data-level="20.2.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#outliers"><i class="fa fa-check"></i><b>20.2.5</b> Outliers</a></li>
+<li class="chapter" data-level="20.2.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#how-statistics-change-if-to-remove-outliers"><i class="fa fa-check"></i><b>20.2.6</b> How statistics change if to remove outliers</a></li>
+</ul></li>
+<li class="chapter" data-level="20.3" data-path="more-basic-plots.html"><a href="more-basic-plots.html"><i class="fa fa-check"></i><b>20.3</b> More basic plots</a><ul>
+<li class="chapter" data-level="20.3.1" data-path="more-basic-plots.html"><a href="more-basic-plots.html#how-to-plot-box-plots-side-by-side-on-one-graph"><i class="fa fa-check"></i><b>20.3.1</b> How to plot box-plots side-by-side on one graph</a></li>
+<li class="chapter" data-level="20.3.2" data-path="more-basic-plots.html"><a href="more-basic-plots.html#excercise-make-a-similar-boxplot-using-ggplot"><i class="fa fa-check"></i><b>20.3.2</b> Excercise: Make a similar boxplot using <em>ggplot()</em></a></li>
+<li class="chapter" data-level="20.3.3" data-path="more-basic-plots.html"><a href="more-basic-plots.html#how-to-plot-together-data-from-two-or-more-vectors-of-different-lengths"><i class="fa fa-check"></i><b>20.3.3</b> How to plot together data from two or more vectors of different lengths</a></li>
+<li class="chapter" data-level="20.3.4" data-path="more-basic-plots.html"><a href="more-basic-plots.html#how-to-make-a-box-plot-more-informative-and-customized"><i class="fa fa-check"></i><b>20.3.4</b> How to make a box-plot more informative and customized</a></li>
+<li class="chapter" data-level="20.3.5" data-path="more-basic-plots.html"><a href="more-basic-plots.html#histogram"><i class="fa fa-check"></i><b>20.3.5</b> Histogram</a></li>
+<li class="chapter" data-level="20.3.6" data-path="more-basic-plots.html"><a href="more-basic-plots.html#control-for-the-size-of-bins"><i class="fa fa-check"></i><b>20.3.6</b> Control for the size of bins</a></li>
+<li class="chapter" data-level="20.3.7" data-path="more-basic-plots.html"><a href="more-basic-plots.html#two-overlaying-histograms-on-one-graph"><i class="fa fa-check"></i><b>20.3.7</b> Two overlaying histograms on one graph</a></li>
+<li class="chapter" data-level="20.3.8" data-path="more-basic-plots.html"><a href="more-basic-plots.html#scatterplot"><i class="fa fa-check"></i><b>20.3.8</b> Scatterplot</a></li>
+<li class="chapter" data-level="20.3.9" data-path="more-basic-plots.html"><a href="more-basic-plots.html#function-palette"><i class="fa fa-check"></i><b>20.3.9</b> Function <em>palette()</em></a></li>
+</ul></li>
+<li class="chapter" data-level="20.4" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html"><i class="fa fa-check"></i><b>20.4</b> Wrapping up everything you have learned in this course</a><ul>
+<li class="chapter" data-level="20.4.1" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#read-data-from-the-file"><i class="fa fa-check"></i><b>20.4.1</b> Read data from the file</a></li>
+<li class="chapter" data-level="20.4.2" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#remove-empty-columns"><i class="fa fa-check"></i><b>20.4.2</b> Remove empty columns</a></li>
+<li class="chapter" data-level="20.4.3" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#explore-rename-and-clean-variables"><i class="fa fa-check"></i><b>20.4.3</b> Explore, rename and clean variables</a></li>
+<li class="chapter" data-level="20.4.4" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#correct-non-numeric-values-changing-them-to-na"><i class="fa fa-check"></i><b>20.4.4</b> Correct non-numeric values, changing them to NA</a></li>
+<li class="chapter" data-level="20.4.5" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#write-corrected-data-frame-in-the-file"><i class="fa fa-check"></i><b>20.4.5</b> Write corrected data frame in the file</a></li>
+<li class="chapter" data-level="20.4.6" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#explore-and-remove-outliers"><i class="fa fa-check"></i><b>20.4.6</b> Explore and remove outliers</a></li>
+<li class="chapter" data-level="20.4.7" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#how-to-change-a-value-of-a-specific-data-point"><i class="fa fa-check"></i><b>20.4.7</b> How to change a value of a specific data point</a></li>
+<li class="chapter" data-level="20.4.8" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#make-a-data-frame-with-statistical-data"><i class="fa fa-check"></i><b>20.4.8</b> Make a data frame with statistical data</a></li>
+<li class="chapter" data-level="20.4.9" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#format-a-data-frame"><i class="fa fa-check"></i><b>20.4.9</b> Format a data frame</a></li>
+<li class="chapter" data-level="20.4.10" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#write-a-data-frame-in-the-file"><i class="fa fa-check"></i><b>20.4.10</b> Write a data frame in the file</a></li>
+<li class="chapter" data-level="20.4.11" data-path="wrapping-up-everything-you-have-learned-in-this-course.html"><a href="wrapping-up-everything-you-have-learned-in-this-course.html#write-a-table-using-as-a-decimal-separator-instead-of-a-dot-a-comma"><i class="fa fa-check"></i><b>20.4.11</b> Write a table using as a decimal separator instead of a dot a comma</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/sarahbonnin/CRG_RIntroduction" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="wrapping-up-everything-you-have-learned-in-this-course" class="section level2">
+<h2><span class="header-section-number">20.4</span> Wrapping up everything you have learned in this course</h2>
+<p><strong>The goal is to read data from the file, clean and explore data, and report in the files cleaned data and the results of descriptive statistics (<em>number of observations, mean and SD</em>) of measured variables affected by two drugs independently in women and men.</strong></p>
+<p><br/></p>
+<div id="read-data-from-the-file" class="section level3">
+<h3><span class="header-section-number">20.4.1</span> Read data from the file</h3>
+<div class="sourceCode" id="cb647"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb647-1" data-line-number="1"><span class="kw">system</span>(<span class="dt">command=</span><span class="st">&quot;svn export https://github.com/biocorecrg/CRG_RIntroduction/trunk/i_o_files&quot;</span>)</a>
+<a class="sourceLine" id="cb647-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb647-3" data-line-number="3">conn &lt;-<span class="st"> </span><span class="kw">file</span>(<span class="st">&quot;./i_o_files/example_data.txt&quot;</span>, <span class="st">&quot;r&quot;</span>)</a>
+<a class="sourceLine" id="cb647-4" data-line-number="4">DATA &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">read.table</span>(conn, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>))</a>
+<a class="sourceLine" id="cb647-5" data-line-number="5">data &lt;-<span class="st"> </span>DATA  <span class="co"># we will save DATA to return to it if needed</span></a>
+<a class="sourceLine" id="cb647-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb647-7" data-line-number="7"><span class="kw">head</span>(data)</a>
+<a class="sourceLine" id="cb647-8" data-line-number="8"><span class="kw">tail</span>(data)</a>
+<a class="sourceLine" id="cb647-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb647-10" data-line-number="10"><span class="kw">str</span>(data) </a>
+<a class="sourceLine" id="cb647-11" data-line-number="11"><span class="kw">dim</span>(data)</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="remove-empty-columns" class="section level3">
+<h3><span class="header-section-number">20.4.2</span> Remove empty columns</h3>
+<div class="sourceCode" id="cb648"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb648-1" data-line-number="1"><span class="co"># one of the ways to remove unwanted columns</span></a>
+<a class="sourceLine" id="cb648-2" data-line-number="2">x &lt;-<span class="st"> </span>data</a>
+<a class="sourceLine" id="cb648-3" data-line-number="3">x &lt;-<span class="st"> </span>x[, <span class="kw">grep</span>(<span class="st">&quot;X.[2-9]&quot;</span>, <span class="kw">colnames</span>(x), <span class="dt">inv =</span> T)] <span class="co"># be careful here because we will need columns &quot;X&quot; and &quot;X.1&quot;</span></a>
+<a class="sourceLine" id="cb648-4" data-line-number="4">x &lt;-<span class="st"> </span>x[, <span class="kw">grep</span>(<span class="st">&quot;X.1[0-9]&quot;</span>, <span class="kw">colnames</span>(x), <span class="dt">inv =</span> T)]</a>
+<a class="sourceLine" id="cb648-5" data-line-number="5"><span class="kw">colnames</span>(x)</a>
+<a class="sourceLine" id="cb648-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb648-7" data-line-number="7"><span class="co"># more elegant (and correct) way that doesn&#39;t use grep and doesn&#39;t require knowledge of columns</span></a>
+<a class="sourceLine" id="cb648-8" data-line-number="8"><span class="kw">apply</span>(<span class="kw">is.na</span>(data), <span class="dv">2</span>, all)</a>
+<a class="sourceLine" id="cb648-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb648-10" data-line-number="10">data &lt;-<span class="st"> </span>data[, <span class="op">!</span><span class="kw">apply</span>(<span class="kw">is.na</span>(data), <span class="dv">2</span>, all)]</a>
+<a class="sourceLine" id="cb648-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb648-12" data-line-number="12"><span class="kw">colnames</span>(data)</a>
+<a class="sourceLine" id="cb648-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb648-14" data-line-number="14"><span class="kw">str</span>(data)</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="explore-rename-and-clean-variables" class="section level3">
+<h3><span class="header-section-number">20.4.3</span> Explore, rename and clean variables</h3>
+<div class="sourceCode" id="cb649"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb649-1" data-line-number="1"><span class="co"># rename the colum for sex</span></a>
+<a class="sourceLine" id="cb649-2" data-line-number="2"><span class="kw">colnames</span>(data)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;SEX&quot;</span></a>
+<a class="sourceLine" id="cb649-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb649-4" data-line-number="4"><span class="kw">table</span>(data<span class="op">$</span>SEX)</a>
+<a class="sourceLine" id="cb649-5" data-line-number="5"><span class="co"># and remove rows with SEX other than M and F</span></a>
+<a class="sourceLine" id="cb649-6" data-line-number="6">data &lt;-<span class="st"> </span>data[data<span class="op">$</span>SEX <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>), ]</a>
+<a class="sourceLine" id="cb649-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb649-8" data-line-number="8"><span class="co"># How many rows were removed?</span></a>
+<a class="sourceLine" id="cb649-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb649-10" data-line-number="10"><span class="co"># what is the data type of data$SEX?</span></a>
+<a class="sourceLine" id="cb649-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb649-12" data-line-number="12"><span class="kw">class</span>(data<span class="op">$</span>SEX)</a>
+<a class="sourceLine" id="cb649-13" data-line-number="13"><span class="kw">levels</span>(data<span class="op">$</span>SEX)</a>
+<a class="sourceLine" id="cb649-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb649-15" data-line-number="15"><span class="co"># remove unused levels</span></a>
+<a class="sourceLine" id="cb649-16" data-line-number="16">data<span class="op">$</span>SEX &lt;-<span class="st"> </span><span class="kw">droplevels</span>(data<span class="op">$</span>SEX)</a>
+<a class="sourceLine" id="cb649-17" data-line-number="17"><span class="kw">str</span>(data<span class="op">$</span>SEX)</a></code></pre></div>
+<p><br/></p>
+<p>Do the same for the column containing information on drugs</p>
+<div class="sourceCode" id="cb650"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb650-1" data-line-number="1"><span class="kw">colnames</span>(data)</a>
+<a class="sourceLine" id="cb650-2" data-line-number="2"><span class="kw">colnames</span>(data)[<span class="kw">colnames</span>(data) <span class="op">==</span><span class="st"> &quot;X.1&quot;</span>] &lt;-<span class="st"> &quot;DRUG&quot;</span></a>
+<a class="sourceLine" id="cb650-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb650-4" data-line-number="4">data<span class="op">$</span>DRUG</a>
+<a class="sourceLine" id="cb650-5" data-line-number="5"><span class="kw">table</span>(data<span class="op">$</span>DRUG)</a>
+<a class="sourceLine" id="cb650-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb650-7" data-line-number="7">data &lt;-<span class="st"> </span>data[data<span class="op">$</span>DRUG <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ART&quot;</span>, <span class="st">&quot;PRG&quot;</span>), ]</a>
+<a class="sourceLine" id="cb650-8" data-line-number="8"><span class="kw">table</span>(data<span class="op">$</span>DRUG)</a>
+<a class="sourceLine" id="cb650-9" data-line-number="9"><span class="kw">levels</span>(data<span class="op">$</span>DRUG)</a>
+<a class="sourceLine" id="cb650-10" data-line-number="10">data<span class="op">$</span>DRUG &lt;-<span class="st"> </span><span class="kw">droplevels</span>(data<span class="op">$</span>DRUG)</a>
+<a class="sourceLine" id="cb650-11" data-line-number="11"><span class="kw">levels</span>(data<span class="op">$</span>DRUG)</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="correct-non-numeric-values-changing-them-to-na" class="section level3">
+<h3><span class="header-section-number">20.4.4</span> Correct non-numeric values, changing them to NA</h3>
+<div class="sourceCode" id="cb651"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb651-1" data-line-number="1"><span class="co"># you can correct columns one by one</span></a>
+<a class="sourceLine" id="cb651-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">as.character</span>(data<span class="op">$</span>U_<span class="dv">12</span>))</a>
+<a class="sourceLine" id="cb651-3" data-line-number="3"><span class="kw">str</span>(x)</a>
+<a class="sourceLine" id="cb651-4" data-line-number="4"><span class="co"># etc....</span></a>
+<a class="sourceLine" id="cb651-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb651-6" data-line-number="6"><span class="co"># more elegant way to correct multiple columns at once</span></a>
+<a class="sourceLine" id="cb651-7" data-line-number="7">df &lt;-<span class="st"> </span>data[, <span class="op">!</span><span class="kw">colnames</span>(data) <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;SEX&quot;</span>, <span class="st">&quot;DRUG&quot;</span>)]</a>
+<a class="sourceLine" id="cb651-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb651-9" data-line-number="9"><span class="kw">apply</span>(df, <span class="dv">2</span>, as.numeric)</a>
+<a class="sourceLine" id="cb651-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb651-11" data-line-number="11">x &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">apply</span>(df, <span class="dv">2</span>, as.numeric))</a>
+<a class="sourceLine" id="cb651-12" data-line-number="12"><span class="co"># well, we lost columns SEX and DRUGS, let&#39;s add them</span></a>
+<a class="sourceLine" id="cb651-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb651-14" data-line-number="14">df &lt;-<span class="st"> </span><span class="kw">cbind</span>(<span class="dt">SEX=</span>data<span class="op">$</span>SEX, <span class="dt">DRUG=</span>data<span class="op">$</span>DRUG, x)</a>
+<a class="sourceLine" id="cb651-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb651-16" data-line-number="16">data &lt;-<span class="st"> </span>df <span class="co"># here is our clean dataset</span></a>
+<a class="sourceLine" id="cb651-17" data-line-number="17"><span class="kw">str</span>(data)</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="write-corrected-data-frame-in-the-file" class="section level3">
+<h3><span class="header-section-number">20.4.5</span> Write corrected data frame in the file</h3>
+<div class="sourceCode" id="cb652"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb652-1" data-line-number="1">conn &lt;-<span class="st"> </span><span class="kw">file</span>(<span class="st">&quot;corrected_data.txt&quot;</span>, <span class="st">&quot;w&quot;</span>)</a>
+<a class="sourceLine" id="cb652-2" data-line-number="2"><span class="kw">write.table</span>(data, conn, <span class="dt">row.names =</span> F, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">quote =</span> F)</a>
+<a class="sourceLine" id="cb652-3" data-line-number="3"><span class="kw">close</span>(conn)</a>
+<a class="sourceLine" id="cb652-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb652-5" data-line-number="5"><span class="co"># now let&#39;s read corrected data</span></a>
+<a class="sourceLine" id="cb652-6" data-line-number="6">conn &lt;-<span class="st"> </span><span class="kw">file</span>(<span class="st">&quot;corrected_data.txt&quot;</span>, <span class="st">&quot;r&quot;</span>)</a>
+<a class="sourceLine" id="cb652-7" data-line-number="7">DATA &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(<span class="kw">read.table</span>(conn, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>))</a>
+<a class="sourceLine" id="cb652-8" data-line-number="8"><span class="kw">close</span>(conn)</a>
+<a class="sourceLine" id="cb652-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb652-10" data-line-number="10"><span class="kw">all.equal</span>(DATA, data)</a>
+<a class="sourceLine" id="cb652-11" data-line-number="11">data &lt;-<span class="st"> </span>DATA  <span class="co"># we will save DATA to return to it if needed</span></a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="explore-and-remove-outliers" class="section level3">
+<h3><span class="header-section-number">20.4.6</span> Explore and remove outliers</h3>
+<p>We are interested in 4 groups (by sex and drug) independently</p>
+<div class="sourceCode" id="cb653"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb653-1" data-line-number="1"><span class="kw">summary</span>(data)</a>
+<a class="sourceLine" id="cb653-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb653-3" data-line-number="3"><span class="co">#install.packages(&quot;ggplot2&quot;)</span></a>
+<a class="sourceLine" id="cb653-4" data-line-number="4"><span class="kw">library</span>(ggplot2) </a>
+<a class="sourceLine" id="cb653-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb653-6" data-line-number="6"><span class="cf">for</span> (num <span class="cf">in</span> <span class="dv">4</span><span class="op">:</span><span class="kw">ncol</span>(data)){ <span class="co"># skip columns SEX, DRUG, ID</span></a>
+<a class="sourceLine" id="cb653-7" data-line-number="7">  <span class="kw">print</span>(<span class="kw">colnames</span>(data)[num])</a>
+<a class="sourceLine" id="cb653-8" data-line-number="8">  p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>data, <span class="kw">aes</span>(<span class="dt">x =</span> SEX, <span class="dt">y =</span> data[ ,num], <span class="dt">col =</span> DRUG))  </a>
+<a class="sourceLine" id="cb653-9" data-line-number="9">  p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">ggtitle</span>(<span class="kw">paste</span>(<span class="kw">colnames</span>(data)[num]))</a>
+<a class="sourceLine" id="cb653-10" data-line-number="10">  <span class="kw">print</span>(p)</a>
+<a class="sourceLine" id="cb653-11" data-line-number="11">}</a></code></pre></div>
+<div class="sourceCode" id="cb654"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb654-1" data-line-number="1"><span class="co"># Let&#39;s remove &quot;obvious&quot;&quot; outliers by changing their values to NA</span></a>
+<a class="sourceLine" id="cb654-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb654-3" data-line-number="3"><span class="co"># data point below -20 and above 5 in A</span></a>
+<a class="sourceLine" id="cb654-4" data-line-number="4">data<span class="op">$</span>A[data<span class="op">$</span>A <span class="op">&lt;</span><span class="st"> </span><span class="dv">-20</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a>
+<a class="sourceLine" id="cb654-5" data-line-number="5">data<span class="op">$</span>A[data<span class="op">$</span>A <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a>
+<a class="sourceLine" id="cb654-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb654-7" data-line-number="7"><span class="co"># data point below -10 in I_6</span></a>
+<a class="sourceLine" id="cb654-8" data-line-number="8">data<span class="op">$</span>I_<span class="dv">6</span>[data<span class="op">$</span>I_<span class="dv">6</span> <span class="op">&lt;=</span><span class="st"> </span><span class="dv">-10</span>] &lt;-<span class="st"> </span><span class="ot">NA</span> </a>
+<a class="sourceLine" id="cb654-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb654-10" data-line-number="10"><span class="co"># data point &lt;-4 in S_6</span></a>
+<a class="sourceLine" id="cb654-11" data-line-number="11">data<span class="op">$</span>S_<span class="dv">6</span>[data<span class="op">$</span>S_<span class="dv">6</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">-4</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a>
+<a class="sourceLine" id="cb654-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb654-13" data-line-number="13"><span class="co"># data point &lt;-9 in I_2</span></a>
+<a class="sourceLine" id="cb654-14" data-line-number="14">data<span class="op">$</span>I_<span class="dv">2</span>[data<span class="op">$</span>I_<span class="dv">2</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">-9</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a>
+<a class="sourceLine" id="cb654-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb654-16" data-line-number="16"><span class="co"># data point above 4 in S_2</span></a>
+<a class="sourceLine" id="cb654-17" data-line-number="17">data<span class="op">$</span>S_<span class="dv">2</span>[data<span class="op">$</span>S_<span class="dv">2</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a>
+<a class="sourceLine" id="cb654-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb654-19" data-line-number="19"><span class="co"># data point above 10 in U_2</span></a>
+<a class="sourceLine" id="cb654-20" data-line-number="20">data<span class="op">$</span>U_<span class="dv">2</span>[data<span class="op">$</span>U_<span class="dv">2</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a>
+<a class="sourceLine" id="cb654-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb654-22" data-line-number="22"><span class="co"># data point below 10 in D1</span></a>
+<a class="sourceLine" id="cb654-23" data-line-number="23">data<span class="op">$</span>D1[data<span class="op">$</span>D1 <span class="op">&lt;=</span><span class="st"> </span><span class="dv">10</span>] &lt;-<span class="st"> </span><span class="ot">NA</span></a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="how-to-change-a-value-of-a-specific-data-point" class="section level3">
+<h3><span class="header-section-number">20.4.7</span> How to change a value of a specific data point</h3>
+<div class="sourceCode" id="cb655"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb655-1" data-line-number="1">data[data<span class="op">$</span>SEX<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>data<span class="op">$</span>DRUG<span class="op">==</span><span class="st">&quot;ART&quot;</span>,]<span class="op">$</span>E</a>
+<a class="sourceLine" id="cb655-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb655-3" data-line-number="3"><span class="co"># difficult way</span></a>
+<a class="sourceLine" id="cb655-4" data-line-number="4">df[df<span class="op">$</span>SEX<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>DRUG<span class="op">==</span><span class="st">&quot;ART&quot;</span>, ]<span class="op">$</span>E[df[df<span class="op">$</span>SEX<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>DRUG<span class="op">==</span><span class="st">&quot;ART&quot;</span>, ]<span class="op">$</span>E <span class="op">==</span><span class="st"> </span><span class="dv">911</span>] &lt;-<span class="st"> </span><span class="dv">500</span> <span class="co"># or NA</span></a>
+<a class="sourceLine" id="cb655-5" data-line-number="5">df[df<span class="op">$</span>SEX<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>DRUG<span class="op">==</span><span class="st">&quot;ART&quot;</span>,]<span class="op">$</span>E</a>
+<a class="sourceLine" id="cb655-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb655-7" data-line-number="7"><span class="co"># simpler way</span></a>
+<a class="sourceLine" id="cb655-8" data-line-number="8">df &lt;-<span class="st"> </span>data</a>
+<a class="sourceLine" id="cb655-9" data-line-number="9">df[df<span class="op">$</span>SEX<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>DRUG<span class="op">==</span><span class="st">&quot;ART&quot;</span>,]<span class="op">$</span>E</a>
+<a class="sourceLine" id="cb655-10" data-line-number="10">df[df<span class="op">$</span>SEX<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>DRUG<span class="op">==</span><span class="st">&quot;ART&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>E <span class="op">==</span><span class="st"> </span><span class="dv">911</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(df<span class="op">$</span>E), ]<span class="op">$</span>E &lt;-<span class="st"> </span><span class="dv">500</span></a>
+<a class="sourceLine" id="cb655-11" data-line-number="11">df[df<span class="op">$</span>SEX<span class="op">==</span><span class="st">&quot;M&quot;</span> <span class="op">&amp;</span><span class="st"> </span>df<span class="op">$</span>DRUG<span class="op">==</span><span class="st">&quot;ART&quot;</span>,]<span class="op">$</span>E</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="make-a-data-frame-with-statistical-data" class="section level3">
+<h3><span class="header-section-number">20.4.8</span> Make a data frame with statistical data</h3>
+<div class="sourceCode" id="cb656"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb656-1" data-line-number="1"><span class="co">#let&#39;s make first a data frame for only one group</span></a>
+<a class="sourceLine" id="cb656-2" data-line-number="2">d &lt;-<span class="st"> </span>data[data<span class="op">$</span>SEX <span class="op">==</span><span class="st"> &quot;F&quot;</span> <span class="op">&amp;</span><span class="st"> </span>data<span class="op">$</span>DRUG <span class="op">==</span><span class="st"> &quot;ART&quot;</span>,]</a>
+<a class="sourceLine" id="cb656-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb656-4" data-line-number="4">result &lt;-<span class="st"> </span><span class="kw">list</span>()</a>
+<a class="sourceLine" id="cb656-5" data-line-number="5">names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;N&quot;</span>, <span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>)</a>
+<a class="sourceLine" id="cb656-6" data-line-number="6">count &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb656-7" data-line-number="7"><span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">colnames</span>(d)){</a>
+<a class="sourceLine" id="cb656-8" data-line-number="8">  <span class="kw">print</span>(i)</a>
+<a class="sourceLine" id="cb656-9" data-line-number="9">  <span class="cf">if</span> (i <span class="op">==</span><span class="st"> &quot;SEX&quot;</span> <span class="op">|</span><span class="st"> </span>i <span class="op">==</span><span class="st"> &quot;DRUG&quot;</span> <span class="op">|</span><span class="st"> </span>i <span class="op">==</span><span class="st"> &quot;ID&quot;</span>) <span class="cf">next</span>;</a>
+<a class="sourceLine" id="cb656-10" data-line-number="10">  x &lt;-<span class="st"> </span>d[ ,i]</a>
+<a class="sourceLine" id="cb656-11" data-line-number="11">  x &lt;-<span class="st"> </span>x[<span class="op">!</span><span class="kw">is.na</span>(x)]</a>
+<a class="sourceLine" id="cb656-12" data-line-number="12">  v &lt;-<span class="st"> </span><span class="kw">c</span>(i, <span class="kw">length</span>(x), <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</a>
+<a class="sourceLine" id="cb656-13" data-line-number="13">  result[[count]] &lt;-<span class="st"> </span>v</a>
+<a class="sourceLine" id="cb656-14" data-line-number="14">  count &lt;-<span class="st"> </span>count <span class="op">+</span><span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb656-15" data-line-number="15">}</a>
+<a class="sourceLine" id="cb656-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb656-17" data-line-number="17">res &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(<span class="kw">unlist</span>(result), <span class="dt">nrow=</span>count<span class="dv">-1</span>, <span class="dt">byrow=</span>T))</a>
+<a class="sourceLine" id="cb656-18" data-line-number="18">sex &lt;-<span class="st"> &quot;F&quot;</span></a>
+<a class="sourceLine" id="cb656-19" data-line-number="19">drug &lt;-<span class="st"> &quot;ART&quot;</span></a>
+<a class="sourceLine" id="cb656-20" data-line-number="20"><span class="kw">colnames</span>(res) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;variable&quot;</span>, <span class="kw">paste</span>(sex, drug, names,<span class="dt">sep=</span><span class="st">&quot;_&quot;</span>))</a>
+<a class="sourceLine" id="cb656-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb656-22" data-line-number="22"><span class="co"># make a data frame for statistics for all groups, re-using the above for-loop</span></a>
+<a class="sourceLine" id="cb656-23" data-line-number="23">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>()</a>
+<a class="sourceLine" id="cb656-24" data-line-number="24">names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;N&quot;</span>, <span class="st">&quot;mean&quot;</span>, <span class="st">&quot;sd&quot;</span>)</a>
+<a class="sourceLine" id="cb656-25" data-line-number="25"><span class="cf">for</span> (sex <span class="cf">in</span> <span class="kw">levels</span>(data<span class="op">$</span>SEX)){ </a>
+<a class="sourceLine" id="cb656-26" data-line-number="26">  <span class="cf">for</span>(drug <span class="cf">in</span> <span class="kw">levels</span>(data<span class="op">$</span>DRUG)){</a>
+<a class="sourceLine" id="cb656-27" data-line-number="27">    d &lt;-<span class="st"> </span>data[data<span class="op">$</span>SEX <span class="op">==</span><span class="st"> </span>sex <span class="op">&amp;</span><span class="st"> </span>data<span class="op">$</span>DRUG <span class="op">==</span><span class="st"> </span>drug,]</a>
+<a class="sourceLine" id="cb656-28" data-line-number="28">    result &lt;-<span class="st"> </span><span class="kw">list</span>()</a>
+<a class="sourceLine" id="cb656-29" data-line-number="29">    count &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb656-30" data-line-number="30">    <span class="cf">for</span> (i <span class="cf">in</span> <span class="kw">colnames</span>(d)){</a>
+<a class="sourceLine" id="cb656-31" data-line-number="31">      <span class="kw">print</span>(i)</a>
+<a class="sourceLine" id="cb656-32" data-line-number="32">      <span class="cf">if</span> (i <span class="op">==</span><span class="st"> &quot;SEX&quot;</span> <span class="op">|</span><span class="st"> </span>i <span class="op">==</span><span class="st"> &quot;DRUG&quot;</span> <span class="op">|</span><span class="st"> </span>i <span class="op">==</span><span class="st"> &quot;ID&quot;</span>) <span class="cf">next</span>;</a>
+<a class="sourceLine" id="cb656-33" data-line-number="33">      x &lt;-<span class="st"> </span>d[ ,i]</a>
+<a class="sourceLine" id="cb656-34" data-line-number="34">      x &lt;-<span class="st"> </span>x[<span class="op">!</span><span class="kw">is.na</span>(x)]</a>
+<a class="sourceLine" id="cb656-35" data-line-number="35">      v &lt;-<span class="st"> </span><span class="kw">c</span>(i, <span class="kw">length</span>(x), <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</a>
+<a class="sourceLine" id="cb656-36" data-line-number="36">      result[[count]] &lt;-<span class="st"> </span>v</a>
+<a class="sourceLine" id="cb656-37" data-line-number="37">      count &lt;-<span class="st"> </span>count <span class="op">+</span><span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb656-38" data-line-number="38">    }</a>
+<a class="sourceLine" id="cb656-39" data-line-number="39">    res &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">matrix</span>(<span class="kw">unlist</span>(result), <span class="dt">nrow=</span>count<span class="dv">-1</span>, <span class="dt">byrow=</span>T), <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb656-40" data-line-number="40">    <span class="kw">colnames</span>(res) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;variable&quot;</span>, <span class="kw">paste</span>(sex, drug, names,<span class="dt">sep=</span><span class="st">&quot;_&quot;</span>))</a>
+<a class="sourceLine" id="cb656-41" data-line-number="41">    </a>
+<a class="sourceLine" id="cb656-42" data-line-number="42">    <span class="cf">if</span> (<span class="kw">dim</span>(df)[<span class="dv">1</span>] <span class="op">==</span><span class="st"> </span><span class="dv">0</span>) {</a>
+<a class="sourceLine" id="cb656-43" data-line-number="43">      df &lt;-<span class="st"> </span>res</a>
+<a class="sourceLine" id="cb656-44" data-line-number="44">    }<span class="cf">else</span>{</a>
+<a class="sourceLine" id="cb656-45" data-line-number="45">      df &lt;-<span class="st"> </span><span class="kw">cbind.data.frame</span>(df, res)</a>
+<a class="sourceLine" id="cb656-46" data-line-number="46">    }</a>
+<a class="sourceLine" id="cb656-47" data-line-number="47">  }</a>
+<a class="sourceLine" id="cb656-48" data-line-number="48">}</a>
+<a class="sourceLine" id="cb656-49" data-line-number="49"></a>
+<a class="sourceLine" id="cb656-50" data-line-number="50"><span class="co"># simplify data frame</span></a>
+<a class="sourceLine" id="cb656-51" data-line-number="51"><span class="kw">rownames</span>(df) &lt;-<span class="st"> </span>df<span class="op">$</span>variable</a>
+<a class="sourceLine" id="cb656-52" data-line-number="52">df &lt;-<span class="st"> </span>df[, <span class="kw">colnames</span>(df) <span class="op">!=</span><span class="st"> &quot;variable&quot;</span>]</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="format-a-data-frame" class="section level3">
+<h3><span class="header-section-number">20.4.9</span> Format a data frame</h3>
+<div class="sourceCode" id="cb657"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb657-1" data-line-number="1"><span class="co"># Let&#39;s round all values to two decimal digits</span></a>
+<a class="sourceLine" id="cb657-2" data-line-number="2">x &lt;-<span class="st"> </span><span class="kw">lapply</span>(df, <span class="cf">function</span>(x) <span class="kw">round</span>(<span class="kw">as.numeric</span>(x), <span class="dt">digits =</span> <span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb657-3" data-line-number="3">x</a>
+<a class="sourceLine" id="cb657-4" data-line-number="4">x &lt;-<span class="st"> </span><span class="kw">data.frame</span>(x) <span class="co"># we lost rownames!</span></a>
+<a class="sourceLine" id="cb657-5" data-line-number="5"><span class="kw">rownames</span>(x) &lt;-<span class="st"> </span><span class="kw">rownames</span>(df)</a>
+<a class="sourceLine" id="cb657-6" data-line-number="6">df &lt;-<span class="st"> </span>x</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="write-a-data-frame-in-the-file" class="section level3">
+<h3><span class="header-section-number">20.4.10</span> Write a data frame in the file</h3>
+<div class="sourceCode" id="cb658"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb658-1" data-line-number="1">conn &lt;-<span class="st"> </span><span class="kw">file</span>(<span class="st">&quot;Results.txt&quot;</span>, <span class="st">&quot;w&quot;</span>)</a>
+<a class="sourceLine" id="cb658-2" data-line-number="2"><span class="kw">write.table</span>(df, conn, <span class="dt">row.names =</span> T, <span class="dt">col.names =</span> <span class="ot">NA</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>)</a>
+<a class="sourceLine" id="cb658-3" data-line-number="3"><span class="kw">close</span>(conn)</a>
+<a class="sourceLine" id="cb658-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb658-5" data-line-number="5">conn &lt;-<span class="st"> </span><span class="kw">file</span>(<span class="st">&quot;Results.csv&quot;</span>, <span class="st">&quot;w&quot;</span>)</a>
+<a class="sourceLine" id="cb658-6" data-line-number="6"><span class="kw">write.table</span>(df, conn, <span class="dt">row.names =</span> T, <span class="dt">col.names =</span> <span class="ot">NA</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb658-7" data-line-number="7"><span class="kw">close</span>(conn)</a></code></pre></div>
+<p><br/></p>
+</div>
+<div id="write-a-table-using-as-a-decimal-separator-instead-of-a-dot-a-comma" class="section level3">
+<h3><span class="header-section-number">20.4.11</span> Write a table using as a decimal separator instead of a dot a comma</h3>
+<div class="sourceCode" id="cb659"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb659-1" data-line-number="1">df_comma &lt;-<span class="st"> </span><span class="kw">format</span>(df, <span class="dt">decimal.mark=</span><span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb659-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb659-3" data-line-number="3">conn &lt;-<span class="st"> </span><span class="kw">file</span>(<span class="st">&quot;Results_comma.txt&quot;</span>, <span class="st">&quot;w&quot;</span>)</a>
+<a class="sourceLine" id="cb659-4" data-line-number="4"><span class="kw">write.table</span>(df_comma, conn, <span class="dt">row.names =</span> T, <span class="dt">col.names =</span> <span class="ot">NA</span>, <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="dt">quote =</span> F)</a>
+<a class="sourceLine" id="cb659-5" data-line-number="5"><span class="kw">close</span>(conn)</a></code></pre></div>
+<p><br/></p>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="more-basic-plots.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["r-intro-crg.pdf", "r-intro-crg.epub"],
+"toc": {
+"collapse": "section"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
